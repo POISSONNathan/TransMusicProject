@@ -15,7 +15,6 @@ public class Essuyer : MonoBehaviour
 
     public bool essuieOrNot;
 
-    public Rigidbody2D rb;
 
     private void OnMouseDown()
     {
@@ -42,7 +41,6 @@ public class Essuyer : MonoBehaviour
             transform.Translate(MousePos);
         }
 
-        Debug.Log(rb.velocity);     
 
      
     }
