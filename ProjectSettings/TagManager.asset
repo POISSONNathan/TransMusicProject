@@ -8,6 +8,8 @@ TagManager:
   - greenSquare
   - objSale
   - serviette
+  - objAEclairer
+  - light
   layers:
   - Default
   - TransparentFX

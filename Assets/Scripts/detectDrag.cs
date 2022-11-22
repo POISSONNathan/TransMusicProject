@@ -5,7 +5,12 @@ using UnityEngine;
 public class detectDrag : MonoBehaviour
 {
 
-    private Drag currentDraggedObject;
+    public Drag currentDraggedObject;
+
+    public rotateLight currentRotateObject;
+    public List<GameObject> lights;
+    public int lightUseCount = 0;
+
     void Start()
     {
         
@@ -19,15 +24,19 @@ public class detectDrag : MonoBehaviour
             var tempVector = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, Camera.main.nearClipPlane);
             var tempRay = Camera.main.ScreenPointToRay(tempVector);
             var tempObject = Physics2D.Raycast(tempRay.origin,tempRay.direction);
+
             if (tempObject.collider != null )
             {
-                Debug.Log("Coucu");
                 currentDraggedObject = tempObject.collider.GetComponent<Drag>();
                 if (currentDraggedObject != null)
                 {
-                    Debug.Log(currentDraggedObject);
-
                     currentDraggedObject.drag = true;
+                } 
+
+                currentRotateObject = tempObject.collider.GetComponent<rotateLight>();
+                if (currentRotateObject.gameObject == lights[lightUseCount])
+                {
+                    currentRotateObject.rotate = true;
                 }
             }
         }
@@ -36,6 +45,11 @@ public class detectDrag : MonoBehaviour
             if(currentDraggedObject != null)
             {
                 currentDraggedObject.drag = false;
+            }
+
+            if (currentRotateObject != null)
+            {
+                currentRotateObject.rotate = false;
             }
         }
     }

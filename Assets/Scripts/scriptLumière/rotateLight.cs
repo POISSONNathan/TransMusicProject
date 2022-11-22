@@ -5,10 +5,18 @@ using UnityEngine;
 public class rotateLight : MonoBehaviour
 {
     public bool rotate;
+    public bool addLightCountBool = false;
+    public bool isActive = false;
 
     public Transform parent;
 
+    public detectDrag dd;
+
     public float rotateSpeed = 60f;
+
+    public int countLightOnObject;
+
+    public SpriteRenderer sr;
 
     void Start()
     {
@@ -22,6 +30,31 @@ public class rotateLight : MonoBehaviour
         if (rotate == true)     
         {
             parent.localEulerAngles = new Vector3(0, 0, Mathf.PingPong(Time.time * rotateSpeed, 90) - 45);
+            addLightCountBool = true;
+        }
+
+        if (addLightCountBool == true && rotate == false){
+            addLightCountBool = false;
+            dd.lightUseCount++;
+        }
+
+        var currentLight = dd.lights[dd.lightUseCount];
+        currentLight.GetComponent<SpriteRenderer>().color = new Color(1,0,0);
+
+        if (dd.lightUseCount>0){
+            var lastLight = dd.lights[dd.lightUseCount - 1];
+            lastLight.GetComponent<SpriteRenderer>().color = new Color(1,1,1);
+        }
+
+            
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "objAEclairer"){
+            countLightOnObject++;
         }
     }
+
 }
