@@ -23,7 +23,7 @@ public class ObjSale : MonoBehaviour
 
             if (pourcent >= 0)
             {
-                pourcent -= 0.0001f;
+                pourcent -= 0.001f;
             }
 
         }

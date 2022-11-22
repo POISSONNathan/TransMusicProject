@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
-    bool drag;
+    public bool drag;
 
     public float randomColor;
     public SpriteRenderer sr;
@@ -14,18 +14,11 @@ public class Drag : MonoBehaviour
 
     public bool trigger;
 
-    private void OnMouseDown()
-    {
-        drag = true;
-    }
-
-    private void OnMouseUp()
-    {
-        drag = false;
-    }
+  
 
     public void Start()
     {
+
         randomColor = Random.Range(0f, 1f);
         if (randomColor >= 0.5)
         {
@@ -41,7 +34,7 @@ public class Drag : MonoBehaviour
         posStart = transform.position;
     }
 
-    private void Update()
+    private void Update() 
     {
         if (drag)
         {
@@ -82,5 +75,7 @@ public class Drag : MonoBehaviour
     {
         trigger = false;
     }
+
+
 }
 
