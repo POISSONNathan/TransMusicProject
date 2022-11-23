@@ -52,12 +52,10 @@ public class rotateLight : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && addOnObj == true)
+        if (collision.gameObject.tag == "Player")
         {
-            onObj = true;
-            addOnObj = false;
+            Debug.Log("eheheher");
         }
     }
-    // MARCHE PASSSSSSSSS
 
 }
