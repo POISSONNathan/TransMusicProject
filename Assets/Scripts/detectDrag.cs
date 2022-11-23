@@ -40,6 +40,7 @@ public class detectDrag : MonoBehaviour
                 }
             }
         }
+        
         else
         {
             if(currentDraggedObject != null)

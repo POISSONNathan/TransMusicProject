@@ -14,9 +14,11 @@ public class rotateLight : MonoBehaviour
 
     public float rotateSpeed = 60f;
 
-    public int countLightOnObject;
-
     public SpriteRenderer sr;
+
+    public bool addOnObj;
+    public bool onObj;
+
 
     void Start()
     {
@@ -35,6 +37,7 @@ public class rotateLight : MonoBehaviour
 
         if (addLightCountBool == true && rotate == false){
             addLightCountBool = false;
+            addOnObj = true;
             dd.lightUseCount++;
         }
 
@@ -45,16 +48,16 @@ public class rotateLight : MonoBehaviour
             var lastLight = dd.lights[dd.lightUseCount - 1];
             lastLight.GetComponent<SpriteRenderer>().color = new Color(1,1,1);
         }
-
-            
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "objAEclairer"){
-            countLightOnObject++;
+        if (collision.gameObject.tag == "Player" && addOnObj == true)
+        {
+            onObj = true;
+            addOnObj = false;
         }
     }
+    // MARCHE PASSSSSSSSS
 
 }
