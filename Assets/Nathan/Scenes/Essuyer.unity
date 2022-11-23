@@ -274,6 +274,7 @@ MonoBehaviour:
   trigger: 0
   pourcent: 0
   essuieOrNot: 0
+  rb: {fileID: 1176851311}
 --- !u!1 &1290798747
 GameObject:
   m_ObjectHideFlags: 0

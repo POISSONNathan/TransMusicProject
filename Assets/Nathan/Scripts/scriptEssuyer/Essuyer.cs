@@ -15,6 +15,7 @@ public class Essuyer : MonoBehaviour
 
     public bool essuieOrNot;
 
+    public Rigidbody2D rb;
 
     private void OnMouseDown()
     {
@@ -40,7 +41,7 @@ public class Essuyer : MonoBehaviour
             Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(MousePos);
         }
-
+        Debug.Log(rb.velocity);
 
      
     }

@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class detectDrag : MonoBehaviour
+namespace Nathan
+{
+
+    public class detectDrag : MonoBehaviour
 {
 
     public Drag currentDraggedObject;
@@ -55,3 +58,5 @@ public class detectDrag : MonoBehaviour
         }
     }
 }
+}
+

@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class detectPlayer : MonoBehaviour
+namespace Nathan
+{
+    public class detectPlayer : MonoBehaviour
 {
     public rotateLight rl;
     public BoxCollider2D bc;
@@ -29,4 +31,5 @@ public class detectPlayer : MonoBehaviour
             rl.onObj = true;
         }
     }
+}
 }
