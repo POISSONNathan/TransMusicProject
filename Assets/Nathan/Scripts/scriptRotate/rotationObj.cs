@@ -2,30 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rotationObj : MonoBehaviour
+namespace Nathan
 {
-    private Touch touch;
-    private Vector2 touchPos;
-    private Quaternion rotationY;
-    private float roationSpeedModifier;
-
-    void Start()
+    public class rotationObj : MonoBehaviour
     {
-        
-    }
+        private Touch touch;
+        public activeRotation ar;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.touchCount > 0)
+        void Start()
         {
-            touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Moved)
+        
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (ar.isActive == true)
             {
-                Debug.Log("ehaeha");
-                rotationY = Quaternion.Euler(0f, 0f, -touch.deltaPosition.x * roationSpeedModifier);
-                transform.rotation = rotationY * transform.rotation;
+                faceMouse();
             }
+            Debug.Log(ar.isActive);
+
+        }
+
+        void faceMouse()
+        {
+            Vector3 touchPos = Input.mousePosition;
+            touchPos = Camera.main.ScreenToWorldPoint(touchPos);
+ 
+            Vector2 direction = new Vector2(
+                touchPos.x - transform.position.x,
+                touchPos.y - transform.position.y
+            );
+ 
+            transform.up = direction;
         }
     }
 }

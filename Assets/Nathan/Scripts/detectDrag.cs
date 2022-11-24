@@ -26,6 +26,9 @@ namespace Nathan
     public int randomChoice = -1;
     public reactionTime rt;
 
+    /// //////////////////////////////
+    public activeRotation currentActiveRotate;
+
     void Start()
     {
         
@@ -49,6 +52,13 @@ namespace Nathan
                     currentDraggedObject.drag = true;
                 }
 
+                 /// //////////////////////////////
+                currentActiveRotate = tempObject.collider.GetComponent<activeRotation>();
+                if (currentActiveRotate != null)
+                {
+                    currentActiveRotate.isActive = true;
+                }
+
                 /// //////////////////////////////
                 currentEssuieObject = tempObject.collider.GetComponent<Essuyer>();
                 if (currentEssuieObject != null)
@@ -65,11 +75,11 @@ namespace Nathan
                 }
 
                 /// //////////////////////////////
-                /*currentRotateObject = tempObject.collider.GetComponent<rotateLight>();
+                currentRotateObject = tempObject.collider.GetComponent<rotateLight>();
                 if (currentRotateObject.gameObject == lights[lightUseCount])
                 {
                     currentRotateObject.rotate = true;
-                }*/
+                }
 
                 /// //////////////////////////////
                 currentObjPress = tempObject.collider.GetComponent<objActive>();
@@ -80,6 +90,8 @@ namespace Nathan
                     currentObjPress.isActive = false;
                     rt.counterChangeColor = 0;
                 }
+
+            
             }
 
         }
@@ -97,8 +109,12 @@ namespace Nathan
             {
                 currentRotateObject.rotate = false;
             }
+            if (currentActiveRotate != null)
+                {
+                    currentActiveRotate.isActive = false;
+                }
+            }
         }
     }
-}
 }
 
