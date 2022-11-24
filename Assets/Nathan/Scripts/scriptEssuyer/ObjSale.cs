@@ -10,6 +10,8 @@ namespace Nathan
 
         public float pourcent = 1f;
 
+        public bool essuieOrNot = false;
+
         void Start()
         {
 
@@ -18,22 +20,38 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
+            Debug.Log(essuieOrNot);
 
-            if (objEssuie.essuieOrNot == true && objEssuie.drag == true)
+            if (essuieOrNot == true )
             {
                 sr.color = Color.Lerp(Color.white, Color.black, pourcent);
 
                 if (pourcent >= 0)
                 {
-                    pourcent -= 0.001f;
+                    pourcent -= 0.0005f;
                 }
 
             }
 
+        }
 
-
-
-
+        private void OnTriggerStay2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "serviette" && objEssuie.drag == true)
+            {
+                essuieOrNot = true;
+            }
+            if (collision.gameObject.tag == "serviette" && objEssuie.drag == false)
+            {
+                essuieOrNot = false;
+            }
+        }
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "serviette")
+            {
+                essuieOrNot = false;
+            }
         }
 
 

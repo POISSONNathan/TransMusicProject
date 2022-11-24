@@ -7,12 +7,24 @@ namespace Nathan
 
     public class detectDrag : MonoBehaviour
 {
+    private Touch touch;
 
+    /// //////////////////////////////
     public Drag currentDraggedObject;
 
+    /// //////////////////////////////
+    public Essuyer currentEssuieObject;
+
+    /// //////////////////////////////
     public rotateLight currentRotateObject;
     public List<GameObject> lights;
     public int lightUseCount = 0;
+
+    /// //////////////////////////////
+    public List<GameObject> objPressed;
+    public objActive currentObjPress;
+    public int randomChoice = -1;
+    public reactionTime rt;
 
     void Start()
     {
@@ -30,27 +42,57 @@ namespace Nathan
 
             if (tempObject.collider != null )
             {
+                /// //////////////////////////////
                 currentDraggedObject = tempObject.collider.GetComponent<Drag>();
                 if (currentDraggedObject != null)
                 {
                     currentDraggedObject.drag = true;
-                } 
+                }
 
-                currentRotateObject = tempObject.collider.GetComponent<rotateLight>();
+                /// //////////////////////////////
+                currentEssuieObject = tempObject.collider.GetComponent<Essuyer>();
+                if (currentEssuieObject != null)
+                {
+                    touch = Input.GetTouch(0);
+                    if (touch.phase == TouchPhase.Moved)
+                    {
+                        currentEssuieObject.drag = true;
+                    }
+                    else 
+                    {
+                        currentEssuieObject.drag = false;
+                    }
+                }
+
+                /// //////////////////////////////
+                /*currentRotateObject = tempObject.collider.GetComponent<rotateLight>();
                 if (currentRotateObject.gameObject == lights[lightUseCount])
                 {
                     currentRotateObject.rotate = true;
+                }*/
+
+                /// //////////////////////////////
+                currentObjPress = tempObject.collider.GetComponent<objActive>();
+                if (currentObjPress.isActive == true && currentObjPress.gameObject)
+                {
+                    rt.score ++;
+                    rt.activePossible = true;
+                    currentObjPress.isActive = false;
+                    rt.counterChangeColor = 0;
                 }
             }
+
         }
         
         else
         {
+            /// //////////////////////////////
             if(currentDraggedObject != null)
             {
                 currentDraggedObject.drag = false;
             }
 
+            /// //////////////////////////////
             if (currentRotateObject != null)
             {
                 currentRotateObject.rotate = false;
