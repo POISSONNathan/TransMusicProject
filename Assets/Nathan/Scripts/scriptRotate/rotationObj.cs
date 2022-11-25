@@ -6,41 +6,38 @@ namespace Nathan
 {
     public class rotationObj : MonoBehaviour
     {
-        private Touch touch;
-        public activeRotation ar;
-
-        public float getRotation;
-
-        public Vector3 lastRotation;
+       public activeRotation ar;
+       public float getRotation;
+       public float lastRotation;
 
         void Start()
         {
-        
+
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (ar.isActive == true)
-            {
-                faceMouse();
+            if (ar.isActive){
+                faceTouch();
             }
-
-
-
         }
 
-        void faceMouse()
+        void faceTouch()
         {
             Vector3 touchPos = Input.mousePosition;
             touchPos = Camera.main.ScreenToWorldPoint(touchPos);
+
+            Vector2 direction = new Vector2 (touchPos.x - transform.position.x, touchPos.y - transform.position.y);
+
+            transform.up = direction; 
+
+            float currentPosition = transform.rotation.z;
+
+            if(currentPosition > lastRotation){getRotation ++; }
+            if(currentPosition < lastRotation){ getRotation --;}
  
-            Vector2 direction = new Vector2(
-                touchPos.x - transform.position.x,
-                touchPos.y - transform.position.y
-            );
- 
-            transform.up = direction;
+            lastRotation = currentPosition;
         }
     }
 }
