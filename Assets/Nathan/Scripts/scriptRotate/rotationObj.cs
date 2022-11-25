@@ -9,6 +9,10 @@ namespace Nathan
         private Touch touch;
         public activeRotation ar;
 
+        public float getRotation;
+
+        public Vector3 lastRotation;
+
         void Start()
         {
         
@@ -21,7 +25,8 @@ namespace Nathan
             {
                 faceMouse();
             }
-            Debug.Log(ar.isActive);
+
+
 
         }
 

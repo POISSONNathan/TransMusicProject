@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -63,7 +63,10 @@ namespace Nathan
             transform.right = direction * transform.lossyScale.x;
 
             float dist = Vector2.Distance(pointStart,newPos);
-            filsFin.size = new Vector2 (dist, filsFin.size.y);
+            filsFin.size = new Vector2 (dist , filsFin.size.y);
+
+            Debug.Log("filsFin.size" + pointStart);
+            Debug.Log("dist" + dist);
         }
 
     }
