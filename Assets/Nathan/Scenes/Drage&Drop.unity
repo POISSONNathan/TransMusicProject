@@ -239,7 +239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b9ee01fea46c8429723c5fd8b69b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drag: 0
   randomColor: 0
   sr: {fileID: 338163922}
   colorObj: 
@@ -347,7 +346,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480581025
 GameObject:
@@ -380,7 +379,7 @@ Transform:
   - {fileID: 1690727794}
   - {fileID: 2030021849}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -480,10 +479,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDraggedObject: {fileID: 0}
+  currentTouchedObject: {fileID: 0}
   currentEssuieObject: {fileID: 0}
   currentRotateObject: {fileID: 0}
   lights: []
   lightUseCount: 0
+  objPressed: []
+  currentObjPress: {fileID: 0}
+  randomChoice: -1
+  rt: {fileID: 0}
+  currentActiveRotate: {fileID: 0}
 --- !u!1 &584629308
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +689,7 @@ Transform:
   - {fileID: 336143192}
   - {fileID: 584629310}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149530763
 GameObject:
@@ -718,7 +723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b9ee01fea46c8429723c5fd8b69b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drag: 0
   randomColor: 0
   sr: {fileID: 1149530765}
   colorObj: 
@@ -996,7 +1000,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1925802039
 BoxCollider2D:
@@ -1213,7 +1217,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &2120626938
 BoxCollider2D:

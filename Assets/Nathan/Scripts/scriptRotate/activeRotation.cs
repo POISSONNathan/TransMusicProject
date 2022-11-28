@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class activeRotation : TouchableObject
+namespace Nathan
 {
-    public bool isActive;
-
-    public override void OnTouch(Touch touchinfo)
+    public class activeRotation : TouchableObject
     {
-        isActive = true;
-    }
+        public bool isActive;
 
-    public override void TouchUp()
-    {
-        isActive = false;
-    }
+        public override void OnTouch(Touch touchinfo)
+        {
+            isActive = true;
+        }
 
+        public override void TouchUp()
+        {
+            isActive = false;
+        }
+
+    }
 }
