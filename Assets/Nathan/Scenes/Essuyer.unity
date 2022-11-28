@@ -273,7 +273,6 @@ MonoBehaviour:
   posStart: {x: 0, y: 0, z: 0}
   trigger: 0
   pourcent: 0
-  essuieOrNot: 0
   rb: {fileID: 1176851311}
 --- !u!1 &1290798747
 GameObject:
@@ -289,7 +288,7 @@ GameObject:
   - component: {fileID: 1290798750}
   - component: {fileID: 1290798752}
   m_Layer: 0
-  m_Name: rt
+  m_Name: objSale
   m_TagString: objSale
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,6 +423,7 @@ MonoBehaviour:
   sr: {fileID: 1290798748}
   objEssuie: {fileID: 1176851313}
   pourcent: 1
+  essuieOrNot: 0
 --- !u!1 &1337052603
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 1337052606}
   - component: {fileID: 1337052605}
   - component: {fileID: 1337052604}
+  - component: {fileID: 1337052607}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -508,3 +509,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1337052607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337052603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52fe5ea47107a04c946a869ec1ed937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDraggedObject: {fileID: 0}
+  currentEssuieObject: {fileID: 0}
+  currentRotateObject: {fileID: 0}
+  lights: []
+  lightUseCount: 0

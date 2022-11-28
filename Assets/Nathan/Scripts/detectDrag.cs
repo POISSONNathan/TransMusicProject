@@ -6,57 +6,67 @@ namespace Nathan
 {
 
     public class detectDrag : MonoBehaviour
-{
-
-    public Drag currentDraggedObject;
-
-    public rotateLight currentRotateObject;
-    public List<GameObject> lights;
-    public int lightUseCount = 0;
-
-    void Start()
     {
-        
-    }
+        private Touch touch;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.touchCount >0)
+        /// ////////////////////////////// 
+        public Drag currentDraggedObject;
+        public TouchableObject currentTouchedObject;
+
+        /// //////////////////////////////
+        public Essuyer currentEssuieObject;
+
+        /// //////////////////////////////
+        public rotateLight currentRotateObject;
+        public List<GameObject> lights;
+        public int lightUseCount = 0;
+
+        /// //////////////////////////////
+        public List<GameObject> objPressed;
+        public objActive currentObjPress;
+        public int randomChoice = -1;
+        public reactionTime rt;
+
+        /// //////////////////////////////
+        public activeRotation currentActiveRotate;
+
+        void Start()
         {
-            var tempVector = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, Camera.main.nearClipPlane);
-            var tempRay = Camera.main.ScreenPointToRay(tempVector);
-            var tempObject = Physics2D.Raycast(tempRay.origin,tempRay.direction);
 
-            if (tempObject.collider != null )
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.touchCount > 0)
             {
-                currentDraggedObject = tempObject.collider.GetComponent<Drag>();
-                if (currentDraggedObject != null)
-                {
-                    currentDraggedObject.drag = true;
-                } 
+                var tempVector = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, Camera.main.nearClipPlane);
+                var tempRay = Camera.main.ScreenPointToRay(tempVector);
+                var tempObject = Physics2D.Raycast(tempRay.origin, tempRay.direction);
 
-                currentRotateObject = tempObject.collider.GetComponent<rotateLight>();
-                if (currentRotateObject.gameObject == lights[lightUseCount])
+                if (tempObject.collider != null)
                 {
-                    currentRotateObject.rotate = true;
+                    /// //////////////////////////////
+                    currentTouchedObject = tempObject.collider.GetComponent<TouchableObject>();
+                    if (currentTouchedObject != null)
+                    {
+                        currentTouchedObject.OnTouch(Input.GetTouch(0));
+                    }
+
                 }
-            }
-        }
-        
-        else
-        {
-            if(currentDraggedObject != null)
-            {
-                currentDraggedObject.drag = false;
+
             }
 
-            if (currentRotateObject != null)
+            else
             {
-                currentRotateObject.rotate = false;
+                /// //////////////////////////////
+                if (currentTouchedObject != null)
+                {
+                    currentTouchedObject.TouchUp();
+                }
+
             }
         }
     }
-}
 }
 
