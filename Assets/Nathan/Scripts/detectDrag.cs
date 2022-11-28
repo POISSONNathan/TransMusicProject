@@ -6,113 +6,65 @@ namespace Nathan
 {
 
     public class detectDrag : MonoBehaviour
-{
-    private Touch touch;
-
-    /// //////////////////////////////
-    public Drag currentDraggedObject;
-
-    /// //////////////////////////////
-    public Essuyer currentEssuieObject;
-
-    /// //////////////////////////////
-    public rotateLight currentRotateObject;
-    public List<GameObject> lights;
-    public int lightUseCount = 0;
-
-    /// //////////////////////////////
-    public List<GameObject> objPressed;
-    public objActive currentObjPress;
-    public int randomChoice = -1;
-    public reactionTime rt;
-
-    /// //////////////////////////////
-    public activeRotation currentActiveRotate;
-
-    void Start()
     {
-        
-    }
+        private Touch touch;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.touchCount >0)
+        /// ////////////////////////////// 
+        public Drag currentDraggedObject;
+        public TouchableObject currentTouchedObject;
+
+        /// //////////////////////////////
+        public Essuyer currentEssuieObject;
+
+        /// //////////////////////////////
+        public rotateLight currentRotateObject;
+        public List<GameObject> lights;
+        public int lightUseCount = 0;
+
+        /// //////////////////////////////
+        public List<GameObject> objPressed;
+        public objActive currentObjPress;
+        public int randomChoice = -1;
+        public reactionTime rt;
+
+        /// //////////////////////////////
+        public activeRotation currentActiveRotate;
+
+        void Start()
         {
-            var tempVector = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, Camera.main.nearClipPlane);
-            var tempRay = Camera.main.ScreenPointToRay(tempVector);
-            var tempObject = Physics2D.Raycast(tempRay.origin,tempRay.direction);
-
-            if (tempObject.collider != null )
-            {
-                /// //////////////////////////////
-                currentDraggedObject = tempObject.collider.GetComponent<Drag>();
-                if (currentDraggedObject != null)
-                {
-                    currentDraggedObject.drag = true;
-                }
-
-                 /// //////////////////////////////
-                currentActiveRotate = tempObject.collider.GetComponent<activeRotation>();
-                if (currentActiveRotate != null)
-                {
-                    currentActiveRotate.isActive = true;
-                }
-
-                /// //////////////////////////////
-                currentEssuieObject = tempObject.collider.GetComponent<Essuyer>();
-                if (currentEssuieObject != null)
-                {
-                    touch = Input.GetTouch(0);
-                    if (touch.phase == TouchPhase.Moved)
-                    {
-                        currentEssuieObject.drag = true;
-                    }
-                    else 
-                    {
-                        currentEssuieObject.drag = false;
-                    }
-                }
-
-                /// //////////////////////////////
-                currentRotateObject = tempObject.collider.GetComponent<rotateLight>();
-                if (currentRotateObject.gameObject == lights[lightUseCount])
-                {
-                    currentRotateObject.rotate = true;
-                }
-
-                /// //////////////////////////////
-                currentObjPress = tempObject.collider.GetComponent<objActive>();
-                if (currentObjPress.isActive == true && currentObjPress.gameObject)
-                {
-                    rt.score ++;
-                    rt.activePossible = true;
-                    currentObjPress.isActive = false;
-                    rt.counterChangeColor = 0;
-                }
-
-            
-            }
 
         }
-        
-        else
+
+        // Update is called once per frame
+        void Update()
         {
-            /// //////////////////////////////
-            if(currentDraggedObject != null)
+            if (Input.touchCount > 0)
             {
-                currentDraggedObject.drag = false;
+                var tempVector = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, Camera.main.nearClipPlane);
+                var tempRay = Camera.main.ScreenPointToRay(tempVector);
+                var tempObject = Physics2D.Raycast(tempRay.origin, tempRay.direction);
+
+                if (tempObject.collider != null)
+                {
+                    /// //////////////////////////////
+                    currentTouchedObject = tempObject.collider.GetComponent<TouchableObject>();
+                    if (currentTouchedObject != null)
+                    {
+                        currentTouchedObject.OnTouch(Input.GetTouch(0));
+                    }
+
+                }
+
             }
 
-            /// //////////////////////////////
-            if (currentRotateObject != null)
+            else
             {
-                currentRotateObject.rotate = false;
-            }
-            if (currentActiveRotate != null)
+                /// //////////////////////////////
+                if (currentTouchedObject != null)
                 {
-                    currentActiveRotate.isActive = false;
+                    currentTouchedObject.TouchUp();
                 }
+
             }
         }
     }

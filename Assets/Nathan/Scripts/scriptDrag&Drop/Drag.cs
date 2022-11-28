@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Nathan
 {
-    public class Drag : MonoBehaviour
+    public class Drag : TouchableObject
     {
-        public bool drag;
+        private bool drag;
 
         public float randomColor;
         public SpriteRenderer sr;
@@ -78,6 +78,16 @@ namespace Nathan
             trigger = false;
         }
 
+        public override void OnTouch(Touch touchinfo)
+        {
+            drag = true;
+
+        }
+
+        public override void TouchUp()
+        {
+            drag = false;
+        }
 
     }
 }

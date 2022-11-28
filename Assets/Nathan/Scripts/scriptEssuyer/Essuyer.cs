@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Nathan
 {
-    public class Essuyer : MonoBehaviour
+    public class Essuyer : TouchableObject
     {
 
         public bool drag;
@@ -17,6 +17,23 @@ namespace Nathan
 
         public Rigidbody2D rb;
 
+        public override void OnTouch(Touch touchInfo)
+        {
+            if (touchInfo.phase == TouchPhase.Moved)
+            {
+                drag = true;
+            }
+            else
+            {
+                drag = false;
+            }
+        }
+
+
+        public override void TouchUp()
+        {
+            base.TouchUp();
+        }
         public void Start()
         {
             posStart = transform.position;

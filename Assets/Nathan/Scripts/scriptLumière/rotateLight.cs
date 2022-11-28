@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Nathan
 {
-    public class rotateLight : MonoBehaviour
+    public class rotateLight : TouchableObject
     {
         public bool rotate;
         public bool addLightCountBool = false;
@@ -22,6 +22,16 @@ namespace Nathan
         public bool onObj;
 
         public float randomRotateSpawn;
+
+        public override void OnTouch(Touch touchInfo)
+        {
+            rotate = true;
+        }
+
+        public override void TouchUp()
+        {
+            rotate = false;
+        }
 
         void Start()
         {

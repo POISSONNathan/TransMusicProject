@@ -297,6 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  rt: {fileID: 148116602}
 --- !u!1 &465927731
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  rt: {fileID: 148116602}
 --- !u!1 &678980235
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  rt: {fileID: 148116602}
 --- !u!1 &883958721
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  rt: {fileID: 148116602}
 --- !u!1 &1306123782
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  rt: {fileID: 148116602}
 --- !u!1 &1548842987
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,6 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDraggedObject: {fileID: 0}
+  currentTouchedObject: {fileID: 0}
   currentEssuieObject: {fileID: 0}
   currentRotateObject: {fileID: 0}
   lights: []
@@ -947,6 +953,7 @@ MonoBehaviour:
   currentObjPress: {fileID: 0}
   randomChoice: 0
   rt: {fileID: 148116602}
+  currentActiveRotate: {fileID: 0}
 --- !u!61 &1548842992
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1098,3 +1105,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  rt: {fileID: 148116602}

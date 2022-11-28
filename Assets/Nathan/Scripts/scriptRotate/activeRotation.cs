@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class activeRotation : MonoBehaviour
+public class activeRotation : TouchableObject
 {
     public bool isActive;
-    
-    void Start()
+
+    public override void OnTouch(Touch touchinfo)
     {
-        
+        isActive = true;
     }
 
-    void Update()
+    public override void TouchUp()
     {
-        
+        isActive = false;
     }
+
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Nathan
 {
-    public class reactionTime : MonoBehaviour
+    public class reactionTime : TouchableObject
     {
         public detectDrag dd;
 
@@ -24,42 +24,32 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-
-
         counterChangeColor += 1 * Time.deltaTime;
 
-
-        if (counterChangeColor >= timeBeetweenActivaction)
-        {
-
-
-            if (activePossible == true)
+            if (counterChangeColor >= timeBeetweenActivaction)
             {
-                dd.randomChoice = Random.Range(0,6);
-                var currentObjTouch = dd.objPressed[dd.randomChoice];
-                currentObjTouch.GetComponent<objActive>().isActive = true;
-                activePossible = false;
-            }
+
+
+                if (activePossible == true)
+                {
+                    dd.randomChoice = Random.Range(0,6);
+                    var currentObjTouch = dd.objPressed[dd.randomChoice];
+                    currentObjTouch.GetComponent<objActive>().isActive = true;
+                    activePossible = false;
+                }
             
 
-            if (counterChangeColor >= timeBeetweenActivaction * 2)
-            {
-                activePossible = true;
-                var lastObjTouch = dd.objPressed[dd.randomChoice];
-                lastObjTouch.GetComponent<objActive>().isActive = false;
+                if (counterChangeColor >= timeBeetweenActivaction * 2)
+                {
+                    activePossible = true;
+                    var lastObjTouch = dd.objPressed[dd.randomChoice];
+                    lastObjTouch.GetComponent<objActive>().isActive = false;
 
-                counterChangeColor = 0;
+                    counterChangeColor = 0;
+                }
+
             }
-
         }
 
-
-
-
-
-       
-        
-
     }
-}
 }
