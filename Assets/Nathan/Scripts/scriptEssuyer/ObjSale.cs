@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Nathan
@@ -28,7 +30,7 @@ namespace Nathan
 
                 if (pourcent >= 0)
                 {
-                    pourcent -= 0.0005f;
+                    pourcent -= objEssuie.speedObj/100;
                 }
 
             }

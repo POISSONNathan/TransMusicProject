@@ -15,7 +15,11 @@ namespace Nathan
 
         public float pourcent;
 
+        public Vector2 lastPosition;
+
         public Rigidbody2D rb;
+
+        public float speedObj;
 
         public override void OnTouch(Touch touchInfo)
         {
@@ -32,7 +36,7 @@ namespace Nathan
 
         public override void TouchUp()
         {
-            base.TouchUp();
+            drag = false;
         }
         public void Start()
         {
@@ -47,7 +51,15 @@ namespace Nathan
                 transform.Translate(MousePos);
             }
 
-     
+            Vector2 currentPosition = transform.position;
+
+            speedObj = Vector2.Distance(currentPosition, lastPosition);
+
+            lastPosition = currentPosition;
+
+            Debug.Log(speedObj);
+
+
         }
 
     }

@@ -7,28 +7,15 @@ namespace Nathan
 
     public class detectDrag : MonoBehaviour
     {
-        private Touch touch;
-
         /// ////////////////////////////// 
-        public Drag currentDraggedObject;
         public TouchableObject currentTouchedObject;
 
         /// //////////////////////////////
-        public Essuyer currentEssuieObject;
-
-        /// //////////////////////////////
-        public rotateLight currentRotateObject;
         public List<GameObject> lights;
         public int lightUseCount = 0;
 
         /// //////////////////////////////
         public List<GameObject> objPressed;
-        public objActive currentObjPress;
-        public int randomChoice = -1;
-        public reactionTime rt;
-
-        /// //////////////////////////////
-        public activeRotation currentActiveRotate;
 
         void Start()
         {

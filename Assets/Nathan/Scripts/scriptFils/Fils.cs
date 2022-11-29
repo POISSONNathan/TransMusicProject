@@ -4,13 +4,15 @@ using UnityEngine;
 
 namespace Nathan
 {
-    public class Fils : MonoBehaviour
+    public class Fils : TouchableObject
     {
         public Vector3 pointStart;
         public Vector3 startPos;
         public SpriteRenderer filsFin;
 
         public GameObject lightOn;
+
+        public bool move;
 
         void Start()
         {
@@ -21,32 +23,39 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-        }
-
-        private void OnMouseDrag()
-        {
-            Vector3 newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            newPos.z = 0;
-
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(newPos, .2f);
-            foreach (Collider2D collider in colliders)
+            if (move == true)
             {
-                if (collider.gameObject != gameObject)
+                Vector3 newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                newPos.z = 0;
+
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(newPos, .2f);
+                foreach (Collider2D collider in colliders)
                 {
-                    UpdateFils(collider.transform.position);
-                    if (transform.parent.name.Equals(collider.transform.parent.name))
-                    {      
-                        collider.GetComponent<Fils>()?.Connected();
-                        Connected();
+                    if (collider.gameObject != gameObject)
+                    {
+                        UpdateFils(collider.transform.position);
+                        if (transform.parent.name.Equals(collider.transform.parent.name))
+                        {
+                            collider.GetComponent<Fils>()?.Connected();
+                            Connected();
+                        }
                     }
                 }
+                UpdateFils(newPos);
             }
-            UpdateFils(newPos);
         }
 
-        private void OnMouseUp()
+        
+
+        public override void OnTouch(Touch touchInfo)
+        {
+            move = true;
+        }
+
+        public override void TouchUp()
         {
             UpdateFils(startPos);
+            move = false;
         }
 
         void Connected()

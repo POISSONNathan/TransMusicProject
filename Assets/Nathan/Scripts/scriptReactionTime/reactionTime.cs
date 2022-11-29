@@ -16,6 +16,8 @@ namespace Nathan
 
         public float timeBeetweenActivaction;
 
+        public int randomChoice = -1;
+
         void Start()
         {
         
@@ -29,11 +31,10 @@ namespace Nathan
             if (counterChangeColor >= timeBeetweenActivaction)
             {
 
-
                 if (activePossible == true)
                 {
-                    dd.randomChoice = Random.Range(0,6);
-                    var currentObjTouch = dd.objPressed[dd.randomChoice];
+                    randomChoice = Random.Range(0,6);
+                    var currentObjTouch = dd.objPressed[randomChoice];
                     currentObjTouch.GetComponent<objActive>().isActive = true;
                     activePossible = false;
                 }
@@ -42,7 +43,7 @@ namespace Nathan
                 if (counterChangeColor >= timeBeetweenActivaction * 2)
                 {
                     activePossible = true;
-                    var lastObjTouch = dd.objPressed[dd.randomChoice];
+                    var lastObjTouch = dd.objPressed[randomChoice];
                     lastObjTouch.GetComponent<objActive>().isActive = false;
 
                     counterChangeColor = 0;
