@@ -10,9 +10,10 @@ namespace Nathan
        public float getRotation;
        public float lastRotation;
 
+        public detectDrag dd;
+
         void Start()
         {
-
         }
 
         // Update is called once per frame
@@ -20,6 +21,13 @@ namespace Nathan
         {
             if (ar.isActive){
                 faceTouch();
+            }
+
+            if (getRotation > 160)
+            {
+                dd.gameFinish = true;
+                dd.nextScene = "Accueil";
+                Destroy(this);
             }
         }
 

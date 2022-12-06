@@ -50,6 +50,13 @@ namespace Nathan
             drag = false;
         }
 
+        public void Connected()
+        {
+            lightOn.SetActive(true);
+            dd.scoreScene++;
+            Destroy(this);
+        }
+
         public void OnCollisionEnter2D(Collision2D collision)
         {
             if (color == "red" && collision.gameObject.name == "redWireEnd" )
@@ -58,9 +65,8 @@ namespace Nathan
                 lastPos.x -= 0.7f;
                 transform.position = lastPos;
                 line.SetPosition(1, transform.localPosition);
-                lightOn.SetActive(true);
-                dd.scoreScene++;
-                Destroy(this);
+
+                Connected();
             }
             if (color == "blue" && collision.gameObject.name == "blueWireEnd")
             {
@@ -68,9 +74,8 @@ namespace Nathan
                 lastPos.x -= 0.7f;
                 transform.position = lastPos;
                 line.SetPosition(1, transform.localPosition);
-                lightOn.SetActive(true);
-                dd.scoreScene++;
-                Destroy(this);
+
+                Connected();
             }
             if (color == "green" && collision.gameObject.name == "greenWireEnd")
             {
@@ -78,9 +83,8 @@ namespace Nathan
                 lastPos.x -= 0.7f;
                 transform.position = lastPos;
                 line.SetPosition(1, transform.localPosition);
-                lightOn.SetActive(true);
-                dd.scoreScene++;
-                Destroy(this);
+
+                Connected();
             }
         }
     }

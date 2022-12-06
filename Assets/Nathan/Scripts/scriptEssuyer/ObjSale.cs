@@ -28,8 +28,7 @@ namespace Nathan
 
             if (pourcent < 0)
             {
-                dd.scoreScene++;
-                dd.scoreSceneNeed = 1;
+                dd.gameFinish = true;
                 dd.nextScene = "Fils";
                 Destroy(this);
             }

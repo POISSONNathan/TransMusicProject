@@ -21,18 +21,19 @@ namespace Nathan
         /// //////////////////////////////
         public int scoreScene;
         public int scoreSceneNeed;
+        public bool gameFinish = false;
+
         public string nextScene;
 
         void Start()
         {
-
         }
 
         // Update is called once per frame
         void Update()
         {
 
-            if (scoreScene == scoreSceneNeed)
+            if (scoreScene == scoreSceneNeed || gameFinish == true)
             {
                 SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
             }

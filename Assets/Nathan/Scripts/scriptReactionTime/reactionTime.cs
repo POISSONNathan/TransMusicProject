@@ -36,7 +36,7 @@ namespace Nathan
 
                 if (activePossible == true)
                 {
-                    randomChoice = Random.Range(0,6);
+                    randomChoice = Random.Range(0, dd.objPressed.Count);
                     var currentObjTouch = dd.objPressed[randomChoice];
                     currentObjTouch.GetComponent<objActive>().isActive = true;
                     activePossible = false;

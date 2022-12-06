@@ -161,6 +161,7 @@ MonoBehaviour:
   drag: 0
   color: 
   lightOn: {fileID: 0}
+  dd: {fileID: 0}
 --- !u!1 &6962898011967053561
 GameObject:
   m_ObjectHideFlags: 0
