@@ -20,13 +20,16 @@ namespace Nathan
 
         void Start()
         {
-        
+            dd.scoreSceneNeed = 5;
+            dd.nextScene = "Rotate";
         }
 
         // Update is called once per frame
         void Update()
         {
         counterChangeColor += 1 * Time.deltaTime;
+
+            dd.scoreScene = score;
 
             if (counterChangeColor >= timeBeetweenActivaction)
             {

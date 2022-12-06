@@ -308,6 +308,9 @@ MonoBehaviour:
   lights: []
   lightUseCount: 0
   objPressed: []
+  scoreScene: 0
+  scoreSceneNeed: 0
+  nextScene: 
 --- !u!1 &142095634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,6 +1125,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
+      propertyPath: dd
+      value: 
+      objectReference: {fileID: 133362701}
+    - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: color
       value: green
       objectReference: {fileID: 0}
@@ -1401,6 +1408,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
+      propertyPath: dd
+      value: 
+      objectReference: {fileID: 133362701}
     - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: color
       value: blue
@@ -2888,6 +2899,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
+      propertyPath: dd
+      value: 
+      objectReference: {fileID: 133362701}
     - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: bout
       value: 

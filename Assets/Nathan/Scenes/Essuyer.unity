@@ -273,7 +273,9 @@ MonoBehaviour:
   posStart: {x: 0, y: 0, z: 0}
   trigger: 0
   pourcent: 0
+  lastPosition: {x: 0, y: 0}
   rb: {fileID: 1176851311}
+  speedObj: 0
 --- !u!1 &1290798747
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 1290798748}
+  dd: {fileID: 1337052607}
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
@@ -521,8 +524,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b52fe5ea47107a04c946a869ec1ed937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDraggedObject: {fileID: 0}
-  currentEssuieObject: {fileID: 0}
-  currentRotateObject: {fileID: 0}
+  currentTouchedObject: {fileID: 0}
   lights: []
   lightUseCount: 0
+  objPressed: []
+  scoreScene: 0
+  scoreSceneNeed: 0
+  nextScene: 

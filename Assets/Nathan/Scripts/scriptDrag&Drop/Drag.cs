@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace Nathan
 {
     public class Drag : TouchableObject
@@ -16,10 +17,12 @@ namespace Nathan
 
         public bool trigger;
 
-
+        public detectDrag dd;
 
         public void Start()
         {
+            dd.scoreSceneNeed = 2;
+            dd.nextScene = "Essuyer";
 
             randomColor = Random.Range(0f, 1f);
             if (randomColor >= 0.5)
@@ -60,6 +63,8 @@ namespace Nathan
                 if (!drag)
                 {
                     transform.position = collision.transform.position;
+                    dd.scoreScene++;
+                    Destroy(this);
                 }
             }
 
@@ -68,6 +73,8 @@ namespace Nathan
                 if (!drag)
                 {
                     transform.position = collision.transform.position;
+                    dd.scoreScene++;
+                    Destroy(this);
                 }
             }
             trigger = true;

@@ -57,8 +57,6 @@ namespace Nathan
 
             lastPosition = currentPosition;
 
-            Debug.Log(speedObj);
-
 
         }
 

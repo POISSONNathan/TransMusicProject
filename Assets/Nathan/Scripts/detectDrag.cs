@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Nathan
 {
@@ -17,6 +18,11 @@ namespace Nathan
         /// //////////////////////////////
         public List<GameObject> objPressed;
 
+        /// //////////////////////////////
+        public int scoreScene;
+        public int scoreSceneNeed;
+        public string nextScene;
+
         void Start()
         {
 
@@ -25,6 +31,12 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
+
+            if (scoreScene == scoreSceneNeed)
+            {
+                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+            }
+
             if (Input.touchCount > 0)
             {
                 var tempVector = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, Camera.main.nearClipPlane);

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 namespace Nathan
 {
@@ -86,6 +88,14 @@ namespace Nathan
             moveCamera = true;
             nextPos = new Vector3(transform.position.x + 6.51f, transform.position.y, transform.position.z);
 
+        }
+
+        public void StartGame()
+        {
+            if (levelSelect == 0)
+            {
+                SceneManager.LoadScene("Drage&Drop", LoadSceneMode.Single);
+            }
         }
     }
 }

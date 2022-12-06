@@ -15,9 +15,12 @@ namespace Nathan
 
         public GameObject lightOn;
 
+        public detectDrag dd;
         void Start()
         {
             posStart = transform.position;
+            dd.nextScene = "ReactionTime";
+            dd.scoreSceneNeed = 3;
         }
 
         // Update is called once per frame
@@ -56,6 +59,7 @@ namespace Nathan
                 transform.position = lastPos;
                 line.SetPosition(1, transform.localPosition);
                 lightOn.SetActive(true);
+                dd.scoreScene++;
                 Destroy(this);
             }
             if (color == "blue" && collision.gameObject.name == "blueWireEnd")
@@ -65,6 +69,7 @@ namespace Nathan
                 transform.position = lastPos;
                 line.SetPosition(1, transform.localPosition);
                 lightOn.SetActive(true);
+                dd.scoreScene++;
                 Destroy(this);
             }
             if (color == "green" && collision.gameObject.name == "greenWireEnd")
@@ -74,6 +79,7 @@ namespace Nathan
                 transform.position = lastPos;
                 line.SetPosition(1, transform.localPosition);
                 lightOn.SetActive(true);
+                dd.scoreScene++;
                 Destroy(this);
             }
         }
