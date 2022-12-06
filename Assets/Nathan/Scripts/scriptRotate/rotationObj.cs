@@ -23,7 +23,7 @@ namespace Nathan
                 faceTouch();
             }
 
-            if (getRotation > 160)
+            if (getRotation > 150)
             {
                 dd.gameFinish = true;
                 dd.nextScene = "Accueil";

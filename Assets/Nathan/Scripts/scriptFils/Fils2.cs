@@ -19,7 +19,7 @@ namespace Nathan
         void Start()
         {
             posStart = transform.position;
-            dd.nextScene = "ReactionTime";
+            dd.nextScene = "Lumière";
             dd.scoreSceneNeed = 3;
         }
 
@@ -27,6 +27,8 @@ namespace Nathan
         void Update()
         {
             line.SetPosition(1, transform.localPosition);
+
+            Debug.Log(dd.nextScene);
 
             if (drag == true)
             {

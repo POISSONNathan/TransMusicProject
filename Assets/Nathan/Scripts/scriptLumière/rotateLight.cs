@@ -21,7 +21,7 @@ namespace Nathan
         public bool addOnObj;
         public bool onObj;
 
-        public float randomRotateSpawn;
+        public float randomRotateSpawn; 
 
         public override void OnTouch(Touch touchInfo)
         {
@@ -35,7 +35,8 @@ namespace Nathan
 
         void Start()
         {
-
+            dd.scoreSceneNeed = 3;
+            dd.nextScene = "ReactionTime";
 
             for (int i = 0; i < 4; i++)
             {
@@ -94,6 +95,12 @@ namespace Nathan
             {
                 var lastLight = dd.lights[dd.lightUseCount - 1];
                 lastLight.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+            }
+
+            if (onObj == true)
+            {
+                dd.scoreScene++;
+                Destroy(this);
             }
         }
 
