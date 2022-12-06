@@ -36,16 +36,17 @@ namespace Nathan
             Vector3 touchPos = Input.mousePosition;
             touchPos = Camera.main.ScreenToWorldPoint(touchPos);
 
-            Vector2 direction = new Vector2 (touchPos.x - transform.position.x, touchPos.y - transform.position.y);
+            Vector2 direction = new Vector2(touchPos.x - transform.position.x, touchPos.y - transform.position.y);
 
-            transform.up = direction; 
+            transform.up = direction;
 
-            float currentPosition = transform.rotation.z;
+            float currentPosition = transform.eulerAngles.z;
 
-            if(currentPosition > lastRotation){getRotation ++; }
-            if(currentPosition < lastRotation){ getRotation --;}
- 
+            if (currentPosition > lastRotation) { getRotation++; }
+            if (currentPosition < lastRotation) { getRotation--; }
+
             lastRotation = currentPosition;
-        }
+            transform.Rotate(Vector3.forward, 1);
     }
+}
 }
