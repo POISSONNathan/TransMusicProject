@@ -11,6 +11,7 @@ TagManager:
   - objAEclairer
   - light
   - collider
+  - Balai
   layers:
   - Default
   - TransparentFX

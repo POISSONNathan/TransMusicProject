@@ -9,7 +9,8 @@ namespace spaceCharles
         public Vector2 initialPosition;
         public Vector2 targetPosition;
         public Transform target;
-        public bool shouldGoToTarget;
+        public bool shouldGoToTarget = false;
+        public bool goBack = false;
         public float delta;
         public float speed;
         // Start is called before the first frame update
@@ -30,17 +31,31 @@ namespace spaceCharles
             {
                 shouldGoToTarget = false;
                 delta = 0;
+                
+                goBack = !goBack;
             }
+            
+            if (goBack == true && shouldGoToTarget == false)
+            {
+                targetPosition = initialPosition;
+                initialPosition = transform.position;
+                shouldGoToTarget = true;
+            }
+
 
         }
 
         public override void OnTouch(Touch touchInfo)
         {
-            Debug.Log("dda");
-            targetPosition = target.position;
-            //initialPosition = transform.position;
-            delta = 0;
-            shouldGoToTarget = true;
+            if (!shouldGoToTarget)
+            {
+                Debug.Log("dda");
+                targetPosition = target.position;
+                initialPosition = transform.position;
+                delta = 0;
+                shouldGoToTarget = true;
+            }
+            
         }
     }
 }
