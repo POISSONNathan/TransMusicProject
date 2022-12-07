@@ -11,6 +11,8 @@ TagManager:
   - objAEclairer
   - light
   - collider
+  - nonRecyclable
+  - recyclable
   layers:
   - Default
   - TransparentFX

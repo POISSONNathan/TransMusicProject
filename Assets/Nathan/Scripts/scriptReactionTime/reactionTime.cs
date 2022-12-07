@@ -18,6 +18,8 @@ namespace Nathan
 
         public int randomChoice = -1;
 
+        public List<GameObject> objPressed;
+
         void Start()
         {
             dd.scoreSceneNeed = 5;
@@ -36,8 +38,8 @@ namespace Nathan
 
                 if (activePossible == true)
                 {
-                    randomChoice = Random.Range(0, dd.objPressed.Count);
-                    var currentObjTouch = dd.objPressed[randomChoice];
+                    randomChoice = Random.Range(0, objPressed.Count);
+                    var currentObjTouch = objPressed[randomChoice];
                     currentObjTouch.GetComponent<objActive>().isActive = true;
                     activePossible = false;
                 }
@@ -46,7 +48,7 @@ namespace Nathan
                 if (counterChangeColor >= timeBeetweenActivaction * 2)
                 {
                     activePossible = true;
-                    var lastObjTouch = dd.objPressed[randomChoice];
+                    var lastObjTouch = objPressed[randomChoice];
                     lastObjTouch.GetComponent<objActive>().isActive = false;
 
                     counterChangeColor = 0;

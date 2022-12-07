@@ -9,9 +9,9 @@ namespace Nathan
     {
         private bool drag;
 
-        public float randomColor;
-        public SpriteRenderer sr;
-        public string colorObj;
+        //public float randomColor;
+        //public SpriteRenderer sr;
+        //public string colorObj;
 
         public Vector3 posStart;
 
@@ -19,22 +19,24 @@ namespace Nathan
 
         public detectDrag dd;
 
+        public listObj lo;
+
         public void Start()
         {
-            dd.scoreSceneNeed = 2;
+            dd.scoreSceneNeed = lo.objARecycler.Count;
             dd.nextScene = "Essuyer";
 
-            randomColor = Random.Range(0f, 1f);
-            if (randomColor >= 0.5)
-            {
-                sr.color = new Color(1, 0, 0);
-                colorObj = "red";
-            }
-            else
-            {
-                sr.color = new Color(0, 1, 0);
-                colorObj = "green";
-            }
+            //randomColor = Random.Range(0f, 1f);
+            //if (randomColor >= 0.5)
+            //{
+            //    sr.color = new Color(1, 0, 0);
+            //    colorObj = "red";
+            //}
+            //else
+            //{
+            //    sr.color = new Color(0, 1, 0);
+            //    colorObj = "green";
+            //}
 
             posStart = transform.position;
         }
@@ -58,7 +60,7 @@ namespace Nathan
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            if (colorObj == "red" && collision.gameObject.tag == "redSquare")
+            if (gameObject.tag == "recyclable" && collision.gameObject.name == "poubelleRecyclable")
             {
                 if (!drag)
                 {
@@ -68,7 +70,7 @@ namespace Nathan
                 }
             }
 
-            if (colorObj == "green" && collision.gameObject.tag == "greenSquare")
+            if (gameObject.tag == "nonRecyclable" && collision.gameObject.name == "poubelleNonRecyclable")
             {
                 if (!drag)
                 {

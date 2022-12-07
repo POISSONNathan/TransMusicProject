@@ -157,6 +157,14 @@ MonoBehaviour:
   score: 0
   activePossible: 1
   timeBeetweenActivaction: 1
+  randomChoice: -1
+  objPressed:
+  - {fileID: 1306123782}
+  - {fileID: 419212625}
+  - {fileID: 678980235}
+  - {fileID: 1081679249}
+  - {fileID: 1677115592}
+  - {fileID: 465927731}
 --- !u!4 &148116603
 Transform:
   m_ObjectHideFlags: 0
@@ -937,23 +945,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b52fe5ea47107a04c946a869ec1ed937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDraggedObject: {fileID: 0}
   currentTouchedObject: {fileID: 0}
-  currentEssuieObject: {fileID: 0}
-  currentRotateObject: {fileID: 0}
   lights: []
   lightUseCount: 0
-  objPressed:
-  - {fileID: 1306123782}
-  - {fileID: 419212625}
-  - {fileID: 678980235}
-  - {fileID: 1081679249}
-  - {fileID: 1677115592}
-  - {fileID: 465927731}
-  currentObjPress: {fileID: 0}
-  randomChoice: 0
-  rt: {fileID: 148116602}
-  currentActiveRotate: {fileID: 0}
+  scoreScene: 0
+  scoreSceneNeed: 0
+  gameFinish: 0
+  nextScene: 
 --- !u!61 &1548842992
 BoxCollider2D:
   m_ObjectHideFlags: 0

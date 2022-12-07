@@ -12,13 +12,6 @@ namespace Nathan
         public TouchableObject currentTouchedObject;
 
         /// //////////////////////////////
-        public List<GameObject> lights;
-        public int lightUseCount = 0;
-
-        /// //////////////////////////////
-        public List<GameObject> objPressed;
-
-        /// //////////////////////////////
         public int scoreScene;
         public int scoreSceneNeed;
         public bool gameFinish = false;

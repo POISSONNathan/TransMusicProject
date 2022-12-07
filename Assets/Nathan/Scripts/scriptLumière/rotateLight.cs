@@ -14,6 +14,8 @@ namespace Nathan
 
         public detectDrag dd;
 
+        public listLight ll;
+
         public float rotateSpeed = 60f;
 
         public SpriteRenderer sr;
@@ -35,12 +37,12 @@ namespace Nathan
 
         void Start()
         {
-            dd.scoreSceneNeed = 3;
+            dd.scoreSceneNeed = 1;
             dd.nextScene = "ReactionTime";
 
             for (int i = 0; i < 4; i++)
             {
-                var currentObj = dd.lights[i].gameObject;
+                var currentObj = ll.lights[i].gameObject;
                 if (i == 0)
                 {
                     randomRotateSpawn = Random.Range(-45, 10);
@@ -85,15 +87,15 @@ namespace Nathan
             {
                 addLightCountBool = false;
                 addOnObj = true;
-                dd.lightUseCount++;
+                ll.lightUseCount++;
             }
 
-            var currentLight = dd.lights[dd.lightUseCount];
+            var currentLight = ll.lights[ll.lightUseCount];
             currentLight.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
 
-            if (dd.lightUseCount > 0)
+            if (ll.lightUseCount > 0)
             {
-                var lastLight = dd.lights[dd.lightUseCount - 1];
+                var lastLight = ll.lights[ll.lightUseCount - 1];
                 lastLight.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
             }
 
