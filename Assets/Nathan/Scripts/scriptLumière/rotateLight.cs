@@ -23,6 +23,9 @@ namespace Nathan
         public bool addOnObj;
         public bool onObj;
 
+        public GameObject rayonLumiere;
+
+        public Color colorUnSellect;
 
         public override void OnTouch(Touch touchInfo)
         {
@@ -60,12 +63,18 @@ namespace Nathan
             }
 
             var currentLight = ll.lights[ll.lightUseCount];
-            currentLight.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+            currentLight.GetComponent<SpriteRenderer>().color = Color.white;
+
+            if (ll.lights[ll.lightUseCount] == this.gameObject)
+            {
+                rayonLumiere.SetActive(true);
+            }
+
 
             if (ll.lightUseCount > 0)
             {
                 var lastLight = ll.lights[ll.lightUseCount - 1];
-                lastLight.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+                lastLight.GetComponent<SpriteRenderer>().color = Color.white;
             }
 
             if (onObj == true)
