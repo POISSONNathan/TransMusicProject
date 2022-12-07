@@ -429,12 +429,12 @@ GameObject:
   - component: {fileID: 574271890}
   - component: {fileID: 574271893}
   m_Layer: 0
-  m_Name: LightsLumiere
+  m_Name: LightsLumiere2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &574271889
 Transform:
   m_ObjectHideFlags: 0
@@ -599,6 +599,8 @@ MonoBehaviour:
   sr: {fileID: 761883853}
   addOnObj: 0
   onObj: 0
+  rayonLumiere: {fileID: 0}
+  colorUnSellect: {r: 0, g: 0, b: 0, a: 0}
 --- !u!50 &761883851
 Rigidbody2D:
   serializedVersion: 4
@@ -1345,7 +1347,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: df75401ca9b8fcb49af5bd26be3118f2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1398,6 +1400,8 @@ MonoBehaviour:
   sr: {fileID: 1548908047}
   addOnObj: 0
   onObj: 0
+  rayonLumiere: {fileID: 1720470776}
+  colorUnSellect: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &1548908052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1555,6 +1559,8 @@ MonoBehaviour:
   sr: {fileID: 1550354840}
   addOnObj: 0
   onObj: 0
+  rayonLumiere: {fileID: 1699866025}
+  colorUnSellect: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &1550354847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1678,7 +1684,7 @@ GameObject:
   - component: {fileID: 1699866027}
   - component: {fileID: 1699866030}
   m_Layer: 0
-  m_Name: LightsLumiere
+  m_Name: LightsLumiere1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1804,12 +1810,12 @@ GameObject:
   - component: {fileID: 1720470778}
   - component: {fileID: 1720470781}
   m_Layer: 0
-  m_Name: LightsLumiere
+  m_Name: LightsLumiere3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1720470777
 Transform:
   m_ObjectHideFlags: 0
@@ -2097,7 +2103,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: df75401ca9b8fcb49af5bd26be3118f2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2150,6 +2156,8 @@ MonoBehaviour:
   sr: {fileID: 2030139896}
   addOnObj: 0
   onObj: 0
+  rayonLumiere: {fileID: 574271888}
+  colorUnSellect: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &2030139901
 BoxCollider2D:
   m_ObjectHideFlags: 0

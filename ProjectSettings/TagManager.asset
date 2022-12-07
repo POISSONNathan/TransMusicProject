@@ -13,6 +13,10 @@ TagManager:
   - collider
   - nonRecyclable
   - recyclable
+  - poubelleVerte
+  - poubelleJaune
+  - objPoubelleVerte
+  - objPoubelleJaune
   layers:
   - Default
   - TransparentFX

@@ -21,6 +21,8 @@ namespace Nathan
 
         public listObj lo;
 
+        public GameObject currentObj;
+
         public void Start()
         {
             dd.scoreSceneNeed = lo.objARecycler.Count;
@@ -43,7 +45,7 @@ namespace Nathan
 
         private void Update()
         {
-            if (drag)
+            if (drag && this.gameObject == currentObj)
             {
                 Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 transform.Translate(MousePos);
@@ -56,27 +58,30 @@ namespace Nathan
                     transform.position = posStart;
                 }
             }
+
         }
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            if (gameObject.tag == "objPoubelleverte" && collision.gameObject.name == "poubelleRecyclable")
+            if (gameObject.tag == "objPoubelleVerte" && collision.gameObject.name == "poubelleVerte")
             {
                 if (!drag)
                 {
                     transform.position = collision.transform.position;
                     dd.scoreScene++;
-                    Destroy(this);
+                    lo.objPoubelleVerte++;
+                    Destroy(this.gameObject);
                 }
             }
 
-            if (gameObject.tag == "objPoubelleJaune" && collision.gameObject.name == "poubelleNonRecyclable")
+            if (gameObject.tag == "objPoubelleJaune" && collision.gameObject.name == "poubelleJaune")
             {
                 if (!drag)
                 {
                     transform.position = collision.transform.position;
                     dd.scoreScene++;
-                    Destroy(this);
+                    lo.objPoubelleJaune++;
+                    Destroy(this.gameObject);
                 }
             }
             trigger = true;
@@ -90,6 +95,7 @@ namespace Nathan
         public override void OnTouch(Touch touchinfo)
         {
             drag = true;
+            currentObj = this.gameObject;
 
         }
 
