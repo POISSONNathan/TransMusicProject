@@ -18,7 +18,7 @@ namespace Nathan
         public bool goNexwtGame = false;
 
         public GameObject animWinEndGame;
-        public bool createAnim;
+        public bool createAnim = false;
 
         public string nextScene;
 
