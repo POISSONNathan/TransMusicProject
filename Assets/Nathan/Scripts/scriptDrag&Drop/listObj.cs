@@ -1,34 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using Nathan;
 using UnityEngine;
 
-public class listObj : MonoBehaviour
+namespace Nathan
 {
-    /// //////////////////////////////
-    public List<GameObject> objARecycler;
-
-    public int objPoubelleVerte = -1;
-    public int objPoubelleJaune = -1;
-
-    public List<GameObject> dechetsVert;
-    public List<GameObject> dechetsJaune;
-
-    void Start()
+    public class listObj : MonoBehaviour
     {
-        
-    }
+        /// //////////////////////////////
+        public List<GameObject> objARecycler;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (objPoubelleVerte >= 0)
+        public int objPoubelleVerte = -1;
+        public int objPoubelleJaune = -1;
+
+        public List<GameObject> dechetsVert;
+        public List<GameObject> dechetsJaune;
+
+        public detectDrag dd;
+
+        void Start()
         {
-            dechetsVert[objPoubelleVerte].SetActive(true);
+            dd.scoreSceneNeed = dechetsVert.Count + dechetsJaune.Count;
+            dd.nextScene = "Essuyer";
         }
 
-        if (objPoubelleJaune >= 0)
+        // Update is called once per frame
+        void Update()
         {
-            dechetsJaune[objPoubelleJaune].SetActive(true);
+            if (objPoubelleVerte >= 0)
+            {
+                dechetsVert[objPoubelleVerte].SetActive(true);
+            }
+
+            if (objPoubelleJaune >= 0)
+            {
+                dechetsJaune[objPoubelleJaune].SetActive(true);
+            }
+
+            dd.scoreScene = objPoubelleVerte + objPoubelleJaune + 2;
         }
     }
 }

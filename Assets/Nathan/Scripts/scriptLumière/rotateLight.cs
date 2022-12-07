@@ -39,10 +39,6 @@ namespace Nathan
 
         void Start()
         {
-            dd.scoreSceneNeed = 3;
-            dd.nextScene = "ReactionTime";
-
-           
 
         }
 

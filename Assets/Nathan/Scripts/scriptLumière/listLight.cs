@@ -44,8 +44,10 @@ namespace Nathan
                     randomRotateSpawn = Random.Range(-10, 45);
                     currentObj.transform.localEulerAngles = new Vector3(0, 0, randomRotateSpawn);
                 }
-
             }
+
+            dd.scoreSceneNeed = 3;
+            dd.nextScene = "ReactionTime";
         }
 
         // Update is called once per frame

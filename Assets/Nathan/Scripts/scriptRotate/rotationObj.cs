@@ -14,12 +14,14 @@ namespace Nathan
 
         void Start()
         {
+            dd.nextScene = "Accueil";
+            dd.scoreSceneNeed = 1;
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (ar.isActive && getRotation >= -70 && getRotation <= 320)
+            if (ar.isActive && getRotation >= -70 && getRotation <= 320 )
             {
                 faceTouch();
             }
@@ -27,7 +29,6 @@ namespace Nathan
             if (getRotation >= 320)
             {
                 dd.gameFinish = true;
-                dd.nextScene = "Accueil";
                 Destroy(this);
             }
 

@@ -25,21 +25,6 @@ namespace Nathan
 
         public void Start()
         {
-            dd.scoreSceneNeed = lo.objARecycler.Count;
-            dd.nextScene = "Essuyer";
-
-            //randomColor = Random.Range(0f, 1f);
-            //if (randomColor >= 0.5)
-            //{
-            //    sr.color = new Color(1, 0, 0);
-            //    colorObj = "red";
-            //}
-            //else
-            //{
-            //    sr.color = new Color(0, 1, 0);
-            //    colorObj = "green";
-            //}
-
             posStart = transform.position;
         }
 
@@ -51,13 +36,6 @@ namespace Nathan
                 transform.Translate(MousePos);
             }
 
-            else
-            {
-                if (trigger == false)
-                {
-                    transform.position = posStart;
-                }
-            }
 
             Debug.Log(currentObj);
 
@@ -65,12 +43,13 @@ namespace Nathan
 
         private void OnTriggerStay2D(Collider2D collision)
         {
+            trigger = true;
+
             if (gameObject.tag == "objPoubelleVerte" && collision.gameObject.name == "poubelleVerte")
             {
                 if (!drag)
                 {
                     transform.position = collision.transform.position;
-                    dd.scoreScene++;
                     lo.objPoubelleVerte++;
                     Destroy(this.gameObject);
                 }
@@ -81,12 +60,27 @@ namespace Nathan
                 if (!drag)
                 {
                     transform.position = collision.transform.position;
-                    dd.scoreScene++;
                     lo.objPoubelleJaune++;
                     Destroy(this.gameObject);
                 }
             }
-            trigger = true;
+
+            ///////////////// INVERSE ///////////////////////
+            if (gameObject.tag == "objPoubelleVerte" && collision.gameObject.name == "poubelleJaune")
+            {
+                if (!drag)
+                {
+                    transform.position = posStart;
+                }
+            }
+
+            if (gameObject.tag == "objPoubelleJaune" && collision.gameObject.name == "poubelleVerte")
+            {
+                if (!drag)
+                {
+                    transform.position = posStart;
+                }
+            }
         }
 
         private void OnTriggerExit2D(Collider2D collision)
@@ -97,7 +91,7 @@ namespace Nathan
         public override void OnTouch(Touch touchinfo)
         {
             drag = true;
-            currentObj = this.gameObject;
+            currentObj = gameObject;
 
         }
 
@@ -105,6 +99,8 @@ namespace Nathan
         {
             drag = false;
         }
+
+
 
     }
 }
