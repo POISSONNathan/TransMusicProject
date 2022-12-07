@@ -457,8 +457,6 @@ MonoBehaviour:
   myButton: {fileID: 535535718}
   selectPossible: 1
   levelSelect: 0
-  gm: {fileID: 0}
-  randomMiniGames: 0
 --- !u!1 &1849270878
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,7 +5247,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1

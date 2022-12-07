@@ -11,9 +11,41 @@ namespace Nathan
 
         public detectDrag dd;
 
+        public float randomRotateSpawn;
+
         void Start()
         {
+            for (int i = 0; i < 4; i++)
+            {
+                var currentObj = lights[i].gameObject;
+                if (i == 0)
+                {
+                    randomRotateSpawn = Random.Range(-45, 10);
+                    currentObj.transform.localEulerAngles = new Vector3(0, 0, randomRotateSpawn);
+                }
+                if (i == 1)
+                {
+                    float leftOrRight;
+                    leftOrRight = Random.Range(0f, 1f);
 
+                    if (leftOrRight < 0.5)
+                    {
+                        randomRotateSpawn = Random.Range(-45, -10);
+                        currentObj.transform.localEulerAngles = new Vector3(0, 0, randomRotateSpawn);
+                    }
+                    else
+                    {
+                        randomRotateSpawn = Random.Range(45, 10);
+                        currentObj.transform.localEulerAngles = new Vector3(0, 0, randomRotateSpawn);
+                    }
+                }
+                if (i == 2)
+                {
+                    randomRotateSpawn = Random.Range(-10, 45);
+                    currentObj.transform.localEulerAngles = new Vector3(0, 0, randomRotateSpawn);
+                }
+
+            }
         }
 
         // Update is called once per frame
@@ -23,6 +55,8 @@ namespace Nathan
             {
                 dd.gameFinish = true;
             }
+
+            lights[lightUseCount].GetComponent<rotateLight>().enabled = true;
         }
     }
 }

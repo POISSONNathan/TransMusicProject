@@ -305,11 +305,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTouchedObject: {fileID: 0}
-  lights: []
-  lightUseCount: 0
-  objPressed: []
   scoreScene: 0
   scoreSceneNeed: 0
+  gameFinish: 0
   nextScene: 
 --- !u!1 &142095634
 GameObject:
@@ -1124,6 +1122,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6962898011717171840, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
+      propertyPath: m_Name
+      value: greenWireMoving
+      objectReference: {fileID: 0}
     - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: dd
       value: 
@@ -1146,7 +1148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6962898011967053566, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.13
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6962898011967053566, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1407,6 +1409,10 @@ PrefabInstance:
     - target: {fileID: 6962898011560761917, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962898011717171840, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
+      propertyPath: m_Name
+      value: blueWireMoving
       objectReference: {fileID: 0}
     - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: dd
@@ -2556,6 +2562,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!1 &1834328897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1834328898}
+  m_Layer: 0
+  m_Name: spawnerWire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1834328898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834328897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.20123172, y: 1.3868887, z: 0.569641}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1902383912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2899,6 +2936,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6962898011717171840, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
+      propertyPath: m_Name
+      value: redWireMoving
+      objectReference: {fileID: 0}
     - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: dd
       value: 

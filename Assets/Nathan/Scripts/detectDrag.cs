@@ -25,7 +25,6 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-
             if (scoreScene == scoreSceneNeed || gameFinish == true)
             {
                 SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
