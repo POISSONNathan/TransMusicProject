@@ -60,7 +60,7 @@ namespace Nathan
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            if (gameObject.tag == "recyclable" && collision.gameObject.name == "poubelleRecyclable")
+            if (gameObject.tag == "objPoubelleverte" && collision.gameObject.name == "poubelleRecyclable")
             {
                 if (!drag)
                 {
@@ -70,7 +70,7 @@ namespace Nathan
                 }
             }
 
-            if (gameObject.tag == "nonRecyclable" && collision.gameObject.name == "poubelleNonRecyclable")
+            if (gameObject.tag == "objPoubelleJaune" && collision.gameObject.name == "poubelleNonRecyclable")
             {
                 if (!drag)
                 {

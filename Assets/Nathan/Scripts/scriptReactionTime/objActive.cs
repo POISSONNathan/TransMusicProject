@@ -10,6 +10,8 @@ namespace Nathan
         public bool isActive;
         public reactionTime rt;
 
+        public GameObject colorButton;
+
         public override void OnTouch(Touch touchInfo)
         {
             if (isActive == true)
@@ -31,10 +33,11 @@ namespace Nathan
         {
             if (isActive == true)
             {
-                gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+                colorButton.SetActive(true);
             }
             else{
                 GetComponent<SpriteRenderer>().color = new Color(1,1, 1);
+                colorButton.SetActive(false);
             }
         }
     }
