@@ -16,9 +16,11 @@ namespace Nathan
 
         public bool essuieOrNot = false;
 
+        public int tempsEssuie;
+
         void Start()
         {
-
+            dd.scoreSceneNeed = 5;
         }
 
         // Update is called once per frame
@@ -28,18 +30,19 @@ namespace Nathan
 
             if (pourcent < 0)
             {
-                dd.gameFinish = true;
+                dd.scoreScene++; ;
                 dd.nextScene = "Fils";
                 Destroy(this);
             }
 
             if (essuieOrNot == true )
             {
-                sr.color = Color.Lerp(Color.white, Color.black, pourcent);
+                float newAlpha = Mathf.Lerp(0, 1, pourcent);
+                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, newAlpha);
 
                 if (pourcent >= 0)
                 {
-                    pourcent -= objEssuie.speedObj/75;
+                    pourcent -= objEssuie.speedObj/ tempsEssuie;
                 }
 
             }
