@@ -49,7 +49,6 @@ namespace spaceCharles
         {
             if (!shouldGoToTarget)
             {
-                Debug.Log("dda");
                 targetPosition = target.position;
                 initialPosition = transform.position;
                 delta = 0;

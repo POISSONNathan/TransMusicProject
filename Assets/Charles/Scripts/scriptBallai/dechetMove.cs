@@ -30,7 +30,10 @@ namespace spaceCharles
             if (collision.gameObject.tag == "Balai")
             {
                 rb.velocity = new Vector2(-6.0f, 0.0f);
+
             }
+            Debug.Log("z");
+
         }
     }
 }

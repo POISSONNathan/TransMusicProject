@@ -19,12 +19,10 @@ public class TouchableObject : MonoBehaviour
 
     public virtual void OnTouch(Touch touchInfo)
     {
-        Debug.Log("Touched " + gameObject.name);
     }
 
     public virtual void TouchUp()
     {
-        Debug.Log("Touched Ended with " + gameObject.name);
 
     }
 }
