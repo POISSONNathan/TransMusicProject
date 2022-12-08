@@ -15,9 +15,7 @@ namespace Nathan
 
         void Update()
         {
-            transform.position = new Vector2(posStart.x, posStart.y + ro.getRotation/50  ); 
-
-            Debug.Log(ro.getRotation);
+            transform.position = new Vector2(posStart.x, posStart.y + ro.getRotation/60  ); 
         }
     }
 }

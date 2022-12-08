@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Nathan
@@ -6,29 +8,41 @@ namespace Nathan
     {
         public SpriteRenderer sr;
 
+        public detectDrag dd;
+
         public Essuyer objEssuie;
 
         public float pourcent = 1f;
 
         public bool essuieOrNot = false;
 
+        public int tempsEssuie;
+
         void Start()
         {
-
+            dd.scoreSceneNeed = 5;
         }
 
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(essuieOrNot);
+            Debug.Log(pourcent);
+
+            if (pourcent < 0)
+            {
+                dd.scoreScene++; ;
+                dd.nextScene = "Fils";
+                Destroy(this);
+            }
 
             if (essuieOrNot == true )
             {
-                sr.color = Color.Lerp(Color.white, Color.black, pourcent);
+                float newAlpha = Mathf.Lerp(0, 1, pourcent);
+                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, newAlpha);
 
                 if (pourcent >= 0)
                 {
-                    pourcent -= 0.0005f;
+                    pourcent -= objEssuie.speedObj/ tempsEssuie;
                 }
 
             }

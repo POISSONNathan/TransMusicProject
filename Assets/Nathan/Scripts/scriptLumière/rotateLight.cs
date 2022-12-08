@@ -14,6 +14,8 @@ namespace Nathan
 
         public detectDrag dd;
 
+        public listLight ll;
+
         public float rotateSpeed = 60f;
 
         public SpriteRenderer sr;
@@ -21,7 +23,9 @@ namespace Nathan
         public bool addOnObj;
         public bool onObj;
 
-        public float randomRotateSpawn;
+        public GameObject rayonLumiere;
+
+        public Color colorUnSellect;
 
         public override void OnTouch(Touch touchInfo)
         {
@@ -36,44 +40,11 @@ namespace Nathan
         void Start()
         {
 
-
-            for (int i = 0; i < 4; i++)
-            {
-                var currentObj = dd.lights[i].gameObject;
-                if (i == 0)
-                {
-                    randomRotateSpawn = Random.Range(-45, 10);
-                    currentObj.transform.localEulerAngles = new Vector3(0, 0, randomRotateSpawn);
-                }
-                if (i == 1)
-                {
-                    float leftOrRight;
-                    leftOrRight = Random.Range(0f, 1f);
-
-                    if (leftOrRight < 0.5)
-                    {
-                        randomRotateSpawn = Random.Range(-45, -10);
-                        currentObj.transform.localEulerAngles = new Vector3(0, 0, randomRotateSpawn);
-                    }
-                    else
-                    {
-                        randomRotateSpawn = Random.Range(45, 10);
-                        currentObj.transform.localEulerAngles = new Vector3(0, 0, randomRotateSpawn);
-                    }
-                }
-                if (i == 2)
-                {
-                    randomRotateSpawn = Random.Range(-10, 45);
-                    currentObj.transform.localEulerAngles = new Vector3(0, 0, randomRotateSpawn);
-                }
-
-            }
         }
 
         // Update is called once per frame
         void Update()
         {
-
             if (rotate == true)
             {
                 transform.localEulerAngles = new Vector3(0, 0, Mathf.PingPong(Time.time * rotateSpeed, 90) - 45);
@@ -84,16 +55,28 @@ namespace Nathan
             {
                 addLightCountBool = false;
                 addOnObj = true;
-                dd.lightUseCount++;
+                ll.lightUseCount++;
             }
 
-            var currentLight = dd.lights[dd.lightUseCount];
-            currentLight.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+            var currentLight = ll.lights[ll.lightUseCount];
+            currentLight.GetComponent<SpriteRenderer>().color = Color.white;
 
-            if (dd.lightUseCount > 0)
+            if (ll.lights[ll.lightUseCount] == this.gameObject)
             {
-                var lastLight = dd.lights[dd.lightUseCount - 1];
-                lastLight.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+                rayonLumiere.SetActive(true);
+            }
+
+
+            if (ll.lightUseCount > 0)
+            {
+                var lastLight = ll.lights[ll.lightUseCount - 1];
+                lastLight.GetComponent<SpriteRenderer>().color = Color.white;
+            }
+
+            if (onObj == true)
+            {
+                dd.scoreScene++;
+                Destroy(this);
             }
         }
 

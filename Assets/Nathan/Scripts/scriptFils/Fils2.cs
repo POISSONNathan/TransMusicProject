@@ -2,39 +2,94 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fils2 : MonoBehaviour
+namespace Nathan
 {
-    public LineRenderer line;
-    public bool drag = false;
-
-    void Start()
+    public class Fils2 : TouchableObject
     {
-        
-    }
+        public LineRenderer line;
+        public Vector3 posStart;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(drag)
+        public bool drag = false;
+
+        public string color;
+
+        public GameObject lightOn;
+
+        public detectDrag dd;
+
+        public GameObject currentWire;
+        void Start()
         {
-            Vector3 mousePos = Input.mousePosition;
-            Vector3 convertedMousePos = Camera.main.ScreenToWorldPoint(mousePos);
-            convertedMousePos.z = 0;
-            transform.position = convertedMousePos;
-
-            Vector3 positionDiff = convertedMousePos - line.transform.position;
-            line.SetPosition(2,positionDiff - new Vector3(.75f,0,0));
-            line.SetPosition(3,positionDiff - new Vector3(.25f,0,0));
+            posStart = transform.position;
+            dd.nextScene = "Lumière";
+            dd.scoreSceneNeed = 3;
         }
-    }
 
-    void OnMouseDown()
-    {
-        drag = true;
-    }
+        // Update is called once per frame
+        void Update()
+        {
+            line.SetPosition(1, transform.localPosition);
 
-    void OnMouseUp()
-    {
-        drag = false;
+
+            if (drag == true && this.gameObject == currentWire)
+            {
+                Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+                transform.Translate(MousePos);
+            }
+            if (drag == false)
+            {
+                transform.position = posStart;
+            }
+        }
+
+        public override void OnTouch(Touch touchinfo)
+        {
+            drag = true;
+            currentWire = this.gameObject;
+
+        }
+
+        public override void TouchUp()
+        {
+            drag = false;
+        }
+
+        public void Connected()
+        {
+            lightOn.SetActive(true);
+            dd.scoreScene++;
+            Destroy(this);
+        }
+
+        public void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (color == "red" && collision.gameObject.name == "redWireEnd" )
+            {
+                Vector3 lastPos = collision.transform.position;
+                lastPos.x -= 0.7f;
+                transform.position = lastPos;
+                line.SetPosition(1, transform.localPosition);
+
+                Connected();
+            }
+            if (color == "blue" && collision.gameObject.name == "blueWireEnd")
+            {
+                Vector3 lastPos = collision.transform.position;
+                lastPos.x -= 0.7f;
+                transform.position = lastPos;
+                line.SetPosition(1, transform.localPosition);
+
+                Connected();
+            }
+            if (color == "green" && collision.gameObject.name == "greenWireEnd")
+            {
+                Vector3 lastPos = collision.transform.position;
+                lastPos.x -= 0.7f;
+                transform.position = lastPos;
+                line.SetPosition(1, transform.localPosition);
+
+                Connected();
+            }
+        }
     }
 }

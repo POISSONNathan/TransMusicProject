@@ -11,7 +11,16 @@ TagManager:
   - objAEclairer
   - light
   - collider
+<<<<<<< HEAD
   - Balai
+=======
+  - nonRecyclable
+  - recyclable
+  - poubelleVerte
+  - poubelleJaune
+  - objPoubelleVerte
+  - objPoubelleJaune
+>>>>>>> main
   layers:
   - Default
   - TransparentFX

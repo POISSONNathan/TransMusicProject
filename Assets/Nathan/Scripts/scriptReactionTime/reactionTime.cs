@@ -16,9 +16,14 @@ namespace Nathan
 
         public float timeBeetweenActivaction;
 
+        public int randomChoice = -1;
+
+        public List<GameObject> objPressed;
+
         void Start()
         {
-        
+            dd.scoreSceneNeed = 5;
+            dd.nextScene = "Rotate";
         }
 
         // Update is called once per frame
@@ -26,14 +31,15 @@ namespace Nathan
         {
         counterChangeColor += 1 * Time.deltaTime;
 
+            dd.scoreScene = score;
+
             if (counterChangeColor >= timeBeetweenActivaction)
             {
 
-
                 if (activePossible == true)
                 {
-                    dd.randomChoice = Random.Range(0,6);
-                    var currentObjTouch = dd.objPressed[dd.randomChoice];
+                    randomChoice = Random.Range(0, objPressed.Count);
+                    var currentObjTouch = objPressed[randomChoice];
                     currentObjTouch.GetComponent<objActive>().isActive = true;
                     activePossible = false;
                 }
@@ -42,7 +48,7 @@ namespace Nathan
                 if (counterChangeColor >= timeBeetweenActivaction * 2)
                 {
                     activePossible = true;
-                    var lastObjTouch = dd.objPressed[dd.randomChoice];
+                    var lastObjTouch = objPressed[randomChoice];
                     lastObjTouch.GetComponent<objActive>().isActive = false;
 
                     counterChangeColor = 0;
