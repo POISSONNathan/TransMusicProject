@@ -17,7 +17,7 @@ namespace Nathan
 
         public detectDrag dd;
 
-        public GameObject currentWire;
+        public wireManager wm;
         void Start()
         {
             posStart = transform.position;
@@ -31,7 +31,7 @@ namespace Nathan
             line.SetPosition(1, transform.localPosition);
 
 
-            if (drag == true && this.gameObject == currentWire)
+            if (drag == true)
             {
                 Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 transform.Translate(MousePos);
@@ -44,14 +44,18 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-            drag = true;
-            currentWire = this.gameObject;
+            if (wm.currentWire == null)
+            {
+                drag = true;
+                wm.currentWire = gameObject;
+            }
 
         }
 
         public override void TouchUp()
         {
             drag = false;
+            wm.currentWire = null;
         }
 
         public void Connected()

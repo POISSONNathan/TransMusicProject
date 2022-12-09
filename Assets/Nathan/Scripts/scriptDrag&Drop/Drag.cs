@@ -21,8 +21,6 @@ namespace Nathan
 
         public listObj lo;
 
-        public GameObject currentObj;
-
         public void Start()
         {
             posStart = transform.position;
@@ -30,15 +28,11 @@ namespace Nathan
 
         private void Update()
         {
-            if (drag && this.gameObject == currentObj)
+            if (drag )
             {
                 Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 transform.Translate(MousePos);
             }
-
-
-            Debug.Log(currentObj);
-
         }
 
         private void OnTriggerStay2D(Collider2D collision)
@@ -90,14 +84,18 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-            drag = true;
-            currentObj = gameObject;
+            if (lo.objSelected == null)
+            {
+                drag = true;
+                lo.objSelected = gameObject;
+            }
 
         }
 
         public override void TouchUp()
         {
             drag = false;
+            lo.objSelected = null;
         }
 
 
