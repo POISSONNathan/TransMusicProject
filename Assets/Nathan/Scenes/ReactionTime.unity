@@ -2074,7 +2074,7 @@ MonoBehaviour:
   scoreSceneNeed: 0
   gameFinish: 0
   goNexwtGame: 0
-  animWinEndGame: {fileID: 4261810291065096861, guid: 4819b701cccf624428dbddfb937df306, type: 3}
+  animWinEndGame: {fileID: 6954178084021004802, guid: ffdc9733c1fc574438f079b7b6b3b790, type: 3}
   createAnim: 0
   nextScene: 
 --- !u!61 &1548842992
