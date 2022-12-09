@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace spaceCharles
 {
-    public class balaiControl : TouchableObject
+    public class balaiControl : TouchableObject 
     {
         public Vector2 initialPosition;
         public Vector2 targetPosition;
@@ -13,6 +13,8 @@ namespace spaceCharles
         public bool goBack = false;
         public float delta;
         public float speed;
+
+        public int score;
         // Start is called before the first frame update
         void Start()
         {
@@ -54,7 +56,12 @@ namespace spaceCharles
                 delta = 0;
                 shouldGoToTarget = true;
             }
-            
+            //Debug.Log("touché");
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            score++;
         }
     }
 }

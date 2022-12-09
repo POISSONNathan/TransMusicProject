@@ -6,13 +6,14 @@ namespace spaceCharles
 {
     public class dechetMove : MonoBehaviour
     {
-        private Rigidbody2D rb;
+        public Rigidbody2D rb;
         public float speed = 2.0f;
-        void Awake()
-        {
-            rb = gameObject.AddComponent<Rigidbody2D>() as Rigidbody2D;
-            rb.bodyType = RigidbodyType2D.Kinematic;
-        }
+        void Awake() => rb = GetComponent<Rigidbody2D>();
+
+        public GameObject testC;
+
+        public balaiControl bc;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -23,17 +24,22 @@ namespace spaceCharles
         // Update is called once per frame
         void Update()
         {
-
+            Debug.Log(testC);
         }
-        private void OnCollisionEnter(Collision collision)
+
+        private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.tag == "Balai")
             {
                 rb.velocity = new Vector2(-6.0f, 0.0f);
 
             }
-            Debug.Log("z");
+
+            if (collision.gameObject.tag == "trash")
+                Destroy(this.gameObject);
+
+            }
 
         }
     }
-}
+
