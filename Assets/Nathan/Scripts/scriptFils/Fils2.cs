@@ -70,7 +70,7 @@ namespace Nathan
             if (color == "red" && collision.gameObject.name == "redWireEnd" )
             {
                 Vector3 lastPos = collision.transform.position;
-                lastPos.x -= 1.4f;
+                lastPos.x -= 0.4f;
                 transform.position = lastPos;
                 line.SetPosition(1, transform.localPosition);
 
@@ -79,7 +79,7 @@ namespace Nathan
             if (color == "blue" && collision.gameObject.name == "blueWireEnd")
             {
                 Vector3 lastPos = collision.transform.position;
-                lastPos.x -= 1.4f;
+                lastPos.x -= 0.4f;
                 transform.position = lastPos;
                 line.SetPosition(1, transform.localPosition);
 
