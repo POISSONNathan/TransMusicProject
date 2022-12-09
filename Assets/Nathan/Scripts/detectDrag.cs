@@ -75,7 +75,7 @@ namespace Nathan
 
         IEnumerator EndGame()
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(0.7f);
             goNexwtGame = true;
         }
     }

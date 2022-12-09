@@ -609,7 +609,7 @@ MonoBehaviour:
   scoreSceneNeed: 0
   gameFinish: 0
   goNexwtGame: 0
-  animWinEndGame: {fileID: 4261810291065096861, guid: 4819b701cccf624428dbddfb937df306, type: 3}
+  animWinEndGame: {fileID: 6954178084021004802, guid: ffdc9733c1fc574438f079b7b6b3b790, type: 3}
   createAnim: 0
   nextScene: 
 --- !u!1 &547321274
@@ -1040,7 +1040,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: ff9af8f8c73d5fc4b9c2f0eefbba12cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6fe7416ca00b0e9458ebe5180c40e6d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1509,7 +1509,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b5a536abe79e6244ba413703109d1e90, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a75b37cd7cc6a05468e8b49f59113217, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
