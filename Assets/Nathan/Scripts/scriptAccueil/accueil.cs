@@ -15,9 +15,7 @@ namespace Nathan
 
         private float pourcentMove = 0;
 
-        private bool moveCamera;
-
-        public GameObject myButton;
+        public bool moveCamera;
 
         public bool selectPossible = true;
         public int levelSelect = 0;
@@ -26,7 +24,6 @@ namespace Nathan
         {
         }
 
-        // Update is called once per frame
         void Update()
         {
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -57,21 +54,7 @@ namespace Nathan
             {
                 pourcentMove = 0;
                 moveCamera = false;
-            }
-
-            if (moveCamera == false)
-            {
-                myButton.GetComponent<Image>().color = Color.green;
-                selectPossible = true;
-            }
-
-            if (moveCamera == true)
-            {
-                myButton.GetComponent<Image>().color = Color.grey;
-                selectPossible = false;
-            }
-
-            
+            }   
         }
 
         private void moveLeft()
@@ -88,14 +71,6 @@ namespace Nathan
             moveCamera = true;
             nextPos = new Vector3(transform.position.x + 6.51f, transform.position.y, transform.position.z);
 
-        }
-
-        public void StartGame()
-        {
-            if (levelSelect == 0)
-            {
-                SceneManager.LoadScene("Drage&Drop", LoadSceneMode.Single);
-            }
         }
     }
 }
