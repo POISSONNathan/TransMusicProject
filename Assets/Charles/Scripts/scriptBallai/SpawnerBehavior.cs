@@ -2,19 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerBehavior : MonoBehaviour
+namespace spaceCharles
 {
-    // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
-    public GameObject myPrefab;
-    // Start is called before the first frame update
-    void Start()
+    public class SpawnerBehavior : MonoBehaviour
     {
-        Instantiate(myPrefab, new Vector3(0, 6, 0), Quaternion.identity);
-    }
+        // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
+        public GameObject myPrefab1;
+        public GameObject myPrefab2;
+        public GameObject myPrefab3;
+        // Start is called before the first frame update
+        void Start()
+        {
+            Instantiate(myPrefab1, transform.position, Quaternion.identity);
+            Instantiate(myPrefab2, new Vector3 (transform.position.x, transform.position.y + 3, transform.position.z), Quaternion.identity);
+            Instantiate(myPrefab3, new Vector3(transform.position.x, transform.position.y + 6, transform.position.z), Quaternion.identity);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }
