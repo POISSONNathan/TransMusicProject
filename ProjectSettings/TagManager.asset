@@ -4,19 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - redSquare
-  - greenSquare
-  - objSale
-  - serviette
-  - objAEclairer
-  - light
+  - Balai
   - collider
-  - nonRecyclable
-  - recyclable
-  - poubelleVerte
-  - poubelleJaune
-  - objPoubelleVerte
-  - objPoubelleJaune
+  - trash
   layers:
   - Default
   - TransparentFX
@@ -53,7 +43,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: 1
-    uniqueID: 3289513179
     locked: 0
