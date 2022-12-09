@@ -1,25 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Nathan
 {
-    public class ButtonPlay : TouchableObject
+    public class wireManager : MonoBehaviour
     {
+        public GameObject currentWire;
         void Start()
         {
+
         }
 
         // Update is called once per frame
         void Update()
         {
 
-        }
-
-        public override void OnTouch(Touch touchinfo)
-        {
-            SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
         }
     }
 }

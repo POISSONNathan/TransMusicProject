@@ -21,12 +21,12 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            if (ar.isActive && getRotation >= -70 && getRotation <= 320 )
+            if (ar.isActive && getRotation >= -70 && getRotation <= 110)
             {
                 faceTouch();
             }
 
-            if (getRotation >= 320)
+            if (getRotation >= 110)
             {
                 dd.gameFinish = true;
                 Destroy(this);

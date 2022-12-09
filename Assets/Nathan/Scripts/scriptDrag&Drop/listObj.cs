@@ -18,6 +18,8 @@ namespace Nathan
 
         public detectDrag dd;
 
+        public GameObject objSelected;
+
         void Start()
         {
             dd.scoreSceneNeed = dechetsVert.Count + dechetsJaune.Count;

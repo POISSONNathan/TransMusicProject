@@ -1103,6 +1103,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 133362701}
     - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
+      propertyPath: wm
+      value: 
+      objectReference: {fileID: 1834328899}
+    - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: color
       value: green
       objectReference: {fileID: 0}
@@ -1390,6 +1394,10 @@ PrefabInstance:
       propertyPath: dd
       value: 
       objectReference: {fileID: 133362701}
+    - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
+      propertyPath: wm
+      value: 
+      objectReference: {fileID: 1834328899}
     - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: color
       value: blue
@@ -2088,6 +2096,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 133362701}
     - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
+      propertyPath: wm
+      value: 
+      objectReference: {fileID: 1834328899}
+    - target: {fileID: 6962898011717171846, guid: 24ad95ab9f0a39c48b991d684297f7a2, type: 3}
       propertyPath: color
       value: red
       objectReference: {fileID: 0}
@@ -2656,8 +2668,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1834328898}
+  - component: {fileID: 1834328899}
   m_Layer: 0
-  m_Name: spawnerWire
+  m_Name: wireManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2678,6 +2691,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1834328899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834328897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1341e4d4d3401b3439aed869ca2586fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWire: {fileID: 0}
 --- !u!1 &1902383912
 GameObject:
   m_ObjectHideFlags: 0

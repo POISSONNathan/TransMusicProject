@@ -7,8 +7,6 @@ namespace Nathan
 {
     public class button : TouchableObject
     {
-        public bool startGame;
-
         public accueil ac;
 
         public SpriteRenderer sr;
@@ -40,7 +38,6 @@ namespace Nathan
             {
                 dd.nextScene = "Drage&Drop";
                 dd.gameFinish = true;
-                Debug.Log("eez");
             }
         }
     }
