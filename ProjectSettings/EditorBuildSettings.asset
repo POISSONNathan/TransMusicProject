@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Jojo/Scene/Start.unity
     guid: 8fca1b672fb1aff4789a8ff7ec81704f
+  - enabled: 1
+    path: Assets/Charles/Scenes/balai.unity
+    guid: 082951e733a650740bd3eb9c1c0a6b8c
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 9c5dc4b3f9414984088655477ff1c0de, type: 2}

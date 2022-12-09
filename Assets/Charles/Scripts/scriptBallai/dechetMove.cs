@@ -36,10 +36,22 @@ namespace spaceCharles
             }
 
             if (collision.gameObject.tag == "trash")
+            {
                 Destroy(this.gameObject);
+            }
 
+            if (collision.gameObject.tag == "collider")
+            {
+                transform.position = new Vector3(0, 6, 0);
+                rb.velocity = new Vector2(0.0f, -speed);
             }
 
         }
+
+      
+
     }
+
+}
+    
 

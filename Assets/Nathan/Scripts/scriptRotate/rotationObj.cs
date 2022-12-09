@@ -14,7 +14,7 @@ namespace Nathan
 
         void Start()
         {
-            dd.nextScene = "Accueil";
+            dd.nextScene = "balai";
             dd.scoreSceneNeed = 1;
         }
 

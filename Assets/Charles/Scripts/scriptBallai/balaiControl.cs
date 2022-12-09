@@ -14,11 +14,13 @@ namespace spaceCharles
         public float delta;
         public float speed;
 
-        public int score;
+        public detectDrag dd;
         // Start is called before the first frame update
         void Start()
-        {
+        {   
             initialPosition = transform.position;
+            dd.scoreSceneNeed = 3;
+            dd.nextScene = "Accueil";
         }
 
         // Update is called once per frame
@@ -61,7 +63,7 @@ namespace spaceCharles
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            score++;
+            dd.scoreScene++;
         }
     }
 }
