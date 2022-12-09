@@ -15,6 +15,10 @@ namespace Nathan
         public int scoreScene;
         public int scoreSceneNeed;
         public bool gameFinish = false;
+        public bool goNexwtGame = false;
+
+        public GameObject animWinEndGame;
+        public bool createAnim = false;
 
         public string nextScene;
 
@@ -25,7 +29,16 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            if (scoreScene == scoreSceneNeed || gameFinish == true)
+            if (scoreScene == scoreSceneNeed || gameFinish == true) 
+            {
+                if (createAnim == false)
+                {
+                    Instantiate(animWinEndGame, new Vector3(0, 0, 0), Quaternion.identity);
+                    createAnim = true;
+                }
+                StartCoroutine(EndGame());
+            }
+            if (goNexwtGame == true)
             {
                 SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
             }
@@ -58,6 +71,12 @@ namespace Nathan
                 }
 
             }
+        }
+
+        IEnumerator EndGame()
+        {
+            yield return new WaitForSeconds(2);
+            goNexwtGame = true;
         }
     }
 }
