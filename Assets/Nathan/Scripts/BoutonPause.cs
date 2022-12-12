@@ -11,7 +11,7 @@ namespace Nathan
             // Start is called before the first frame update
             void Start()
         {
-        
+            this.GetComponent<Animator>().Play("");
         }
 
         // Update is called once per frame
@@ -23,8 +23,9 @@ namespace Nathan
         public override void OnTouch(Touch touchinfo)
         {
             menu.GetComponent<Animator>().Play("MenuOpening");
-            this.gameObject.SetActive(false);
+            this.GetComponent<Animator>().Play("ButtonPause");
         }
+
     }
 }
 

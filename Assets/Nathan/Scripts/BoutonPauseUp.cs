@@ -25,7 +25,7 @@ namespace Nathan
         public override void OnTouch(Touch touchinfo)
         {
             menu2.GetComponent<Animator>().Play("MenuClosingVersion2");
-            Bouton.SetActive(true);
+            Bouton.GetComponent<Animator>().Play("ButtonPauseDown");
         }
     }
 }
