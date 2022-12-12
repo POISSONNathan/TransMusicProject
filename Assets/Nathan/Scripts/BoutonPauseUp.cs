@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace Nathan
 {
-
-    public class merchSpeciality : TouchableObject
+    public class BoutonPauseUp : TouchableObject
     {
-        public string color;
-        public string forme;
-        public string nombreForme;
+        public GameObject menu2;
+        public GameObject Bouton;
 
-        public merchDemande md;
-
+        // Start is called before the first frame update
         void Start()
         {
 
@@ -26,11 +24,9 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-
-        }
-
-        public override void TouchUp()
-        {
+            menu2.GetComponent<Animator>().Play("MenuClosingVersion2");
+            Bouton.SetActive(true);
         }
     }
 }
+
