@@ -23,14 +23,22 @@ namespace Nathan
         public GameObject animStartGame;
         public bool createAnim2 = false;
 
+        public GameObject animStartGameReal;
+        public bool createAnim3 = false;
+
         public string nextScene;
 
         void Start()
         {
-            if (createAnim2 == false)
+            if (createAnim3 == false)
             {
-                Instantiate(animStartGame, new Vector3(0, 0, 0), Quaternion.identity);
-                createAnim2 = true;
+                Instantiate(animStartGameReal, new Vector3(0, 0, 0), Quaternion.identity);
+                createAnim3 = true;
+            }
+
+            if (createAnim2 == false )
+            {
+                StartCoroutine(AnimText());
             }
         }
 
@@ -85,6 +93,13 @@ namespace Nathan
         {
             yield return new WaitForSeconds(0.7f);
             goNexwtGame = true;
+        }
+
+        IEnumerator AnimText()
+        {
+            yield return new WaitForSeconds(0.7f);
+            Instantiate(animStartGame, new Vector3(0, 0, 0), Quaternion.identity);
+            createAnim2 = true;
         }
     }
 }
