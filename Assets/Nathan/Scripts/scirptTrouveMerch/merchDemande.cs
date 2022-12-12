@@ -53,7 +53,7 @@ namespace Nathan {
         // Update is called once per frame
         void Update()
         {
-            if (selectObj = true)
+            if (selectObj == true)
             {
                 selectObj = false;
             }
