@@ -406,7 +406,6 @@ Transform:
   - {fileID: 1797008973}
   - {fileID: 699209233}
   - {fileID: 1368766505}
-  - {fileID: 252802472}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -422,7 +421,7 @@ GameObject:
   - component: {fileID: 252802471}
   - component: {fileID: 252802473}
   m_Layer: 0
-  m_Name: Square (4)
+  m_Name: client
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -468,7 +467,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.96760225, g: 0, b: 1, a: 1}
   m_FlipX: 0
@@ -488,12 +487,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252802470}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.75, y: 3.48, z: -1.2011548}
+  m_LocalPosition: {x: 0.044594646, y: 3.8533173, z: 0}
   m_LocalScale: {x: 3.8451915, y: 1.9988, z: 1.9988}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 235184135}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &252802473
 MonoBehaviour:
@@ -507,10 +506,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2948762d952841948be741fe78d989d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ms: {fileID: 0}
-  listColor: []
-  listForme: []
-  listNombreForme: []
+  colorSelected: 
+  formeSelected: 
+  nombreFormeSelected: 
+  selectObj: 0
+  dd: {fileID: 1265945342}
 --- !u!1 &531036450
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,7 +596,7 @@ Transform:
   - {fileID: 802071623}
   - {fileID: 196846382}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &531036453
 MonoBehaviour:
@@ -613,6 +613,7 @@ MonoBehaviour:
   color: bleu
   forme: triangle
   nombreForme: 1
+  md: {fileID: 0}
 --- !u!1 &695980231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,7 +1035,7 @@ Transform:
   - {fileID: 1322691949}
   - {fileID: 91138401}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &923767672
 MonoBehaviour:
@@ -1051,6 +1052,7 @@ MonoBehaviour:
   color: blanc
   forme: etoile
   nombreForme: 2
+  md: {fileID: 0}
 --- !u!1 &1265945338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1157,8 @@ MonoBehaviour:
   goNexwtGame: 0
   animWinEndGame: {fileID: 6954178084021004802, guid: ffdc9733c1fc574438f079b7b6b3b790, type: 3}
   createAnim: 0
+  animStartGame: {fileID: 0}
+  createAnim2: 0
   nextScene: 
 --- !u!1 &1322691948
 GameObject:
@@ -1325,7 +1329,7 @@ Transform:
   - {fileID: 695980232}
   - {fileID: 1546592220}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1355319342
 MonoBehaviour:
@@ -1342,6 +1346,7 @@ MonoBehaviour:
   color: vert
   forme: triangle
   nombreForme: 4
+  md: {fileID: 0}
 --- !u!1 &1368766504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,7 +1684,7 @@ Transform:
   - {fileID: 772919079}
   - {fileID: 29968215}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1877714702
 MonoBehaviour:
@@ -1696,3 +1701,4 @@ MonoBehaviour:
   color: rouge
   forme: etoile
   nombreForme: 4
+  md: {fileID: 0}
