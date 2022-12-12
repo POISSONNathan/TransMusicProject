@@ -20,10 +20,18 @@ namespace Nathan
         public GameObject animWinEndGame;
         public bool createAnim = false;
 
+        public GameObject animStartGame;
+        public bool createAnim2 = false;
+
         public string nextScene;
 
         void Start()
         {
+            if (createAnim2 == false)
+            {
+                Instantiate(animStartGame, new Vector3(0, 0, 0), Quaternion.identity);
+                createAnim2 = true;
+            }
         }
 
         // Update is called once per frame

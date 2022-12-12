@@ -2076,6 +2076,8 @@ MonoBehaviour:
   goNexwtGame: 0
   animWinEndGame: {fileID: 6954178084021004802, guid: ffdc9733c1fc574438f079b7b6b3b790, type: 3}
   createAnim: 0
+  animStartGame: {fileID: 7140452489770253682, guid: 59b7578c8d8a4a04ea9c3155c00d6f10, type: 3}
+  createAnim2: 0
   nextScene: 
 --- !u!61 &1548842992
 BoxCollider2D:
