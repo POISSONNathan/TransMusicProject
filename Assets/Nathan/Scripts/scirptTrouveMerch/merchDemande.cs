@@ -20,23 +20,22 @@ namespace Nathan {
 
         public bool selectObj = false;
 
+        public bool goodObj = false;
+
         public detectDrag dd;
 
         void Start()
         {
             dd.scoreSceneNeed = 3;
 
-            listColor.Add("blanc");
-            listColor.Add("rouge");
+            listColor.Add("orange");
             listColor.Add("bleu");
-            listColor.Add("vert");
 
-            listForme.Add("etoile");
-            listForme.Add("triangle");
+            listForme.Add("lestrans");
+            listForme.Add("transmusical");
 
-            listNombreForme.Add("1");
-            listNombreForme.Add("2");
-            listNombreForme.Add("4");
+            listNombreForme.Add("violet");
+            listNombreForme.Add("jaune");
 
             randomColor = Random.Range(0, listColor.Count);
             colorSelected = listColor[randomColor];
@@ -48,15 +47,29 @@ namespace Nathan {
             nombreFormeSelected = listNombreForme[randomNombreForme];
 
             selectObj = true;
-        }
+        } 
 
         // Update is called once per frame
         void Update()
         {
-            if (selectObj = true)
+
+            if (goodObj == true)
             {
-                selectObj = false;
+                selectSpecialite();
+                goodObj = false;
             }
+        }
+
+        private void selectSpecialite()
+        {
+            randomColor = Random.Range(0, listColor.Count);
+            colorSelected = listColor[randomColor];
+
+            randomForme = Random.Range(0, listForme.Count);
+            formeSelected = listForme[randomForme];
+
+            randomNombreForme = Random.Range(0, listNombreForme.Count);
+            nombreFormeSelected = listNombreForme[randomNombreForme];
         }
     }
 }

@@ -7,6 +7,11 @@ TagManager:
   - Balai
   - collider
   - trash
+  - objPoubelleVerte
+  - objPoubelleJaune
+  - poubelleJaune
+  - poubelleVerte
+  - client
   layers:
   - Default
   - TransparentFX

@@ -53,6 +53,7 @@ namespace Nathan
                     createAnim = true;
                 }
                 StartCoroutine(EndGame());
+                Debug.Log("rrz");
             }
             if (goNexwtGame == true)
             {
