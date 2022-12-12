@@ -19,7 +19,7 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-            SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
+            //SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
         }
     }
 }

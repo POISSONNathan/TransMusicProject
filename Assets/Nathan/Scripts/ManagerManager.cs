@@ -26,6 +26,8 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
+            Debug.Log(myMiniGames[1]);
+
             if (scoreScene == scoreSceneNeed)
             {
                 SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
