@@ -611,6 +611,8 @@ MonoBehaviour:
   goNexwtGame: 0
   animWinEndGame: {fileID: 6954178084021004802, guid: ffdc9733c1fc574438f079b7b6b3b790, type: 3}
   createAnim: 0
+  animStartGame: {fileID: 1759236822953474820, guid: e45c13e4f7ea186408f52e7ec0d1b3ca, type: 3}
+  createAnim2: 0
   nextScene: 
 --- !u!1 &547321274
 GameObject:
