@@ -555,6 +555,8 @@ MonoBehaviour:
   createAnim: 0
   animStartGame: {fileID: 7140452489770253682, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
   createAnim2: 0
+  animStartGameReal: {fileID: 7910283827848377148, guid: 8d98e7bf6c100a34bb74e369a4d15a1e, type: 3}
+  createAnim3: 0
   nextScene: 
 --- !u!1 &1422326836
 GameObject:

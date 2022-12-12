@@ -13,14 +13,24 @@ namespace Nathan
 
         public detectDrag dd;
 
+        public ManagerManager gm;
+
+        public int randomMiniGames;
+
         void Start()
         {
             dd.scoreSceneNeed = 1;
+            gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
+
+            randomMiniGames = Random.Range(0,4);
         }
 
         // Update is called once per frame
         void Update()
         {
+            dd.nextScene = gm.myMiniGames1[randomMiniGames];
+
+
             if (ac.moveCamera == false)
             {
                 sr.color = Color.green;
@@ -36,7 +46,6 @@ namespace Nathan
         {
             if (ac.levelSelect == 0 && ac.moveCamera == false)
             {
-                dd.nextScene = "Drage&Drop";
                 dd.gameFinish = true;
             }
         }
