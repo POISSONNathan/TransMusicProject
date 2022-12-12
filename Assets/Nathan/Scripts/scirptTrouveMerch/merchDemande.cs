@@ -28,14 +28,14 @@ namespace Nathan {
         {
             dd.scoreSceneNeed = 3;
 
-            listColor.Add("blanc");
-            listColor.Add("rouge");
+            listColor.Add("orange");
+            listColor.Add("bleu");
 
-            listForme.Add("etoile");
-            listForme.Add("triangle");
+            listForme.Add("lestrans");
+            listForme.Add("transmusical");
 
-            listNombreForme.Add("1");
-            listNombreForme.Add("2");
+            listNombreForme.Add("violet");
+            listNombreForme.Add("jaune");
 
             randomColor = Random.Range(0, listColor.Count);
             colorSelected = listColor[randomColor];

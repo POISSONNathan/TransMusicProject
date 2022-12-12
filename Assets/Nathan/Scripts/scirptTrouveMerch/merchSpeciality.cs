@@ -8,8 +8,8 @@ namespace Nathan
     public class merchSpeciality : TouchableObject
     {
         public string color;
-        public string forme;
-        public string nombreForme;
+        public string logo;
+        public string colorLogo;
 
         public merchDemande md;
 
@@ -30,7 +30,7 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            if (md.colorSelected == color && md.formeSelected == forme && md.nombreFormeSelected == nombreForme && dragPossible == false)
+            if (md.colorSelected == color && md.formeSelected == logo && md.nombreFormeSelected == colorLogo && dragPossible == false)
             {
                 dragPossible = true;
             }
