@@ -24,18 +24,28 @@ namespace Nathan {
 
         public detectDrag dd;
 
+        public GameObject color1;
+        public GameObject color2;
+
+        public GameObject logo1;
+        public GameObject logo2;
+
+        public GameObject colorLogo1;
+        public GameObject colorLogo2;
+
+
         void Start()
         {
             dd.scoreSceneNeed = 3;
 
-            listColor.Add("blanc");
-            listColor.Add("rouge");
+            listColor.Add("orange");
+            listColor.Add("bleu");
 
-            listForme.Add("etoile");
-            listForme.Add("triangle");
+            listForme.Add("lestrans");
+            listForme.Add("transmusical");
 
-            listNombreForme.Add("1");
-            listNombreForme.Add("2");
+            listNombreForme.Add("violet");
+            listNombreForme.Add("jaune");
 
             randomColor = Random.Range(0, listColor.Count);
             colorSelected = listColor[randomColor];
@@ -52,6 +62,39 @@ namespace Nathan {
         // Update is called once per frame
         void Update()
         {
+
+            if (colorSelected == "orange")
+            {
+                color1.SetActive(false);
+                color2.SetActive(true);
+            }
+            if (colorSelected == "bleu")
+            {
+                color1.SetActive(true);
+                color2.SetActive(false);
+            }
+
+            if (formeSelected == "lestrans")
+            {
+                logo1.SetActive(false);
+                logo2.SetActive(true);
+            }
+            if (formeSelected == "transmusical")
+            {
+                logo1.SetActive(true);
+                logo2.SetActive(false);
+            }
+
+            if (nombreFormeSelected == "violet")
+            {
+                colorLogo1.SetActive(true);
+                colorLogo2.SetActive(false);
+            }
+            if (nombreFormeSelected == "jaune")
+            {
+                colorLogo1.SetActive(false);
+                colorLogo2.SetActive(true);
+            }
 
             if (goodObj == true)
             {
