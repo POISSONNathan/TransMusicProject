@@ -30,11 +30,13 @@ namespace Nathan
         public override void OnTouch(Touch touchInfo)
         {
             rotate = true;
+            addOnObj = false;
         }
 
         public override void TouchUp()
         {
             rotate = false;
+            addOnObj = true;
         }
 
         void Start()
@@ -51,27 +53,6 @@ namespace Nathan
                 addLightCountBool = true;
             }
 
-            if (addLightCountBool == true && rotate == false)
-            {
-                addLightCountBool = false;
-                addOnObj = true;
-                ll.lightUseCount++;
-            }
-
-            var currentLight = ll.lights[ll.lightUseCount];
-            currentLight.GetComponent<SpriteRenderer>().color = Color.white;
-
-            if (ll.lights[ll.lightUseCount] == this.gameObject)
-            {
-                rayonLumiere.SetActive(true);
-            }
-
-
-            if (ll.lightUseCount > 0)
-            {
-                var lastLight = ll.lights[ll.lightUseCount - 1];
-                lastLight.GetComponent<SpriteRenderer>().color = Color.white;
-            }
 
             if (onObj == true)
             {

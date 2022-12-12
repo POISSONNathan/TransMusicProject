@@ -22,7 +22,11 @@ namespace Nathan
         {
             bc.enabled = true;
         }
-    }
+            if (rl.addOnObj == false)
+            {
+                bc.enabled = false;
+            }
+        }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

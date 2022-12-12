@@ -53,12 +53,6 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            if (lightUseCount == 3)
-            {
-                dd.gameFinish = true;
-            }
-
-            lights[lightUseCount].GetComponent<rotateLight>().enabled = true;
         }
     }
 }

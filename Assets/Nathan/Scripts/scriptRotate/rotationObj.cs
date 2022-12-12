@@ -21,7 +21,7 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            if (ar.isActive && getRotation >= -70 && getRotation <= 110)
+            if (ar.isActive && getRotation >= -25 && getRotation <= 110)
             {
                 faceTouch();
             }
@@ -32,9 +32,9 @@ namespace Nathan
                 Destroy(this);
             }
 
-            if (getRotation <= -70)
+            if (getRotation <= -25)
             {
-                getRotation = -70;
+                getRotation = -25;
             }
         }
 
@@ -49,8 +49,8 @@ namespace Nathan
 
             float currentPosition = transform.eulerAngles.z;
 
-            if (currentPosition > lastRotation) { getRotation++; }
-            if (currentPosition < lastRotation) { getRotation--; }
+            if (currentPosition < lastRotation) { getRotation++; }
+            if (currentPosition > lastRotation) { getRotation--; }
 
             lastRotation = currentPosition;
             transform.Rotate(Vector3.forward, 1);

@@ -288,11 +288,11 @@ Transform:
   m_LocalScale: {x: 0.29365766, y: 0.29365766, z: 0.29365766}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1839799220}
   - {fileID: 1897337245}
   - {fileID: 1422326837}
-  - {fileID: 1984708644}
   - {fileID: 1678953833}
-  - {fileID: 1839799220}
+  - {fileID: 1984708644}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -587,7 +587,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1069992885}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1422326838
 Rigidbody2D:
@@ -653,7 +653,7 @@ MonoBehaviour:
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
-  tempsEssuie: 50
+  tempsEssuie: 30
 --- !u!212 &1422326841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -922,7 +922,7 @@ MonoBehaviour:
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
-  tempsEssuie: 60
+  tempsEssuie: 35
 --- !u!212 &1678953837
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1008,7 +1008,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1069992885}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1839799221
 Rigidbody2D:
@@ -1074,7 +1074,7 @@ MonoBehaviour:
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
-  tempsEssuie: 30
+  tempsEssuie: 20
 --- !u!212 &1839799224
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1160,7 +1160,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1069992885}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1897337246
 Rigidbody2D:
@@ -1226,7 +1226,7 @@ MonoBehaviour:
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
-  tempsEssuie: 40
+  tempsEssuie: 25
 --- !u!212 &1897337249
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1312,7 +1312,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1069992885}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1984708645
 Rigidbody2D:
@@ -1378,7 +1378,7 @@ MonoBehaviour:
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
-  tempsEssuie: 70
+  tempsEssuie: 40
 --- !u!212 &1984708648
 SpriteRenderer:
   m_ObjectHideFlags: 0
