@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace spaceCharles
+namespace Nathan
 {
     public class dechetMove : MonoBehaviour
     {
@@ -24,7 +24,6 @@ namespace spaceCharles
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(testC);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)

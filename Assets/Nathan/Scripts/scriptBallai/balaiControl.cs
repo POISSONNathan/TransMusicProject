@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace spaceCharles
+namespace Nathan
 {
     public class balaiControl : TouchableObject 
     {
@@ -53,12 +53,12 @@ namespace spaceCharles
         {
             if (!shouldGoToTarget)
             {
+
                 targetPosition = target.position;
                 initialPosition = transform.position;
                 delta = 0;
                 shouldGoToTarget = true;
             }
-            //Debug.Log("touché");
         }
 
         private void OnCollisionEnter2D(Collision2D collision)

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Nathan 
+namespace Nathan
 {
-    public class TouchableObject : MonoBehaviour
+    public class respawnTop : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
@@ -18,13 +18,9 @@ namespace Nathan
 
         }
 
-        public virtual void OnTouch(Touch touchInfo)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-        }
-
-        public virtual void TouchUp()
-        {
-
+            collision.transform.position = new Vector3(0, 5, 0);
         }
     }
 }

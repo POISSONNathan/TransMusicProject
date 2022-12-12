@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 927985680}
   - component: {fileID: 927985683}
   m_Layer: 0
-  m_Name: r
+  m_Name: respawnTop
   m_TagString: collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -601,8 +601,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2046899047}
   - component: {fileID: 2046899046}
-  - component: {fileID: 2046899045}
   - component: {fileID: 2046899050}
+  - component: {fileID: 2046899051}
   m_Layer: 0
   m_Name: balai
   m_TagString: Balai
@@ -610,26 +610,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2046899045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046899044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b877263f3a9f3a4c8afe1001ea1f5f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialPosition: {x: 0, y: 0}
-  targetPosition: {x: 0, y: 0}
-  target: {fileID: 960618238}
-  shouldGoToTarget: 0
-  goBack: 0
-  delta: 0
-  speed: 4
-  dd: {fileID: 2089060969}
 --- !u!212 &2046899046
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -723,6 +703,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.01, y: 4.11}
   m_EdgeRadius: 0
+--- !u!114 &2046899051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046899044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b877263f3a9f3a4c8afe1001ea1f5f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPosition: {x: 0, y: 0}
+  targetPosition: {x: 0, y: 0}
+  target: {fileID: 960618238}
+  shouldGoToTarget: 0
+  goBack: 0
+  delta: 0
+  speed: 4
+  dd: {fileID: 2089060969}
 --- !u!1 &2089060965
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +817,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2089060965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 419c024c1a84f1c499e10027221da888, type: 3}
+  m_Script: {fileID: 11500000, guid: b52fe5ea47107a04c946a869ec1ed937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentTouchedObject: {fileID: 0}

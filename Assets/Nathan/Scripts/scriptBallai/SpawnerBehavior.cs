@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace spaceCharles
+namespace Nathan
 {
     public class SpawnerBehavior : MonoBehaviour
     {
