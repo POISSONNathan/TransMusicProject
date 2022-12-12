@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 421}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 120
+  controlID: 49097
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 121
+  controlID: 49098
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 122
+  controlID: 49171
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 90
+  controlID: 49172
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SimulatorWindow
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -241,13 +241,13 @@ MonoBehaviour:
     height: 565
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 13}
   - {fileID: 16}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -345,7 +345,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_SimulatorState:
     controlPanelVisible: 0
-    controlPanelWidth: 0
+    controlPanelWidth: NaN
     controlPanelFoldoutKeys:
     - UnityEditor.AdaptivePerformance.Editor.AdaptivePerformanceUIExtension
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
@@ -394,9 +394,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 02a40000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 3838ffff7a38ffff524cffff8e4cffffca4cffff5a4dffff964dffffd24dffff0e4effff9e4effffda4effff164fffff2058ffff6258ffff1e5effffc661ffff0262ffff6866ffff4675ffffda75ffff5077ffffbe79ffffb67bffff788effffc88fffff0a90ffff6a95fffff495ffffd8aaffffaeabffff36b2ffffd8b6fffff4b7ffff4af8000042ff000094ff000046080100140c0100c812010038130100041e0100
+      m_SelectedIDs: e8d0feff
+      m_LastClickedID: -77592
+      m_ExpandedIDs: 96d2feffa8d3feffecd3feffaad6feffe4dafeff40ddfeff98ddfeffd8ddfeff18defeff58defeffc8defeff08dffeffa2e0feffdce0feffdee1feff4ce2feff86e2feffc0e2feff02e3feff40e3feff7ae3feffb4e3feffeee3feff2ce4feff66e4feff1285ffff1086ffff7886ffffde86fffff28dffffd88fffff62bdffff46c1ffff74c4ffffb6c4ffff8cc6ffffcec6ffff10c7ffff52c7ffff94c7ffffd8c7ffff1ac8ffff8ef9ffff28fbffff34e00000880e0100441f0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -667,9 +667,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.7945946, y: 0.37331733, z: 1.2011548}
+    m_Target: {x: -0.5285792, y: 3.4826727, z: 1.323292}
     speed: 2
-    m_Value: {x: 1.7945946, y: 0.37331733, z: 1.2011548}
+    m_Value: {x: -0.5285792, y: 3.4826727, z: 1.323292}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -720,9 +720,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.641213
+    m_Target: 2.4080775
     speed: 2
-    m_Value: 4.641213
+    m_Value: 2.4080775
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -869,36 +869,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Nathan/Scenes
+    - Assets/Nathan/Scripts/scriptMagasin
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Nathan/Scenes
+  - Assets/Nathan/Scripts/scriptMagasin
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\zNathan\Unity\TransM
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f6a30000
-    m_LastClickedID: 41974
-    m_ExpandedIDs: 00000000aea30000b2a30000b6a30000b8a30000f6a30000f8a30000faa3000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 127}
+    m_SelectedIDs: e62a0100
+    m_LastClickedID: 76518
+    m_ExpandedIDs: 000000007e63000080630000826300008463000086630000886300008a630000d4630000586400005a6400005c6400005e64000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Adaptive Performance
-      m_OriginalName: Adaptive Performance
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 41904
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -912,7 +912,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 0000000080630000826300008463000086630000886300008a630000d4630000586400005a6400005c6400005e64000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -940,7 +940,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000687a00008c320100
+    m_ExpandedInstanceIDs: c6230000687a00008c3201002a630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
