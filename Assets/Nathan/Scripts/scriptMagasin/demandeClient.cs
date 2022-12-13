@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Nathan {
     public class demandeClient : MonoBehaviour
     {
-        private List<string> objPossible = new List<string>();
+        public List<string> objPossible = new List<string>();
 
         public int randomObj;
 
@@ -25,7 +25,7 @@ namespace Nathan {
 
         void Start()
         {
-            dd.scoreSceneNeed = 3;
+            dd.scoreSceneNeed = 2;
 
             objPossible.Add("cable");
             objPossible.Add("boite");
@@ -33,41 +33,48 @@ namespace Nathan {
             objPossible.Add("bois");
             objPossible.Add("proj");
             objPossible.Add("micro");
-
-            for (int i = 0; i < nbrObj; i++)
-            {
-                randomObj = Random.Range(0, objPossible.Count );
-                client.Add(objPossible[randomObj]);
-            }
-
-
+            GenerateList();
         }
 
+
+        private void GenerateList()
+        {
+            var temp = objPossible;
+
+            for (int i = 0; i < Mathf.Min(nbrObj, objPossible.Count); i++)
+            {
+                randomObj = Random.Range(0, temp.Count);
+                client.Add(temp[randomObj]);
+                temp.Remove(temp[randomObj]);
+            }
+
+        }
         // Update is called once per frame
         void Update()
         {
             if (changeCmd == true)
             {
-                demandeClient1();
+                GenerateList();
                 changeCmd = false;
             }
 
             if (goodObj == nbrObj)
             {
                 changeCmd = true;
+                goodObj = 0;
                 dd.scoreScene++;
             }
 
 
         }
 
-        public void demandeClient1()
-        {
-            for (int i = 0; i < nbrObj; i++)
-            {
-                randomObj = Random.Range(0, objPossible.Count);
-                client[i] = objPossible[randomObj];
-            }
-        }
+        //public void demandeClient1()
+        //{
+        //    for (int i = 0; i < nbrObj; i++)
+        //    {
+        //        randomObj = Random.Range(0, objPossible.Count);
+        //        client[i] = objPossible[randomObj];
+        //    }
+        //}
     }
 }

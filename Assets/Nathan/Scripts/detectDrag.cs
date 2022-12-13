@@ -88,6 +88,7 @@ namespace Nathan
                 if (currentTouchedObject != null)
                 {
                     currentTouchedObject.TouchUp();
+                    currentTouchedObject = null;
                 }
 
             }
