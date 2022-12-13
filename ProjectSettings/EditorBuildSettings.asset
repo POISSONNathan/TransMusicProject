@@ -38,5 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nathan/Scenes/TrouveMerch.unity
     guid: de77916088302f145b8dea0d5f376c11
+  - enabled: 1
+    path: Assets/Nathan/Scenes/Magasin.unity
+    guid: 264d6c0431191e040a4da2947e570b2e
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 9c5dc4b3f9414984088655477ff1c0de, type: 2}

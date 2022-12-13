@@ -42,8 +42,6 @@ namespace Nathan
             {
                 StartCoroutine(AnimText());
             }
-
-            switchMiniGame = true;
         }
 
         // Update is called once per frame
@@ -54,6 +52,7 @@ namespace Nathan
 
                 if (createAnim == false)
                 {
+                    switchMiniGame = true;
                     Instantiate(animWinEndGame, new Vector3(0, 0, 0), Quaternion.identity);
                     createAnim = true;
                 }
@@ -89,6 +88,7 @@ namespace Nathan
                 if (currentTouchedObject != null)
                 {
                     currentTouchedObject.TouchUp();
+                    currentTouchedObject = null;
                 }
 
             }

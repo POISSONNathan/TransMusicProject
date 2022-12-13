@@ -41,7 +41,7 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-            if (ac.levelSelect == 0 && ac.moveCamera == false)
+            if (ac.moveCamera == false)
             {
                 dd.gameFinish = true;
             }

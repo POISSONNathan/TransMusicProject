@@ -18,6 +18,7 @@ namespace Nathan {
 
         public demandeClient dc;
 
+        private bool isOnShop;
 
         void Start()
         {
@@ -39,27 +40,25 @@ namespace Nathan {
                 resetPos();
             }
 
-            //if (dc.goodObj == dc.client.Count)
-            //{
-            //    dc.goodObj = 0;
-            //    dc.changeCmd = true;
-            //    stayOnObj = false;
-            //}
+            if (dc.changeCmd == true)
+            {
+                stayOnObj = false;
+                dragPossible = true;
+                resetPos();
+            }
 
         }
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            if (!drag && collision.gameObject.tag == "client" )
+            if (collision.gameObject.tag == "client" )
             {
-                for (int i = 0; i < dc.client.Count; i++)
-                {
-                    if (dc.client[i] == this.gameObject.name)
-                    {
-                        stayOnObj = true;
-                        dragPossible = false;
-                    }
-                }
+                isOnShop = true;
+                
+            }
+            else
+            {
+                isOnShop = false;
             }
 
             for (int i = 0; i < dc.client.Count; i++)
@@ -79,7 +78,10 @@ namespace Nathan {
         private void OnTriggerExit2D(Collider2D collision)
         {
             trigger = false;
-
+            if (collision.gameObject.tag == "client")
+            {
+                isOnShop = false;
+            }
         }
 
         public override void OnTouch(Touch touchinfo)
@@ -93,8 +95,23 @@ namespace Nathan {
 
         public override void TouchUp()
         {
+            Debug.Log(gameObject.name);
             drag = false;
             dc.objSelected = null;
+
+            if(isOnShop == true)
+            {
+                for (int i = 0; i < dc.client.Count; i++)
+                {
+                    if (dc.client[i] == this.gameObject.name)
+                    {
+                        stayOnObj = true;
+                        dragPossible = false;
+                        dc.client.Remove(this.gameObject.name);
+                        dc.goodObj ++;
+                    }
+                }
+            }
         }
     }
 }
