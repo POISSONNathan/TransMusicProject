@@ -33,10 +33,14 @@ namespace Nathan {
         public GameObject colorLogo1;
         public GameObject colorLogo2;
 
+        private LevelManager lm;
+
 
         void Start()
         {
-            dd.scoreSceneNeed = 2;
+
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = 2;
 
             listColor.Add("orange");
             listColor.Add("bleu");

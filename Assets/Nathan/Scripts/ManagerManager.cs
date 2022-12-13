@@ -14,6 +14,7 @@ namespace Nathan
         public List<string> myMiniGames3 = new List<string>();
 
         public detectDrag dd;
+        public LevelManager lm;
 
         public accueil ac;
 
@@ -23,6 +24,9 @@ namespace Nathan
 
         public bool accueilScene = false;
 
+        //Pas ouf mais pas dégeu quand meme
+        public static ManagerManager GetManagerManager => FindObjectOfType<ManagerManager>();
+
         void Awake()
 
         {
@@ -31,6 +35,7 @@ namespace Nathan
             dd = FindObjectOfType<detectDrag>().GetComponent<detectDrag>();
 
             ac = FindObjectOfType<accueil>().GetComponent<accueil>();
+            
         }
 
         // Update is called once per frame
@@ -43,10 +48,10 @@ namespace Nathan
 
             dd = FindObjectOfType<detectDrag>().GetComponent<detectDrag>();
 
-            if (dd.switchMiniGame == true)
+            if (lm.switchMiniGame == true)
             {
                 changeMiniGame();
-                dd.switchMiniGame = false;
+                lm.switchMiniGame = false;
             }
         }
 
@@ -56,13 +61,13 @@ namespace Nathan
             {
                 if (myMiniGames1.Count == 0)
                 {
-                    dd.nextScene = "Accueil";
+                    lm.nextScene = "Accueil";
                 }
 
                 if (myMiniGames1.Count > 0)
                 {
                     randomMiniGames = Random.Range(0, myMiniGames1.Count);
-                    dd.nextScene = myMiniGames1[randomMiniGames];
+                    lm.nextScene = myMiniGames1[randomMiniGames];
                     myMiniGames1.Remove(myMiniGames1[randomMiniGames]);
                 }
             }
@@ -71,13 +76,13 @@ namespace Nathan
             {
                 if (myMiniGames2.Count == 0)
                 {
-                    dd.nextScene = "Accueil";
+                    lm.nextScene = "Accueil";
                 }
 
                 if (myMiniGames2.Count > 0)
                 {
                     randomMiniGames = Random.Range(0, myMiniGames2.Count);
-                    dd.nextScene = myMiniGames2[randomMiniGames];
+                    lm.nextScene = myMiniGames2[randomMiniGames];
                     myMiniGames2.Remove(myMiniGames2[randomMiniGames]);
                 }
             }
@@ -86,13 +91,13 @@ namespace Nathan
             {
                 if (myMiniGames3.Count == 0)
                 {
-                    dd.nextScene = "Accueil";
+                    lm.nextScene = "Accueil";
                 }
                 
                 if (myMiniGames3.Count > 0)
                 {
                     randomMiniGames = Random.Range(0, myMiniGames3.Count);
-                    dd.nextScene = myMiniGames3[randomMiniGames];
+                    lm.nextScene = myMiniGames3[randomMiniGames];
                     myMiniGames3.Remove(myMiniGames3[randomMiniGames]);
                 }
             }

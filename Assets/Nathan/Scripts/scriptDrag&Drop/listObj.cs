@@ -19,10 +19,13 @@ namespace Nathan
         public detectDrag dd;
 
         public GameObject objSelected;
+        private LevelManager lm;
 
         void Start()
         {
-            dd.scoreSceneNeed = dechetsVert.Count + dechetsJaune.Count;
+
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = dechetsVert.Count + dechetsJaune.Count;
         }
 
         // Update is called once per frame
@@ -38,7 +41,7 @@ namespace Nathan
                 dechetsJaune[objPoubelleJaune].SetActive(true);
             }
 
-            dd.scoreScene = objPoubelleVerte + objPoubelleJaune + 2;
+            lm.scoreScene = objPoubelleVerte + objPoubelleJaune + 2;
         }
     }
 }

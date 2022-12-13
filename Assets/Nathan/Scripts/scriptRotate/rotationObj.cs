@@ -6,16 +6,16 @@ namespace Nathan
 {
     public class rotationObj : MonoBehaviour
     {
-       public activeRotation ar;
-       public float getRotation;
-       public float lastRotation;
+        public activeRotation ar;
+        public float getRotation;
+        public float lastRotation;
 
-        public detectDrag dd;
+        private LevelManager lm;
 
         void Start()
         {
-            dd.nextScene = "balai";
-            dd.scoreSceneNeed = 1;
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = 1;
         }
 
         // Update is called once per frame
@@ -28,7 +28,7 @@ namespace Nathan
 
             if (getRotation >= 110)
             {
-                dd.gameFinish = true;
+                lm.GoToNextScene();
                 Destroy(this);
             }
 

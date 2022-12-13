@@ -14,14 +14,14 @@ namespace Nathan
         public string color;
 
         public GameObject lightOn;
-
-        public detectDrag dd;
-
         public wireManager wm;
+
+        private LevelManager lm;
         void Start()
         {
             posStart = transform.position;
-            dd.scoreSceneNeed = 3;
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = 3;
         }
 
         // Update is called once per frame
@@ -60,7 +60,7 @@ namespace Nathan
         public void Connected()
         {
             lightOn.SetActive(true);
-            dd.scoreScene++;
+            lm.scoreScene++;
             Destroy(this);
         }
 

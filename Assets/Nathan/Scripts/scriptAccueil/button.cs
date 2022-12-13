@@ -10,9 +10,6 @@ namespace Nathan
         public accueil ac;
 
         public SpriteRenderer sr;
-
-        public detectDrag dd;
-
         public ManagerManager gm;
 
         public int randomMiniGames;
@@ -21,9 +18,8 @@ namespace Nathan
 
         void Start()
         {
-            gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
-
-            dd.scoreSceneNeed = 1;
+            gm = ManagerManager.GetManagerManager;
+            gm.lm.scoreSceneNeed = 1;
         }
 
         // Update is called once per frame
@@ -47,7 +43,7 @@ namespace Nathan
             if (ac.moveCamera == false)
             {
                 gm.accueilScene = false;
-                dd.gameFinish = true;
+                ManagerManager.GetManagerManager.lm.GoToNextScene();
             }
         }
     }

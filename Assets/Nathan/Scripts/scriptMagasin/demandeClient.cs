@@ -15,7 +15,6 @@ namespace Nathan {
 
         public int goodObj = 0;
 
-        public detectDrag dd;
 
         public GameObject objSelected;
 
@@ -23,9 +22,12 @@ namespace Nathan {
 
         public bool objOn = false;
 
+        private LevelManager lm;
+
         void Start()
         {
-            dd.scoreSceneNeed = 2;
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = 2;
 
             objPossible.Add("cable");
             objPossible.Add("boite");
@@ -62,19 +64,10 @@ namespace Nathan {
             {
                 changeCmd = true;
                 goodObj = 0;
-                dd.scoreScene++;
+                lm.scoreScene++;
             }
 
 
         }
-
-        //public void demandeClient1()
-        //{
-        //    for (int i = 0; i < nbrObj; i++)
-        //    {
-        //        randomObj = Random.Range(0, objPossible.Count);
-        //        client[i] = objPossible[randomObj];
-        //    }
-        //}
     }
 }

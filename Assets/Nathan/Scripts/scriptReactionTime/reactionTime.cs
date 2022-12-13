@@ -20,10 +20,12 @@ namespace Nathan
 
         public List<GameObject> objPressed;
 
+        private LevelManager lm;
+
         void Start()
         {
-            dd.scoreSceneNeed = 5;
-            dd.nextScene = "Rotate";
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = 5;
         }
 
         // Update is called once per frame
@@ -31,7 +33,7 @@ namespace Nathan
         {
         counterChangeColor += 1 * Time.deltaTime;
 
-            dd.scoreScene = score;
+            lm.scoreScene = score;
 
             if (counterChangeColor >= timeBeetweenActivaction)
             {

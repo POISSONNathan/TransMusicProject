@@ -10,58 +10,17 @@ namespace Nathan
     {
         /// ////////////////////////////// 
         public TouchableObject currentTouchedObject;
-        public GameObject WinParticule;
         /// //////////////////////////////
-        public int scoreScene;
-        public int scoreSceneNeed;
-        public bool gameFinish = false;
-        public bool goNexwtGame = false;
-
-        public GameObject animWinEndGame;
-        public bool createAnim = false;
-
-        public GameObject animStartGame;
-        public bool createAnim2 = false;
-
-        public GameObject animStartGameReal;
-        public bool createAnim3 = false;
-
-        public string nextScene;
-
-        public bool switchMiniGame = false;
-
-        bool ParticleDone = false;
-
+        
         void Start()
         {
-            if (createAnim3 == false)
-            {
-                Instantiate(animStartGameReal, new Vector3(0, 0, 0), Quaternion.identity);
-                createAnim3 = true;
-            }
-
-            if (createAnim2 == false )
-            {
-                StartCoroutine(AnimText());
-            }
+   
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (scoreScene == scoreSceneNeed || gameFinish == true) 
-            {
-                if(ParticleDone == false)
-                {
-                    Instantiate(WinParticule, transform.position, Quaternion.identity);
-                    ParticleDone = true;
-                }
-                StartCoroutine(EndAnim());
-            }
-            if (goNexwtGame == true)
-            {
-                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
-            }
+    
 
             if (Input.touchCount > 0)
             {
@@ -94,30 +53,7 @@ namespace Nathan
             }
         }
 
-        IEnumerator EndGame()
-        {
-            yield return new WaitForSeconds(0.7f);
-            goNexwtGame = true;
-        }
-
-        IEnumerator AnimText()
-        {
-            yield return new WaitForSeconds(0.7f);
-            Instantiate(animStartGame, new Vector3(0, 0, 0), Quaternion.identity);
-            createAnim2 = true;
-        }
-
-        IEnumerator EndAnim()
-        {
-            yield return new WaitForSeconds(0.7f);
-            if (createAnim == false)
-            {
-                switchMiniGame = true;
-                Instantiate(animWinEndGame, new Vector3(0, 0, 0), Quaternion.identity);
-                createAnim = true;
-            }
-            StartCoroutine(EndGame());
-        }
+       
     }
 }
 
