@@ -21,6 +21,8 @@ namespace Nathan {
 
         public bool changeCmd = false;
 
+        public bool objOn = false;
+
         void Start()
         {
             dd.scoreSceneNeed = 3;
@@ -34,7 +36,7 @@ namespace Nathan {
 
             for (int i = 0; i < nbrObj; i++)
             {
-                randomObj = Random.Range(0, objPossible.Count - 1);
+                randomObj = Random.Range(0, objPossible.Count );
                 client.Add(objPossible[randomObj]);
             }
 
@@ -49,13 +51,21 @@ namespace Nathan {
                 demandeClient1();
                 changeCmd = false;
             }
+
+            if (goodObj == nbrObj)
+            {
+                changeCmd = true;
+                dd.scoreScene++;
+            }
+
+
         }
 
         public void demandeClient1()
         {
             for (int i = 0; i < nbrObj; i++)
             {
-                randomObj = Random.Range(0, objPossible.Count - 1);
+                randomObj = Random.Range(0, objPossible.Count);
                 client[i] = objPossible[randomObj];
             }
         }

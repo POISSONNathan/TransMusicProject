@@ -7,6 +7,7 @@ namespace Nathan {
     {
         public detectDrag dd;
 
+
         public Vector3 posStart;
 
         public bool drag = false;
@@ -26,6 +27,7 @@ namespace Nathan {
         // Update is called once per frame
         void Update()
         {
+            
             if (drag && dragPossible)
             {
                 Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -68,7 +70,6 @@ namespace Nathan {
                 }
             }
         }
-
 
         private void resetPos()
         {
