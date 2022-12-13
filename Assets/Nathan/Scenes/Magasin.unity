@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 288797651}
   - component: {fileID: 288797654}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: camMagasin
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,9 +380,9 @@ MonoBehaviour:
   goNexwtGame: 0
   animWinEndGame: {fileID: 6954178084021004802, guid: ffdc9733c1fc574438f079b7b6b3b790, type: 3}
   createAnim: 0
-  animStartGame: {fileID: 0}
+  animStartGame: {fileID: 7140452489770253682, guid: 59b7578c8d8a4a04ea9c3155c00d6f10, type: 3}
   createAnim2: 0
-  animStartGameReal: {fileID: 0}
+  animStartGameReal: {fileID: 7910283827848377148, guid: 8d98e7bf6c100a34bb74e369a4d15a1e, type: 3}
   createAnim3: 0
   nextScene: 
   switchMiniGame: 0
@@ -590,7 +590,6 @@ MonoBehaviour:
   - {fileID: 673966774}
   - {fileID: 894555330}
   - {fileID: 1930312587}
-  test: 0
 --- !u!1 &833678820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,6 +1147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d686ef329e160cd40a86d56795c915dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objPossible: []
   randomObj: 0
   client: []
   nbrObj: 2
@@ -1155,6 +1155,7 @@ MonoBehaviour:
   dd: {fileID: 288797654}
   objSelected: {fileID: 0}
   changeCmd: 0
+  objOn: 0
 --- !u!61 &970125914
 BoxCollider2D:
   m_ObjectHideFlags: 0
