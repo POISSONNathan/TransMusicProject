@@ -114,7 +114,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 716106449962838956, guid: a6fc3b3132f16454d9d0c25dfa314162, type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 716106450599194009, guid: a6fc3b3132f16454d9d0c25dfa314162, type: 3}
       propertyPath: Bouton

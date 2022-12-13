@@ -9,6 +9,8 @@ namespace Nathan
 
         public bool drag;
 
+        
+
         public Vector3 posStart;
 
         public bool trigger;
@@ -23,21 +25,16 @@ namespace Nathan
 
         public override void OnTouch(Touch touchInfo)
         {
-            if (touchInfo.phase == TouchPhase.Moved)
-            {
-                drag = true;
-            }
-            else
-            {
-                drag = false;
-            }
+            drag = true;
         }
-
-
         public override void TouchUp()
         {
             drag = false;
         }
+        
+
+
+        
         public void Start()
         {
             posStart = transform.position;
@@ -45,11 +42,28 @@ namespace Nathan
 
         private void Update()
         {
-            if (drag)
+            Touch touch = Input.GetTouch(0);
+            switch (touch.phase)
             {
-                Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                transform.Translate(MousePos);
+                //When a touch has first been detected, change the message and record the starting position
+                case TouchPhase.Began:
+                    
+                    
+                    break;
+                case TouchPhase.Moved:
+                    if (drag)
+                        {
+                            Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+                            transform.Translate(MousePos);
+                        }
+
+                    break;
+                case TouchPhase.Ended:
+                    drag = false;
+
+                    break;
             }
+            
 
             Vector2 currentPosition = transform.position;
 
