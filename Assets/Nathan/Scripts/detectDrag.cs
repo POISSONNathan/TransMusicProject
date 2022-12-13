@@ -51,6 +51,7 @@ namespace Nathan
         {
             if (scoreScene == scoreSceneNeed || gameFinish == true) 
             {
+
                 if (createAnim == false)
                 {
                     Instantiate(animWinEndGame, new Vector3(0, 0, 0), Quaternion.identity);
