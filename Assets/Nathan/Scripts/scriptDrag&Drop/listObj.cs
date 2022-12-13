@@ -23,7 +23,6 @@ namespace Nathan
         void Start()
         {
             dd.scoreSceneNeed = dechetsVert.Count + dechetsJaune.Count;
-            dd.nextScene = "Essuyer";
         }
 
         // Update is called once per frame

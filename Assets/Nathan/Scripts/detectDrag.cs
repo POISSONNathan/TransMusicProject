@@ -28,6 +28,8 @@ namespace Nathan
 
         public string nextScene;
 
+        public bool switchMiniGame = false;
+
         void Start()
         {
             if (createAnim3 == false)
@@ -49,11 +51,11 @@ namespace Nathan
             {
                 if (createAnim == false)
                 {
+                    switchMiniGame = true;
                     Instantiate(animWinEndGame, new Vector3(0, 0, 0), Quaternion.identity);
                     createAnim = true;
                 }
                 StartCoroutine(EndGame());
-                Debug.Log("rrz");
             }
             if (goNexwtGame == true)
             {

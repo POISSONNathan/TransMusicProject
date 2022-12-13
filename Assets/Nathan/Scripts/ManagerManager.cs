@@ -9,26 +9,42 @@ namespace Nathan
     {
         public List<string> myMiniGames1 = new List<string>();
 
-        public int scoreScene;
-        public int scoreSceneNeed;
-        public string nextScene;
+        public detectDrag dd;
 
-        void Start()
+        public int randomMiniGames;
+
+        void Awake()
 
         {
             DontDestroyOnLoad(gameObject);
 
-            myMiniGames1.Add("Essuyer");
+            myMiniGames1.Add("Drage&Drop");
             myMiniGames1.Add("Fils");
-            myMiniGames1.Add("Lumière");
             myMiniGames1.Add("balai");
-            
 
+            dd = FindObjectOfType<detectDrag>().GetComponent<detectDrag>();
+            dd.switchMiniGame = true;
         }
 
         // Update is called once per frame
         void Update()
         {
+            dd = FindObjectOfType<detectDrag>().GetComponent<detectDrag>();
+
+            if (dd.switchMiniGame == true)
+            {
+                changeMiniGame();
+                dd.switchMiniGame = false;
+            }   
+
+            if (myMiniGames1.Count > 0)
+            {
+                dd.nextScene = myMiniGames1[randomMiniGames];
+            }
+            if (myMiniGames1.Count == 0)
+            {
+                dd.nextScene = "Accueil";
+            }
 
 
             // POUR RECUPERER LE GAMEOBEJCT DANS LE SCIRPY
@@ -36,6 +52,15 @@ namespace Nathan
 
             //gm = FindObjectOfType<ManagerManager>();
             //gm.scoreSceneNeed = 1;
+        }
+
+        void changeMiniGame()
+        {
+            if (myMiniGames1.Count > 0)
+            {
+                randomMiniGames = Random.Range(0, myMiniGames1.Count);
+                myMiniGames1.Remove(myMiniGames1[randomMiniGames]);
+            }
         }
     }
 }
