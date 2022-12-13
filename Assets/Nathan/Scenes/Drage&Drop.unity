@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuPause
       objectReference: {fileID: 0}
+    - target: {fileID: 7140912690759637933, guid: 4f50ccc59aa0a5a43986af132cb042fe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f50ccc59aa0a5a43986af132cb042fe, type: 3}
 --- !u!1 &332489625
@@ -392,7 +396,7 @@ MonoBehaviour:
   posStart: {x: 0, y: 0, z: 0}
   trigger: 0
   dd: {fileID: 519420034}
-  lo: {fileID: 2041175117}
+  lo: {fileID: 2041175119}
 --- !u!50 &439093221
 Rigidbody2D:
   serializedVersion: 4
@@ -542,7 +546,7 @@ MonoBehaviour:
   posStart: {x: 0, y: 0, z: 0}
   trigger: 0
   dd: {fileID: 519420034}
-  lo: {fileID: 2041175117}
+  lo: {fileID: 2041175119}
 --- !u!50 &440799139
 Rigidbody2D:
   serializedVersion: 4
@@ -673,6 +677,7 @@ MonoBehaviour:
   animStartGameReal: {fileID: 7910283827848377148, guid: 8d98e7bf6c100a34bb74e369a4d15a1e, type: 3}
   createAnim3: 0
   nextScene: 
+  switchMiniGame: 0
 --- !u!1 &547321274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,7 +1410,7 @@ MonoBehaviour:
   posStart: {x: 0, y: 0, z: 0}
   trigger: 0
   dd: {fileID: 519420034}
-  lo: {fileID: 2041175117}
+  lo: {fileID: 2041175119}
 --- !u!50 &1221232667
 Rigidbody2D:
   serializedVersion: 4
@@ -1753,7 +1758,7 @@ MonoBehaviour:
   posStart: {x: 0, y: 0, z: 0}
   trigger: 0
   dd: {fileID: 519420034}
-  lo: {fileID: 2041175117}
+  lo: {fileID: 2041175119}
 --- !u!50 &1622083638
 Rigidbody2D:
   serializedVersion: 4
@@ -1853,7 +1858,7 @@ Transform:
   m_GameObject: {fileID: 1798167104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.00937464, y: -1.759295, z: 0}
-  m_LocalScale: {x: 1.0296831, y: 1.0296831, z: 1.0296831}
+  m_LocalScale: {x: 1.0296832, y: 1.0296832, z: 1.0296832}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1602620999}
@@ -1987,7 +1992,7 @@ MonoBehaviour:
   posStart: {x: 0, y: 0, z: 0}
   trigger: 0
   dd: {fileID: 519420034}
-  lo: {fileID: 2041175117}
+  lo: {fileID: 2041175119}
 --- !u!50 &1978788431
 Rigidbody2D:
   serializedVersion: 4
@@ -2018,7 +2023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2041175118}
-  - component: {fileID: 2041175117}
+  - component: {fileID: 2041175119}
   m_Layer: 0
   m_Name: listObj
   m_TagString: Untagged
@@ -2026,31 +2031,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2041175117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041175116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d108a6ba27c1d24499e183e2970aa94e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objARecycler: []
-  objPoubelleVerte: -1
-  objPoubelleJaune: -1
-  dechetsVert:
-  - {fileID: 1352269187}
-  - {fileID: 1798167104}
-  - {fileID: 1135333366}
-  dechetsJaune:
-  - {fileID: 793167670}
-  - {fileID: 332489625}
-  - {fileID: 564609411}
-  dd: {fileID: 519420034}
-  objSelected: {fileID: 0}
 --- !u!4 &2041175118
 Transform:
   m_ObjectHideFlags: 0
@@ -2066,6 +2046,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041175119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041175116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4abf6c1d4c9e5440b655328681cf404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objARecycler: []
+  objPoubelleVerte: -1
+  objPoubelleJaune: -1
+  dechetsVert:
+  - {fileID: 1352269187}
+  - {fileID: 1798167104}
+  - {fileID: 564609411}
+  dechetsJaune:
+  - {fileID: 793167670}
+  - {fileID: 332489625}
+  - {fileID: 564609411}
+  dd: {fileID: 519420034}
+  objSelected: {fileID: 0}
 --- !u!1 &2084156938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2194,7 +2199,7 @@ MonoBehaviour:
   posStart: {x: 0, y: 0, z: 0}
   trigger: 0
   dd: {fileID: 519420034}
-  lo: {fileID: 2041175117}
+  lo: {fileID: 2041175119}
 --- !u!50 &2084156943
 Rigidbody2D:
   serializedVersion: 4

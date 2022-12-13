@@ -11,11 +11,17 @@ namespace Nathan {
 
         public List<string> client = new List<string>();
 
-        public int nbrObj = 3;
+        public int nbrObj = 2;
+
+        public int goodObj = 0;
 
         public detectDrag dd;
 
-    void Start()
+        public GameObject objSelected;
+
+        public bool changeCmd = false;
+
+        void Start()
         {
             dd.scoreSceneNeed = 3;
 
@@ -38,14 +44,19 @@ namespace Nathan {
         // Update is called once per frame
         void Update()
         {
-
+            if (changeCmd == true)
+            {
+                demandeClient1();
+                changeCmd = false;
+            }
         }
 
-        void resetClient()
+        public void demandeClient1()
         {
-            for (int i = 0; i < client.Count; i++)
+            for (int i = 0; i < nbrObj; i++)
             {
-                client.Remove(client[i]);
+                randomObj = Random.Range(0, objPossible.Count - 1);
+                client[i] = objPossible[randomObj];
             }
         }
     }
