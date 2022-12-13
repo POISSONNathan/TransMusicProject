@@ -878,6 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTouchedObject: {fileID: 0}
+  WinParticule: {fileID: 6526580923330962994, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
   scoreScene: 0
   scoreSceneNeed: 0
   gameFinish: 0
@@ -890,60 +891,3 @@ MonoBehaviour:
   createAnim3: 0
   nextScene: 
   switchMiniGame: 0
---- !u!1001 &6526580922623708159
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6526580923330962991, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526580923330962991, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526580923330962991, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526580923330962991, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526580923330962991, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526580923330962991, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526580923330962991, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526580923330962991, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526580923330962991, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526580923330962991, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526580923330962991, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6526580923330962994, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-      propertyPath: m_Name
-      value: ParticleWin
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}

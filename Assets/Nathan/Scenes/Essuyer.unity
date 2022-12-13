@@ -547,6 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTouchedObject: {fileID: 0}
+  WinParticule: {fileID: 6526580923330962994, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
   scoreScene: 0
   scoreSceneNeed: 0
   gameFinish: 0
@@ -558,6 +559,7 @@ MonoBehaviour:
   animStartGameReal: {fileID: 7910283827848377148, guid: 8d98e7bf6c100a34bb74e369a4d15a1e, type: 3}
   createAnim3: 0
   nextScene: 
+  switchMiniGame: 0
 --- !u!1 &1422326836
 GameObject:
   m_ObjectHideFlags: 0
