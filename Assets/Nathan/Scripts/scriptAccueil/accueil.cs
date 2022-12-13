@@ -20,8 +20,17 @@ namespace Nathan
         public bool selectPossible = true;
         public int levelSelect = 0;
 
+        public ManagerManager gm;
+
         void Start()
         {
+            gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
+
+            gm.myMiniGames1.Add("Drage&Drop");
+            gm.myMiniGames1.Add("Fils");
+            gm.myMiniGames1.Add("balai");
+            gm.myMiniGames1.Add("Essuyer");
+
         }
 
         void Update()

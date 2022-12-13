@@ -20,7 +20,6 @@ namespace Nathan
         {   
             initialPosition = transform.position;
             dd.scoreSceneNeed = 3;
-            dd.nextScene = "Accueil";
         }
 
         // Update is called once per frame
