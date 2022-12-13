@@ -17,6 +17,8 @@ namespace Nathan
 
         public int randomMiniGames;
 
+        public GameObject buttonOn;
+
         void Start()
         {
             gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
@@ -31,12 +33,12 @@ namespace Nathan
 
             if (ac.moveCamera == false)
             {
-                sr.color = Color.green;
+                buttonOn.SetActive(true);
             }
 
             if (ac.moveCamera == true)
             {
-                sr.color = Color.grey;
+                buttonOn.SetActive(false);
             }
         }
 
