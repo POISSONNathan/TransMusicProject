@@ -8,8 +8,9 @@ namespace Nathan
         public class BoutonPause : TouchableObject
     {
         public GameObject menu;
-            // Start is called before the first frame update
-            void Start()
+        public GameObject FondPause;
+        // Start is called before the first frame update
+        void Start()
         {
             this.GetComponent<Animator>().Play("");
         }
@@ -24,6 +25,8 @@ namespace Nathan
         {
             menu.GetComponent<Animator>().Play("MenuOpening");
             this.GetComponent<Animator>().Play("ButtonPause");
+            FondPause.GetComponent<Animator>().Play("FondShadeIn");
+            Debug.Log("oui");
         }
 
     }
