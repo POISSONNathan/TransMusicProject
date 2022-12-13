@@ -28,6 +28,8 @@ namespace Nathan
 
         public string nextScene;
 
+        public bool switchMiniGame = false;
+
         void Start()
         {
             if (createAnim3 == false)
@@ -40,6 +42,8 @@ namespace Nathan
             {
                 StartCoroutine(AnimText());
             }
+
+            switchMiniGame = true;
         }
 
         // Update is called once per frame
@@ -53,7 +57,6 @@ namespace Nathan
                     createAnim = true;
                 }
                 StartCoroutine(EndGame());
-                Debug.Log("rrz");
             }
             if (goNexwtGame == true)
             {

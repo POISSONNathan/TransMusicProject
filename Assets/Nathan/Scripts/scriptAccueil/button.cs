@@ -20,15 +20,12 @@ namespace Nathan
         void Start()
         {
             dd.scoreSceneNeed = 1;
-            gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
 
-            randomMiniGames = Random.Range(0,4);
         }
 
         // Update is called once per frame
         void Update()
         {
-            dd.nextScene = gm.myMiniGames1[randomMiniGames];
 
 
             if (ac.moveCamera == false)

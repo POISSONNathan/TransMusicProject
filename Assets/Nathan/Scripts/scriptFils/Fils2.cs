@@ -21,7 +21,6 @@ namespace Nathan
         void Start()
         {
             posStart = transform.position;
-            dd.nextScene = "Lumière";
             dd.scoreSceneNeed = 3;
         }
 
