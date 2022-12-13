@@ -18,10 +18,6 @@ namespace Nathan
         {
             DontDestroyOnLoad(gameObject);
 
-            myMiniGames1.Add("Drage&Drop");
-            myMiniGames1.Add("Fils");
-            myMiniGames1.Add("balai");
-
             dd = FindObjectOfType<detectDrag>().GetComponent<detectDrag>();
             dd.switchMiniGame = true;
         }
@@ -35,30 +31,20 @@ namespace Nathan
             {
                 changeMiniGame();
                 dd.switchMiniGame = false;
-            }   
-
-            if (myMiniGames1.Count > 0)
-            {
-                dd.nextScene = myMiniGames1[randomMiniGames];
             }
+        }
+
+        void changeMiniGame()
+        {
             if (myMiniGames1.Count == 0)
             {
                 dd.nextScene = "Accueil";
             }
 
-
-            // POUR RECUPERER LE GAMEOBEJCT DANS LE SCIRPY
-            //public ManagerManager gm;
-
-            //gm = FindObjectOfType<ManagerManager>();
-            //gm.scoreSceneNeed = 1;
-        }
-
-        void changeMiniGame()
-        {
             if (myMiniGames1.Count > 0)
             {
                 randomMiniGames = Random.Range(0, myMiniGames1.Count);
+                dd.nextScene = myMiniGames1[randomMiniGames];
                 myMiniGames1.Remove(myMiniGames1[randomMiniGames]);
             }
         }

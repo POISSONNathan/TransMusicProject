@@ -7,6 +7,7 @@ namespace Nathan
     public class wireManager : MonoBehaviour
     {
         public GameObject currentWire;
+
         void Start()
         {
 
