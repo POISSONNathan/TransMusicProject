@@ -2,45 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class demandeClient : MonoBehaviour
-{
-    private List<string> objPossible = new List<string>();
+namespace Nathan {
+    public class demandeClient : MonoBehaviour
+    {
+        private List<string> objPossible = new List<string>();
 
-    public int randomObj;
+        public int randomObj;
 
-    public List<string> client = new List<string>();
+        public List<string> client = new List<string>();
 
-    public int nbrObj = 3;
+        public int nbrObj = 3;
+
+        public detectDrag dd;
 
     void Start()
-    {
-        objPossible.Add("cable");
-        objPossible.Add("boite");
-        objPossible.Add("outil");
-        objPossible.Add("bois");
-        objPossible.Add("proj");
-        objPossible.Add("micro");
-
-        for (int i = 0; i < nbrObj; i++)
         {
-            randomObj = Random.Range(0, objPossible.Count - 1);
-            client.Add(objPossible[randomObj]);
+            dd.scoreSceneNeed = 3;
+
+            objPossible.Add("cable");
+            objPossible.Add("boite");
+            objPossible.Add("outil");
+            objPossible.Add("bois");
+            objPossible.Add("proj");
+            objPossible.Add("micro");
+
+            for (int i = 0; i < nbrObj; i++)
+            {
+                randomObj = Random.Range(0, objPossible.Count - 1);
+                client.Add(objPossible[randomObj]);
+            }
+
+
         }
 
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    void resetClient()
-    {
-        for (int i = 0; i < client.Count; i++)
+        // Update is called once per frame
+        void Update()
         {
-            client.Remove(client[i]);
+
+        }
+
+        void resetClient()
+        {
+            for (int i = 0; i < client.Count; i++)
+            {
+                client.Remove(client[i]);
+            }
         }
     }
 }

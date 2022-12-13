@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb42366077f0b440ae30f9dbf550262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dd: {fileID: 0}
+  dd: {fileID: 288797654}
   posStart: {x: 0, y: 0, z: 0}
   drag: 0
   trigger: 0
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb42366077f0b440ae30f9dbf550262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dd: {fileID: 0}
+  dd: {fileID: 288797654}
   posStart: {x: 0, y: 0, z: 0}
   drag: 0
   trigger: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb42366077f0b440ae30f9dbf550262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dd: {fileID: 0}
+  dd: {fileID: 288797654}
   posStart: {x: 0, y: 0, z: 0}
   drag: 0
   trigger: 0
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb42366077f0b440ae30f9dbf550262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dd: {fileID: 0}
+  dd: {fileID: 288797654}
   posStart: {x: 0, y: 0, z: 0}
   drag: 0
   trigger: 0
@@ -734,7 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb42366077f0b440ae30f9dbf550262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dd: {fileID: 0}
+  dd: {fileID: 288797654}
   posStart: {x: 0, y: 0, z: 0}
   drag: 0
   trigger: 0
@@ -1200,7 +1200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb42366077f0b440ae30f9dbf550262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dd: {fileID: 0}
+  dd: {fileID: 288797654}
   posStart: {x: 0, y: 0, z: 0}
   drag: 0
   trigger: 0
