@@ -38,6 +38,8 @@ namespace Nathan
             gm.myMiniGames3.Add("ReactionTime");
             gm.myMiniGames3.Add("Lumière");
 
+            gm.accueilScene = true;
+
         }
 
         void Update()

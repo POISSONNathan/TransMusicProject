@@ -21,6 +21,8 @@ namespace Nathan
 
         public int currentLevel;
 
+        public bool accueilScene = false;
+
         void Awake()
 
         {
@@ -34,9 +36,10 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            currentLevel = ac.levelSelect;
-
-            Debug.Log(ac.levelSelect);
+            if (accueilScene == true)
+            {
+                currentLevel = ac.levelSelect;
+            }
 
             dd = FindObjectOfType<detectDrag>().GetComponent<detectDrag>();
 

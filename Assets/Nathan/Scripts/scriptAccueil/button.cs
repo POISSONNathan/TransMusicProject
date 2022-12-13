@@ -19,8 +19,9 @@ namespace Nathan
 
         void Start()
         {
-            dd.scoreSceneNeed = 1;
+            gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
 
+            dd.scoreSceneNeed = 1;
         }
 
         // Update is called once per frame
@@ -43,6 +44,7 @@ namespace Nathan
         {
             if (ac.moveCamera == false)
             {
+                gm.accueilScene = false;
                 dd.gameFinish = true;
             }
         }
