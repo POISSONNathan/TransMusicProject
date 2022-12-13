@@ -16,6 +16,8 @@ namespace Nathan
 
         public GameObject buttonOn;
 
+        public bool touchOneTime = false;
+
         void Start()
         {
             gm = ManagerManager.GetManagerManager;
@@ -23,7 +25,7 @@ namespace Nathan
         }
 
         // Update is called once per frame
-        void Update()
+        void Update() 
         {
 
 
@@ -39,6 +41,15 @@ namespace Nathan
         }
 
         public override void OnTouch(Touch touchinfo)
+        {
+            if (ac.moveCamera == false && touchOneTime == false)
+            {
+                touchOneTime = true;
+                gm.accueilScene = false;
+                ManagerManager.GetManagerManager.lm.GoToNextScene();
+            }
+        }
+        public override void TouchUp()
         {
             if (ac.moveCamera == false)
             {

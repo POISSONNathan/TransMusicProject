@@ -3,49 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
+namespace Nathan
 {
-
-    public Animator startCurtain, endCurtain;
-    public int scoreScene;
-    public int scoreSceneNeed;
-    public bool goNexwtGame = false;
-
-    public string nextScene;
-    public bool switchMiniGame = false;
-
-    public ParticleSystem WinParticule;
-
-    public Animator animator;
-
-    // Start is called before the first frame update
-    void ResetComponent()
+    public class LevelManager : MonoBehaviour
     {
-        scoreScene = 0;
-        goNexwtGame = false;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (scoreScene == scoreSceneNeed)
+        //public animator startcurtain, endcurtain;
+        public int scoreScene;
+        public int scoreSceneNeed;
+        public bool goNexwtGame = false;
+
+        public string nextScene;
+        public bool switchMiniGame = false;
+
+        public bool switchOneTime = false;
+
+        public ParticleSystem WinParticule;
+
+        public Animator animator;
+
+        public void ResetComponent()
         {
-            GoToNextScene();
+            scoreScene = 0;
+            goNexwtGame = false;
         }
-    }
 
-    public void GoToNextScene()
-    {
-        Instantiate(WinParticule, transform.position, Quaternion.identity);
-        switchMiniGame = true;
-        animator.SetTrigger("End");
-    }
+        void Update()
+        {
+            if (scoreScene == scoreSceneNeed)
+            {
+                GoToNextScene();
+            }
+        }
 
-    private void LaunchEndOfScene()
-    {
-        Debug.Log("coucou");
-        ResetComponent();
-        SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
-    }
-    
+        public void GoToNextScene()
+        {
+            ResetComponent();
+            //Instantiate(WinParticule, transform.position, Quaternion.identity);
+            if (switchOneTime == false)
+            {
+                switchMiniGame = true;
+                switchOneTime = true;
+                animator.SetTrigger("End");
+            }
+
+        }
+
+        private void LaunchEndOfScene()
+        {
+            switchOneTime = false;
+            SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+        }
+    } 
 }
