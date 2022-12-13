@@ -10,7 +10,7 @@ namespace Nathan
     {
         /// ////////////////////////////// 
         public TouchableObject currentTouchedObject;
-
+        public GameObject WinParticule;
         /// //////////////////////////////
         public int scoreScene;
         public int scoreSceneNeed;
@@ -29,6 +29,8 @@ namespace Nathan
         public string nextScene;
 
         public bool switchMiniGame = false;
+
+        bool ParticleDone = false;
 
         void Start()
         {
@@ -49,14 +51,12 @@ namespace Nathan
         {
             if (scoreScene == scoreSceneNeed || gameFinish == true) 
             {
-
-                if (createAnim == false)
+                if(ParticleDone == false)
                 {
-                    switchMiniGame = true;
-                    Instantiate(animWinEndGame, new Vector3(0, 0, 0), Quaternion.identity);
-                    createAnim = true;
+                    Instantiate(WinParticule, transform.position, Quaternion.identity);
+                    ParticleDone = true;
                 }
-                StartCoroutine(EndGame());
+                StartCoroutine(EndAnim());
             }
             if (goNexwtGame == true)
             {
@@ -105,6 +105,18 @@ namespace Nathan
             yield return new WaitForSeconds(0.7f);
             Instantiate(animStartGame, new Vector3(0, 0, 0), Quaternion.identity);
             createAnim2 = true;
+        }
+
+        IEnumerator EndAnim()
+        {
+            yield return new WaitForSeconds(0.7f);
+            if (createAnim == false)
+            {
+                switchMiniGame = true;
+                Instantiate(animWinEndGame, new Vector3(0, 0, 0), Quaternion.identity);
+                createAnim = true;
+            }
+            StartCoroutine(EndGame());
         }
     }
 }
