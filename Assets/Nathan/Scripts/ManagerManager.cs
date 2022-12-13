@@ -9,33 +9,91 @@ namespace Nathan
     {
         public List<string> myMiniGames1 = new List<string>();
 
-        public int scoreScene;
-        public int scoreSceneNeed;
-        public string nextScene;
+        public List<string> myMiniGames2 = new List<string>();
 
-        void Start()
+        public List<string> myMiniGames3 = new List<string>();
+
+        public detectDrag dd;
+
+        public accueil ac;
+
+        public int randomMiniGames;
+
+        public int currentLevel;
+
+        void Awake()
 
         {
             DontDestroyOnLoad(gameObject);
 
-            myMiniGames1.Add("Essuyer");
-            myMiniGames1.Add("Fils");
-            myMiniGames1.Add("Lumière");
-            myMiniGames1.Add("balai");
-            
+            dd = FindObjectOfType<detectDrag>().GetComponent<detectDrag>();
 
+            ac = FindObjectOfType<accueil>().GetComponent<accueil>();
         }
 
         // Update is called once per frame
         void Update()
         {
+            currentLevel = ac.levelSelect;
 
+            Debug.Log(ac.levelSelect);
 
-            // POUR RECUPERER LE GAMEOBEJCT DANS LE SCIRPY
-            //public ManagerManager gm;
+            dd = FindObjectOfType<detectDrag>().GetComponent<detectDrag>();
 
-            //gm = FindObjectOfType<ManagerManager>();
-            //gm.scoreSceneNeed = 1;
+            if (dd.switchMiniGame == true)
+            {
+                changeMiniGame();
+                dd.switchMiniGame = false;
+            }
+        }
+
+        void changeMiniGame()
+        {
+            if (currentLevel == 0)
+            {
+                if (myMiniGames1.Count == 0)
+                {
+                    dd.nextScene = "Accueil";
+                }
+
+                if (myMiniGames1.Count > 0)
+                {
+                    randomMiniGames = Random.Range(0, myMiniGames1.Count);
+                    dd.nextScene = myMiniGames1[randomMiniGames];
+                    myMiniGames1.Remove(myMiniGames1[randomMiniGames]);
+                }
+            }
+            //////
+            if (currentLevel == 1)
+            {
+                if (myMiniGames2.Count == 0)
+                {
+                    dd.nextScene = "Accueil";
+                }
+
+                if (myMiniGames2.Count > 0)
+                {
+                    randomMiniGames = Random.Range(0, myMiniGames2.Count);
+                    dd.nextScene = myMiniGames2[randomMiniGames];
+                    myMiniGames2.Remove(myMiniGames2[randomMiniGames]);
+                }
+            }
+            //////
+            if (currentLevel == 2)
+            {
+                if (myMiniGames3.Count == 0)
+                {
+                    dd.nextScene = "Accueil";
+                }
+                
+                if (myMiniGames3.Count > 0)
+                {
+                    randomMiniGames = Random.Range(0, myMiniGames3.Count);
+                    dd.nextScene = myMiniGames3[randomMiniGames];
+                    myMiniGames3.Remove(myMiniGames3[randomMiniGames]);
+                }
+            }
+            //////
         }
     }
 }

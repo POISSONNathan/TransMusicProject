@@ -36,7 +36,7 @@ namespace Nathan {
 
         void Start()
         {
-            dd.scoreSceneNeed = 3;
+            dd.scoreSceneNeed = 2;
 
             listColor.Add("orange");
             listColor.Add("bleu");
