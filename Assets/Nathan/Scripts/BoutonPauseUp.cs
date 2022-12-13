@@ -9,6 +9,7 @@ namespace Nathan
     {
         public GameObject menu2;
         public GameObject Bouton;
+        public GameObject FondPause2;
 
         // Start is called before the first frame update
         void Start()
@@ -25,7 +26,9 @@ namespace Nathan
         public override void OnTouch(Touch touchinfo)
         {
             menu2.GetComponent<Animator>().Play("MenuClosingVersion2");
-            Bouton.SetActive(true);
+            Bouton.GetComponent<Animator>().Play("ButtonPauseDown");
+            FondPause2.GetComponent<Animator>().Play("FondShadeOut");
+            Debug.Log("oui");
         }
     }
 }
