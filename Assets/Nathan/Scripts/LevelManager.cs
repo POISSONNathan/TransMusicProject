@@ -39,7 +39,10 @@ namespace Nathan
         public void GoToNextScene()
         {
             ResetComponent();
-            //Instantiate(WinParticule, transform.position, Quaternion.identity);
+            if((SceneManager.GetActiveScene().name) != "Accueil")
+            {
+                Instantiate(WinParticule, transform.position, Quaternion.identity);
+            }
             if (switchOneTime == false)
             {
                 switchMiniGame = true;
