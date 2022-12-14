@@ -95,7 +95,6 @@ namespace Nathan {
 
         public override void TouchUp()
         {
-            Debug.Log(gameObject.name);
             drag = false;
             dc.objSelected = null;
 

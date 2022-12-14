@@ -23,7 +23,7 @@ namespace Nathan
             lm = ManagerManager.GetManagerManager.lm;
             lm.scoreSceneNeed = 3;
 
-            lm.secondMiniGame = 12;
+            lm.secondMiniGame = 8;
         }
 
         // Update is called once per frame
