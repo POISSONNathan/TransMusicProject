@@ -24,10 +24,26 @@ namespace Nathan
 
         public bool playAnimOneTime = false;
 
+        private float timerGame = 0;
+        public float seconds = 0;
+
+
+        private float currentTimer = 0;
+        public float currentSecond = 0;
+
+        public bool startTimerMiniGame1 = false;
+
+        public float lastTimerMiniGame1;
+        public float bestTimerMiniGame1;
+
+
+        public int secondMiniGame;
+
         public void ResetComponent()
         {
             scoreScene = 0;
-            Debug.Log(scoreScene);
+            timerGame = 0;
+            seconds = 0;
             goNexwtGame = false;
         }
 
@@ -38,7 +54,40 @@ namespace Nathan
                 GoToNextScene();
             }
 
-            if(oldLevel != SceneManager.GetActiveScene().name)
+            if ((SceneManager.GetActiveScene().name) != "Accueil" && (SceneManager.GetActiveScene().name) != "1Start" )
+            {
+                timerGame += Time.deltaTime;
+                seconds = timerGame % 60;
+
+                if (seconds == secondMiniGame)
+                {
+                    GoToNextScene();
+                }
+            }
+
+            if (startTimerMiniGame1 == true)
+            {
+                currentTimer += Time.deltaTime;
+                currentTimer = currentTimer % 60;
+                lastTimerMiniGame1 = currentSecond;
+            }
+            if (startTimerMiniGame1 == false)
+            {
+                if (lastTimerMiniGame1 > bestTimerMiniGame1)
+                {
+                    bestTimerMiniGame1 = lastTimerMiniGame1;
+                }
+            }
+
+            if (startTimerMiniGame1 == true)
+            {
+                currentTimer = 0;
+                currentSecond = 0;
+            }
+
+
+
+            if (oldLevel != SceneManager.GetActiveScene().name)
             {
                 oldLevel = SceneManager.GetActiveScene().name;
                 ResetComponent();
