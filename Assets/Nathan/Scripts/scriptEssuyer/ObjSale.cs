@@ -8,8 +8,6 @@ namespace Nathan
     {
         public SpriteRenderer sr;
 
-        public detectDrag dd;
-
         public Essuyer objEssuie;
 
         public float pourcent = 1f;
@@ -17,20 +15,22 @@ namespace Nathan
         public bool essuieOrNot = false;
 
         public int tempsEssuie;
+        private LevelManager lm;
 
         void Start()
         {
-            dd.scoreSceneNeed = 5;
+
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = 5;
         }
 
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(pourcent);
 
             if (pourcent < 0)
             {
-                dd.scoreScene++; ;
+                lm.scoreScene++; ;
                 Destroy(this);
             }
 

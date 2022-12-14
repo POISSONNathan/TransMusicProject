@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 35
+  controlID: 103
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 36
+  controlID: 104
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 37
+  controlID: 56
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 38
+  controlID: 57
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -239,8 +239,8 @@ MonoBehaviour:
     y: 0
     width: 1458
     height: 565
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 16}
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -266,16 +266,16 @@ MonoBehaviour:
     y: 565
     width: 1937
     height: 382
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 17}
   - {fileID: 13}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -426,9 +426,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b62e0100
-      m_LastClickedID: 77494
-      m_ExpandedIDs: 325fffff4c71ffff0875ffffe676ffff6a7cffff727ffffff080ffffb882ffff7ab1ffffe8b2ffff10b7fffff4ffffffdcbf0000
+      m_SelectedIDs: 1a660000
+      m_LastClickedID: 0
+      m_ExpandedIDs: bcf3ffff2af7ffff6af7ffffaaf7ffffeaf7ffff72f8ffffb2f8ffff3cf9ffff7cf9fffffcfaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -699,9 +699,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -9.699391, y: 0.10015619, z: 0.08352204}
+    m_Target: {x: 3.048542, y: 0.5791615, z: -3.1648886}
     speed: 2
-    m_Value: {x: -9.699391, y: 0.10015619, z: 0.08352204}
+    m_Value: {x: 3.048542, y: 0.5791615, z: -3.1648886}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -752,9 +752,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.8249063
+    m_Target: 7.0632396
     speed: 2
-    m_Value: 4.8249063
+    m_Value: 7.0632396
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -943,14 +943,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Nathan/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\NATHAN\TransM
+  m_LastProjectPath: C:\Users\game\Documents\TransMusicProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 40a90000
-    m_LastClickedID: 43328
-    m_ExpandedIDs: 00000000faa8000000a9000042a9000000ca9a3bffffff7f
+    m_SelectedIDs: f2650000
+    m_LastClickedID: 26098
+    m_ExpandedIDs: 00000000aa650000b065000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1003,8 +1003,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: aa2e0100
-    m_LastClickedInstanceID: 77482
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000687a00008c3201002a630000
     m_RenameOverlay:

@@ -221,17 +221,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTouchedObject: {fileID: 0}
+  WinParticule: {fileID: 6526580923330962994, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
   scoreScene: 0
-  scoreSceneNeed: 0
+  scoreSceneNeed: 5
   gameFinish: 0
   goNexwtGame: 0
-  animWinEndGame: {fileID: 0}
+  animWinEndGame: {fileID: 6954178084021004802, guid: ffdc9733c1fc574438f079b7b6b3b790, type: 3}
   createAnim: 0
-  animStartGame: {fileID: 0}
+  animStartGame: {fileID: 7910283827848377148, guid: 8d98e7bf6c100a34bb74e369a4d15a1e, type: 3}
   createAnim2: 0
   animStartGameReal: {fileID: 0}
   createAnim3: 0
   nextScene: 
+  switchMiniGame: 0
 --- !u!1 &627528711
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,6 +263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a438254b0ebfada4997f82c14f9bf7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myGuest: {fileID: 2202499976624639790, guid: 99b572a836f5dac4c81ea3dc2d54cce7, type: 3}
+  speed: 3
 --- !u!4 &627528713
 Transform:
   m_ObjectHideFlags: 0
@@ -269,7 +273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627528711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.78, y: 1.27, z: 1.225152}
+  m_LocalPosition: {x: 3.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -409,9 +413,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372203731}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -3.64, z: 0}
-  m_LocalScale: {x: 4.88585, y: 2.812, z: 2.812}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.00999999, y: -3.64, z: 0}
+  m_LocalScale: {x: 4.88585, y: 2.8120003, z: 2.812}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

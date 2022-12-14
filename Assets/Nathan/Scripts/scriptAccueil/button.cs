@@ -10,40 +10,51 @@ namespace Nathan
         public accueil ac;
 
         public SpriteRenderer sr;
-
-        public detectDrag dd;
-
         public ManagerManager gm;
 
         public int randomMiniGames;
 
+        public GameObject buttonOn;
+
+        public bool touchOneTime = false;
+
         void Start()
         {
-            dd.scoreSceneNeed = 1;
-
+            gm = ManagerManager.GetManagerManager;
+            gm.lm.scoreSceneNeed = 1;
         }
 
         // Update is called once per frame
-        void Update()
+        void Update() 
         {
 
 
             if (ac.moveCamera == false)
             {
-                sr.color = Color.green;
+                buttonOn.SetActive(true);
             }
 
             if (ac.moveCamera == true)
             {
-                sr.color = Color.grey;
+                buttonOn.SetActive(false);
             }
         }
 
         public override void OnTouch(Touch touchinfo)
         {
-            if (ac.levelSelect == 0 && ac.moveCamera == false)
+            if (ac.moveCamera == false && touchOneTime == false)
             {
-                dd.gameFinish = true;
+                touchOneTime = true;
+                gm.accueilScene = false;
+                ManagerManager.GetManagerManager.lm.GoToNextScene();
+            }
+        }
+        public override void TouchUp()
+        {
+            if (ac.moveCamera == false)
+            {
+                gm.accueilScene = false;
+                ManagerManager.GetManagerManager.lm.GoToNextScene();
             }
         }
     }

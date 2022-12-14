@@ -13,17 +13,18 @@ namespace Nathan
 
         public merchDemande md;
 
-        public detectDrag dd;
 
         public bool dragPossible = false;
         public bool drag = false;
         public bool trigger = false;
 
         public Vector3 posStart;
-
+        private LevelManager lm;
 
         void Start()
         {
+
+            lm = ManagerManager.GetManagerManager.lm;
             posStart = transform.position;
         }
 
@@ -76,7 +77,7 @@ namespace Nathan
                 Debug.Log("fer");
                 md.goodObj = true;
                 dragPossible = false;
-                dd.scoreScene++;
+                lm.scoreScene++;
                 transform.position = posStart;
             }
         }

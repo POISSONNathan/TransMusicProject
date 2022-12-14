@@ -14,12 +14,14 @@ namespace Nathan
         public float delta;
         public float speed;
 
-        public detectDrag dd;
+        private LevelManager lm;
+
         // Start is called before the first frame update
         void Start()
         {   
             initialPosition = transform.position;
-            dd.scoreSceneNeed = 3;
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = 3;
         }
 
         // Update is called once per frame
@@ -62,7 +64,7 @@ namespace Nathan
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            dd.scoreScene++;
+            lm.scoreScene++;
         }
     }
 }

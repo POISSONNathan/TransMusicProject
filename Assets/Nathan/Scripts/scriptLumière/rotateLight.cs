@@ -12,7 +12,7 @@ namespace Nathan
 
         public Transform parent;
 
-        public detectDrag dd;
+        private LevelManager lm;
 
         public listLight ll;
 
@@ -41,7 +41,7 @@ namespace Nathan
 
         void Start()
         {
-
+            lm = ManagerManager.GetManagerManager.lm;
         }
 
         // Update is called once per frame
@@ -56,7 +56,7 @@ namespace Nathan
 
             if (onObj == true)
             {
-                dd.scoreScene++;
+                lm.scoreScene++;
                 Destroy(this);
             }
         }

@@ -9,12 +9,11 @@ namespace Nathan
         public List<GameObject> lights;
         public int lightUseCount = 0;
 
-        public detectDrag dd;
-
         public float randomRotateSpawn;
-
+        private LevelManager lm;
         void Start()
         {
+            lm = ManagerManager.GetManagerManager.lm;
             for (int i = 0; i < 4; i++)
             {
                 var currentObj = lights[i].gameObject;
@@ -46,8 +45,8 @@ namespace Nathan
                 }
             }
 
-            dd.scoreSceneNeed = 3;
-            dd.nextScene = "ReactionTime";
+            lm.scoreSceneNeed = 3;
+            lm.nextScene = "ReactionTime";
         }
 
         // Update is called once per frame
