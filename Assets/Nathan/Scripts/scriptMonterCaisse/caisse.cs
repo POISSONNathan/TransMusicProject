@@ -15,6 +15,9 @@ namespace Nathan
         public bool good;
 
         public int nbrObj;
+        public bool Up;
+        public GameObject Boite;
+        public GameObject MonteCharge;
 
         void Start()
         {
@@ -23,11 +26,28 @@ namespace Nathan
 
             posStart = transform.position;
             good = false;
+            Up = false;
+            MonteCharge.transform.SetParent(this.transform);
+            MonteCharge.transform.position = new Vector2(0.469999999f, -6.76000023f);
         }
 
         // Update is called once per frame
         void Update()
         {
+            //if (transform.position.y >= 0.56)
+            //{
+            //    MonteCharge.transform.parent = null;
+            //    Up = true;
+            //}
+
+            //if (Up == true)
+            //{
+            //    if (MonteCharge.transform.position.y > -5.8)
+            //    {
+            //        MonteCharge.transform.position = new Vector2(MonteCharge.transform.position.x, MonteCharge.transform.position.y - 0.003f);
+            //    }
+            //}
+
             if (good == false)
             {
                 if (Input.touchCount > 0 && touchPossible == true)
@@ -68,6 +88,7 @@ namespace Nathan
                 transform.position = collision.transform.position;
                 transform.position = new Vector2(transform.position.x - 0.5f, transform.position.y + 0.9f);
                 good = true;
+                MonteCharge.transform.parent = null;
             }
         }
 
