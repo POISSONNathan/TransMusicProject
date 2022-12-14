@@ -68,13 +68,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreScene: 0
-  scoreSceneNeed: 0
+  scoreSceneNeed: 99999
   goNexwtGame: 0
   nextScene: 
   switchMiniGame: 0
   switchOneTime: 0
   WinParticule: {fileID: 6526580923330962992, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
   animator: {fileID: 3539503965631134003}
+  playAnimOneTime: 0
 --- !u!95 &3539503965631134003
 Animator:
   serializedVersion: 4

@@ -21,6 +21,9 @@ namespace Nathan
         public Animator animator;
 
         private string oldLevel;
+
+        public bool playAnimOneTime = false;
+
         public void ResetComponent()
         {
             scoreScene = 0;
@@ -44,7 +47,12 @@ namespace Nathan
 
         public void GoToNextScene()
         {
-            //Instantiate(WinParticule, transform.position, Quaternion.identity);
+            if ((SceneManager.GetActiveScene().name) != "Accueil" && (SceneManager.GetActiveScene().name) != "1Start" && playAnimOneTime == false)
+            {
+                Instantiate(WinParticule, transform.position, Quaternion.identity);
+                playAnimOneTime = true;
+            }
+
             if (switchOneTime == false)
             {
                 switchMiniGame = true;
@@ -57,6 +65,7 @@ namespace Nathan
         private void LaunchEndOfScene()
         {
             switchOneTime = false;
+            playAnimOneTime = false;
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
         }
     } 
