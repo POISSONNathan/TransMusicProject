@@ -41,7 +41,7 @@ namespace Nathan
 
             if (collision.gameObject.tag == "collider")
             {
-                transform.position = new Vector3(0, 6, 0);
+                transform.position = new Vector3(0, 18, 0);
                 rb.velocity = new Vector2(0.0f, -speed);
             }
 

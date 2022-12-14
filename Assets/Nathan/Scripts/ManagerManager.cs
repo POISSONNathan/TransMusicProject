@@ -55,12 +55,15 @@ namespace Nathan
             {
                 if (myMiniGames1.Count == 0)
                 {
+                    lm.startTimerMiniGame1 = false;
                     lm.nextScene = "Accueil";
                     ac.stopReloadString = false;
+
                 }
 
                 if (myMiniGames1.Count > 0)
                 {
+                    lm.startTimerMiniGame1 = true;
                     ac.stopReloadString = true;
                     randomMiniGames = Random.Range(0, myMiniGames1.Count);
                     lm.nextScene = myMiniGames1[randomMiniGames];
