@@ -666,19 +666,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTouchedObject: {fileID: 0}
-  WinParticule: {fileID: 6526580923330962994, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-  scoreScene: 0
-  scoreSceneNeed: 0
-  gameFinish: 0
-  goNexwtGame: 0
-  animWinEndGame: {fileID: 6954178084021004802, guid: ffdc9733c1fc574438f079b7b6b3b790, type: 3}
-  createAnim: 0
-  animStartGame: {fileID: 1759236822953474820, guid: e45c13e4f7ea186408f52e7ec0d1b3ca, type: 3}
-  createAnim2: 0
-  animStartGameReal: {fileID: 7910283827848377148, guid: 8d98e7bf6c100a34bb74e369a4d15a1e, type: 3}
-  createAnim3: 0
-  nextScene: 
-  switchMiniGame: 0
 --- !u!1 &547321274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,7 +2170,7 @@ MonoBehaviour:
   dechetsVert:
   - {fileID: 1352269187}
   - {fileID: 1798167104}
-  - {fileID: 564609411}
+  - {fileID: 1135333366}
   dechetsJaune:
   - {fileID: 793167670}
   - {fileID: 332489625}

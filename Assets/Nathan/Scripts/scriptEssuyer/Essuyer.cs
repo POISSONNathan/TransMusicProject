@@ -42,26 +42,30 @@ namespace Nathan
 
         private void Update()
         {
-            Touch touch = Input.GetTouch(0);
-            switch (touch.phase)
+            if(Input.touchCount>0)
             {
-                //When a touch has first been detected, change the message and record the starting position
-                case TouchPhase.Began:
+
+                Touch touch = Input.GetTouch(0);
+                switch (touch.phase)
+                {
+                    //When a touch has first been detected, change the message and record the starting position
+                    case TouchPhase.Began:
                     
                     
-                    break;
-                case TouchPhase.Moved:
-                    if (drag)
-                        {
-                            Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                            transform.Translate(MousePos);
-                        }
+                        break;
+                    case TouchPhase.Moved:
+                        if (drag)
+                            {
+                                Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+                                transform.Translate(MousePos);
+                            }
 
-                    break;
-                case TouchPhase.Ended:
-                    drag = false;
+                        break;
+                    case TouchPhase.Ended:
+                        drag = false;
 
-                    break;
+                        break;
+                }
             }
             
 
