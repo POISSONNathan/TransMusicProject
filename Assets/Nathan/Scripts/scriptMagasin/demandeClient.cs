@@ -76,9 +76,13 @@ namespace Nathan
                 change = true;
                 spawnIndex = 0;
                 goodObj = 0;
-                for (int i = 0; i < newObj.Count; i++)
+                for (int i = 0; i <= newObj.Count; i++)
                 {
-                    newObj.Remove(newObj[i]);
+                    if(i==newObj.Count){
+                    newObj.Clear();
+                    }else{
+                        Destroy(newObj[i]);
+                    }
                 }
                 lm.scoreScene++;
             }

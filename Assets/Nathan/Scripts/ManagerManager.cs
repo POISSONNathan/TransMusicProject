@@ -23,7 +23,7 @@ namespace Nathan
 
         public bool accueilScene = false;
 
-        //Pas ouf mais pas dégeu quand meme
+        //Pas ouf mais pas dï¿½geu quand meme
         public static ManagerManager GetManagerManager => FindObjectOfType<ManagerManager>();
 
         void Awake()
