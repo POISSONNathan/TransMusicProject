@@ -13,32 +13,26 @@ namespace Nathan
 
         public merchDemande md;
 
-
-        public bool dragPossible = false;
         public bool drag = false;
-        public bool trigger = false;
 
         public Vector3 posStart;
         private LevelManager lm;
 
+        public bool goodTrigger = false;
+
+        public SpriteRenderer sr;
+
         void Start()
         {
-
             lm = ManagerManager.GetManagerManager.lm;
             posStart = transform.position;
+
+            sr = GetComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (md.colorSelected == color && md.formeSelected == logo && md.nombreFormeSelected == colorLogo && dragPossible == false)
-            {
-                dragPossible = true;
-            }
-            else
-            {
-                dragPossible = false;
-            }
 
             if (drag)
             {
@@ -46,7 +40,7 @@ namespace Nathan
                 transform.Translate(MousePos);
             }
 
-            if (!drag && trigger == false)
+            if (!drag && !goodTrigger)
             {
                 transform.position = posStart;
             }
@@ -54,38 +48,41 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-
-            if (dragPossible == true)
+            if (md.currentObjDrag == null)
             {
+                md.currentObjDrag = this.gameObject;
                 drag = true;
+                sr.sortingOrder = 10;
             }
         }
 
         public override void TouchUp()
         {
-            if (dragPossible == true)
-            {
-                drag = false;
-            }
+            drag = false;
+            md.currentObjDrag = null;
+            sr.sortingOrder = 0;
         }
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            trigger = true;
-            if (!drag && collision.gameObject.tag == "client")
+            if (collision.gameObject.tag == "client" && md.colorSelected == color && md.formeSelected == logo && md.nombreFormeSelected == colorLogo)
             {
-                Debug.Log("fer");
-                md.goodObj = true;
-                dragPossible = false;
-                lm.scoreScene++;
-                transform.position = posStart;
+                goodTrigger = true;
+                if (!drag)
+                {
+                    Debug.Log("fer");
+                    md.goodObj = true;
+                    lm.scoreScene++;
+                    transform.position = posStart;
+				}
             }
         }
-
-        private void OnTriggerExit2D(Collider2D collision)
-        {
-            trigger = false;
-
+		private void OnTriggerExit2D(Collider2D collision)
+		{
+            if (goodTrigger == true)
+            {
+                goodTrigger = false;
+            }
         }
-    }
+	}
 }

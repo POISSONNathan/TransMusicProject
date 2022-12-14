@@ -33,6 +33,8 @@ namespace Nathan {
         public GameObject colorLogo1;
         public GameObject colorLogo2;
 
+        public GameObject currentObjDrag;
+
         private LevelManager lm;
 
 

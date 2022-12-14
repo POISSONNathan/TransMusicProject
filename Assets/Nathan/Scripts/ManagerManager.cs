@@ -13,6 +13,8 @@ namespace Nathan
 
         public List<string> myMiniGames3 = new List<string>();
 
+        public List<string> tempMiniGames = new List<string>();
+
         public LevelManager lm;
 
         public accueil ac;
@@ -38,6 +40,12 @@ namespace Nathan
         {                  
             if (accueilScene == true)
             {
+                myMiniGames1 = new List<string> { "Drage&Drop", "Essuyer", "Fils" };
+                myMiniGames2 = new List<string> { "TrouveMerch", "Magasin", "balai" };
+                myMiniGames3 = new List<string> { "Rotate", "ReactionTime", "Lumière" };
+
+                tempMiniGames.Clear();
+
                 currentLevel = ac.levelSelect;
             }
 
@@ -50,60 +58,42 @@ namespace Nathan
 
         void changeMiniGame()
         {
-            if (currentLevel == 0)
+            if (currentLevel == 0 && SceneManager.GetActiveScene().name == "Accueil" )
             {
-                if (myMiniGames1.Count == 0)
-                {
-                    lm.nextScene = "Accueil";
-                    ac.stopReloadString = false;
-                }
-
                 if (myMiniGames1.Count > 0)
                 {
-                    ac.stopReloadString = true;
-                    randomMiniGames = Random.Range(0, myMiniGames1.Count);
-                    lm.nextScene = myMiniGames1[randomMiniGames];
-                    myMiniGames1.Remove(myMiniGames1[randomMiniGames]);
+                    tempMiniGames = myMiniGames1;
                 }
             }
             //////
             //////
             //////
-            if (currentLevel == 1)
+            if (currentLevel == 1 && SceneManager.GetActiveScene().name == "Accueil" )
             {
-                if (myMiniGames2.Count == 0)
-                {
-                    lm.nextScene = "Accueil";
-                    ac.stopReloadString = false;
-                }
-
                 if (myMiniGames2.Count > 0)
                 {
-                    ac.stopReloadString = true;
-                    randomMiniGames = Random.Range(0, myMiniGames2.Count);
-                    lm.nextScene = myMiniGames2[randomMiniGames];
-                    myMiniGames2.Remove(myMiniGames2[randomMiniGames]);
+                    tempMiniGames = myMiniGames2;
                 }
             }
             //////
             //////
             //////
-            if (currentLevel == 2)
+            if (currentLevel == 2 && SceneManager.GetActiveScene().name == "Accueil")
             {
-                if (myMiniGames3.Count == 0)
-                {
-                    lm.nextScene = "Accueil";
-                    ac.stopReloadString = false;
-                }
-                
                 if (myMiniGames3.Count > 0)
                 {
-                    ac.stopReloadString = true;
-                    randomMiniGames = Random.Range(0, myMiniGames3.Count);
-                    lm.nextScene = myMiniGames3[randomMiniGames];
-                    myMiniGames3.Remove(myMiniGames3[randomMiniGames]);
+                    tempMiniGames = myMiniGames3;
                 }
             }
+
+            if (tempMiniGames.Count == 0)
+            {
+                lm.nextScene = "Accueil";
+            }
+
+            randomMiniGames = Random.Range(0, tempMiniGames.Count);
+            lm.nextScene = tempMiniGames[randomMiniGames];
+            tempMiniGames.Remove(tempMiniGames[randomMiniGames]);
         }
     }
 }

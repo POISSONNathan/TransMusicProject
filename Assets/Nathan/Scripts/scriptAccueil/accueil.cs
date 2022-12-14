@@ -29,17 +29,10 @@ namespace Nathan
             gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
             gm.ac = this;
             gm.accueilScene = true;
-
         }
 
         void Update()
         {
-            if (stopReloadString == false)
-            {
-                gm.myMiniGames1 = new List<string> { "Drage&Drop", "Essuyer", "Fils" };
-                gm.myMiniGames2 = new List<string> { "TrouveMerch", "Magasin", "balai" };
-                gm.myMiniGames3 = new List<string> { "Rotate", "ReactionTime", "Lumière" };
-            }
             
 
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
