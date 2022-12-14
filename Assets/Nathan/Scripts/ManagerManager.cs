@@ -51,6 +51,10 @@ namespace Nathan
 
         void changeMiniGame()
         {
+            if(ac == null)
+            {
+                return;
+            }
             if (currentLevel == 0)
             {
                 if (myMiniGames1.Count == 0)

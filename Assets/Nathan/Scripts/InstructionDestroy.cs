@@ -13,13 +13,16 @@ public class InstructionDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Touch touch = Input.GetTouch(0);
-        switch (touch.phase)
+        if(Input.touchCount>0)
         {
-            //When a touch has first been detected, change the message and record the starting position
-            case TouchPhase.Began:
-                Destroy(this.gameObject);
-                break;
+            Touch touch = Input.GetTouch(0);
+            switch (touch.phase)
+            {
+                //When a touch has first been detected, change the message and record the starting position
+                case TouchPhase.Began:
+                    Destroy(this.gameObject);
+                    break;
+            }
         }
     }
 }

@@ -15,16 +15,16 @@ namespace Nathan
 
         public string nextScene;
         public bool switchMiniGame = false;
-
         public bool switchOneTime = false;
 
         public ParticleSystem WinParticule;
-
         public Animator animator;
 
+        private string oldLevel;
         public void ResetComponent()
         {
             scoreScene = 0;
+            Debug.Log(scoreScene);
             goNexwtGame = false;
         }
 
@@ -34,11 +34,16 @@ namespace Nathan
             {
                 GoToNextScene();
             }
+
+            if(oldLevel != SceneManager.GetActiveScene().name)
+            {
+                oldLevel = SceneManager.GetActiveScene().name;
+                ResetComponent();
+            }
         }
 
         public void GoToNextScene()
         {
-            ResetComponent();
             //Instantiate(WinParticule, transform.position, Quaternion.identity);
             if (switchOneTime == false)
             {
