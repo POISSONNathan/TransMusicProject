@@ -40,7 +40,7 @@ namespace Nathan
         {                  
             if (accueilScene == true)
             {
-                myMiniGames1 = new List<string> { "Drage&Drop", "Essuyer", "Fils" };
+                myMiniGames1 = new List<string> { "Drage&Drop", "Essuyer", "Fils", "MonterCaisse" };
                 myMiniGames2 = new List<string> { "TrouveMerch", "Magasin", "balai" };
                 myMiniGames3 = new List<string> { "Rotate", "ReactionTime", "Lumière" };
 

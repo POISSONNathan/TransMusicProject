@@ -360,7 +360,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -6.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -371,7 +371,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.97, y: 15.42}
+  m_Size: {x: 2.41, y: 2.34}
   m_EdgeRadius: 0
 --- !u!1 &686839387
 GameObject:
@@ -508,7 +508,6 @@ MonoBehaviour:
   addLightCountBool: 0
   isActive: 0
   parent: {fileID: 0}
-  dd: {fileID: 2016787830}
   ll: {fileID: 0}
   rotateSpeed: 60
   sr: {fileID: 761883853}
@@ -792,7 +791,6 @@ MonoBehaviour:
   - {fileID: 1548908045}
   - {fileID: 761883848}
   lightUseCount: 0
-  dd: {fileID: 2016787830}
   randomRotateSpawn: 0
 --- !u!4 &1047425386
 Transform:
@@ -1451,7 +1449,6 @@ MonoBehaviour:
   addLightCountBool: 0
   isActive: 0
   parent: {fileID: 0}
-  dd: {fileID: 2016787830}
   ll: {fileID: 1047425385}
   rotateSpeed: 60
   sr: {fileID: 1548908047}
@@ -1610,7 +1607,6 @@ MonoBehaviour:
   addLightCountBool: 0
   isActive: 0
   parent: {fileID: 0}
-  dd: {fileID: 2016787830}
   ll: {fileID: 1047425385}
   rotateSpeed: 60
   sr: {fileID: 1550354840}
@@ -1841,7 +1837,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -6.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1852,7 +1848,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.97, y: 15.42}
+  m_Size: {x: 2.41, y: 2.34}
   m_EdgeRadius: 0
 --- !u!1 &1720470776
 GameObject:
@@ -1967,7 +1963,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -6.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1978,7 +1974,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.97, y: 15.42}
+  m_Size: {x: 2.41, y: 2.34}
   m_EdgeRadius: 0
 --- !u!1001 &1832646493
 PrefabInstance:
@@ -2135,19 +2131,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTouchedObject: {fileID: 0}
-  WinParticule: {fileID: 6526580923330962994, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-  scoreScene: 0
-  scoreSceneNeed: 0
-  gameFinish: 0
-  goNexwtGame: 0
-  animWinEndGame: {fileID: 6954178084021004802, guid: ffdc9733c1fc574438f079b7b6b3b790, type: 3}
-  createAnim: 0
-  animStartGame: {fileID: 7140452489770253682, guid: 8c5796847314e2d4e9b3dae7b1546e44, type: 3}
-  createAnim2: 0
-  animStartGameReal: {fileID: 7910283827848377148, guid: 8d98e7bf6c100a34bb74e369a4d15a1e, type: 3}
-  createAnim3: 0
-  nextScene: 
-  switchMiniGame: 0
 --- !u!1 &2030139894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,7 +2256,6 @@ MonoBehaviour:
   addLightCountBool: 0
   isActive: 0
   parent: {fileID: 0}
-  dd: {fileID: 2016787830}
   ll: {fileID: 1047425385}
   rotateSpeed: 60
   sr: {fileID: 2030139896}
