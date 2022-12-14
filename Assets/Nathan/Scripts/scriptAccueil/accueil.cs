@@ -27,7 +27,7 @@ namespace Nathan
         void Start()
         {
             gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
-
+            gm.ac = this;
             gm.accueilScene = true;
 
         }
