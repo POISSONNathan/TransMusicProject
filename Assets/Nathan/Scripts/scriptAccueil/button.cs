@@ -45,16 +45,27 @@ namespace Nathan
             if (ac.moveCamera == false && touchOneTime == false)
             {
                 touchOneTime = true;
-                gm.accueilScene = false;
-                ManagerManager.GetManagerManager.lm.GoToNextScene();
             }
         }
         public override void TouchUp()
         {
             if (ac.moveCamera == false)
             {
-                gm.accueilScene = false;
-                ManagerManager.GetManagerManager.lm.GoToNextScene();
+                if (gm.currentLevel == 0)
+                {
+                    gm.accueilScene = false;
+                    ManagerManager.GetManagerManager.lm.GoToNextScene();
+                }
+                if (gm.currentLevel == 1 && gm.lm.bestTimeLevel1 < 100000)
+                {
+                    gm.accueilScene = false;
+                    ManagerManager.GetManagerManager.lm.GoToNextScene();
+                }
+                if (gm.currentLevel == 2 && gm.lm.bestTimeLevel2 < 100000)
+                {
+                    gm.accueilScene = false;
+                    ManagerManager.GetManagerManager.lm.GoToNextScene();
+                }
             }
         }
     }

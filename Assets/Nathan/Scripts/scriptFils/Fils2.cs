@@ -20,6 +20,7 @@ namespace Nathan
         void Start()
         {
             posStart = transform.position;
+
             lm = ManagerManager.GetManagerManager.lm;
             lm.scoreSceneNeed = 3;
 
@@ -61,6 +62,7 @@ namespace Nathan
 
         public void Connected()
         {
+            wm.currentWire = null;
             lightOn.SetActive(true);
             lm.scoreScene++;
             Destroy(this);

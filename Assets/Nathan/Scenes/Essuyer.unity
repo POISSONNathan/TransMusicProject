@@ -824,7 +824,7 @@ MonoBehaviour:
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
-  tempsEssuie: 30
+  tempsEssuie: 25
 --- !u!212 &1422326841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
-  tempsEssuie: 35
+  tempsEssuie: 30
 --- !u!212 &1678953837
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1300,7 +1300,7 @@ MonoBehaviour:
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
-  tempsEssuie: 20
+  tempsEssuie: 15
 --- !u!212 &1839799224
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
-  tempsEssuie: 25
+  tempsEssuie: 20
 --- !u!212 &1897337249
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1602,7 +1602,7 @@ MonoBehaviour:
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
-  tempsEssuie: 40
+  tempsEssuie: 35
 --- !u!212 &1984708648
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -16,10 +16,12 @@ namespace Nathan
         
         public float delta;
         public float speed;
+
         // Start is called before the first frame update
         void Start()
         {
             posStart = transform.position;
+
         }
 
         // Update is called once per frame

@@ -35,7 +35,18 @@ namespace Nathan
             }
             else
             {
-                rb.velocity = new Vector2(-speed, 0.0f);
+
+                
+
+                if (vs.accelererFile == true)
+                {
+                    rb.velocity = new Vector2(-speed * 3, 0.0f);
+                }
+                else
+                {
+                    rb.velocity = new Vector2(-speed, 0.0f);
+                }
+
             }
             
         }

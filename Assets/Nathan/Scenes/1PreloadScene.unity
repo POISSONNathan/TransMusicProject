@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c41af8004cf6a946a1f024521e214a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startThisScene: 0
+  startThisScene: 1
   index: 1
 --- !u!1001 &1795741570
 PrefabInstance:
@@ -188,9 +188,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 921830040}
+    - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: mm
       value: 
       objectReference: {fileID: 921830040}
+    - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
+      propertyPath: bestTimeLevel1
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
+      propertyPath: bestTimeLevel2
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
+      propertyPath: bestTimeLevel3
+      value: 1000000
+      objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134005, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: m_RootOrder
       value: 0
