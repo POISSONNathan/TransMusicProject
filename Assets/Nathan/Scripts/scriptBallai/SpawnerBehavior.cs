@@ -6,22 +6,50 @@ namespace Nathan
 {
     public class SpawnerBehavior : MonoBehaviour
     {
-        // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
-        public GameObject myPrefab1;
-        public GameObject myPrefab2;
-        public GameObject myPrefab3;
+
+        public List<GameObject> listPrefab;
+        public List<GameObject> createdObjects;
+
+        public int valueSpawnPlus = 6;
+
+        private LevelManager lm;
+
+        private int randomGameobject;
+        public int randomValueSpawnPlus;
+
         // Start is called before the first frame update
         void Start()
         {
-            Instantiate(myPrefab1, transform.position, Quaternion.identity);
-            Instantiate(myPrefab2, new Vector3 (transform.position.x, transform.position.y + 6, transform.position.z), Quaternion.identity);
-            Instantiate(myPrefab3, new Vector3(transform.position.x, transform.position.y + 12, transform.position.z), Quaternion.identity);
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = listPrefab.Count;
+
+            RespawnObj();
         }
 
         // Update is called once per frame
         void Update()
         {
 
+        }
+
+        public void CheckForRespawn()
+        {
+            if(createdObjects.Count<=0)
+            {
+                RespawnObj();
+            }
+        }
+
+        public void RespawnObj()
+        {
+            randomValueSpawnPlus = 0;
+            for (int i = 0; i < listPrefab.Count; i++)
+            {
+                var obj = Instantiate(listPrefab[i], new Vector3(transform.position.x, transform.position.y + randomValueSpawnPlus, transform.position.z), Quaternion.identity);
+                createdObjects.Add(obj);
+
+                randomValueSpawnPlus += Random.Range(4, 7);
+            }
         }
     }
 }

@@ -21,7 +21,6 @@ namespace Nathan
         {   
             initialPosition = transform.position;
             lm = ManagerManager.GetManagerManager.lm;
-            lm.scoreSceneNeed = 3;
         }
 
         // Update is called once per frame
