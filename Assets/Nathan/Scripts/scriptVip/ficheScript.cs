@@ -5,33 +5,38 @@ using UnityEngine;
 
 namespace Nathan
 {
-    public class faceScript : MonoBehaviour
+    public class ficheScript : TouchableObject
+
+    
     {
-
-        public SpriteRenderer sr;
-        public Sprite[] sprites;
+        public Vector3 start;
+        public Transform target;
         public vipScript vs;
-
-        public int type;
         // Start is called before the first frame update
         void Start()
         {
-            if (type >= 0) {sr.sprite = sprites[type]; }
-            sr.color = new Color(255, 255, 255, 1);
+            start = transform.position;
         }
 
         // Update is called once per frame
         void Update()
         {
+            
+        }
+
+        public override void OnTouch(Touch touchInfo)
+        {
             Debug.Log(vs.pause);
-            if (vs.pause)
+            if (!vs.pause)
             {
-                sr.color = new Color(255, 255, 255, 1);
+                transform.position = target.position;
+                
             }
             else
             {
-                sr.color = new Color(0,0,0,0);
+                transform.position = start;
             }
+            vs.pause = !vs.pause;
         }
     }
 }
