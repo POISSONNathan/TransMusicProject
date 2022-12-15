@@ -929,8 +929,9 @@ MonoBehaviour:
   colorLogo: jaune
   md: {fileID: 252802473}
   drag: 0
-  trigger: 0
   posStart: {x: 0, y: 0, z: 0}
+  goodTrigger: 0
+  sr: {fileID: 0}
 --- !u!61 &531036454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1185,8 +1186,9 @@ MonoBehaviour:
   colorLogo: jaune
   md: {fileID: 252802473}
   drag: 0
-  trigger: 0
   posStart: {x: 0, y: 0, z: 0}
+  goodTrigger: 0
+  sr: {fileID: 0}
 --- !u!212 &629334384
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1331,7 +1333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630714954}
   m_LocalRotation: {x: -0, y: -0, z: -0.093452126, w: 0.9956238}
-  m_LocalPosition: {x: 2.6799564, y: -0.52723247, z: -0.059950646}
+  m_LocalPosition: {x: 2.6799564, y: -2.059, z: -0.059950646}
   m_LocalScale: {x: 0.39491728, y: 0.39491728, z: 0.39491722}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1543,7 +1545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923767669}
   m_LocalRotation: {x: -0, y: -0, z: -0.093452126, w: 0.9956238}
-  m_LocalPosition: {x: 2.6799564, y: -0.52723247, z: -0.059950646}
+  m_LocalPosition: {x: 2.6799564, y: -2.059, z: -0.059950646}
   m_LocalScale: {x: 0.39491728, y: 0.39491728, z: 0.39491722}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1567,8 +1569,9 @@ MonoBehaviour:
   colorLogo: violet
   md: {fileID: 252802473}
   drag: 0
-  trigger: 0
   posStart: {x: 0, y: 0, z: 0}
+  goodTrigger: 0
+  sr: {fileID: 0}
 --- !u!61 &923767673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2043,7 +2046,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310846824}
   m_LocalRotation: {x: -0, y: -0, z: 0.06711042, w: 0.99774563}
-  m_LocalPosition: {x: 2.6799564, y: -2.053915, z: -0.059950646}
+  m_LocalPosition: {x: 2.6799564, y: -0.47599995, z: -0.059950646}
   m_LocalScale: {x: 0.39491728, y: 0.39491728, z: 0.39491722}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2154,8 +2157,9 @@ MonoBehaviour:
   colorLogo: jaune
   md: {fileID: 252802473}
   drag: 0
-  trigger: 0
   posStart: {x: 0, y: 0, z: 0}
+  goodTrigger: 0
+  sr: {fileID: 0}
 --- !u!61 &1355319343
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2287,8 +2291,9 @@ MonoBehaviour:
   colorLogo: violet
   md: {fileID: 252802473}
   drag: 0
-  trigger: 0
   posStart: {x: 0, y: 0, z: 0}
+  goodTrigger: 0
+  sr: {fileID: 0}
 --- !u!212 &1475617725
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2440,8 +2445,9 @@ MonoBehaviour:
   colorLogo: violet
   md: {fileID: 252802473}
   drag: 0
-  trigger: 0
   posStart: {x: 0, y: 0, z: 0}
+  goodTrigger: 0
+  sr: {fileID: 0}
 --- !u!212 &1501376623
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2502,7 +2508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501376619}
   m_LocalRotation: {x: -0, y: -0, z: 0.06711042, w: 0.99774563}
-  m_LocalPosition: {x: 2.6799564, y: -2.053915, z: -0.059950646}
+  m_LocalPosition: {x: 2.6799564, y: -0.476, z: -0.059950646}
   m_LocalScale: {x: 0.39491728, y: 0.39491728, z: 0.39491722}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2761,8 +2767,9 @@ MonoBehaviour:
   colorLogo: violet
   md: {fileID: 252802473}
   drag: 0
-  trigger: 0
   posStart: {x: 0, y: 0, z: 0}
+  goodTrigger: 0
+  sr: {fileID: 0}
 --- !u!212 &1752752505
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3056,8 +3063,9 @@ MonoBehaviour:
   colorLogo: jaune
   md: {fileID: 252802473}
   drag: 0
-  trigger: 0
   posStart: {x: 0, y: 0, z: 0}
+  goodTrigger: 0
+  sr: {fileID: 0}
 --- !u!61 &1877714703
 BoxCollider2D:
   m_ObjectHideFlags: 0
