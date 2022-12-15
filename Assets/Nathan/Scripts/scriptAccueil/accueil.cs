@@ -31,6 +31,8 @@ namespace Nathan
 
         public float Fade;
 
+        public GameObject mapObj;
+
         void Start()
         {
             gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
@@ -95,9 +97,9 @@ namespace Nathan
                 }
             }
 
-            transform.position = Vector3.Lerp(transform.position, nextPos, pourcentMove);
+            mapObj.transform.position = Vector3.Lerp(mapObj.transform.position, nextPos, pourcentMove);
 
-            if (transform.position == nextPos)
+            if (mapObj.transform.position == nextPos)
             {
                 pourcentMove = 0;
                 moveCamera = false;
@@ -110,7 +112,7 @@ namespace Nathan
         {   
             levelSelect--; 
             moveCamera = true;
-            nextPos = new Vector3(transform.position.x - 6.51f, transform.position.y, transform.position.z);
+            nextPos = new Vector3(mapObj.transform.position.x + 6.51f, mapObj.transform.position.y, mapObj.transform.position.z);
             MovingLeft = true;
         }
 
@@ -118,7 +120,7 @@ namespace Nathan
         {
             levelSelect++;
             moveCamera = true;
-            nextPos = new Vector3(transform.position.x + 6.51f, transform.position.y, transform.position.z);
+            nextPos = new Vector3(mapObj.transform.position.x - 6.51f, mapObj.transform.position.y, mapObj.transform.position.z);
             MovingRight = true;
         }
 

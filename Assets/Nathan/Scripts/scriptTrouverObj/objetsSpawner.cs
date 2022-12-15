@@ -47,7 +47,7 @@ namespace Nathan
                 int spawnPointIndex = Random.Range(0, spawnPoints.Count);
 
                 var newObj = Instantiate(gameObjectsToSpawn[gameObjectToSpawnIndex], spawnPoints[spawnPointIndex].position, Quaternion.identity);
-                newObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                newObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
 
                 spawnPoints.Remove(spawnPoints[spawnPointIndex]);
             }
@@ -68,7 +68,7 @@ namespace Nathan
                 int spawnPointIndex2 = Random.Range(0, spawnPoints.Count);
 
                 var newObj1 = Instantiate(gameObjectsToSpawn[gameObjectToSpawnIndex2], spawnPointsLeure[spawnPointIndex2].position, Quaternion.identity);
-                newObj1.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                newObj1.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
                 newObj1.gameObject.GetComponent<objScore>().enabled = false;
 
                 spawnPointsLeure.Remove(spawnPointsLeure[spawnPointIndex2]);

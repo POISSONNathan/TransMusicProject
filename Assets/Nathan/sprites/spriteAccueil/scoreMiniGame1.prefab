@@ -53,6 +53,10 @@ MonoBehaviour:
   disqueBronze: {fileID: 4127067902697078949}
   disqueArgent: {fileID: 4127067903594561177}
   disqueOr: {fileID: 4127067903694847698}
+  listDisques:
+  - {fileID: 4127067902697078949}
+  - {fileID: 4127067903594561177}
+  - {fileID: 4127067903694847698}
   level: 0
 --- !u!1 &4127067901930832900
 GameObject:
