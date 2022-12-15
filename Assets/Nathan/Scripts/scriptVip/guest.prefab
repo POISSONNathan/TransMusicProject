@@ -116,7 +116,7 @@ MonoBehaviour:
   vip: 0
   vs: {fileID: 0}
   touched: 0
-  speed: 10
+  speed: 4
 --- !u!50 &2477514017919145725
 Rigidbody2D:
   serializedVersion: 4

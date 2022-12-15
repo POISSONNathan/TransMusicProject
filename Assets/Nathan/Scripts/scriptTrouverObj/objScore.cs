@@ -13,12 +13,6 @@ namespace Nathan
             lm = ManagerManager.GetManagerManager.lm;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
         public override void OnTouch(Touch touchinfo)
         {
             lm.scoreScene++;
