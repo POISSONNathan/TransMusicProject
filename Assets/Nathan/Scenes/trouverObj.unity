@@ -593,6 +593,7 @@ GameObject:
   - component: {fileID: 941257820}
   - component: {fileID: 941257819}
   - component: {fileID: 941257818}
+  - component: {fileID: 941257821}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -666,6 +667,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &941257821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941257817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52fe5ea47107a04c946a869ec1ed937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTouchedObject: {fileID: 0}
 --- !u!1 &1161393221
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,16 +961,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cfac5c9961c2641bfe6b50d8546e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints: []
   gameObjectsToSpawn:
-  - {fileID: 714275690}
-  - {fileID: 1161393221}
-  - {fileID: 1428447757}
-  - {fileID: 2067116409}
-  - {fileID: 463379275}
-  - {fileID: 130218493}
-  - {fileID: 224688993}
-  - {fileID: 865761827}
+  - {fileID: 3553622571853488493, guid: 4a0f4aae5423e84468cf951604df40c9, type: 3}
+  - {fileID: 3150491415072988158, guid: 15357e2d8cbf1f84691bd752ec790188, type: 3}
+  - {fileID: 3147704944493391211, guid: c88bcc9d26cbff54fabf23e17991d4d2, type: 3}
+  spawnPoints:
+  - {fileID: 714275692}
+  - {fileID: 1161393223}
+  - {fileID: 1428447759}
+  - {fileID: 2067116411}
+  - {fileID: 463379277}
+  - {fileID: 130218495}
+  - {fileID: 224688995}
+  - {fileID: 865761829}
   spawnRate: 1
 --- !u!4 &2088380730
 Transform:
