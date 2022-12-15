@@ -30,7 +30,7 @@ namespace Nathan
                 Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 transform.Translate(MousePos);
             }
-            if (!drag)
+            if (!vs.drag)
             {
                 resetPos();
             }
@@ -77,18 +77,23 @@ namespace Nathan
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            Debug.Log(collision.GetComponent<guestScript>().vip);
-            if (!drag && collision.GetComponent<guestScript>().vip == true && !vs.vipSelected.Contains(collision.GetComponent<guestScript>().type))
+            if (collision.tag == "client")
             {
-                vs.vipSelected.Add(collision.GetComponent<guestScript>().type);
-                shouldGoToTarget = false;
-                delta = 0;
-                posStart = transform.position;
+                if (!drag && collision.GetComponent<guestScript>().vip && !vs.vipSelected.Contains(collision.GetComponent<guestScript>().type))
+                {
+                    vs.vipSelected.Add(collision.GetComponent<guestScript>().type);
+                    shouldGoToTarget = false;
+                    delta = 0;
+                    posStart = transform.position;
 
-                vs.drag = false;
-                Destroy(gameObject);
+                    vs.drag = false;
+                    Destroy(gameObject);
+                    Debug.Log("trouvé");
                 
+                }
+
             }
+            //Debug.Log(collision.GetComponent<guestScript>().vip);
         }
     }
 }

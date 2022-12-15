@@ -16,7 +16,7 @@ namespace Nathan
 
         public bool drag = false;
 
-        public bool pause = true;
+        public bool pause;
 
         private bool vipOuPas;
 
@@ -29,7 +29,7 @@ namespace Nathan
         // Start is called before the first frame update
         void Start()
         {
-
+            pause = true;
             //remplir la liste
             for (int i = 0; i < 10; i++)
             {
