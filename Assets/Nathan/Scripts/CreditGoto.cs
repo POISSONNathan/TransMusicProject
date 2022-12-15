@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Nathan {
-    public class BoutonReturHome : TouchableObject
+namespace Nathan
+{
+    public class CreditGoto : TouchableObject
     {
         // Start is called before the first frame update
         void Start()
@@ -15,12 +16,12 @@ namespace Nathan {
         // Update is called once per frame
         void Update()
         {
-            
+
         }
-            public override void OnTouch(Touch touchinfo)
+
+        public override void OnTouch(Touch touchinfo)
         {
-            Debug.Log("fr");
-            SceneManager.LoadScene("1Start", LoadSceneMode.Single);
+            SceneManager.LoadScene("CreditScene", LoadSceneMode.Single);
         }
     }
 }
