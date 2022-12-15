@@ -48,8 +48,6 @@ namespace Nathan
 
                 currentLevel = ac.levelSelect;
             }
-                Debug.Log(lm.switchMiniGame);
-
             if (lm.switchMiniGame == true)
             {
                 changeMiniGame();
