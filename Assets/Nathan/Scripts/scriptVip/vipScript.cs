@@ -26,9 +26,13 @@ namespace Nathan
 
         public Transform[] target;
 
+        public LevelManager lm;
+
         // Start is called before the first frame update
         void Start()
         {
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = 1;
 
             //remplir la liste
             for (int i = 0; i < 10; i++)
@@ -45,6 +49,7 @@ namespace Nathan
             {
                 faceScript ceVisage = Instantiate(myFace, target[i].position, Quaternion.identity);
                 ceVisage.type = vipList[i];
+                ceVisage.GetComponent<SpriteRenderer>().sortingOrder = 100;
                 ceVisage.vs = this;
             } 
             
@@ -96,6 +101,7 @@ namespace Nathan
             if (vipSelected.Count == 3)
             {
                 Debug.Log("gagné");
+                lm.GoToNextScene();
             }
         }
         void Generate(int type,int move,bool vip)

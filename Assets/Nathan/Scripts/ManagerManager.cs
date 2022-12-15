@@ -42,7 +42,7 @@ namespace Nathan
             {
                 myMiniGames1 = new List<string> { "Drage&Drop", "Essuyer", "Fils", "MonterCaisse" };
                 myMiniGames2 = new List<string> { "TrouveMerch", "Magasin", "balai" };
-                myMiniGames3 = new List<string> { "Rotate", "ReactionTime", "Lumière" };
+                myMiniGames3 = new List<string> { "Rotate", "ReactionTime", "Lumière", "Vip" };
 
                 tempMiniGames.Clear();
 

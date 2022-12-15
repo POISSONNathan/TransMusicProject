@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace Nathan {
     public class tpBack : MonoBehaviour
+
     {
+        public vipScript vs;
         // Start is called before the first frame update
         void Start()
         {
@@ -21,8 +23,12 @@ namespace Nathan {
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            collision.gameObject.GetComponent<Transform>().transform.position = new Vector2(28, collision.gameObject.GetComponent<Transform>().transform.position.y);
+            if (vs.vipSelected.Contains(collision.GetComponent<guestScript>().type))
+            {
+                Destroy(collision.gameObject);
+            }
 
+            collision.gameObject.GetComponent<Transform>().transform.position = new Vector2(28, collision.gameObject.GetComponent<Transform>().transform.position.y);
         }
     }
 }
