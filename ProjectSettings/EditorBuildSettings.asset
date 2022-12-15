@@ -44,5 +44,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nathan/Scenes/Magasin.unity
     guid: 264d6c0431191e040a4da2947e570b2e
+  - enabled: 1
+    path: Assets/Nathan/Scenes/MonterCaisse.unity
+    guid: 1a6dd3b9dd1472e4b841b028fb3c7977
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 9c5dc4b3f9414984088655477ff1c0de, type: 2}

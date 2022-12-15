@@ -20,9 +20,16 @@ namespace Nathan {
 
         private bool isOnShop;
 
+        public SpriteRenderer sr;
+
+        public BoxCollider2D bc;
+
         void Start()
         {
             posStart = transform.position;
+
+            sr = GetComponent<SpriteRenderer>();
+            bc = GetComponent<BoxCollider2D>();
         }
 
         // Update is called once per frame
@@ -42,6 +49,7 @@ namespace Nathan {
 
             if (dc.changeCmd == true)
             {
+                bc.enabled = true;
                 stayOnObj = false;
                 dragPossible = true;
                 resetPos();
@@ -90,22 +98,24 @@ namespace Nathan {
             {
                 drag = true;
                 dc.objSelected = this.gameObject;
+                sr.sortingOrder = 10;
             }
         }
 
         public override void TouchUp()
         {
-            Debug.Log(gameObject.name);
             drag = false;
             dc.objSelected = null;
+            sr.sortingOrder = 0;
 
-            if(isOnShop == true)
+            if (isOnShop == true)
             {
                 for (int i = 0; i < dc.client.Count; i++)
                 {
                     if (dc.client[i] == this.gameObject.name)
                     {
                         stayOnObj = true;
+                        bc.enabled = false;
                         dragPossible = false;
                         dc.client.Remove(this.gameObject.name);
                         dc.goodObj ++;

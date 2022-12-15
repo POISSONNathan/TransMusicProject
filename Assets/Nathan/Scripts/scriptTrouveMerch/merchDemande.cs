@@ -33,6 +33,8 @@ namespace Nathan {
         public GameObject colorLogo1;
         public GameObject colorLogo2;
 
+        public GameObject currentObjDrag;
+
         private LevelManager lm;
 
 
@@ -40,7 +42,7 @@ namespace Nathan {
         {
 
             lm = ManagerManager.GetManagerManager.lm;
-            lm.scoreSceneNeed = 2;
+            lm.scoreSceneNeed = 3;
 
             listColor.Add("orange");
             listColor.Add("bleu");

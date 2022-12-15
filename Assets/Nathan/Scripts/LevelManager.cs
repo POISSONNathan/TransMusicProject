@@ -24,21 +24,40 @@ namespace Nathan
 
         public bool playAnimOneTime = false;
 
+        private float timerGame = 0;
+        public float seconds = 0;
+
+        public int secondMiniGame;
+
+        public bool inMiniGame = false;
         public void ResetComponent()
         {
             scoreScene = 0;
-            Debug.Log(scoreScene);
+            //timerGame = 0;
+            //seconds = 0;
             goNexwtGame = false;
         }
 
         void Update()
         {
-            if (scoreScene == scoreSceneNeed)
+            if (scoreScene == scoreSceneNeed    )
             {
                 GoToNextScene();
             }
 
-            if(oldLevel != SceneManager.GetActiveScene().name)
+
+            //if ((SceneManager.GetActiveScene().name) != "Accueil" && (SceneManager.GetActiveScene().name) != "1Start" && inMiniGame == true)
+            //{
+            //    timerGame += Time.deltaTime;
+            //    seconds = timerGame % 60;
+
+            //    if (seconds >= secondMiniGame)
+            //    {
+            //        GoToNextScene();
+            //    }
+            //}
+
+            if (oldLevel != SceneManager.GetActiveScene().name)
             {
                 oldLevel = SceneManager.GetActiveScene().name;
                 ResetComponent();
@@ -47,6 +66,7 @@ namespace Nathan
 
         public void GoToNextScene()
         {
+            inMiniGame = false;
             if ((SceneManager.GetActiveScene().name) != "Accueil" && (SceneManager.GetActiveScene().name) != "1Start" && playAnimOneTime == false)
             {
                 Instantiate(WinParticule, transform.position, Quaternion.identity);
@@ -66,6 +86,7 @@ namespace Nathan
         {
             switchOneTime = false;
             playAnimOneTime = false;
+            inMiniGame = true;
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
         }
     } 

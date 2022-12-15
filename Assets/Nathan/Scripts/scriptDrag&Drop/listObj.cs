@@ -26,6 +26,8 @@ namespace Nathan
 
             lm = ManagerManager.GetManagerManager.lm;
             lm.scoreSceneNeed = dechetsVert.Count + dechetsJaune.Count;
+
+            lm.secondMiniGame = 10;
         }
 
         // Update is called once per frame

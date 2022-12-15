@@ -21,9 +21,13 @@ namespace Nathan
 
         public listObj lo;
 
+        public SpriteRenderer sr;
+
         public void Start()
         {
             posStart = transform.position;
+
+            sr = GetComponent<SpriteRenderer>();
         }
 
         private void Update()
@@ -88,6 +92,7 @@ namespace Nathan
             {
                 drag = true;
                 lo.objSelected = gameObject;
+                sr.sortingOrder = 10;
             }
 
         }
@@ -95,7 +100,8 @@ namespace Nathan
         public override void TouchUp()
         {
             drag = false;
-            lo.objSelected = null;
+            lo.objSelected = null; 
+            sr.sortingOrder = 6;
         }
 
 
