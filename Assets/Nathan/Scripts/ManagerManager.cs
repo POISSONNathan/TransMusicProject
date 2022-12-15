@@ -19,7 +19,7 @@ namespace Nathan
 
         public accueil ac;
 
-        public int randomMiniGames;
+        private int randomMiniGames;
 
         public int currentLevel;
 
@@ -41,7 +41,7 @@ namespace Nathan
             if (accueilScene == true)
             {
                 myMiniGames1 = new List<string> { "Drage&Drop", "Essuyer", "Fils", "MonterCaisse" };
-                myMiniGames2 = new List<string> { "TrouveMerch", "Magasin", "balai" };
+                myMiniGames2 = new List<string> { "TrouveMerch", "Magasin", "balai", "trouverObj" };
                 myMiniGames3 = new List<string> { "Rotate", "ReactionTime", "Lumière", "Vip" };
 
                 tempMiniGames.Clear();
@@ -60,9 +60,10 @@ namespace Nathan
         {
             if (currentLevel == 0 && SceneManager.GetActiveScene().name == "Accueil" )
             {
-                if (myMiniGames1.Count > 0)
+                if (myMiniGames1.Count > 0 && accueilScene == false)
                 {
                     tempMiniGames = myMiniGames1;
+                    lm.startTimer1();
                 }
             }
             //////
@@ -73,6 +74,7 @@ namespace Nathan
                 if (myMiniGames2.Count > 0)
                 {
                     tempMiniGames = myMiniGames2;
+                    lm.startTimer2();
                 }
             }
             //////
@@ -83,6 +85,7 @@ namespace Nathan
                 if (myMiniGames3.Count > 0)
                 {
                     tempMiniGames = myMiniGames3;
+                    lm.startTimer3();
                 }
             }
 

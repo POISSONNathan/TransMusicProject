@@ -20,6 +20,7 @@ namespace Nathan
         void Start()
         {
             posStart = transform.position;
+
             lm = ManagerManager.GetManagerManager.lm;
             lm.scoreSceneNeed = 3;
 

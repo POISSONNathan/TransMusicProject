@@ -19,10 +19,14 @@ namespace Nathan
         public GameObject Boite;
         public GameObject MonteCharge;
 
+        private LevelManager lm;
+
         void Start()
         {
-            gm = ManagerManager.GetManagerManager;
-            gm.lm.scoreSceneNeed = 2;
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = 2;
+
+            lm.secondMiniGame = 10;
 
             posStart = transform.position;
             good = false;
@@ -67,13 +71,12 @@ namespace Nathan
                 }
             }
             if (good == true)
-            {
-                transform.position = new Vector2(transform.position.x + 0.01f, transform.position.y);
+            {                transform.position = new Vector2(transform.position.x + 0.01f, transform.position.y);
 
                 if (transform.position.x > 3)
                 {
-                    gm.lm.scoreScene ++;
-                    if (gm.lm.scoreScene < gm.lm.scoreSceneNeed)
+                    lm.scoreScene ++;
+                    if (lm.scoreScene < lm.scoreSceneNeed)
                     {
                         Instantiate(gameObject, posStart, Quaternion.identity);
                     }
