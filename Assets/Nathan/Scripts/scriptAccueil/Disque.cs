@@ -26,11 +26,11 @@ namespace Nathan
                 {
                     listDisques[0].SetActive(true);
                 }
-                if (lm.bestTimeLevel1 < 50)
+                if (lm.bestTimeLevel1 < 40)
                 {
                     listDisques[1].SetActive(true);
                 }
-                if (lm.bestTimeLevel1 < 40)
+                if (lm.bestTimeLevel1 < 30)
                 {
                     listDisques[2].SetActive(true);
                 }
