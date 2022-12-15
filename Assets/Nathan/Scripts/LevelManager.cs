@@ -45,8 +45,7 @@ namespace Nathan
                 GoToNextScene();
             }
 
-
-            //if ((SceneManager.GetActiveScene().name) != "Accueil" && (SceneManager.GetActiveScene().name) != "1Start" && inMiniGame == true)
+            //if ((SceneManager.GetActiveScene().name) != "accueil" && (SceneManager.GetActiveScene().name) != "1start" && inMiniGame == true)
             //{
             //    timerGame += Time.deltaTime;
             //    seconds = timerGame % 60;
