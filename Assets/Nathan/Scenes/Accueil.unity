@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1774929029826824684, guid: 029554d0ad6703544aaed33673d5d024, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.882114
+      value: -1.2827
       objectReference: {fileID: 0}
     - target: {fileID: 1774929029826824684, guid: 029554d0ad6703544aaed33673d5d024, type: 3}
       propertyPath: m_LocalRotation.w
@@ -310,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1774929029826824684, guid: 029554d0ad6703544aaed33673d5d024, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.882114
+      value: -1.2827
       objectReference: {fileID: 0}
     - target: {fileID: 1774929029826824684, guid: 029554d0ad6703544aaed33673d5d024, type: 3}
       propertyPath: m_LocalRotation.w
@@ -556,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1774929029826824684, guid: 029554d0ad6703544aaed33673d5d024, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.882114
+      value: -1.2827
       objectReference: {fileID: 0}
     - target: {fileID: 1774929029826824684, guid: 029554d0ad6703544aaed33673d5d024, type: 3}
       propertyPath: m_LocalRotation.w
@@ -907,7 +907,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128106473}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.99, y: 1.7733, z: -0.013048412}
+  m_LocalPosition: {x: 4.99, y: 1.7733, z: -1.2827}
   m_LocalScale: {x: 0.39093873, y: 0.39093873, z: 0.39093873}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1205,7 +1205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306499945}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.49, y: 1.7616, z: -0.013048412}
+  m_LocalPosition: {x: -1.49, y: 1.7616, z: -1.2827}
   m_LocalScale: {x: 0.3837968, y: 0.3837968, z: 0.3837968}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1496,6 +1496,7 @@ MonoBehaviour:
   FondLV1: {fileID: 1003111383}
   FondLV2: {fileID: 610765540}
   Fade: 0
+  mapObj: {fileID: 755831825}
 --- !u!114 &1656788316
 MonoBehaviour:
   m_ObjectHideFlags: 0

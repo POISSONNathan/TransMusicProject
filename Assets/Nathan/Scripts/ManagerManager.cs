@@ -48,6 +48,7 @@ namespace Nathan
 
                 currentLevel = ac.levelSelect;
             }
+                Debug.Log(lm.switchMiniGame);
 
             if (lm.switchMiniGame == true)
             {
@@ -93,10 +94,12 @@ namespace Nathan
             {
                 lm.nextScene = "Accueil";
             }
-
-            randomMiniGames = Random.Range(0, tempMiniGames.Count);
-            lm.nextScene = tempMiniGames[randomMiniGames];
-            tempMiniGames.Remove(tempMiniGames[randomMiniGames]);
+            else
+            {
+                randomMiniGames = Random.Range(0, tempMiniGames.Count);
+                lm.nextScene = tempMiniGames[randomMiniGames];
+                tempMiniGames.Remove(tempMiniGames[randomMiniGames]);
+            }
         }
     }
 }

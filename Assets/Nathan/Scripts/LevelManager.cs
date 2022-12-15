@@ -53,6 +53,9 @@ namespace Nathan
 
         public ManagerManager gm;
 
+        public bool skipMiniGames = false;
+        public bool allMinigames3Disques = false;
+
         public void ResetComponent()
         {
             scoreScene = 0;
@@ -100,7 +103,19 @@ namespace Nathan
                 timerLevel3 += Time.deltaTime;
                 secondLevel3 = timerLevel3 % 60;
             }
+
+            if (skipMiniGames == true)
+            {
+                nextScene = "Accueil";
+            }
+            if (allMinigames3Disques == true)
+            {
+                bestTimeLevel1 = 30;
+                bestTimeLevel2 = 30;
+                bestTimeLevel3 = 30;
+            }
         }
+
 
         public void GoToNextScene()
         {
@@ -132,7 +147,6 @@ namespace Nathan
 
             if (nextScene == "Accueil")
             {
-                Debug.Log(nextScene);
                 if (gm.currentLevel == 0)
                 {
                     endTimer1();
