@@ -42,7 +42,7 @@ namespace Nathan {
         {
 
             lm = ManagerManager.GetManagerManager.lm;
-            lm.scoreSceneNeed = 3;
+            lm.scoreSceneNeed = 2;
 
             listColor.Add("orange");
             listColor.Add("bleu");

@@ -36,18 +36,18 @@ namespace Nathan
         public bool timer1Start = false;
         private float timerLevel1 = 0;
         public float secondLevel1 = 0;
-        public float bestTimeLevel1 = 100000;
+        public float bestTimeLevel1 = 1000000;
 
 
         public bool timer2Start = false;
         private float timerLevel2 = 0;
         public float secondLevel2 = 0;
-        public float bestTimeLevel2 = 100000;
+        public float bestTimeLevel2 = 1000000;
 
         public bool timer3Start = false;
         private float timerLevel3 = 0;
         public float secondLevel3 = 0;
-        public float bestTimeLevel3 = 100000;
+        public float bestTimeLevel3 = 1000000;
 
         public bool inMiniGame = false;
 
@@ -105,10 +105,14 @@ namespace Nathan
         public void GoToNextScene()
         {
             inMiniGame = false;
-            if ((SceneManager.GetActiveScene().name) != "Accueil" && (SceneManager.GetActiveScene().name) != "1Start" && playAnimOneTime == false)
+            if ((SceneManager.GetActiveScene().name) != "Accueil" && (SceneManager.GetActiveScene().name) != "1Start" && (SceneManager.GetActiveScene().name) != "CreditScene" && playAnimOneTime == false)
             {
                 Instantiate(WinParticule, transform.position, Quaternion.identity);
                 playAnimOneTime = true;
+            }
+            if ((SceneManager.GetActiveScene().name) == "Accueil")
+            {
+                resetTimer();
             }
 
             if (switchOneTime == false)
