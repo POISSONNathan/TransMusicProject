@@ -16,6 +16,8 @@ namespace Nathan
         private float pourcentMove = 0;
 
         public bool moveCamera;
+        public bool MovingLeft;
+        public bool MovingRight;
 
         public bool selectPossible = true;
         public int levelSelect = 0;
@@ -24,16 +26,24 @@ namespace Nathan
 
         public bool stopReloadString = false;
 
+        public GameObject FondLV1;
+        public GameObject FondLV2;
+
+        public float Fade;
+
         void Start()
         {
             gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
             gm.ac = this;
             gm.accueilScene = true;
+            Fade = 1;
+            MovingLeft = false;
+            MovingRight = false;
         }
 
         void Update()
         {
-            
+            Debug.Log(moveCamera);
 
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
@@ -52,9 +62,39 @@ namespace Nathan
                     moveRight();
                 }
             }
+
             if (moveCamera == true)
             {
                 pourcentMove += 0.001f;
+                if (levelSelect == 1)
+                {
+                    if (MovingRight == true)
+                    {
+                        StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 0, 0.5f));
+                    }
+                    if (MovingLeft == true)
+                    {
+                        StartCoroutine(SpriteFade(FondLV2.GetComponent<SpriteRenderer>(), 1, 0.5f));
+                    }
+                }
+                if (levelSelect == 2)
+                {
+                    if (MovingRight == true)
+                    {
+                        StartCoroutine(SpriteFade(FondLV2.GetComponent<SpriteRenderer>(), 0, 0.5f));
+                    }
+                    if (MovingLeft == true)
+                    {
+                        StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 1, 0.5f));
+                    }
+                }
+                if(levelSelect == 0)
+                {
+                    if (MovingLeft == true)
+                    {
+                        StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 1, 0.5f));
+                    }
+                }
             }
 
             transform.position = Vector3.Lerp(transform.position, nextPos, pourcentMove);
@@ -63,15 +103,17 @@ namespace Nathan
             {
                 pourcentMove = 0;
                 moveCamera = false;
+                MovingLeft = false;
+                MovingRight = false;
             }   
         }
 
         private void moveLeft()
         {   
-            levelSelect--;
+            levelSelect--; 
             moveCamera = true;
             nextPos = new Vector3(transform.position.x - 6.51f, transform.position.y, transform.position.z);
-
+            MovingLeft = true;
         }
 
         private void moveRight()
@@ -79,7 +121,24 @@ namespace Nathan
             levelSelect++;
             moveCamera = true;
             nextPos = new Vector3(transform.position.x + 6.51f, transform.position.y, transform.position.z);
-
+            MovingRight = true;
         }
+
+        public IEnumerator SpriteFade(
+            SpriteRenderer sr,
+            float endValue,
+            float duration)
+        {
+            float elapsedTime = 0;
+            float startValue = sr.color.a;
+            while (elapsedTime < duration)
+            {
+                elapsedTime += Time.deltaTime;
+                float newAlpha = Mathf.Lerp(startValue, endValue, elapsedTime / duration);
+                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, newAlpha);
+                yield return null;
+            }
+        }
+
     }
 }
