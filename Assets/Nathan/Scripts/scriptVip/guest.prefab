@@ -116,7 +116,11 @@ MonoBehaviour:
   vip: 0
   vs: {fileID: 0}
   touched: 0
+<<<<<<< HEAD
   speed: 4
+=======
+  speed: 2.5
+>>>>>>> main
 --- !u!50 &2477514017919145725
 Rigidbody2D:
   serializedVersion: 4
@@ -162,5 +166,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 4}
+  m_Size: {x: 2.05, y: 3.45}
   m_EdgeRadius: 0

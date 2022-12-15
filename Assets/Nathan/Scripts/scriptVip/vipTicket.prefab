@@ -100,7 +100,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drag: 0
   vs: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
   posStart: {x: 0, y: 0, z: 0}
+  shouldGoToTarget: 0
+  delta: 0
+  speed: 5
 --- !u!61 &-6202193671259442128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -111,7 +115,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.51, y: 0}

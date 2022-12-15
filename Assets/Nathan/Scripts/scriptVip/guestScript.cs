@@ -42,8 +42,8 @@ namespace Nathan
 
         
 
-        //public override void OnTouch(Touch touchInfo)
-        //    {
+        public override void OnTouch(Touch touchInfo)
+           {
 
         //        if (!vs.pointTouch)
         //        {
@@ -55,9 +55,9 @@ namespace Nathan
 
         //                rb.velocity = new Vector2(0.0f, 6.0f);
         //            }
-        //            Debug.Log($"type : {type}  vip : {vip}");
+                    //Debug.Log($"type : {type}  vip : {vip}");
         //            vs.pointTouch = true;
-        //        }
+           }
 
         //    }
         //public override void TouchUp()
