@@ -98,16 +98,19 @@ namespace Nathan
                         if (nbrObj == 1)
                         {
                             neObj = Instantiate(inventaireClient[index], spawnObj1[i].transform.position, Quaternion.identity);
+                            neObj.gameObject.GetComponent<objets>().enabled = false;
                             neObj.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
                         }
                         if (nbrObj == 2)
                         {
                             neObj = Instantiate(inventaireClient[index], spawnObj2[i].transform.position, Quaternion.identity);
+                            neObj.gameObject.GetComponent<objets>().enabled = false;
                             neObj.transform.localScale = new Vector3(0.26f, 0.26f, 0.26f);
                         }
                         if (nbrObj == 3)
                         {
                             neObj = Instantiate(inventaireClient[index], spawnObj3[i].transform.position, Quaternion.identity);
+                            neObj.gameObject.GetComponent<objets>().enabled = false;
                             neObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
                         }
                         newObj.Add(neObj);

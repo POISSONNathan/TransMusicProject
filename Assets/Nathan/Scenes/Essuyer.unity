@@ -294,7 +294,7 @@ Transform:
   - {fileID: 1678953833}
   - {fileID: 1984708644}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105856397
 GameObject:
@@ -400,7 +400,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1105856401
 MonoBehaviour:
@@ -414,6 +414,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd47b6b67b10814c91430d96595e6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1166209378
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4516674341150260272, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820943639453435388, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820943639453435388, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.08860636
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820943639453435388, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20791776
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820943639453435388, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820943639453435388, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820943639453435388, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820943639453435388, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820943639453435388, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820943639453435388, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820943639453435388, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820943639453435388, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7140452489770253682, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
+      propertyPath: m_Name
+      value: TextNettoyez
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
 --- !u!1 &1176851308
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +560,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1176851311
 Rigidbody2D:
@@ -665,19 +726,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTouchedObject: {fileID: 0}
-  WinParticule: {fileID: 6526580923330962994, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
-  scoreScene: 0
-  scoreSceneNeed: 0
-  gameFinish: 0
-  goNexwtGame: 0
-  animWinEndGame: {fileID: 6954178084021004802, guid: ffdc9733c1fc574438f079b7b6b3b790, type: 3}
-  createAnim: 0
-  animStartGame: {fileID: 7140452489770253682, guid: 6775329aaf341ee429a83d97b1b71945, type: 3}
-  createAnim2: 0
-  animStartGameReal: {fileID: 7910283827848377148, guid: 8d98e7bf6c100a34bb74e369a4d15a1e, type: 3}
-  createAnim3: 0
-  nextScene: 
-  switchMiniGame: 0
 --- !u!1 &1422326836
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,7 +821,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 1422326841}
-  dd: {fileID: 1337052607}
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
@@ -1002,7 +1049,7 @@ Transform:
   - {fileID: 570387646}
   - {fileID: 1428923222}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1678953832
 GameObject:
@@ -1099,7 +1146,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 1678953837}
-  dd: {fileID: 1337052607}
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
@@ -1251,7 +1297,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 1839799224}
-  dd: {fileID: 1337052607}
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
@@ -1403,7 +1448,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 1897337249}
-  dd: {fileID: 1337052607}
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
@@ -1555,7 +1599,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 1984708648}
-  dd: {fileID: 1337052607}
   objEssuie: {fileID: 1176851313}
   pourcent: 1
   essuieOrNot: 0
