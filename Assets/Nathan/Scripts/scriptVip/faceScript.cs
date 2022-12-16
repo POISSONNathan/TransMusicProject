@@ -13,6 +13,9 @@ namespace Nathan
         public vipScript vs;
 
         public int type;
+
+        private float fade = 1;
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -23,14 +26,17 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            if (!vs.pause)
+            //Debug.Log(vs.pause);
+            if (vs.pause)
             {
-                sr.color = new Color(0,0,0,0);
+                sr.color = new Color(255, 255, 255, fade);
             }
             else
             {
-                sr.color = new Color(255, 255, 255, 1);
+                sr.color = new Color(255,255,255,0);
             }
+
+            if (vs.vipSelected.Contains(type)) { fade = 0.3f; }
         }
     }
 }
