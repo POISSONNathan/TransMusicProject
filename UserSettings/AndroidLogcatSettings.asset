@@ -1,13 +1,44 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "8c31a1fc",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "8c31a1fc",
+        "name": "com.SleepyFrog.TransMusicProject",
+        "processId": 11931,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "8c31a1fc",
+            "name": "net.oneplus.launcher",
+            "processId": 4978,
+            "exited": false
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 11932,
+            "exited": true
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.SleepyFrog.TransMusicProject",
+            "processId": 11933,
+            "exited": false
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.SleepyFrog.TransMusicProject",
+            "processId": 11936,
+            "exited": false
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.SleepyFrog.TransMusicProject",
+            "processId": 11931,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -41,9 +72,20 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 0.0,
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
         "Behavior": 0
     },
