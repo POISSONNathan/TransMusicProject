@@ -14,7 +14,7 @@ namespace Nathan
 
         public bool drag = false;
 
-        public bool pause;
+        public bool pause = true;
 
         private bool vipOuPas;
 
@@ -31,12 +31,8 @@ namespace Nathan
         // Start is called before the first frame update
         void Start()
         {
-
-            pause = true;
-
             lm = ManagerManager.GetManagerManager.lm;
             lm.scoreSceneNeed = 1;
-
 
             //remplir la liste
             for (int i = 0; i < 10; i++)
@@ -80,10 +76,29 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            
+            if (Input.touchCount > 0)
+            {
+
+            Touch touch = Input.GetTouch(0);
+            switch (touch.phase)
+            {
+                //When a touch has first been detected, change the message and record the starting position
+                case TouchPhase.Began:
+                    pause = false;
+
+                    break;
+                case TouchPhase.Moved:
+                    
+                    break;
+                case TouchPhase.Ended:
+                    
+
+                    break;
+            }
+            }
             if (vipSelected.Count == 3)
             {
-                Debug.Log("gagné");
+                Debug.Log("gagnï¿½");
                 lm.GoToNextScene();
             }
 
@@ -99,10 +114,7 @@ namespace Nathan
             
             Rigidbody2D rb = ceMec.GetComponent<Rigidbody2D>();
 
-            if (vip)
-            {
-                ceMec.GetComponent<BoxCollider2D>().enabled = true;
-            }
+            ceMec.GetComponent<BoxCollider2D>().enabled = true;
 
             ceMec.vs = this;            
         }
