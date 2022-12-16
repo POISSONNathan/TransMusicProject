@@ -7,18 +7,21 @@ namespace Nathan
     public class dechetMove : MonoBehaviour
     {
         public Rigidbody2D rb;
-        public float speed = 2.0f;
+        public float speed = 4.0f;
         void Awake() => rb = GetComponent<Rigidbody2D>();
 
         public GameObject testC;
 
         public balaiControl bc;
 
+        public GameObject tertfe;
+
         // Start is called before the first frame update
         void Start()
         {
             rb.velocity = new Vector2(0.0f, -speed);
 
+            tertfe = GameObject.Find("spawner");
         }
 
         // Update is called once per frame
@@ -36,13 +39,17 @@ namespace Nathan
 
             if (collision.gameObject.tag == "trash")
             {
+                tertfe.GetComponent<SpawnerBehavior>().createdObjects.Remove(gameObject);
                 Destroy(this.gameObject);
             }
 
             if (collision.gameObject.tag == "collider")
             {
-                transform.position = new Vector3(0, 18, 0);
+
+                tertfe.GetComponent<SpawnerBehavior>().createdObjects.Remove(gameObject);
+                tertfe.GetComponent<SpawnerBehavior>().CheckForRespawn();
                 rb.velocity = new Vector2(0.0f, -speed);
+                Destroy(this.gameObject);
             }
 
         }

@@ -28,7 +28,7 @@ namespace Nathan {
                 Destroy(collision.gameObject);
             }
 
-            collision.gameObject.GetComponent<Transform>().transform.position = new Vector2(28, collision.gameObject.GetComponent<Transform>().transform.position.y);
+            collision.gameObject.GetComponent<Transform>().transform.position = new Vector2(26, collision.gameObject.GetComponent<Transform>().transform.position.y);
         }
     }
 }

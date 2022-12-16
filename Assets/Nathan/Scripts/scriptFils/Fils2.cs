@@ -62,6 +62,7 @@ namespace Nathan
 
         public void Connected()
         {
+            wm.currentWire = null;
             lightOn.SetActive(true);
             lm.scoreScene++;
             Destroy(this);

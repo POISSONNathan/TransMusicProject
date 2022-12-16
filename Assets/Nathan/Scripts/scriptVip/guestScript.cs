@@ -31,7 +31,14 @@ namespace Nathan
         {
             if (!vs.pause)
             {
-                rb.velocity = new Vector2(-speed, 0.0f);
+                if (vs.accelererFile == true)
+                {
+                    rb.velocity = new Vector2(-speed * 3, 0.0f);
+                }
+                if (vs.accelererFile == false)
+                {
+                    rb.velocity = new Vector2(-speed, 0.0f);
+                }
             }
             else
             {

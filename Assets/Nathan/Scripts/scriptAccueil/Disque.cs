@@ -6,9 +6,7 @@ namespace Nathan
 {
     public class Disque : MonoBehaviour
     {
-        public GameObject disqueBronze;
-        public GameObject disqueArgent;
-        public GameObject disqueOr;
+        public List<GameObject> listDisques;
 
         public int level;
 
@@ -26,45 +24,45 @@ namespace Nathan
             {
                 if (lm.bestTimeLevel1 < 100000)
                 {
-                    disqueBronze.SetActive(true);
-                }
-                if (lm.bestTimeLevel1 < 50)
-                {
-                    disqueArgent.SetActive(true);
+                    listDisques[0].SetActive(true);
                 }
                 if (lm.bestTimeLevel1 < 40)
                 {
-                    disqueOr.SetActive(true);
+                    listDisques[1].SetActive(true);
+                }
+                if (lm.bestTimeLevel1 < 30)
+                {
+                    listDisques[2].SetActive(true);
                 }
             }
             if (level == 2)
             {
                 if (lm.bestTimeLevel2 < 100000)
                 {
-                    disqueBronze.SetActive(true);
+                    listDisques[0].SetActive(true);
                 }
                 if (lm.bestTimeLevel2 < 50)
                 {
-                    disqueArgent.SetActive(true);
+                    listDisques[1].SetActive(true);
                 }
                 if (lm.bestTimeLevel2 < 40)
                 {
-                    disqueOr.SetActive(true);
+                    listDisques[2].SetActive(true);
                 }
             }
             if (level == 3)
             {
                 if (lm.bestTimeLevel3 < 100000)
                 {
-                    disqueBronze.SetActive(true);
+                    listDisques[0].SetActive(true);
                 }
                 if (lm.bestTimeLevel3 < 50)
                 {
-                    disqueArgent.SetActive(true);
+                    listDisques[1].SetActive(true);
                 }
                 if (lm.bestTimeLevel3 < 40)
                 {
-                    disqueOr.SetActive(true);
+                    listDisques[2].SetActive(true);
                 }
             }
         }

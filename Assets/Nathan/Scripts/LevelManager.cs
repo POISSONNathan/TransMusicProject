@@ -36,22 +36,25 @@ namespace Nathan
         public bool timer1Start = false;
         private float timerLevel1 = 0;
         public float secondLevel1 = 0;
-        public float bestTimeLevel1 = 100000;
+        public float bestTimeLevel1 = 1000000;
 
 
         public bool timer2Start = false;
         private float timerLevel2 = 0;
         public float secondLevel2 = 0;
-        public float bestTimeLevel2 = 100000;
+        public float bestTimeLevel2 = 1000000;
 
         public bool timer3Start = false;
         private float timerLevel3 = 0;
         public float secondLevel3 = 0;
-        public float bestTimeLevel3 = 100000;
+        public float bestTimeLevel3 = 1000000;
 
         public bool inMiniGame = false;
 
         public ManagerManager gm;
+
+        public bool skipMiniGames = false;
+        public bool allMinigames3Disques = false;
 
         public void ResetComponent()
         {
@@ -100,15 +103,31 @@ namespace Nathan
                 timerLevel3 += Time.deltaTime;
                 secondLevel3 = timerLevel3 % 60;
             }
+
+            if (skipMiniGames == true)
+            {
+                nextScene = "Accueil";
+            }
+            if (allMinigames3Disques == true)
+            {
+                bestTimeLevel1 = 30;
+                bestTimeLevel2 = 30;
+                bestTimeLevel3 = 30;
+            }
         }
+
 
         public void GoToNextScene()
         {
             inMiniGame = false;
-            if ((SceneManager.GetActiveScene().name) != "Accueil" && (SceneManager.GetActiveScene().name) != "1Start" && playAnimOneTime == false)
+            if ((SceneManager.GetActiveScene().name) != "Accueil" && (SceneManager.GetActiveScene().name) != "1Start" && (SceneManager.GetActiveScene().name) != "CreditScene" && playAnimOneTime == false)
             {
                 Instantiate(WinParticule, transform.position, Quaternion.identity);
                 playAnimOneTime = true;
+            }
+            if ((SceneManager.GetActiveScene().name) == "Accueil")
+            {
+                resetTimer();
             }
 
             if (switchOneTime == false)
@@ -128,7 +147,6 @@ namespace Nathan
 
             if (nextScene == "Accueil")
             {
-                Debug.Log(nextScene);
                 if (gm.currentLevel == 0)
                 {
                     endTimer1();

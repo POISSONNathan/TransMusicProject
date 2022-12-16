@@ -9,8 +9,6 @@ namespace Nathan
         public guestScript myGuest;
 
         public faceScript myFace;
-        
-        
 
         public bool pointTouch = false;
 
@@ -27,6 +25,8 @@ namespace Nathan
         public Transform[] target;
 
         public LevelManager lm;
+
+        public bool accelererFile = false;
 
         // Start is called before the first frame update
         void Start()
@@ -55,8 +55,6 @@ namespace Nathan
             
             for (int i = 0; i < baseCount; i++)
             {
-
-
                 int rand = Random.Range(0, guestList.Count);
                 int rdType = guestList[rand];
 
@@ -103,16 +101,25 @@ namespace Nathan
                 Debug.Log("gagné");
                 lm.GoToNextScene();
             }
+
+     
+
+
         }
         void Generate(int type,int move,bool vip)
         {
             guestScript ceMec = Instantiate(myGuest, new Vector2(transform.position.x+move, transform.position.y) , Quaternion.identity);
             ceMec.type = type;
             ceMec.vip = vip;
-            Rigidbody2D rb = ceMec.GetComponent<Rigidbody2D>();
             
+            Rigidbody2D rb = ceMec.GetComponent<Rigidbody2D>();
 
-            ceMec.vs = this;
+            if (vip)
+            {
+                ceMec.GetComponent<BoxCollider2D>().enabled = true;
+            }
+
+            ceMec.vs = this;            
         }
     }
 }
