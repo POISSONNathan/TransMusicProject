@@ -19,6 +19,7 @@ namespace Nathan
 
         public accueil ac;
 
+
         private int randomMiniGames;
 
         public int currentLevel;

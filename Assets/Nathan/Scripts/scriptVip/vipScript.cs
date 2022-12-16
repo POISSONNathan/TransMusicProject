@@ -98,7 +98,7 @@ namespace Nathan
             }
             if (vipSelected.Count == 3)
             {
-                Debug.Log("gagné");
+                Debug.Log("gagnï¿½");
                 lm.GoToNextScene();
             }
 
@@ -114,10 +114,7 @@ namespace Nathan
             
             Rigidbody2D rb = ceMec.GetComponent<Rigidbody2D>();
 
-            if (vip)
-            {
-                ceMec.GetComponent<BoxCollider2D>().enabled = true;
-            }
+            ceMec.GetComponent<BoxCollider2D>().enabled = true;
 
             ceMec.vs = this;            
         }
