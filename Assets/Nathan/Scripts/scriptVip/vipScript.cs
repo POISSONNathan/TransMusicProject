@@ -9,14 +9,12 @@ namespace Nathan
         public guestScript myGuest;
 
         public faceScript myFace;
-        
-        
 
         public bool pointTouch = false;
 
         public bool drag = false;
 
-        public bool pause = true;
+        public bool pause;
 
         private bool vipOuPas;
 
@@ -26,9 +24,19 @@ namespace Nathan
 
         public Transform[] target;
 
+        public LevelManager lm;
+
+        public bool accelererFile = false;
+
         // Start is called before the first frame update
         void Start()
         {
+
+            pause = true;
+
+            lm = ManagerManager.GetManagerManager.lm;
+            lm.scoreSceneNeed = 1;
+
 
             //remplir la liste
             for (int i = 0; i < 10; i++)
@@ -45,13 +53,12 @@ namespace Nathan
             {
                 faceScript ceVisage = Instantiate(myFace, target[i].position, Quaternion.identity);
                 ceVisage.type = vipList[i];
+                ceVisage.GetComponent<SpriteRenderer>().sortingOrder = 100;
                 ceVisage.vs = this;
             } 
             
             for (int i = 0; i < baseCount; i++)
             {
-
-
                 int rand = Random.Range(0, guestList.Count);
                 int rdType = guestList[rand];
 
@@ -73,40 +80,31 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            //if (Input.touchCount > 0)
-            //{
-
-            //    Touch touch = Input.GetTouch(0);
-            //    switch (touch.phase)
-            //    {
-            //        //When a touch has first been detected, change the message and record the starting position
-            //        case TouchPhase.Began:
-            //            pause = false;
-
-            //            break;
-            //        case TouchPhase.Moved:
-
-            //            break;
-            //        case TouchPhase.Ended:
-
-
-            //            break;
-            //    }
-            //}
+            
             if (vipSelected.Count == 3)
             {
                 Debug.Log("gagné");
+                lm.GoToNextScene();
             }
+
+     
+
+
         }
         void Generate(int type,int move,bool vip)
         {
             guestScript ceMec = Instantiate(myGuest, new Vector2(transform.position.x+move, transform.position.y) , Quaternion.identity);
             ceMec.type = type;
             ceMec.vip = vip;
-            Rigidbody2D rb = ceMec.GetComponent<Rigidbody2D>();
             
+            Rigidbody2D rb = ceMec.GetComponent<Rigidbody2D>();
 
-            ceMec.vs = this;
+            if (vip)
+            {
+                ceMec.GetComponent<BoxCollider2D>().enabled = true;
+            }
+
+            ceMec.vs = this;            
         }
     }
 }

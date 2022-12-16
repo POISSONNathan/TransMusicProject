@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 namespace Nathan {
     public class BoutonReturHome : TouchableObject
     {
-        // Start is called before the first frame update
+        private LevelManager lm;
+
         void Start()
         {
-
+            lm = ManagerManager.GetManagerManager.lm;
         }
 
         // Update is called once per frame
@@ -17,8 +18,10 @@ namespace Nathan {
         {
             
         }
-            public override void OnTouch(Touch touchinfo)
+        public override void OnTouch(Touch touchinfo)
         {
+            lm.resetTimer();
+            Debug.Log("fr");
             SceneManager.LoadScene("1Start", LoadSceneMode.Single);
         }
     }

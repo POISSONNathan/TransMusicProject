@@ -16,6 +16,7 @@ namespace Nathan
         void Start()
         {
             start = transform.position;
+            //Debug.Log(vs.pause);
         }
 
         // Update is called once per frame
@@ -26,17 +27,21 @@ namespace Nathan
 
         public override void OnTouch(Touch touchInfo)
         {
-            Debug.Log(vs.pause);
+            
             if (!vs.pause)
             {
-                transform.position = target.position;
+                
+                transform.position = start;
+                vs.pause = true;
                 
             }
             else
             {
-                transform.position = start;
+                transform.position = target.position;
+                vs.pause = false;
             }
-            vs.pause = !vs.pause;
+            //Debug.Log(vs.pause);
+
         }
     }
 }

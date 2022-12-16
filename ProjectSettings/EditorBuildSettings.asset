@@ -47,5 +47,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nathan/Scenes/MonterCaisse.unity
     guid: 1a6dd3b9dd1472e4b841b028fb3c7977
+  - enabled: 1
+    path: Assets/Nathan/Scenes/Vip.unity
+    guid: 655b23d096837944d9dd0b218cc95fc2
+  - enabled: 1
+    path: Assets/Nathan/Scenes/trouverObj.unity
+    guid: 5f13d93395cb0834895a33b08bfa13b4
+  - enabled: 1
+    path: Assets/Nathan/Scenes/CreditScene.unity
+    guid: 860acda291475cd4e94ef2e02b55469b
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 9c5dc4b3f9414984088655477ff1c0de, type: 2}
