@@ -14,7 +14,7 @@ namespace Nathan
 
         public bool drag = false;
 
-        public bool pause = true;
+        public bool pause;
 
         private bool vipOuPas;
 
@@ -33,6 +33,8 @@ namespace Nathan
         {
             lm = ManagerManager.GetManagerManager.lm;
             lm.scoreSceneNeed = 1;
+
+            pause = true;
 
             //remplir la liste
             for (int i = 0; i < 10; i++)
@@ -76,26 +78,26 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            if (Input.touchCount > 0)
-            {
+            //if (Input.touchCount > 0)
+            //{
 
-            Touch touch = Input.GetTouch(0);
-            switch (touch.phase)
-            {
-                //When a touch has first been detected, change the message and record the starting position
-                case TouchPhase.Began:
-                    pause = false;
+            //Touch touch = Input.GetTouch(0);
+            //switch (touch.phase)
+            //{
+            //    //When a touch has first been detected, change the message and record the starting position
+            //    case TouchPhase.Began:
+            //        pause = false;
 
-                    break;
-                case TouchPhase.Moved:
+            //        break;
+            //    case TouchPhase.Moved:
                     
-                    break;
-                case TouchPhase.Ended:
+            //        break;
+            //    case TouchPhase.Ended:
                     
 
-                    break;
-            }
-            }
+            //        break;
+            //}
+            //}
             if (vipSelected.Count == 3)
             {
                 Debug.Log("gagn�");
