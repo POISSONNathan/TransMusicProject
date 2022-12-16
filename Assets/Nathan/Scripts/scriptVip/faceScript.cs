@@ -23,7 +23,7 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(vs.pause);
+            
             if (vs.pause)
             {
                 sr.color = new Color(255, 255, 255, 1);
