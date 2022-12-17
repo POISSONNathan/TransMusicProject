@@ -33,6 +33,17 @@ namespace Nathan
 
         public GameObject mapObj;
 
+        public GameObject buttonPlayOff;
+        public GameObject buttonPlayOn;
+
+        public bool fullDisqueLvl1;
+        public bool fullDisqueLvl2;
+        public bool fullDisqueLvl3;
+
+        public GameObject disqueDiamant;
+
+        public Vector3 posStart;
+
         void Start()
         {
             gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
@@ -41,10 +52,17 @@ namespace Nathan
             Fade = 1;
             MovingLeft = false;
             MovingRight = false;
+
+            posStart = mapObj.transform.position;
         }
 
         void Update()
         {
+            if (fullDisqueLvl1 == true && fullDisqueLvl2 == true && fullDisqueLvl3 == true)
+            {
+                disqueDiamant.SetActive(true);
+            }
+
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 startTouchPos = Input.GetTouch(0).position;
@@ -57,7 +75,7 @@ namespace Nathan
                 {
                     moveLeft();
                 }
-                if (startTouchPos.x > endTouchPos.x && moveCamera == false && levelSelect < 2)
+                if (startTouchPos.x > endTouchPos.x && moveCamera == false && levelSelect < 3)
                 {
                     moveRight();
                 }
@@ -106,6 +124,37 @@ namespace Nathan
                 MovingLeft = false;
                 MovingRight = false;
             }   
+
+            if (levelSelect == 3)
+            {
+                buttonPlayOff.SetActive(false);
+                buttonPlayOn.SetActive(false); 
+            }
+            else
+            {
+                buttonPlayOff.SetActive(true);
+            }
+
+            if (gm.lm.miniGame1End == true)
+            {
+                mapObj.transform.position = new Vector3(posStart.x, posStart.y, posStart.z);
+                levelSelect = 0;
+                gm.lm.miniGame1End = false;
+            }
+
+            if (gm.lm.miniGame2End == true)
+            {
+                mapObj.transform.position = new Vector3(posStart.x - 6.51f, posStart.y, posStart.z);
+                levelSelect = 1;
+                gm.lm.miniGame2End = false;
+            }
+
+            if (gm.lm.miniGame3End == true)
+            {
+                mapObj.transform.position = new Vector3(posStart.x - 6.51f * 2, posStart.y, posStart.z);
+                levelSelect = 2;
+                gm.lm.miniGame3End = false;
+            }
         }
 
         private void moveLeft()

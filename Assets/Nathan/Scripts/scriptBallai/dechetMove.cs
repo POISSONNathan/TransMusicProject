@@ -41,6 +41,7 @@ namespace Nathan
             {
                 tertfe.GetComponent<SpawnerBehavior>().createdObjects.Remove(gameObject);
                 Destroy(this.gameObject);
+                tertfe.GetComponent<SpawnerBehavior>().CheckForRespawn();
             }
 
             if (collision.gameObject.tag == "collider")

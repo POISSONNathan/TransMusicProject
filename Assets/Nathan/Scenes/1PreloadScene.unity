@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c41af8004cf6a946a1f024521e214a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startThisScene: 0
+  startThisScene: 1
   index: 1
 --- !u!1 &1549831422
 GameObject:
@@ -716,7 +716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: maxTimeLevel2
-      value: 70
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: maxTimeLevel3
@@ -744,7 +744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: twoStarTimeLevel2
-      value: 55
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: twoStarTimeLevel3

@@ -21,8 +21,8 @@ namespace Nathan {
         public override void OnTouch(Touch touchinfo)
         {
             lm.resetTimer();
-            Debug.Log("fr");
-            SceneManager.LoadScene("1Start", LoadSceneMode.Single);
+            lm.inMiniGame = false;
+            SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
         }
     }
 }

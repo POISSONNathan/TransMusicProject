@@ -76,6 +76,10 @@ namespace Nathan
         public bool skipMiniGames = false;
         public bool allMinigames3Disques = false;
 
+        public bool miniGame1End = false;
+        public bool miniGame2End = false;
+        public bool miniGame3End = false;
+
         public void ResetComponent()
         {
             scoreScene = 0;
@@ -146,12 +150,14 @@ namespace Nathan
             }
             if (allMinigames3Disques == true)
             {
-                bestTimeLevel1 = 30;
-                bestTimeLevel2 = 30;
-                bestTimeLevel3 = 30;
+                bestTimeLevel1 = 1;
+                bestTimeLevel2 = 1;
+                bestTimeLevel3 = 1;
+                gm.ac.fullDisqueLvl1 = true;
+                gm.ac.fullDisqueLvl2 = true;
+                gm.ac.fullDisqueLvl3 = true;
             }
         }
-
 
         public void GoToNextScene()
         {
@@ -173,22 +179,6 @@ namespace Nathan
                 animator.SetTrigger("End");
             }
 
-            if (nextScene == "Accueil")
-            {
-                if (gm.currentLevel == 0)
-                {
-                    endTimer1();
-                }
-                if (gm.currentLevel == 1)
-                {
-                    endTimer2();
-                }
-                if (gm.currentLevel == 2)
-                {
-                    endTimer3();
-                }
-                inMiniGame = false;
-            }
 
         }
 
@@ -200,10 +190,26 @@ namespace Nathan
 
             if (nextScene == "Accueil")
             {
+                if (gm.currentLevel == 0)
+                {
+                    endTimer1();
+                    miniGame1End = true;
+                }
+                if (gm.currentLevel == 1)
+                {
+                    endTimer2();
+                    miniGame2End = true;
+                }
+                if (gm.currentLevel == 2)
+                {
+                    endTimer3();
+                    miniGame3End = true;
+                }
                 inMiniGame = false;
             }
 
-                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+            skipMiniGames = false;
+            SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
         }
 
         public void resetTimer()
