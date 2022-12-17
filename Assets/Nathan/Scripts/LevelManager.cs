@@ -24,30 +24,50 @@ namespace Nathan
 
         public bool playAnimOneTime = false;
 
-        private float timerGame = 0;
-        public float seconds = 0;
+        //private float timerGame = 0;
+        //public float seconds = 0;
         public int secondMiniGame;
 
-        /// <summary>
-        /// /////////////////
-        /// </summary>
-        /// 
+        //////////////////
 
-        public bool timer1Start = false;
+        private bool timer1Start = false;
         private float timerLevel1 = 0;
         public float secondLevel1 = 0;
+        //////
+        public float maxTimeLevel1;
+        //////
+        public float twoStarTimeLevel1;
+        public float threeStarTimeLevel1;
+        //////
         public float bestTimeLevel1 = 1000000;
 
+        //////////////////
 
-        public bool timer2Start = false;
+        private bool timer2Start = false;
         private float timerLevel2 = 0;
         public float secondLevel2 = 0;
+        //////
+        public float maxTimeLevel2;
+        //////
+        public float twoStarTimeLevel2;
+        public float threeStarTimeLevel2;
+        //////
         public float bestTimeLevel2 = 1000000;
 
-        public bool timer3Start = false;
+        //////////////////
+
+        private bool timer3Start = false;
         private float timerLevel3 = 0;
         public float secondLevel3 = 0;
+        //////
+        public float maxTimeLevel3;
+        //////
+        public float twoStarTimeLevel3;
+        public float threeStarTimeLevel3;
+        //////
         public float bestTimeLevel3 = 1000000;
+
+        //////////////////
 
         public bool inMiniGame = false;
 
@@ -92,16 +112,32 @@ namespace Nathan
             {
                 timerLevel1 += Time.deltaTime;
                 secondLevel1 = timerLevel1 % 60;
+
+                if (secondLevel1 > maxTimeLevel1)
+                {
+                    resetTimer();
+                    SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
+                }
             }
             if (timer2Start == true)
             {
                 timerLevel2 += Time.deltaTime;
                 secondLevel2 = timerLevel2 % 60;
+                if (secondLevel2 > maxTimeLevel2)
+                {
+                    resetTimer();
+                    SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
+                }
             }
             if (timer3Start == true)
             {
                 timerLevel3 += Time.deltaTime;
                 secondLevel3 = timerLevel3 % 60;
+                if (secondLevel3 > maxTimeLevel3)
+                {
+                    resetTimer();
+                    SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
+                }
             }
 
             if (skipMiniGames == true)
@@ -137,14 +173,6 @@ namespace Nathan
                 animator.SetTrigger("End");
             }
 
-        }
-
-        private void LaunchEndOfScene()
-        {
-            switchOneTime = false;
-            playAnimOneTime = false;
-            inMiniGame = true;
-
             if (nextScene == "Accueil")
             {
                 if (gm.currentLevel == 0)
@@ -159,9 +187,23 @@ namespace Nathan
                 {
                     endTimer3();
                 }
+                inMiniGame = false;
             }
 
-            SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+        }
+
+        private void LaunchEndOfScene()
+        {
+            switchOneTime = false;
+            playAnimOneTime = false;
+            inMiniGame = true;
+
+            if (nextScene == "Accueil")
+            {
+                inMiniGame = false;
+            }
+
+                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
         }
 
         public void resetTimer()
