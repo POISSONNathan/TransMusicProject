@@ -220,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: maxTimeLevel3
-      value: 60
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: skipMiniGames
@@ -248,7 +248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: twoStarTimeLevel3
-      value: 45
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: threeStarTimeLevel1
@@ -260,7 +260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: threeStarTimeLevel3
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134005, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: m_RootOrder
