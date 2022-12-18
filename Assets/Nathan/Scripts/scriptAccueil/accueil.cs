@@ -58,102 +58,105 @@ namespace Nathan
 
         void Update()
         {
-            if (fullDisqueLvl1 == true && fullDisqueLvl2 == true && fullDisqueLvl3 == true)
+            if (gm.introGame == false)
             {
-                disqueDiamant.SetActive(true);
-            }
-
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-            {
-                startTouchPos = Input.GetTouch(0).position;
-            }
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
-            {
-                endTouchPos = Input.GetTouch(0).position;
-
-                if (startTouchPos.x < endTouchPos.x - 200  && moveCamera == false && levelSelect > 0)
+                if (fullDisqueLvl1 == true && fullDisqueLvl2 == true && fullDisqueLvl3 == true)
                 {
-                    moveLeft();
+                    disqueDiamant.SetActive(true);
                 }
-                if (startTouchPos.x > endTouchPos.x + 200 && moveCamera == false && levelSelect < 3)
-                {
-                    moveRight();
-                }
-            }
 
-            if (moveCamera == true)
-            {
-                pourcentMove += 0.5f * Time.deltaTime;
-                if (levelSelect == 1)
+                if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
                 {
-                    if (MovingRight == true)
+                    startTouchPos = Input.GetTouch(0).position;
+                }
+                if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+                {
+                    endTouchPos = Input.GetTouch(0).position;
+
+                    if (startTouchPos.x < endTouchPos.x - 200 && moveCamera == false && levelSelect > 0)
                     {
-                        StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 0, 0.5f));
+                        moveLeft();
                     }
-                    if (MovingLeft == true)
+                    if (startTouchPos.x > endTouchPos.x + 200 && moveCamera == false && levelSelect < 3)
                     {
-                        StartCoroutine(SpriteFade(FondLV2.GetComponent<SpriteRenderer>(), 1, 0.5f));
+                        moveRight();
                     }
                 }
-                if (levelSelect == 2)
+
+                if (moveCamera == true)
                 {
-                    if (MovingRight == true)
+                    pourcentMove += 0.5f * Time.deltaTime;
+                    if (levelSelect == 1)
                     {
-                        StartCoroutine(SpriteFade(FondLV2.GetComponent<SpriteRenderer>(), 0, 0.5f));
+                        if (MovingRight == true)
+                        {
+                            StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 0, 0.5f));
+                        }
+                        if (MovingLeft == true)
+                        {
+                            StartCoroutine(SpriteFade(FondLV2.GetComponent<SpriteRenderer>(), 1, 0.5f));
+                        }
                     }
-                    if (MovingLeft == true)
+                    if (levelSelect == 2)
                     {
-                        StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 1, 0.5f));
+                        if (MovingRight == true)
+                        {
+                            StartCoroutine(SpriteFade(FondLV2.GetComponent<SpriteRenderer>(), 0, 0.5f));
+                        }
+                        if (MovingLeft == true)
+                        {
+                            StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 1, 0.5f));
+                        }
+                    }
+                    if (levelSelect == 0)
+                    {
+                        if (MovingLeft == true)
+                        {
+                            StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 1, 0.5f));
+                        }
                     }
                 }
-                if(levelSelect == 0)
+
+                mapObj.transform.position = Vector3.Lerp(mapObj.transform.position, nextPos, pourcentMove);
+
+                if (mapObj.transform.position == nextPos)
                 {
-                    if (MovingLeft == true)
-                    {
-                        StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 1, 0.5f));
-                    }
+                    pourcentMove = 0;
+                    moveCamera = false;
+                    MovingLeft = false;
+                    MovingRight = false;
                 }
-            }
 
-            mapObj.transform.position = Vector3.Lerp(mapObj.transform.position, nextPos, pourcentMove);
+                if (levelSelect == 3)
+                {
+                    buttonPlayOff.SetActive(false);
+                    buttonPlayOn.SetActive(false);
+                }
+                else
+                {
+                    buttonPlayOff.SetActive(true);
+                }
 
-            if (mapObj.transform.position == nextPos)
-            {
-                pourcentMove = 0;
-                moveCamera = false;
-                MovingLeft = false;
-                MovingRight = false;
-            }   
+                if (gm.lm.miniGame1End == true)
+                {
+                    mapObj.transform.position = new Vector3(posStart.x, posStart.y, posStart.z);
+                    levelSelect = 0;
+                    gm.lm.miniGame1End = false;
+                }
 
-            if (levelSelect == 3)
-            {
-                buttonPlayOff.SetActive(false);
-                buttonPlayOn.SetActive(false); 
-            }
-            else
-            {
-                buttonPlayOff.SetActive(true);
-            }
+                if (gm.lm.miniGame2End == true)
+                {
+                    mapObj.transform.position = new Vector3(posStart.x - 6.51f, posStart.y, posStart.z);
+                    levelSelect = 1;
+                    gm.lm.miniGame2End = false;
+                }
 
-            if (gm.lm.miniGame1End == true)
-            {
-                mapObj.transform.position = new Vector3(posStart.x, posStart.y, posStart.z);
-                levelSelect = 0;
-                gm.lm.miniGame1End = false;
-            }
-
-            if (gm.lm.miniGame2End == true)
-            {
-                mapObj.transform.position = new Vector3(posStart.x - 6.51f, posStart.y, posStart.z);
-                levelSelect = 1;
-                gm.lm.miniGame2End = false;
-            }
-
-            if (gm.lm.miniGame3End == true)
-            {
-                mapObj.transform.position = new Vector3(posStart.x - 6.51f * 2, posStart.y, posStart.z);
-                levelSelect = 2;
-                gm.lm.miniGame3End = false;
+                if (gm.lm.miniGame3End == true)
+                {
+                    mapObj.transform.position = new Vector3(posStart.x - 6.51f * 2, posStart.y, posStart.z);
+                    levelSelect = 2;
+                    gm.lm.miniGame3End = false;
+                }
             }
         }
 

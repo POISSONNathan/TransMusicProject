@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Nathan {
+namespace Nathan 
+{
     public class BoutonReturHome : TouchableObject
     {
         private LevelManager lm;
 
+        public accueil ac;
+
+        public ManagerManager gm;
+
         void Start()
         {
             lm = ManagerManager.GetManagerManager.lm;
+            gm = ManagerManager.GetManagerManager;
         }
 
         // Update is called once per frame
@@ -20,9 +26,12 @@ namespace Nathan {
         }
         public override void OnTouch(Touch touchinfo)
         {
-            lm.resetTimer();
-            lm.inMiniGame = false;
-            SceneManager.LoadScene("1Start", LoadSceneMode.Single);
+            if (gm.introGame == false)
+            {
+                lm.resetTimer();
+                lm.inMiniGame = false;
+                SceneManager.LoadScene("1Start", LoadSceneMode.Single);
+            }
         }
     }
 }

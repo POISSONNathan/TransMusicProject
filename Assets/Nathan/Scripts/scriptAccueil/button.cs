@@ -51,34 +51,40 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-            if (ac.moveCamera == false && touchOneTime == false)
+            if (gm.introGame == false)
             {
-                touchOneTime = true;
-                this.GetComponent<Animator>().SetTrigger("Boing");
-                //this.GetComponent<Animator>().Play("ButtonPlayAcceuil");
+                if (ac.moveCamera == false && touchOneTime == false)
+                {
+                    touchOneTime = true;
+                    this.GetComponent<Animator>().SetTrigger("Boing");
+                    //this.GetComponent<Animator>().Play("ButtonPlayAcceuil");
+                }
             }
         }
         public override void TouchUp()
         {
-            if (ac.moveCamera == false)
+            if (gm.introGame == false)
             {
-                if (gm.currentLevel == 0)
+                if (ac.moveCamera == false)
                 {
-                    gm.accueilScene = false;
-                    ManagerManager.GetManagerManager.lm.GoToNextScene();
+                    if (gm.currentLevel == 0)
+                    {
+                        gm.accueilScene = false;
+                        ManagerManager.GetManagerManager.lm.GoToNextScene();
+                    }
+                    if (gm.currentLevel == 1 && gm.lm.bestTimeLevel1 < 100000)
+                    {
+                        gm.accueilScene = false;
+                        ManagerManager.GetManagerManager.lm.GoToNextScene();
+                    }
+                    if (gm.currentLevel == 2 && gm.lm.bestTimeLevel2 < 100000)
+                    {
+                        gm.accueilScene = false;
+                        ManagerManager.GetManagerManager.lm.GoToNextScene();
+                    }
                 }
-                if (gm.currentLevel == 1 && gm.lm.bestTimeLevel1 < 100000)
-                {
-                    gm.accueilScene = false;
-                    ManagerManager.GetManagerManager.lm.GoToNextScene();
-                }
-                if (gm.currentLevel == 2 && gm.lm.bestTimeLevel2 < 100000)
-                {
-                    gm.accueilScene = false;
-                    ManagerManager.GetManagerManager.lm.GoToNextScene();
-                }
+                this.GetComponent<Animator>().SetTrigger("Boing");
             }
-            this.GetComponent<Animator>().SetTrigger("Boing");
         }
 
     }

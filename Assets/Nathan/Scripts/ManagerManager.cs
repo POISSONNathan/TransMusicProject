@@ -25,6 +25,8 @@ namespace Nathan
 
         public bool accueilScene = false;
 
+        public bool introGame = true;
+
         //Pas ouf mais pas d�geu quand meme
         public static ManagerManager GetManagerManager => FindObjectOfType<ManagerManager>();
 
@@ -70,7 +72,7 @@ namespace Nathan
             //////
             if (currentLevel == 1 && SceneManager.GetActiveScene().name == "Accueil" )
             {
-                if (myMiniGames2.Count > 0)
+                if (myMiniGames2.Count > 0 && accueilScene == false)
                 {
                     tempMiniGames = myMiniGames2;
                     lm.startTimer2();
@@ -81,7 +83,7 @@ namespace Nathan
             //////
             if (currentLevel == 2 && SceneManager.GetActiveScene().name == "Accueil")
             {
-                if (myMiniGames3.Count > 0)
+                if (myMiniGames3.Count > 0 && accueilScene == false)
                 {
                     tempMiniGames = myMiniGames3;
                     lm.startTimer3();

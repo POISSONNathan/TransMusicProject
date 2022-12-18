@@ -7,7 +7,6 @@ namespace Nathan
     public class listLight : MonoBehaviour
     {
         public List<GameObject> lights;
-        public int lightUseCount = 0;
 
         public float randomRotateSpawn;
         private LevelManager lm;
@@ -46,7 +45,6 @@ namespace Nathan
             }
 
             lm.scoreSceneNeed = 3;
-            lm.nextScene = "ReactionTime";
         }
 
         // Update is called once per frame

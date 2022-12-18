@@ -1524,7 +1524,7 @@ MonoBehaviour:
   objPossible: []
   randomObj: 0
   client: []
-  nbrObj: 1
+  nbrObj: 3
   goodObj: 0
   index: 0
   objSelected: {fileID: 0}
@@ -1549,6 +1549,8 @@ MonoBehaviour:
   - {fileID: 706823754}
   neObj: {fileID: 0}
   newObj: []
+  bulle: {fileID: 37878835}
+  clientSprite: {fileID: 970125910}
 --- !u!61 &970125914
 BoxCollider2D:
   m_ObjectHideFlags: 0
