@@ -73,6 +73,7 @@ namespace Nathan
 
         public ManagerManager gm;
 
+        public bool skipThisMiniGame = false;
         public bool skipMiniGames = false;
         public bool allMinigames3Disques = false;
 
@@ -144,6 +145,10 @@ namespace Nathan
                 }
             }
 
+            if (skipThisMiniGame == true)
+            {
+                GoToNextScene();
+            }
             if (skipMiniGames == true)
             {
                 nextScene = "Accueil";

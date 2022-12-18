@@ -71,11 +71,11 @@ namespace Nathan
             {
                 endTouchPos = Input.GetTouch(0).position;
 
-                if (startTouchPos.x < endTouchPos.x && moveCamera == false && levelSelect > 0)
+                if (startTouchPos.x < endTouchPos.x - 200  && moveCamera == false && levelSelect > 0)
                 {
                     moveLeft();
                 }
-                if (startTouchPos.x > endTouchPos.x && moveCamera == false && levelSelect < 3)
+                if (startTouchPos.x > endTouchPos.x + 200 && moveCamera == false && levelSelect < 3)
                 {
                     moveRight();
                 }

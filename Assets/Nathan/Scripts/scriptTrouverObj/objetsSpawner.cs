@@ -54,6 +54,7 @@ namespace Nathan
 
             var inventaireObj = Instantiate(gameObjectsToSpawn[gameObjectToSpawnIndex], spawnObjATouver.position, Quaternion.identity);
             inventaireObj.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+            inventaireObj.gameObject.GetComponent<objScore>().enabled = false;
 
             gameObjectsToSpawn.Remove(gameObjectsToSpawn[gameObjectToSpawnIndex]);
             leure();
