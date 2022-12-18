@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "8c31a1fc",
     "m_SelectedPackage": {
         "deviceId": "8c31a1fc",
-        "name": "com.SleepyFrog.TransMusicProject",
-        "processId": 11931,
+        "name": "com.SleepyFrog.VoluntaryParty",
+        "processId": 16155,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -36,6 +36,54 @@
             "deviceId": "8c31a1fc",
             "name": "com.SleepyFrog.TransMusicProject",
             "processId": 11931,
+            "exited": false
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.SleepyFrog.TransMusicProject",
+            "processId": 16140,
+            "exited": false
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.SleepyFrog.VoluntaryParty",
+            "processId": 16145,
+            "exited": false
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.SleepyFrog.VoluntaryParty",
+            "processId": 16144,
+            "exited": false
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.SleepyFrog.VoluntaryParty",
+            "processId": 16146,
+            "exited": false
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.SleepyFrog.VoluntaryParty",
+            "processId": 16152,
+            "exited": false
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.SleepyFrog.VoluntaryParty",
+            "processId": 16154,
+            "exited": false
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.SleepyFrog.VoluntaryParty",
+            "processId": 16153,
+            "exited": false
+        },
+        {
+            "deviceId": "8c31a1fc",
+            "name": "com.SleepyFrog.VoluntaryParty",
+            "processId": 16155,
             "exited": false
         }
     ],

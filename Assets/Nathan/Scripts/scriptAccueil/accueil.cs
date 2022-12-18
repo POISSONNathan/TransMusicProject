@@ -83,7 +83,7 @@ namespace Nathan
 
             if (moveCamera == true)
             {
-                pourcentMove += 0.001f;
+                pourcentMove += 0.5f * Time.deltaTime;
                 if (levelSelect == 1)
                 {
                     if (MovingRight == true)

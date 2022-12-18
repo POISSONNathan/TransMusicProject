@@ -22,7 +22,7 @@ namespace Nathan {
         {
             lm.resetTimer();
             lm.inMiniGame = false;
-            SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
+            SceneManager.LoadScene("1Start", LoadSceneMode.Single);
         }
     }
 }

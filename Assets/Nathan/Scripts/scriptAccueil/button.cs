@@ -28,7 +28,6 @@ namespace Nathan
         void Update() 
         {
 
-
             if (ac.moveCamera == false )
             {
                 if((gm.lm.bestTimeLevel1 != 1000000 && gm.currentLevel==1)){
