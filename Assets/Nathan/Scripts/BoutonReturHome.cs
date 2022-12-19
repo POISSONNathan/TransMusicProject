@@ -9,8 +9,6 @@ namespace Nathan
     {
         private LevelManager lm;
 
-        public accueil ac;
-
         public ManagerManager gm;
 
         void Start()
