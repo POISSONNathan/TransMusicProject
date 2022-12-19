@@ -73,6 +73,10 @@ namespace Nathan
                     Debug.Log("fer");
                     md.goodObj = true;
                     lm.scoreScene++;
+                    if (lm.scoreScene == lm.scoreSceneNeed)
+                    {
+                        md.thisGameFish = true;
+                    }
                     transform.position = posStart;
 				}
             }

@@ -71,6 +71,7 @@ namespace Nathan
         private void OnCollisionEnter2D(Collision2D collision)
         {
             lm.scoreScene++;
+            collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }
