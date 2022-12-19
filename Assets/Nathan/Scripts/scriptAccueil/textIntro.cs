@@ -17,6 +17,8 @@ namespace Nathan
 
         public ManagerManager gm;
 
+        private bool StartD = false;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -45,14 +47,25 @@ namespace Nathan
                 if (dialogues.Count == 0)
                 {
                     gm.introGame = false;
-                    Destroy(this.gameObject);
+                    this.GetComponent<Animator>().Play("DialogueEnd");
                 }
             }
-            
-            if (dialogues.Count > 0)
+
+            if (dialogues.Count > 0 && StartD == true)
             {
                 dialogues[0].SetActive(true);
             }
+            
+        }
+
+        public void DialogueStart()
+        {
+            StartD = true;
+        }
+
+        public void DialogueEnd()
+        {
+            Destroy(this.gameObject);
         }
     }
 }
