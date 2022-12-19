@@ -8,15 +8,31 @@ namespace Nathan
     {
         private LevelManager lm;
 
+        private bool canTouch = false;
+
         void Start()
         {
             lm = ManagerManager.GetManagerManager.lm;
         }
 
+        public void Update()
+        {
+            if (Input.touchCount == 0)
+            {
+                canTouch = true;
+            }
+            else
+            {
+                canTouch = false;
+            }
+        }
         public override void OnTouch(Touch touchinfo)
         {
-            lm.scoreScene++;
-            Destroy(this.gameObject);
+            if (canTouch == true)
+            {
+                lm.scoreScene++;
+                Destroy(this.gameObject);
+            }
         }
     }
 }
