@@ -12,10 +12,14 @@ namespace Nathan
 
         public List<GameObject> dialogues;
 
+        public List<GameObject> Expression;
+
         public GameObject chefBenevole;
         public GameObject bulle;
 
         public ManagerManager gm;
+
+        private bool StartD = false;
 
         // Start is called before the first frame update
         void Start()
@@ -37,6 +41,16 @@ namespace Nathan
                 Destroy(dialogues[0]);
                 dialogues.Remove(dialogues[0]);
             }
+            
+            if(dialogues.Count == 3 || dialogues.Count == 1 ){
+                Expression[4].SetActive(true);
+                Expression[3].SetActive(false);
+            }
+
+            if(dialogues.Count == 2 ){
+                Expression[4].SetActive(false);
+                Expression[3].SetActive(true);
+            }
 
             if (Input.touchCount == 0)
             {
@@ -45,14 +59,25 @@ namespace Nathan
                 if (dialogues.Count == 0)
                 {
                     gm.introGame = false;
-                    Destroy(this.gameObject);
+                    this.GetComponent<Animator>().Play("DialogueEnd");
                 }
             }
-            
-            if (dialogues.Count > 0)
+
+            if (dialogues.Count > 0 && StartD == true)
             {
                 dialogues[0].SetActive(true);
             }
+            
+        }
+
+        public void DialogueStart()
+        {
+            StartD = true;
+        }
+
+        public void DialogueEnd()
+        {
+            Destroy(this.gameObject);
         }
     }
 }

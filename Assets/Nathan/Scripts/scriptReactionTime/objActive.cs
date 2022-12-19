@@ -20,6 +20,7 @@ namespace Nathan
                 rt.activePossible = true;
                 isActive = false;
                 rt.counterChangeColor = 0;
+                this.GetComponent<Animator>().Play("ButtonPushLevel");
             }
         }
 
