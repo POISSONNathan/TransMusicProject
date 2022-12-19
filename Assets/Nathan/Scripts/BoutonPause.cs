@@ -26,7 +26,6 @@ namespace Nathan
             menu.GetComponent<Animator>().Play("MenuOpening");
             this.GetComponent<Animator>().Play("ButtonPause");
             FondPause.GetComponent<Animator>().Play("FondShadeIn");
-            Debug.Log("oui");
         }
 
     }

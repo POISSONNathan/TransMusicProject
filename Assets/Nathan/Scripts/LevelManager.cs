@@ -31,7 +31,6 @@ namespace Nathan
         //////////////////
 
         private bool timer1Start = false;
-        private float timerLevel1 = 0;
         public float secondLevel1 = 0;
         //////
         public float maxTimeLevel1;
@@ -44,7 +43,6 @@ namespace Nathan
         //////////////////
 
         private bool timer2Start = false;
-        private float timerLevel2 = 0;
         public float secondLevel2 = 0;
         //////
         public float maxTimeLevel2;
@@ -57,7 +55,6 @@ namespace Nathan
         //////////////////
 
         private bool timer3Start = false;
-        private float timerLevel3 = 0;
         public float secondLevel3 = 0;
         //////
         public float maxTimeLevel3;
@@ -115,32 +112,32 @@ namespace Nathan
 
             if (timer1Start == true)
             {
-                timerLevel1 += Time.deltaTime;
-                secondLevel1 = timerLevel1 % 60;
+                secondLevel1 += Time.deltaTime;
 
                 if (secondLevel1 > maxTimeLevel1)
                 {
                     resetTimer();
+                    inMiniGame = false;
                     SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
                 }
             }
             if (timer2Start == true)
             {
-                timerLevel2 += Time.deltaTime;
-                secondLevel2 = timerLevel2 % 60;
+                secondLevel2 += Time.deltaTime;
                 if (secondLevel2 > maxTimeLevel2)
                 {
                     resetTimer();
+                    inMiniGame = false;
                     SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
                 }
             }
             if (timer3Start == true)
             {
-                timerLevel3 += Time.deltaTime;
-                secondLevel3 = timerLevel3 % 60;
+                secondLevel3 += Time.deltaTime;
                 if (secondLevel3 > maxTimeLevel3)
                 {
                     resetTimer();
+                    inMiniGame = false;
                     SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
                 }
             }
@@ -220,11 +217,8 @@ namespace Nathan
         public void resetTimer()
         {
             secondLevel1 = 0;
-            timerLevel1 = 0;
             secondLevel2 = 0;
-            timerLevel2 = 0;
             secondLevel3 = 0;
-            timerLevel3 = 0;
 
             timer1Start = false;
             timer2Start = false;
