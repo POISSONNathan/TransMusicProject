@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "2UPNW20825002495",
         "name": "com.SleepyFrog.VoluntaryParty",
-        "processId": 4424,
+        "processId": 7436,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -108,6 +108,12 @@
             "deviceId": "2UPNW20825002495",
             "name": "com.SleepyFrog.VoluntaryParty",
             "processId": 4424,
+            "exited": false
+        },
+        {
+            "deviceId": "2UPNW20825002495",
+            "name": "com.SleepyFrog.VoluntaryParty",
+            "processId": 7436,
             "exited": false
         }
     ],

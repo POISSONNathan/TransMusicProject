@@ -1231,7 +1231,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1656788314}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &722873779
 PrefabInstance:
@@ -1803,7 +1803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003111383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05564642, y: -0.15000004, z: 10}
+  m_LocalPosition: {x: -0.055645943, y: -0.15000004, z: 10}
   m_LocalScale: {x: 0.7447495, y: 0.7447495, z: 0.7447495}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1892,7 +1892,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1656788314}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1025213588
 GameObject:
@@ -3103,7 +3103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507ba62438ed441429e09d96140dbc86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ac: {fileID: 1656788315}
   gm: {fileID: 0}
 --- !u!58 &1567281829
 CircleCollider2D:
@@ -3325,8 +3324,8 @@ Transform:
   - {fileID: 1295291508}
   - {fileID: 427988555}
   - {fileID: 1207555668}
-  - {fileID: 610765542}
   - {fileID: 1010828304}
+  - {fileID: 610765542}
   - {fileID: 1003111385}
   m_Father: {fileID: 0}
   m_RootOrder: 0

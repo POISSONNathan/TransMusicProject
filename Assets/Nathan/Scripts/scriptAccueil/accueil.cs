@@ -86,6 +86,13 @@ namespace Nathan
                 if (moveCamera == true)
                 {
                     pourcentMove += 0.5f * Time.deltaTime;
+                    if (levelSelect == 0)
+                    {
+                        if (MovingLeft == true)
+                        {
+                            StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 1, 0.5f));
+                        }
+                    }
                     if (levelSelect == 1)
                     {
                         if (MovingRight == true)
@@ -103,13 +110,6 @@ namespace Nathan
                         {
                             StartCoroutine(SpriteFade(FondLV2.GetComponent<SpriteRenderer>(), 0, 0.5f));
                         }
-                        if (MovingLeft == true)
-                        {
-                            StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 1, 0.5f));
-                        }
-                    }
-                    if (levelSelect == 0)
-                    {
                         if (MovingLeft == true)
                         {
                             StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 1, 0.5f));
