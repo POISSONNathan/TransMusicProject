@@ -56,7 +56,7 @@ namespace Nathan
             {
                 if (Input.touchCount > 0 && touchPossible == true)
                 {
-                    transform.position = new Vector2(transform.position.x, transform.position.y + 0.4f);
+                    transform.position = new Vector2(transform.position.x, transform.position.y + 0.7f);
                     touchPossible = false;
                 }
                 if (Input.touchCount == 0)
