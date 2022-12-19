@@ -12,6 +12,8 @@ namespace Nathan
 
         public List<GameObject> dialogues;
 
+        public List<GameObject> Expression;
+
         public GameObject chefBenevole;
         public GameObject bulle;
 
@@ -38,6 +40,16 @@ namespace Nathan
                 touchOneTime = false;
                 Destroy(dialogues[0]);
                 dialogues.Remove(dialogues[0]);
+            }
+            
+            if(dialogues.Count == 3 || dialogues.Count == 1 ){
+                Expression[4].SetActive(true);
+                Expression[3].SetActive(false);
+            }
+
+            if(dialogues.Count == 2 ){
+                Expression[4].SetActive(false);
+                Expression[3].SetActive(true);
             }
 
             if (Input.touchCount == 0)
