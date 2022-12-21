@@ -197,6 +197,7 @@ namespace Nathan
 
         public void GoToNextScene()
         {
+            ResetComponent();
             inMiniGame = false;
             if ((SceneManager.GetActiveScene().name) != "Accueil" && (SceneManager.GetActiveScene().name) != "1Start" && (SceneManager.GetActiveScene().name) != "CreditScene" && playAnimOneTime == false)
             {

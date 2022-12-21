@@ -40,7 +40,7 @@ namespace Nathan {
         public GameObject bulle;
         public GameObject client;
 
-
+        public bool thisGameFish = false;
         void Start()
         {
 
@@ -71,7 +71,7 @@ namespace Nathan {
         // Update is called once per frame
         void Update()
         {
-            if (lm.scoreScene < lm.scoreSceneNeed)
+            if (thisGameFish == false)
             {
                 if (colorSelected == "orange")
                 {
@@ -116,7 +116,7 @@ namespace Nathan {
                 colorLogo2.SetActive(false);
             }
 
-            if (lm.scoreScene < lm.scoreSceneNeed)
+            if (thisGameFish == false)
             {
                 if (goodObj == true)
                 {

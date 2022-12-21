@@ -53,9 +53,8 @@ namespace Nathan
         {
             if (gm.introGame == false)
             {
-                if (ac.moveCamera == false && touchOneTime == false)
+                if (ac.moveCamera == false)
                 {
-                    touchOneTime = true;
                     this.GetComponent<Animator>().SetTrigger("Boing");
                     //this.GetComponent<Animator>().Play("ButtonPlayAcceuil");
                 }
@@ -65,8 +64,9 @@ namespace Nathan
         {
             if (gm.introGame == false)
             {
-                if (ac.moveCamera == false)
+                if (ac.moveCamera == false && touchOneTime == false)
                 {
+                    touchOneTime = true;
                     if (gm.currentLevel == 0)
                     {
                         gm.accueilScene = false;
