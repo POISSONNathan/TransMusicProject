@@ -52,6 +52,7 @@ namespace Nathan {
                 disque2.GetComponent<Image>().enabled = true;
                 disque3.GetComponent<Image>().enabled = true;
             }
+            
             if (lm.inMiniGame == false)
             {
                 contourBar.GetComponent<Image>().enabled = false;

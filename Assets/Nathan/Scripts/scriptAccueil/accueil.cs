@@ -28,7 +28,7 @@ namespace Nathan
 
         public GameObject FondLV1;
         public GameObject FondLV2;
-
+        public GameObject FondLV3;
         public float Fade;
 
         public GameObject mapObj;
@@ -58,6 +58,7 @@ namespace Nathan
 
         void Update()
         {
+            Debug.Log(levelSelect);
             if (gm.introGame == false)
             {
                 if (fullDisqueLvl1 == true && fullDisqueLvl2 == true && fullDisqueLvl3 == true)
@@ -110,9 +111,23 @@ namespace Nathan
                         {
                             StartCoroutine(SpriteFade(FondLV2.GetComponent<SpriteRenderer>(), 0, 0.5f));
                         }
+
                         if (MovingLeft == true)
                         {
-                            StartCoroutine(SpriteFade(FondLV1.GetComponent<SpriteRenderer>(), 1, 0.5f));
+                            StartCoroutine(SpriteFade(FondLV3.GetComponent<SpriteRenderer>(), 1, 0.5f));
+                        }
+                    }
+
+                    if (levelSelect == 3)
+                    {
+                        if (MovingRight == true)
+                        {
+                            StartCoroutine(SpriteFade(FondLV3.GetComponent<SpriteRenderer>(), 0, 0.5f));
+                        }
+
+                        if (MovingLeft == true)
+                        {
+                            StartCoroutine(SpriteFade(FondLV2.GetComponent<SpriteRenderer>(), 1, 0.5f));
                         }
                     }
                 }
