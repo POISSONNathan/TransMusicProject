@@ -51,7 +51,7 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-            if (gm.introGame == false)
+            if (gm.introGame == false && gm.lm.infoOpen == false)
             {
                 if (ac.moveCamera == false)
                 {
@@ -62,7 +62,7 @@ namespace Nathan
         }
         public override void TouchUp()
         {
-            if (gm.introGame == false)
+            if (gm.introGame == false && gm.lm.infoOpen == false)
             {
                 if (ac.moveCamera == false && touchOneTime == false)
                 {

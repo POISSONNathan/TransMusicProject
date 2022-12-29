@@ -82,6 +82,11 @@ namespace Nathan
         public bool miniGame2End = false;
         public bool miniGame3End = false;
 
+        public bool oneInfoSelected = false;
+        public bool infoOpen = false;
+
+        public bool gamePause = false;
+
         public void ResetComponent()
         {
             scoreScene = 0;
@@ -114,7 +119,7 @@ namespace Nathan
                 ResetComponent();
             }
 
-            if (timer1Start == true)
+            if (timer1Start == true && gamePause == false)
             {
                 secondLevel1 += Time.deltaTime;
 
@@ -135,7 +140,7 @@ namespace Nathan
                     OrDisque.GetComponent<Image>().color = new Color (0.35f,0.35f,0.35f);
                 }
             }
-            if (timer2Start == true)
+            if (timer2Start == true && gamePause == false)
             {
                 secondLevel2 += Time.deltaTime;
                 if (secondLevel2 > maxTimeLevel2)
@@ -155,7 +160,7 @@ namespace Nathan
                     OrDisque.GetComponent<Image>().color = new Color (0.35f,0.35f,0.35f);
                 }
             }
-            if (timer3Start == true)
+            if (timer3Start == true && gamePause == false)
             {
                 secondLevel3 += Time.deltaTime;
                 if (secondLevel3 > maxTimeLevel3)
@@ -215,8 +220,6 @@ namespace Nathan
                 switchOneTime = true;
                 animator.SetTrigger("End");
             }
-
-
         }
 
         private void LaunchEndOfScene()

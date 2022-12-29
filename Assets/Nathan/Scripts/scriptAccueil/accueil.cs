@@ -58,8 +58,7 @@ namespace Nathan
 
         void Update()
         {
-            Debug.Log(levelSelect);
-            if (gm.introGame == false)
+            if (gm.introGame == false && gm.lm.infoOpen == false)
             {
                 if (fullDisqueLvl1 == true && fullDisqueLvl2 == true && fullDisqueLvl3 == true)
                 {

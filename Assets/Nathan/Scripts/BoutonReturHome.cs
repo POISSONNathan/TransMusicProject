@@ -24,7 +24,7 @@ namespace Nathan
         }
         public override void OnTouch(Touch touchinfo)
         {
-            if (gm.introGame == false)
+            if (gm.introGame == false && lm.infoOpen == false)
             {
                 lm.resetTimer();
                 lm.inMiniGame = false;
