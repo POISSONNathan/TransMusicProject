@@ -30,11 +30,9 @@ namespace Nathan
         //Pas ouf mais pas d�geu quand meme
         public static ManagerManager GetManagerManager => FindObjectOfType<ManagerManager>();
 
-        void Awake()
-
+        void Start()
         {
             DontDestroyOnLoad(gameObject);
-            
         }
 
         // Update is called once per frame
@@ -64,6 +62,7 @@ namespace Nathan
                 if (myMiniGames1.Count > 0 && accueilScene == false)
                 {
                     tempMiniGames = myMiniGames1;
+                    ShuffleList(tempMiniGames);
                     lm.startTimer1();
                 }
             }
@@ -75,6 +74,7 @@ namespace Nathan
                 if (myMiniGames2.Count > 0 && accueilScene == false)
                 {
                     tempMiniGames = myMiniGames2;
+                    ShuffleList(tempMiniGames);
                     lm.startTimer2();
                 }
             }
@@ -86,6 +86,7 @@ namespace Nathan
                 if (myMiniGames3.Count > 0 && accueilScene == false)
                 {
                     tempMiniGames = myMiniGames3;
+                    ShuffleList(tempMiniGames);
                     lm.startTimer3();
                 }
             }
@@ -96,9 +97,19 @@ namespace Nathan
             }
             else
             {
-                randomMiniGames = Random.Range(0, tempMiniGames.Count);
-                lm.nextScene = tempMiniGames[randomMiniGames];
-                tempMiniGames.Remove(tempMiniGames[randomMiniGames]);
+                lm.nextScene = tempMiniGames[0];
+                tempMiniGames.Remove(tempMiniGames[0]);
+            }
+        }
+
+        public void ShuffleList(List<string> listeGames)
+        {
+            for (int i = 0; i < listeGames.Count; i++)
+            {
+                string temp = listeGames[i];
+                int randomIndex = Random.Range(i, listeGames.Count);
+                listeGames[i] = listeGames[randomIndex];
+                listeGames[randomIndex] = temp;
             }
         }
     }

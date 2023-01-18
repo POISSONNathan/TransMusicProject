@@ -28,6 +28,8 @@ namespace Nathan
             {
                 lm.resetTimer();
                 lm.inMiniGame = false;
+                lm.switchOneTime = false;
+                lm.gamePause = false;
                 SceneManager.LoadScene("1Start", LoadSceneMode.Single);
             }
         }

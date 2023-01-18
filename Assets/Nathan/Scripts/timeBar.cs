@@ -26,6 +26,7 @@ namespace Nathan {
         // Update is called once per frame
         void Update()
         {
+
             if (gm.currentLevel == 0)
             {
                 float fillAmount = (float)lm.secondLevel1 / (float)lm.maxTimeLevel1;

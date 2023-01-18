@@ -213,7 +213,6 @@ namespace Nathan
             {
                 resetTimer();
             }
-
             if (switchOneTime == false)
             {
                 switchMiniGame = true;
@@ -266,6 +265,7 @@ namespace Nathan
         public void startTimer1()
         {
             timer1Start = true;
+
         }
         public void endTimer1()
         {
