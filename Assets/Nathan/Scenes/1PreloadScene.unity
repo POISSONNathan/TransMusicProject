@@ -326,6 +326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ManagerManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4489459246919199775, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6909287471366142611, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: gm
       value: 
