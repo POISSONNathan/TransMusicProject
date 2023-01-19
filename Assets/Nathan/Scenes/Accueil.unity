@@ -595,7 +595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &182892817
 Transform:
   m_ObjectHideFlags: 0
@@ -715,7 +715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &242369862
 Transform:
   m_ObjectHideFlags: 0
@@ -2348,10 +2348,10 @@ Transform:
   - {fileID: 258321095}
   - {fileID: 1306499946}
   - {fileID: 1128106474}
+  - {fileID: 2015759897}
   - {fileID: 8625054}
   - {fileID: 370188853}
   - {fileID: 722873780}
-  - {fileID: 2015759897}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2373,7 +2373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &764281101
 Transform:
   m_ObjectHideFlags: 0
@@ -2866,7 +2866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1068505717
 Transform:
   m_ObjectHideFlags: 0
@@ -3978,7 +3978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1399093995
 Transform:
   m_ObjectHideFlags: 0
@@ -4098,7 +4098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1403630567
 Transform:
   m_ObjectHideFlags: 0
@@ -4337,7 +4337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1518067061
 Transform:
   m_ObjectHideFlags: 0
@@ -5247,7 +5247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1828024414
 Transform:
   m_ObjectHideFlags: 0
@@ -5746,7 +5746,7 @@ Transform:
   - {fileID: 129613791}
   - {fileID: 1337063625}
   m_Father: {fileID: 755831826}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2054453001
 GameObject:
@@ -5871,7 +5871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2056912710
 Transform:
   m_ObjectHideFlags: 0

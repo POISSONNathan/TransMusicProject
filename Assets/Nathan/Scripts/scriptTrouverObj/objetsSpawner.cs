@@ -22,6 +22,7 @@ namespace Nathan
         private LevelManager lm;
 
         public Text scoreText;
+        public Text scoreTextMax;
 
         void Start()
         {
@@ -38,6 +39,8 @@ namespace Nathan
         public void spawnObj()
         {
             numGameObjectsToSpawn = Random.Range(3, spawnPoints.Count + 1);
+            scoreTextMax.text = numGameObjectsToSpawn.ToString();
+
             gameObjectToSpawnIndex = Random.Range(0, gameObjectsToSpawn.Count);
 
             lm.scoreSceneNeed = numGameObjectsToSpawn;

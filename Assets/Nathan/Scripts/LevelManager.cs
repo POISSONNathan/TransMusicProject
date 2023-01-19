@@ -249,6 +249,7 @@ namespace Nathan
 
             skipMiniGames = false;
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+            nextScene = "";
         }
 
         public void resetTimer()
