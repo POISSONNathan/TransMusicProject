@@ -486,7 +486,7 @@ RectTransform:
   m_GameObject: {fileID: 337580688}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11.947119, y: 11.947119, z: 11.947119}
+  m_LocalScale: {x: 4.66081, y: 4.66081, z: 4.66081}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1774246840}
@@ -494,8 +494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 653, y: -1055}
-  m_SizeDelta: {x: 32.4, y: 30}
+  m_AnchoredPosition: {x: 577.06946, y: -1055}
+  m_SizeDelta: {x: 47.8, y: 65.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &337580690
 MonoBehaviour:
@@ -519,10 +519,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 27
+    m_FontSize: 55
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 69
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1899,7 +1899,7 @@ RectTransform:
   m_GameObject: {fileID: 2132917631}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11.947119, y: 11.947119, z: 11.947119}
+  m_LocalScale: {x: 4.66081, y: 4.66081, z: 4.66081}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1774246840}
@@ -1907,8 +1907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 404, y: -1055}
-  m_SizeDelta: {x: 32.4, y: 30}
+  m_AnchoredPosition: {x: 277, y: -1055}
+  m_SizeDelta: {x: 47.8, y: 65.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2132917633
 MonoBehaviour:
@@ -1932,10 +1932,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 27
+    m_FontSize: 55
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 69
     m_Alignment: 0
     m_AlignByGeometry: 0
