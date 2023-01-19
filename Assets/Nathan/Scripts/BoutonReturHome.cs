@@ -26,6 +26,8 @@ namespace Nathan
         {
             if (gm.introGame == false && lm.infoOpen == false)
             {
+                gm.lm.resetGameEnd();
+
                 lm.resetTimer();
                 lm.inMiniGame = false;
                 lm.switchOneTime = false;

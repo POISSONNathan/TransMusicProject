@@ -87,12 +87,32 @@ namespace Nathan
 
         public bool gamePause = false;
 
+        public bool doOnceEndTimer = false;
+
         public void ResetComponent()
         {
             scoreScene = 0;
             //timerGame = 0;
             //seconds = 0;
             goNexwtGame = false;
+        }
+
+        public void resetGameEnd()
+        {
+            gm.dragGameGood = false;
+            gm.essuyerGameGood = false;
+            gm.filsGameGood = false;
+            gm.monterCaisseGameGood = false;
+
+            gm.trouverMerchGameGood = false;
+            gm.magasinGameGood = false;
+            gm.balaiGameGood = false;
+            gm.trouverObjGameGood = false;
+
+            gm.rotateGameGood = false;
+            gm.reactionTimeGameGood = false;
+            gm.lumiereGameGood = false;
+            gm.vipGameGood = false;
         }
 
         void Update()
@@ -125,8 +145,11 @@ namespace Nathan
 
                 if (secondLevel1 > maxTimeLevel1)
                 {
+                    gm.backgroundSummary.SetActive(true);
+
                     resetTimer();
                     inMiniGame = false;
+                    miniGame1End = true;
                     SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
                     ArgentDisque.GetComponent<Image>().color = new Color (1,1,1);
                     OrDisque.GetComponent<Image>().color = new Color (1,1,1);
@@ -145,7 +168,9 @@ namespace Nathan
                 secondLevel2 += Time.deltaTime;
                 if (secondLevel2 > maxTimeLevel2)
                 {
+                    gm.backgroundSummary.SetActive(true);
                     resetTimer();
+                    miniGame2End = true;
                     inMiniGame = false;
                     SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
                     ArgentDisque.GetComponent<Image>().color = new Color (1,1,1);
@@ -165,6 +190,8 @@ namespace Nathan
                 secondLevel3 += Time.deltaTime;
                 if (secondLevel3 > maxTimeLevel3)
                 {
+                    gm.backgroundSummary.SetActive(true);
+                    miniGame3End = true;
                     resetTimer();
                     inMiniGame = false;
                     SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
@@ -213,21 +240,7 @@ namespace Nathan
             {
                 resetTimer();
             }
-            if (switchOneTime == false)
-            {
-                switchMiniGame = true;
-                switchOneTime = true;
-                animator.SetTrigger("End");
-            }
-        }
-
-        private void LaunchEndOfScene()
-        {
-            switchOneTime = false;
-            playAnimOneTime = false;
-            inMiniGame = true;
-
-            if (nextScene == "Accueil")
+            if (nextScene == "Accueil" && doOnceEndTimer == false)
             {
                 if (gm.currentLevel == 0)
                 {
@@ -244,8 +257,58 @@ namespace Nathan
                     endTimer3();
                     miniGame3End = true;
                 }
-                inMiniGame = false;
+                doOnceEndTimer = true;
             }
+
+            if (switchOneTime == false)
+            {
+                switchMiniGame = true;
+                switchOneTime = true;
+                animator.SetTrigger("End");
+            }
+        }
+
+        private void LaunchEndOfScene()
+        {
+            doOnceEndTimer = false;
+
+            switchOneTime = false;
+            playAnimOneTime = false;
+            inMiniGame = true;
+
+            if (nextScene == "Accueil")
+            {
+                inMiniGame = false;
+
+                gm.backgroundSummary.SetActive(true);
+            }
+
+            if ((SceneManager.GetActiveScene().name) == "Drage&Drop")
+            {gm.dragGameGood = true; }
+            if ((SceneManager.GetActiveScene().name) == "Essuyer")
+            { gm.essuyerGameGood = true; }
+            if ((SceneManager.GetActiveScene().name) == "Fils")
+            { gm.filsGameGood = true; }
+            if ((SceneManager.GetActiveScene().name) == "MonterCaisse")
+            { gm.monterCaisseGameGood = true; }
+
+            if ((SceneManager.GetActiveScene().name) == "TrouveMerch")
+            { gm.trouverMerchGameGood = true; }
+            if ((SceneManager.GetActiveScene().name) == "Magasin")
+            { gm.magasinGameGood = true; }
+            if ((SceneManager.GetActiveScene().name) == "balai")
+            { gm.balaiGameGood = true; }
+            if ((SceneManager.GetActiveScene().name) == "trouverObj")
+            { gm.trouverObjGameGood = true; }
+
+            if ((SceneManager.GetActiveScene().name) == "Rotate")
+            { gm.rotateGameGood = true; }
+            if ((SceneManager.GetActiveScene().name) == "ReactionTime")
+            { gm.reactionTimeGameGood = true; }
+            if ((SceneManager.GetActiveScene().name) == "Lumière")
+            { gm.lumiereGameGood = true; }
+            if ((SceneManager.GetActiveScene().name) == "Vip")
+            { gm.vipGameGood = true; }
 
             skipMiniGames = false;
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);

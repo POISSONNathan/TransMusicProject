@@ -27,6 +27,25 @@ namespace Nathan
 
         public bool introGame = true;
 
+        public int numberMiniGameEnd = -1;
+
+        public GameObject backgroundSummary;
+
+        public bool dragGameGood = false;
+        public bool essuyerGameGood = false;
+        public bool filsGameGood = false;
+        public bool monterCaisseGameGood = false;
+
+        public bool trouverMerchGameGood = false;
+        public bool magasinGameGood = false;
+        public bool balaiGameGood = false;
+        public bool trouverObjGameGood = false;
+
+        public bool rotateGameGood = false;
+        public bool reactionTimeGameGood = false;
+        public bool lumiereGameGood = false;
+        public bool vipGameGood = false;
+
         //Pas ouf mais pas d�geu quand meme
         public static ManagerManager GetManagerManager => FindObjectOfType<ManagerManager>();
 
@@ -62,6 +81,7 @@ namespace Nathan
                 if (myMiniGames1.Count > 0 && accueilScene == false)
                 {
                     tempMiniGames = myMiniGames1;
+
                     ShuffleList(tempMiniGames);
                     lm.startTimer1();
                 }
@@ -100,6 +120,7 @@ namespace Nathan
                 lm.nextScene = tempMiniGames[0];
                 tempMiniGames.Remove(tempMiniGames[0]);
             }
+                numberMiniGameEnd++;
         }
 
         public void ShuffleList(List<string> listeGames)
