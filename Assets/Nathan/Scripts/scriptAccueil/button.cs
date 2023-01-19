@@ -66,20 +66,22 @@ namespace Nathan
             {
                 if (ac.moveCamera == false && touchOneTime == false)
                 {
-                    touchOneTime = true;
                     if (gm.currentLevel == 0)
                     {
                         gm.accueilScene = false;
+                        touchOneTime = true;
                         ManagerManager.GetManagerManager.lm.GoToNextScene();
                     }
                     if (gm.currentLevel == 1 && gm.lm.bestTimeLevel1 < 100000)
                     {
                         gm.accueilScene = false;
+                        touchOneTime = true;
                         ManagerManager.GetManagerManager.lm.GoToNextScene();
                     }
                     if (gm.currentLevel == 2 && gm.lm.bestTimeLevel2 < 100000)
                     {
                         gm.accueilScene = false;
+                        touchOneTime = true;
                         ManagerManager.GetManagerManager.lm.GoToNextScene();
                     }
                 }
