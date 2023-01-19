@@ -24,6 +24,8 @@ namespace Nathan
         public GameObject ArgentDisque;
         public GameObject OrDisque;  
 
+        public SummaryEndLevel se;  
+
         private string oldLevel;
 
         public bool playAnimOneTime = false;
@@ -146,13 +148,11 @@ namespace Nathan
                 if (secondLevel1 > maxTimeLevel1)
                 {
                     gm.backgroundSummary.SetActive(true);
-
                     resetTimer();
                     inMiniGame = false;
                     miniGame1End = true;
+                    se.CreateText();
                     SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
-                    ArgentDisque.GetComponent<Image>().color = new Color (1,1,1);
-                    OrDisque.GetComponent<Image>().color = new Color (1,1,1);
                 }
 
                 if(secondLevel1 >= twoStarTimeLevel1){
@@ -171,10 +171,9 @@ namespace Nathan
                     gm.backgroundSummary.SetActive(true);
                     resetTimer();
                     miniGame2End = true;
+                    se.CreateText();
                     inMiniGame = false;
                     SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
-                    ArgentDisque.GetComponent<Image>().color = new Color (1,1,1);
-                    OrDisque.GetComponent<Image>().color = new Color (1,1,1);
                 }
 
                 if(secondLevel2 >= twoStarTimeLevel2){
@@ -192,11 +191,10 @@ namespace Nathan
                 {
                     gm.backgroundSummary.SetActive(true);
                     miniGame3End = true;
+                    se.CreateText();
                     resetTimer();
                     inMiniGame = false;
                     SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
-                    ArgentDisque.GetComponent<Image>().color = new Color (1,1,1);
-                    OrDisque.GetComponent<Image>().color = new Color (1,1,1);
                 }
 
                 if(secondLevel3 >= twoStarTimeLevel3){
@@ -311,6 +309,12 @@ namespace Nathan
             { gm.vipGameGood = true; }
 
             skipMiniGames = false;
+            
+            if ((SceneManager.GetActiveScene().name) != "Accueil" && nextScene == "Accueil")
+            {
+                se.CreateText();
+            }
+
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
             nextScene = "";
         }
@@ -324,6 +328,9 @@ namespace Nathan
             timer1Start = false;
             timer2Start = false;
             timer3Start = false;
+
+            ArgentDisque.GetComponent<Image>().color = new Color(1, 1, 1);
+            OrDisque.GetComponent<Image>().color = new Color(1, 1, 1);
         }
 
         public void startTimer1()
@@ -338,8 +345,6 @@ namespace Nathan
                 bestTimeLevel1 = secondLevel1;
             }
             resetTimer();
-            ArgentDisque.GetComponent<Image>().color = new Color (1,1,1);
-            OrDisque.GetComponent<Image>().color = new Color (1,1,1);
         }
 
         public void startTimer2()
@@ -353,8 +358,6 @@ namespace Nathan
                 bestTimeLevel2 = secondLevel2;
             }
             resetTimer();
-            ArgentDisque.GetComponent<Image>().color = new Color (1,1,1);
-            OrDisque.GetComponent<Image>().color = new Color (1,1,1);
         }
 
         public void startTimer3()
@@ -368,8 +371,6 @@ namespace Nathan
                 bestTimeLevel3 = secondLevel3;
             }
             resetTimer();
-            ArgentDisque.GetComponent<Image>().color = new Color (1,1,1);
-            OrDisque.GetComponent<Image>().color = new Color (1,1,1);
         }
     } 
 }

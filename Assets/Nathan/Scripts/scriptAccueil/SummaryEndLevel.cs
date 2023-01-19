@@ -16,8 +16,7 @@ namespace Nathan
 
         public List<GameObject> miniGames3;
 
-
-        void Start()
+        public void CreateText()
         {
             if (gm.lm.miniGame1End == true)
             {

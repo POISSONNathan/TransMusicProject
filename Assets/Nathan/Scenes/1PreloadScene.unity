@@ -716,7 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c41af8004cf6a946a1f024521e214a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startThisScene: 0
+  startThisScene: 1
   index: 1
 --- !u!1 &1519115585
 GameObject:
@@ -1261,6 +1261,10 @@ PrefabInstance:
       propertyPath: mm
       value: 
       objectReference: {fileID: 921830040}
+    - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
+      propertyPath: se
+      value: 
+      objectReference: {fileID: 1523572003}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: GoldStar
       value: 
