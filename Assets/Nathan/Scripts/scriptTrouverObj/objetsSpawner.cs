@@ -48,14 +48,14 @@ namespace Nathan
 
                 var newObj = Instantiate(gameObjectsToSpawn[gameObjectToSpawnIndex], spawnPoints[spawnPointIndex].position, Quaternion.identity);
                 newObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-
+                newObj.GetComponent<SpriteRenderer>().sortingOrder = spawnPoints[spawnPointIndex].GetComponent<SpriteRenderer>().sortingOrder;
                 spawnPoints.Remove(spawnPoints[spawnPointIndex]);
             }
 
             var inventaireObj = Instantiate(gameObjectsToSpawn[gameObjectToSpawnIndex], spawnObjATouver.position, Quaternion.identity);
             inventaireObj.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
             inventaireObj.gameObject.GetComponent<objScore>().enabled = false;
-
+            inventaireObj.GetComponent<SpriteRenderer>().sortingOrder = spawnObjATouver.GetComponent<SpriteRenderer>().sortingOrder;
             gameObjectsToSpawn.Remove(gameObjectsToSpawn[gameObjectToSpawnIndex]);
             leure();
         }
@@ -71,7 +71,7 @@ namespace Nathan
                 var newObj1 = Instantiate(gameObjectsToSpawn[gameObjectToSpawnIndex2], spawnPointsLeure[spawnPointIndex2].position, Quaternion.identity);
                 newObj1.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
                 newObj1.gameObject.GetComponent<objScore>().enabled = false;
-
+                newObj1.GetComponent<SpriteRenderer>().sortingOrder = spawnPointsLeure[spawnPointIndex2].GetComponent<SpriteRenderer>().sortingOrder;
                 spawnPointsLeure.Remove(spawnPointsLeure[spawnPointIndex2]);
             }
         }
