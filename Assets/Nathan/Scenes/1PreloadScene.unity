@@ -904,7 +904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1523572001
 Transform:
   m_ObjectHideFlags: 0
@@ -1287,7 +1287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: maxTimeLevel1
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3539503965631134002, guid: eb376cd55bce4a44fa6351010455b755, type: 3}
       propertyPath: maxTimeLevel2
