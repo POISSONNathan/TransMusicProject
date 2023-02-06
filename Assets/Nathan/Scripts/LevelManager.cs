@@ -243,17 +243,14 @@ namespace Nathan
                 if (gm.currentLevel == 0)
                 {
                     endTimer1();
-                    miniGame1End = true;
                 }
                 if (gm.currentLevel == 1)
                 {
                     endTimer2();
-                    miniGame2End = true;
                 }
                 if (gm.currentLevel == 2)
                 {
                     endTimer3();
-                    miniGame3End = true;
                 }
                 doOnceEndTimer = true;
             }
@@ -274,12 +271,6 @@ namespace Nathan
             playAnimOneTime = false;
             inMiniGame = true;
 
-            if (nextScene == "Accueil")
-            {
-                inMiniGame = false;
-
-                gm.backgroundSummary.SetActive(true);
-            }
 
             if ((SceneManager.GetActiveScene().name) == "Drage&Drop")
             {gm.dragGameGood = true; }
@@ -312,6 +303,23 @@ namespace Nathan
             
             if ((SceneManager.GetActiveScene().name) != "Accueil" && nextScene == "Accueil")
             {
+                inMiniGame = false;
+
+                gm.backgroundSummary.SetActive(true);
+
+                if (gm.currentLevel == 0)
+                {
+                    miniGame1End = true;
+                }
+                if (gm.currentLevel == 1)
+                {
+                    miniGame2End = true;
+                }
+                if (gm.currentLevel == 2)
+                {
+                    miniGame3End = true;
+                }
+
                 se.CreateText();
             }
 
