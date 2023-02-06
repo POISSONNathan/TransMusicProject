@@ -151,8 +151,8 @@ namespace Nathan
                     resetTimer();
                     inMiniGame = false;
                     miniGame1End = true;
-                    se.CreateText();
                     SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
+                    se.CreateText();
                 }
 
                 if(secondLevel1 >= twoStarTimeLevel1){
@@ -238,22 +238,7 @@ namespace Nathan
             {
                 resetTimer();
             }
-            if (nextScene == "Accueil" && doOnceEndTimer == false)
-            {
-                if (gm.currentLevel == 0)
-                {
-                    endTimer1();
-                }
-                if (gm.currentLevel == 1)
-                {
-                    endTimer2();
-                }
-                if (gm.currentLevel == 2)
-                {
-                    endTimer3();
-                }
-                doOnceEndTimer = true;
-            }
+            
 
             if (switchOneTime == false)
             {
@@ -263,41 +248,82 @@ namespace Nathan
             }
         }
 
+        public void placeImageGame1(int currentGame,int order)
+        {
+            se.miniGames1[currentGame].transform.position = se.spawn[order].transform.position;
+            se.orderText.Add(se.miniGames1[currentGame]);
+        }
+        public void placeImageGame2(int currentGame, int order)
+        {
+            se.miniGames2[currentGame].transform.position = se.spawn[order].transform.position;
+            se.orderText.Add(se.miniGames2[currentGame]);
+        }
+        public void placeImageGame3(int currentGame, int order)
+        {
+            se.miniGames3[currentGame].transform.position = se.spawn[order].transform.position;
+            se.orderText.Add(se.miniGames3[currentGame]);
+        }
+
         private void LaunchEndOfScene()
         {
             doOnceEndTimer = false;
-
             switchOneTime = false;
             playAnimOneTime = false;
             inMiniGame = true;
 
 
             if ((SceneManager.GetActiveScene().name) == "Drage&Drop")
-            {gm.dragGameGood = true; }
+            {gm.dragGameGood = true;
+                placeImageGame1(0,se.order);
+            }
             if ((SceneManager.GetActiveScene().name) == "Essuyer")
-            { gm.essuyerGameGood = true; }
+            { gm.essuyerGameGood = true;
+                placeImageGame1(1, se.order);
+            }
             if ((SceneManager.GetActiveScene().name) == "Fils")
-            { gm.filsGameGood = true; }
+            { gm.filsGameGood = true;
+                placeImageGame1(2, se.order);
+            }
             if ((SceneManager.GetActiveScene().name) == "MonterCaisse")
-            { gm.monterCaisseGameGood = true; }
+            { gm.monterCaisseGameGood = true;
+                placeImageGame1(3, se.order);
+            }
+
+
 
             if ((SceneManager.GetActiveScene().name) == "TrouveMerch")
-            { gm.trouverMerchGameGood = true; }
+            { gm.trouverMerchGameGood = true;
+                placeImageGame2(0, se.order);
+            }
             if ((SceneManager.GetActiveScene().name) == "Magasin")
-            { gm.magasinGameGood = true; }
+            { gm.magasinGameGood = true;
+                placeImageGame2(1, se.order);
+            }
             if ((SceneManager.GetActiveScene().name) == "balai")
-            { gm.balaiGameGood = true; }
+            { gm.balaiGameGood = true;
+                placeImageGame2(2, se.order);
+            }
             if ((SceneManager.GetActiveScene().name) == "trouverObj")
-            { gm.trouverObjGameGood = true; }
+            { gm.trouverObjGameGood = true;
+                placeImageGame2(3, se.order);
+            }
 
             if ((SceneManager.GetActiveScene().name) == "Rotate")
-            { gm.rotateGameGood = true; }
+            { gm.rotateGameGood = true;
+                placeImageGame3(0, se.order);
+            }
             if ((SceneManager.GetActiveScene().name) == "ReactionTime")
-            { gm.reactionTimeGameGood = true; }
+            { gm.reactionTimeGameGood = true;
+                placeImageGame3(1, se.order);
+            }
             if ((SceneManager.GetActiveScene().name) == "Lumière")
-            { gm.lumiereGameGood = true; }
+            { gm.lumiereGameGood = true;
+                placeImageGame3(2, se.order);
+            }
             if ((SceneManager.GetActiveScene().name) == "Vip")
-            { gm.vipGameGood = true; }
+            { gm.vipGameGood = true;
+                placeImageGame3(3, se.order);
+            }
 
             skipMiniGames = false;
             
@@ -321,6 +347,27 @@ namespace Nathan
                 }
 
                 se.CreateText();
+            }
+
+            if ((SceneManager.GetActiveScene().name) != "Accueil" && nextScene != "Accueil")
+            {
+                se.order++;
+            }
+
+            if (nextScene == "Accueil")
+            {
+                if (gm.currentLevel == 0)
+                {
+                    endTimer1();
+                }
+                if (gm.currentLevel == 1)
+                {
+                    endTimer2();
+                }
+                if (gm.currentLevel == 2)
+                {
+                    endTimer3();
+                }
             }
 
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
