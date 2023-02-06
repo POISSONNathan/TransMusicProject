@@ -41,6 +41,8 @@ namespace Nathan
                     miniGames3[i].SetActive(true);
                 }
             }
+
+            gm.lm.infoOpen = true;
         }
 
         void Update()
@@ -114,6 +116,8 @@ namespace Nathan
                 }
 
                 this.gameObject.SetActive(false);
+
+                gm.lm.infoOpen = false;
             }
         }
     }
