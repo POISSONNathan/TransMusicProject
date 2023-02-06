@@ -20,9 +20,18 @@ namespace Nathan
 
         public int order = 0;
 
-        public bool addOrder1;
+        public bool canEnd = false;
+
+        public bool startTimer = false;
 
         public List<GameObject> orderText;
+
+        public float pourcent = 0;
+
+        public Color alphaGood;
+        public Color alphaNotGood;
+
+        public int indexOrderText = 0;
 
         public void CreateText()
         {
@@ -31,7 +40,7 @@ namespace Nathan
                 for (int i = 0; i < miniGames1.Count; i++)
                 {
                     miniGames1[i].SetActive(true);
-                    miniGames1[i].GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
+                    miniGames1[i].GetComponent<SpriteRenderer>().color = alphaNotGood;
                 }
             }
 
@@ -40,7 +49,7 @@ namespace Nathan
                 for (int i = 0; i < miniGames2.Count; i++)
                 {
                     miniGames2[i].SetActive(true);
-                    miniGames2[i].GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
+                    miniGames2[i].GetComponent<SpriteRenderer>().color = alphaNotGood;
                 }
             }
 
@@ -49,7 +58,7 @@ namespace Nathan
                 for (int i = 0; i < miniGames3.Count; i++)
                 {
                     miniGames3[i].SetActive(true);
-                    miniGames3[i].GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
+                    miniGames3[i].GetComponent<SpriteRenderer>().color = alphaNotGood;
                 }
             }
 
@@ -83,7 +92,6 @@ namespace Nathan
                     order++;
                 }
             }
-
 
             ////////////////////
 
@@ -139,15 +147,36 @@ namespace Nathan
 
             /////////////////////
 
-            for (int i = 0; i < orderText.Count; i++)
+            startTimer = true;
+        }
+
+        public void Update()
+        {
+            if (startTimer == true)
             {
-                orderText[i].GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+                pourcent += Time.deltaTime / 1f ;
+
+                orderText[indexOrderText].GetComponent<SpriteRenderer>().color = Color.Lerp(alphaNotGood, alphaGood, pourcent);
+
+                if (pourcent >= 1)
+                {
+                    indexOrderText++;
+                    pourcent = 0;
+                }
+
+                if (indexOrderText == orderText.Count)
+                {
+                    startTimer = false;
+                    canEnd = true;
+                    indexOrderText = 0;
+                    pourcent = 0;
+                }
             }
         }
 
         public override void OnTouch(Touch touchinfo)
         {
-            if (!touchOneTime)
+            if (!touchOneTime && canEnd == true)
             {
                 touchOneTime = true;
             }
@@ -178,6 +207,7 @@ namespace Nathan
                 orderText.Clear();
 
                 order = 0;
+                canEnd = false;
                 gm.lm.infoOpen = false;
             }
         }

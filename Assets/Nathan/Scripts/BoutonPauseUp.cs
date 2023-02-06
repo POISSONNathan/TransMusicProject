@@ -29,7 +29,6 @@ namespace Nathan
             menu2.GetComponent<Animator>().Play("MenuClosingVersion2");
             Bouton.GetComponent<Animator>().Play("ButtonPauseDown");
             FondPause2.GetComponent<Animator>().Play("FondShadeOut");
-            Debug.Log("oui");
             gm.lm.gamePause = false;
         }
     }
