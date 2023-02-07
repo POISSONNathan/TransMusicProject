@@ -91,6 +91,8 @@ namespace Nathan
 
         public bool doOnceEndTimer = false;
 
+        public bool isScrolling = false;
+
         public void ResetComponent()
         {
             scoreScene = 0;

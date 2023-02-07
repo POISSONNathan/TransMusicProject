@@ -14,7 +14,6 @@ namespace Nathan
         public bool isOpen = false;
         public bool touchOneTime = false;
 
-
         public GameObject text;
         public Vector3 originPos;
         public Vector3 originScale;
@@ -28,12 +27,18 @@ namespace Nathan
 
         public float pourcent = 0f;
 
+        public GameObject fond;
+        public Color startColor;
+        public Color endColor;
+
         void Start()
         {
             gm = ManagerManager.GetManagerManager;
             lm = ManagerManager.GetManagerManager.lm;
 
             originScale = text.transform.localScale;
+
+            fond.GetComponent<SpriteRenderer>().color = startColor;
 
             scalePos = new Vector3(1.17633915f, 1.17633915f, 1.17633915f);
         }
@@ -47,6 +52,8 @@ namespace Nathan
                 text.transform.localScale = originScale;
                 text.SetActive(false);
                 touchOneTime = true;
+
+                fond.GetComponent<SpriteRenderer>().color = startColor;
 
                 isOpen = false;
                 lm.oneInfoSelected = false;
@@ -66,6 +73,8 @@ namespace Nathan
                     text.transform.position = Vector3.Lerp(originPos, zoomPos.position, pourcent);
                     text.transform.localScale = Vector3.Lerp(originScale, scalePos, pourcent);
 
+                    fond.GetComponent<SpriteRenderer>().color = Color.Lerp(startColor, endColor, pourcent);
+
                     if (pourcent >= 1f)
                     {
                         isOpen = true;
@@ -79,7 +88,7 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-            if (isOpen == false && touchOneTime == false && gm.introGame == false && lm.oneInfoSelected == false)
+            if (isOpen == false && touchOneTime == false && gm.introGame == false && lm.oneInfoSelected == false && lm.isScrolling == false)
             {
                 text.SetActive(true);
                 lm.infoOpen = true;
@@ -91,6 +100,7 @@ namespace Nathan
 
                 shouldZoom = true;
                 zoom = true;
+
             }
         }
 
