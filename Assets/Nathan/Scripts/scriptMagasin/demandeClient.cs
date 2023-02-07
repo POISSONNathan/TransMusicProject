@@ -36,6 +36,9 @@ namespace Nathan
         public GameObject neObj;
         public List<GameObject> newObj;
 
+        public GameObject bulle;
+        public GameObject clientSprite;
+
         void Start()
         {
             lm = ManagerManager.GetManagerManager.lm;
@@ -85,6 +88,12 @@ namespace Nathan
                     }
                 }
                 lm.scoreScene++;
+
+                if (lm.scoreScene == lm.scoreSceneNeed)
+                {
+                    Destroy(bulle.gameObject);
+                    Destroy(clientSprite.gameObject);
+                }
             }
 
             if (changeInventaire == true && lm.scoreScene < lm.scoreSceneNeed)

@@ -19,21 +19,39 @@ namespace Nathan
 
         public accueil ac;
 
-
         private int randomMiniGames;
 
         public int currentLevel;
 
         public bool accueilScene = false;
 
+        public bool introGame = true;
+
+        public int numberMiniGameEnd = -1;
+
+        public GameObject backgroundSummary;
+
+        public bool dragGameGood = false;
+        public bool essuyerGameGood = false;
+        public bool filsGameGood = false;
+        public bool monterCaisseGameGood = false;
+
+        public bool trouverMerchGameGood = false;
+        public bool magasinGameGood = false;
+        public bool balaiGameGood = false;
+        public bool trouverObjGameGood = false;
+
+        public bool rotateGameGood = false;
+        public bool reactionTimeGameGood = false;
+        public bool lumiereGameGood = false;
+        public bool vipGameGood = false;
+
         //Pas ouf mais pas d�geu quand meme
         public static ManagerManager GetManagerManager => FindObjectOfType<ManagerManager>();
 
-        void Awake()
-
+        void Start()
         {
             DontDestroyOnLoad(gameObject);
-            
         }
 
         // Update is called once per frame
@@ -63,6 +81,8 @@ namespace Nathan
                 if (myMiniGames1.Count > 0 && accueilScene == false)
                 {
                     tempMiniGames = myMiniGames1;
+
+                    ShuffleList(tempMiniGames);
                     lm.startTimer1();
                 }
             }
@@ -71,9 +91,10 @@ namespace Nathan
             //////
             if (currentLevel == 1 && SceneManager.GetActiveScene().name == "Accueil" )
             {
-                if (myMiniGames2.Count > 0)
+                if (myMiniGames2.Count > 0 && accueilScene == false)
                 {
                     tempMiniGames = myMiniGames2;
+                    ShuffleList(tempMiniGames);
                     lm.startTimer2();
                 }
             }
@@ -82,9 +103,10 @@ namespace Nathan
             //////
             if (currentLevel == 2 && SceneManager.GetActiveScene().name == "Accueil")
             {
-                if (myMiniGames3.Count > 0)
+                if (myMiniGames3.Count > 0 && accueilScene == false)
                 {
                     tempMiniGames = myMiniGames3;
+                    ShuffleList(tempMiniGames);
                     lm.startTimer3();
                 }
             }
@@ -95,9 +117,20 @@ namespace Nathan
             }
             else
             {
-                randomMiniGames = Random.Range(0, tempMiniGames.Count);
-                lm.nextScene = tempMiniGames[randomMiniGames];
-                tempMiniGames.Remove(tempMiniGames[randomMiniGames]);
+                lm.nextScene = tempMiniGames[0];
+                tempMiniGames.Remove(tempMiniGames[0]);
+            }
+                numberMiniGameEnd++;
+        }
+
+        public void ShuffleList(List<string> listeGames)
+        {
+            for (int i = 0; i < listeGames.Count; i++)
+            {
+                string temp = listeGames[i];
+                int randomIndex = Random.Range(i, listeGames.Count);
+                listeGames[i] = listeGames[randomIndex];
+                listeGames[randomIndex] = temp;
             }
         }
     }

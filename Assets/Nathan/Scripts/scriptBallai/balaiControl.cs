@@ -14,6 +14,8 @@ namespace Nathan
         public float delta;
         public float speed;
 
+        public bool useOneTime = true;
+
         private LevelManager lm;
 
         // Start is called before the first frame update
@@ -51,19 +53,25 @@ namespace Nathan
 
         public override void OnTouch(Touch touchInfo)
         {
-            if (!shouldGoToTarget)
+            if (!shouldGoToTarget && useOneTime == true)
             {
-
                 targetPosition = target.position;
                 initialPosition = transform.position;
                 delta = 0;
                 shouldGoToTarget = true;
+                useOneTime = false;
             }
+        }
+
+        public override void TouchUp()
+        {
+            useOneTime = true;
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
             lm.scoreScene++;
+            collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }

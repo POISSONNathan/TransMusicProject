@@ -37,7 +37,10 @@ namespace Nathan {
 
         private LevelManager lm;
 
+        public GameObject bulle;
+        public GameObject client;
 
+        public bool thisGameFish = false;
         void Start()
         {
 
@@ -68,44 +71,63 @@ namespace Nathan {
         // Update is called once per frame
         void Update()
         {
+            if (thisGameFish == false)
+            {
+                if (colorSelected == "orange")
+                {
+                    color1.SetActive(false);
+                    color2.SetActive(true);
+                }
+                if (colorSelected == "bleu")
+                {
+                    color1.SetActive(true);
+                    color2.SetActive(false);
+                }
 
-            if (colorSelected == "orange")
+                if (formeSelected == "lestrans")
+                {
+                    logo1.SetActive(false);
+                    logo2.SetActive(true);
+                }
+                if (formeSelected == "transmusical")
+                {
+                    logo1.SetActive(true);
+                    logo2.SetActive(false);
+                }
+
+                if (nombreFormeSelected == "violet")
+                {
+                    colorLogo1.SetActive(true);
+                    colorLogo2.SetActive(false);
+                }
+                if (nombreFormeSelected == "jaune")
+                {
+                    colorLogo1.SetActive(false);
+                    colorLogo2.SetActive(true);
+                }
+            }
+            else
             {
                 color1.SetActive(false);
-                color2.SetActive(true);
-            }
-            if (colorSelected == "bleu")
-            {
-                color1.SetActive(true);
                 color2.SetActive(false);
-            }
-
-            if (formeSelected == "lestrans")
-            {
                 logo1.SetActive(false);
-                logo2.SetActive(true);
-            }
-            if (formeSelected == "transmusical")
-            {
-                logo1.SetActive(true);
                 logo2.SetActive(false);
-            }
-
-            if (nombreFormeSelected == "violet")
-            {
-                colorLogo1.SetActive(true);
+                colorLogo1.SetActive(false);
                 colorLogo2.SetActive(false);
             }
-            if (nombreFormeSelected == "jaune")
-            {
-                colorLogo1.SetActive(false);
-                colorLogo2.SetActive(true);
-            }
 
-            if (goodObj == true)
+            if (thisGameFish == false)
             {
-                selectSpecialite();
-                goodObj = false;
+                if (goodObj == true)
+                {
+                    selectSpecialite();
+                    goodObj = false;
+                }
+            }
+            else
+            {
+                Destroy(bulle.gameObject);
+                Destroy(client.gameObject);
             }
         }
 

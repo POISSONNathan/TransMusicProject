@@ -56,7 +56,7 @@ namespace Nathan
             {
                 if (Input.touchCount > 0 && touchPossible == true)
                 {
-                    transform.position = new Vector2(transform.position.x, transform.position.y + 0.4f);
+                    transform.position = new Vector2(transform.position.x, transform.position.y + 0.7f);
                     touchPossible = false;
                 }
                 if (Input.touchCount == 0)
@@ -67,11 +67,12 @@ namespace Nathan
 
                 if (transform.position.y > posStart.y - 0.5f)
                 {
-                    transform.position = new Vector2(transform.position.x, transform.position.y - 0.003f);
+                    transform.position = new Vector2(transform.position.x, transform.position.y - 1.2f * Time.deltaTime);
                 }
             }
             if (good == true)
-            {                transform.position = new Vector2(transform.position.x + 0.01f, transform.position.y);
+            {                
+                transform.position = new Vector2(transform.position.x + 2.5f * Time.deltaTime, transform.position.y);
 
                 if (transform.position.x > 3)
                 {

@@ -7,7 +7,6 @@ namespace Nathan
     public class rotateLight : TouchableObject
     {
         public bool rotate;
-        public bool addLightCountBool = false;
         public bool isActive = false;
 
         public Transform parent;
@@ -50,13 +49,13 @@ namespace Nathan
             if (rotate == true)
             {
                 transform.localEulerAngles = new Vector3(0, 0, Mathf.PingPong(Time.time * rotateSpeed, 90) - 45);
-                addLightCountBool = true;
             }
 
 
             if (onObj == true)
             {
                 lm.scoreScene++;
+                sr.color = Color.grey;
                 Destroy(this);
             }
         }

@@ -9,9 +9,12 @@ namespace Nathan
     {
         public GameObject menu;
         public GameObject FondPause;
+
+        public ManagerManager gm;
         // Start is called before the first frame update
         void Start()
         {
+            gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
             this.GetComponent<Animator>().Play("");
         }
 
@@ -26,7 +29,7 @@ namespace Nathan
             menu.GetComponent<Animator>().Play("MenuOpening");
             this.GetComponent<Animator>().Play("ButtonPause");
             FondPause.GetComponent<Animator>().Play("FondShadeIn");
-            Debug.Log("oui");
+            gm.lm.gamePause = true;
         }
 
     }

@@ -27,6 +27,12 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
+            if (transform.position.x < - 4)
+            {
+                tertfe.GetComponent<SpawnerBehavior>().createdObjects.Remove(gameObject);
+                tertfe.GetComponent<SpawnerBehavior>().CheckForRespawn();
+                Destroy(this.gameObject);
+            }
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -35,12 +41,6 @@ namespace Nathan
             {
                 rb.velocity = new Vector2(-6.0f, 0.0f);
 
-            }
-
-            if (collision.gameObject.tag == "trash")
-            {
-                tertfe.GetComponent<SpawnerBehavior>().createdObjects.Remove(gameObject);
-                Destroy(this.gameObject);
             }
 
             if (collision.gameObject.tag == "collider")

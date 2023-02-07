@@ -18,20 +18,15 @@ namespace Nathan
 
         public bool touchOneTime = false;
 
-        public bool touch1Time;
-
         void Start()
         {
             gm = ManagerManager.GetManagerManager;
             gm.lm.scoreSceneNeed = 1;
-
-            touch1Time = true;
         }
 
         // Update is called once per frame
         void Update() 
         {
-
 
             if (ac.moveCamera == false )
             {
@@ -56,35 +51,42 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-            if (ac.moveCamera == false && touchOneTime == false)
+            if (gm.introGame == false && gm.lm.infoOpen == false)
             {
-                touchOneTime = true;
-                this.GetComponent<Animator>().SetTrigger("Boing");
-                //this.GetComponent<Animator>().Play("ButtonPlayAcceuil");
+                if (ac.moveCamera == false)
+                {
+                    this.GetComponent<Animator>().SetTrigger("Boing");
+                    //this.GetComponent<Animator>().Play("ButtonPlayAcceuil");
+                }
             }
         }
         public override void TouchUp()
         {
-            if (ac.moveCamera == false && touch1Time == true)
+            if (gm.introGame == false && gm.lm.infoOpen == false)
             {
-                touch1Time = false;
-                if (gm.currentLevel == 0)
+                if (ac.moveCamera == false && touchOneTime == false)
                 {
-                    gm.accueilScene = false;
-                    ManagerManager.GetManagerManager.lm.GoToNextScene();
+                    if (gm.currentLevel == 0)
+                    {
+                        gm.accueilScene = false;
+                        touchOneTime = true;
+                        ManagerManager.GetManagerManager.lm.GoToNextScene();
+                    }
+                    if (gm.currentLevel == 1 && gm.lm.bestTimeLevel1 < 100000)
+                    {
+                        gm.accueilScene = false;
+                        touchOneTime = true;
+                        ManagerManager.GetManagerManager.lm.GoToNextScene();
+                    }
+                    if (gm.currentLevel == 2 && gm.lm.bestTimeLevel2 < 100000)
+                    {
+                        gm.accueilScene = false;
+                        touchOneTime = true;
+                        ManagerManager.GetManagerManager.lm.GoToNextScene();
+                    }
                 }
-                if (gm.currentLevel == 1 && gm.lm.bestTimeLevel1 < 100000)
-                {
-                    gm.accueilScene = false;
-                    ManagerManager.GetManagerManager.lm.GoToNextScene();
-                }
-                if (gm.currentLevel == 2 && gm.lm.bestTimeLevel2 < 100000)
-                {
-                    gm.accueilScene = false;
-                    ManagerManager.GetManagerManager.lm.GoToNextScene();
-                }
+                this.GetComponent<Animator>().SetTrigger("Boing");
             }
-            this.GetComponent<Animator>().SetTrigger("Boing");
         }
 
     }
