@@ -26,12 +26,17 @@ namespace Nathan
 
         public List<GameObject> orderText;
 
-        public float pourcent = 0;
+        public float pourcent = -0.01f;
 
         public Color alphaGood;
         public Color alphaNotGood;
 
         public int indexOrderText = 0;
+
+        public GameObject caseCoche;
+        public Transform posX;
+
+        public bool createCaseCoche = false;
 
         public void CreateText()
         {
@@ -148,10 +153,12 @@ namespace Nathan
             /////////////////////
 
             startTimer = true;
+            createCaseCoche = true;
         }
 
         public void Update()
         {
+            Debug.Log(spawn[0].transform.position.y);
             if (startTimer == true)
             {
                 pourcent += Time.deltaTime / 1f ;
@@ -162,6 +169,7 @@ namespace Nathan
                 {
                     indexOrderText++;
                     pourcent = 0;
+                    createCaseCoche = true;
                 }
 
                 if (indexOrderText == orderText.Count)
@@ -171,6 +179,12 @@ namespace Nathan
                     indexOrderText = 0;
                     pourcent = 0;
                 }
+            }
+
+            if (createCaseCoche == true)
+            {
+                var newCaseCoche = Instantiate(caseCoche, new Vector2(posX.position.x, spawn[indexOrderText].transform.position.y), Quaternion.identity);
+                createCaseCoche = false;
             }
         }
 
