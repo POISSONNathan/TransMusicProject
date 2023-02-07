@@ -22,6 +22,7 @@ namespace Nathan
         public bool selectPossible = true;
         public int levelSelect = 0;
 
+        public bool Off;
         public ManagerManager gm;
 
         public bool stopReloadString = false;
@@ -162,6 +163,7 @@ namespace Nathan
                 {
                     mapObj.transform.position = new Vector3(posStart.x - 6.51f, posStart.y, posStart.z);
                     levelSelect = 1;
+                    FondLV1.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0f);
                     gm.lm.miniGame2End = false;
                 }
 
@@ -169,6 +171,8 @@ namespace Nathan
                 {
                     mapObj.transform.position = new Vector3(posStart.x - 6.51f * 2, posStart.y, posStart.z);
                     levelSelect = 2;
+                    FondLV2.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0f);
+                    FondLV1.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0f);
                     gm.lm.miniGame3End = false;
                 }
             }
