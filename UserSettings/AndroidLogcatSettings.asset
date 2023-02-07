@@ -2,8 +2,13 @@
     "m_SelectedDeviceId": "2UPNW20825002495",
     "m_SelectedPackage": {
         "deviceId": "2UPNW20825002495",
+<<<<<<< HEAD
+        "name": "com.SleepyFrog.TransMusicProject",
+        "processId": 6178,
+=======
         "name": "com.SleepyFrog.VoluntaryParty",
         "processId": 13483,
+>>>>>>> c074b165710000913d3ed60a3ca679ab87f41e78
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -39,6 +44,11 @@
             "exited": false
         },
         {
+<<<<<<< HEAD
+            "deviceId": "2UPNW20825002495",
+            "name": "com.SleepyFrog.TransMusicProject",
+            "processId": 6178,
+=======
             "deviceId": "8c31a1fc",
             "name": "com.SleepyFrog.TransMusicProject",
             "processId": 16140,
@@ -132,6 +142,7 @@
             "deviceId": "2UPNW20825002495",
             "name": "com.SleepyFrog.VoluntaryParty",
             "processId": 13483,
+>>>>>>> c074b165710000913d3ed60a3ca679ab87f41e78
             "exited": false
         }
     ],

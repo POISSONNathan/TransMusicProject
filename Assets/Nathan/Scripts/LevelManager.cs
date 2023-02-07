@@ -289,8 +289,6 @@ namespace Nathan
                 placeImageGame1(3, se.order);
             }
 
-
-
             if ((SceneManager.GetActiveScene().name) == "TrouveMerch")
             { gm.trouverMerchGameGood = true;
                 placeImageGame2(0, se.order);

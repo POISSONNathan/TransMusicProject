@@ -6,7 +6,6 @@ namespace Nathan
 {
     public class TouchableObject : MonoBehaviour
     {
-        // Start is called before the first frame update
         void Start()
         {
 
@@ -24,7 +23,6 @@ namespace Nathan
 
         public virtual void TouchUp()
         {
-
         }
 
     }
