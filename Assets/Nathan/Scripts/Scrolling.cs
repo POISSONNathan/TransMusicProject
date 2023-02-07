@@ -28,7 +28,6 @@ namespace Nathan
                     case TouchPhase.Stationary:
                     case TouchPhase.Moved:
                         Vector3 pos = transform.position;
-                        pos.x -= touch.deltaPosition.x * _speed * Time.deltaTime;
                         pos.y -= touch.deltaPosition.y * _speed * Time.deltaTime;
                         pos.y = Mathf.Clamp(pos.y, _minY, _maxY);
                         transform.position = pos;
