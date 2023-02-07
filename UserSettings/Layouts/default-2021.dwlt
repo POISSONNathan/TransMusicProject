@@ -17,11 +17,19 @@ MonoBehaviour:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 >>>>>>> main
     x: 2249
     y: 302.5
     width: 1206
     height: 715
+<<<<<<< HEAD
+  m_ShowMode: 4
+  m_Title:
+  m_RootView: {fileID: 6}
+=======
 <<<<<<< HEAD
   m_ShowMode: 4
   m_Title:
@@ -43,6 +51,7 @@ MonoBehaviour:
   m_Title: Scene
   m_RootView: {fileID: 2}
 >>>>>>> c074b165710000913d3ed60a3ca679ab87f41e78
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
   m_MinSize: {x: 875, y: 300}
@@ -109,10 +118,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name:
   m_EditorClassIdentifier:
   m_Children: []
+<<<<<<< HEAD
+=======
 =======
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name:
@@ -142,6 +156,7 @@ MonoBehaviour:
   - {fileID: 4}
 >>>>>>> c074b165710000913d3ed60a3ca679ab87f41e78
 >>>>>>> main
+>>>>>>> main
   m_Position:
     serializedVersion: 2
     x: 0
@@ -156,6 +171,7 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
+<<<<<<< HEAD
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,6 +219,72 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1206
+    height: 715
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+--- !u!114 &7
+=======
+>>>>>>> main
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+<<<<<<< HEAD
+  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name:
+=======
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProjectBrowser
+>>>>>>> main
+  m_EditorClassIdentifier:
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 394
+    width: 921
+    height: 271
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+  - {fileID: 12}
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name:
+  m_EditorClassIdentifier:
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 2}
+  - {fileID: 8}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1206
+<<<<<<< HEAD
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LoadedToolbars: []
+  m_LastLoadedLayoutName: Default
+--- !u!114 &8
+=======
     height: 715
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -272,6 +354,7 @@ MonoBehaviour:
 --- !u!114 &4
 >>>>>>> c074b165710000913d3ed60a3ca679ab87f41e78
 >>>>>>> main
+>>>>>>> main
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,8 +365,11 @@ MonoBehaviour:
   m_EditorHideFlags: 1
 <<<<<<< HEAD
   m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
+=======
 =======
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> main
 >>>>>>> main
   m_Name:
   m_EditorClassIdentifier:
@@ -291,6 +377,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+    y: 695
+    width: 1206
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+=======
 <<<<<<< HEAD
     y: 695
     width: 1206
@@ -442,6 +535,7 @@ MonoBehaviour:
   vertical: 0
   controlID: 87
 >>>>>>> main
+>>>>>>> main
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -495,6 +589,8 @@ MonoBehaviour:
 --- !u!114 &11
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
     width: 1471
     height: 682
@@ -506,6 +602,7 @@ MonoBehaviour:
 --- !u!114 &8
 >>>>>>> c074b165710000913d3ed60a3ca679ab87f41e78
 >>>>>>> main
+>>>>>>> main
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -516,14 +613,20 @@ MonoBehaviour:
   m_EditorHideFlags: 1
 <<<<<<< HEAD
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
+=======
 =======
   m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> main
 >>>>>>> main
   m_Name:
   m_EditorClassIdentifier:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 228
+=======
 <<<<<<< HEAD
     x: 228
 =======
@@ -537,6 +640,7 @@ MonoBehaviour:
 --- !u!114 &9
 =======
 >>>>>>> main
+>>>>>>> main
     y: 0
     width: 693
     height: 394
@@ -545,6 +649,10 @@ MonoBehaviour:
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
+<<<<<<< HEAD
+  - {fileID: 16}
+  m_Selected: 0
+=======
 <<<<<<< HEAD
   - {fileID: 16}
   m_Selected: 0
@@ -716,6 +824,7 @@ MonoBehaviour:
 >>>>>>> main
   m_Selected: 0
 >>>>>>> main
+>>>>>>> main
   m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
@@ -725,6 +834,24 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+<<<<<<< HEAD
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name:
+  m_EditorClassIdentifier:
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip:
+  m_Pos:
+    serializedVersion: 2
+    x: 2249
+    y: 726.5
+    width: 920
+    height: 250
+=======
 <<<<<<< HEAD
   m_EditorHideFlags: 1
   m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
@@ -1543,6 +1670,7 @@ MonoBehaviour:
     height: 254
 >>>>>>> c074b165710000913d3ed60a3ca679ab87f41e78
 >>>>>>> main
+>>>>>>> main
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter:
@@ -1656,6 +1784,9 @@ MonoBehaviour:
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1953,9 +2084,12 @@ MonoBehaviour:
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
 --- !u!114 &17
+<<<<<<< HEAD
+=======
 =======
 --- !u!114 &18
 >>>>>>> c074b165710000913d3ed60a3ca679ab87f41e78
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
 MonoBehaviour:
@@ -1980,11 +2114,18 @@ MonoBehaviour:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 >>>>>>> main
     x: 2249
     y: 726.5
     width: 920
     height: 250
+<<<<<<< HEAD
+  m_ViewDataDictionary: {fileID: 0}
+
+=======
 <<<<<<< HEAD
   m_ViewDataDictionary: {fileID: 0}
 
@@ -2088,5 +2229,6 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main

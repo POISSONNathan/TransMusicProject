@@ -1,151 +1,13 @@
 {
-    "m_SelectedDeviceId": "2UPNW20825002495",
+    "m_SelectedDeviceId": "",
     "m_SelectedPackage": {
-        "deviceId": "2UPNW20825002495",
-<<<<<<< HEAD
-        "name": "com.SleepyFrog.TransMusicProject",
-        "processId": 6178,
-=======
-        "name": "com.SleepyFrog.VoluntaryParty",
-        "processId": 13483,
->>>>>>> c074b165710000913d3ed60a3ca679ab87f41e78
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "8c31a1fc",
-            "name": "net.oneplus.launcher",
-            "processId": 4978,
-            "exited": false
-        },
-        {
-            "deviceId": "8c31a1fc",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 11932,
-            "exited": true
-        },
-        {
-            "deviceId": "8c31a1fc",
-            "name": "com.SleepyFrog.TransMusicProject",
-            "processId": 11933,
-            "exited": false
-        },
-        {
-            "deviceId": "8c31a1fc",
-            "name": "com.SleepyFrog.TransMusicProject",
-            "processId": 11936,
-            "exited": false
-        },
-        {
-            "deviceId": "8c31a1fc",
-            "name": "com.SleepyFrog.TransMusicProject",
-            "processId": 11931,
-            "exited": false
-        },
-        {
-<<<<<<< HEAD
-            "deviceId": "2UPNW20825002495",
-            "name": "com.SleepyFrog.TransMusicProject",
-            "processId": 6178,
-=======
-            "deviceId": "8c31a1fc",
-            "name": "com.SleepyFrog.TransMusicProject",
-            "processId": 16140,
-            "exited": false
-        },
-        {
-            "deviceId": "8c31a1fc",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 16145,
-            "exited": false
-        },
-        {
-            "deviceId": "8c31a1fc",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 16144,
-            "exited": false
-        },
-        {
-            "deviceId": "8c31a1fc",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 16146,
-            "exited": false
-        },
-        {
-            "deviceId": "8c31a1fc",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 16152,
-            "exited": false
-        },
-        {
-            "deviceId": "8c31a1fc",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 16154,
-            "exited": false
-        },
-        {
-            "deviceId": "8c31a1fc",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 16153,
-            "exited": false
-        },
-        {
-            "deviceId": "8c31a1fc",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 16155,
-            "exited": false
-        },
-        {
-            "deviceId": "2UPNW20825002495",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 22519,
-            "exited": true
-        },
-        {
-            "deviceId": "2UPNW20825002495",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 26412,
-            "exited": true
-        },
-        {
-            "deviceId": "2UPNW20825002495",
-            "name": "com.huawei.android.launcher",
-            "processId": 2138,
-            "exited": false
-        },
-        {
-            "deviceId": "2UPNW20825002495",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 4424,
-            "exited": true
-        },
-        {
-            "deviceId": "2UPNW20825002495",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 7436,
-            "exited": true
-        },
-        {
-            "deviceId": "2UPNW20825002495",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 9740,
-            "exited": false
-        },
-        {
-            "deviceId": "2UPNW20825002495",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 10636,
-            "exited": false
-        },
-        {
-            "deviceId": "2UPNW20825002495",
-            "name": "com.SleepyFrog.VoluntaryParty",
-            "processId": 13483,
->>>>>>> c074b165710000913d3ed60a3ca679ab87f41e78
-            "exited": false
-        }
-    ],
+    "m_KnownPackagesForSerialization": [],
     "m_Tags": {
         "m_Entries": [
             {
@@ -179,20 +41,9 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 300.0,
-        "MemoryWindowWidth": 170.0,
-        "MemoryTypeEnabled": [
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true
-        ],
+        "MemoryWindowHeight": 0.0,
+        "MemoryWindowWidth": 0.0,
+        "MemoryTypeEnabled": [],
         "MemoryGroup": 2,
         "Behavior": 0
     },
