@@ -18,10 +18,14 @@ namespace Nathan
 
         public bool touchOneTime = false;
 
+        public bool touch1Time;
+
         void Start()
         {
             gm = ManagerManager.GetManagerManager;
             gm.lm.scoreSceneNeed = 1;
+
+            touch1Time = true;
         }
 
         // Update is called once per frame
@@ -61,8 +65,9 @@ namespace Nathan
         }
         public override void TouchUp()
         {
-            if (ac.moveCamera == false)
+            if (ac.moveCamera == false && touch1Time == true)
             {
+                touch1Time = false;
                 if (gm.currentLevel == 0)
                 {
                     gm.accueilScene = false;
