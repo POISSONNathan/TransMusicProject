@@ -24,9 +24,12 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            Debug.Log("ff");
             if (level == 1)
             {
+                if (lm.bestTimeLevel1 == 1000000)
+                {
+                    Debug.Log("FirstTimePlaying");
+                }
                 if (lm.bestTimeLevel1 < lm.maxTimeLevel1)
                 {
                     listDisques[0].SetActive(true);
