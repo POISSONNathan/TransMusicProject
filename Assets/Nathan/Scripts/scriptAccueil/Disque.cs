@@ -24,6 +24,7 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
+            Debug.Log("ff");
             if (level == 1)
             {
                 if (lm.bestTimeLevel1 < lm.maxTimeLevel1)
