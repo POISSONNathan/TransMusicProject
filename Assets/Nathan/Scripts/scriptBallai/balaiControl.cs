@@ -6,6 +6,7 @@ namespace Nathan
 {
     public class balaiControl : TouchableObject 
     {
+
         public Vector2 initialPosition;
         public Vector2 targetPosition;
         public Transform target;
@@ -22,6 +23,7 @@ namespace Nathan
         void Start()
         {   
             initialPosition = transform.position;
+            
             lm = ManagerManager.GetManagerManager.lm;
         }
 
@@ -46,6 +48,27 @@ namespace Nathan
                 targetPosition = initialPosition;
                 initialPosition = transform.position;
                 shouldGoToTarget = true;
+            }
+
+            if (Input.touchCount > 0 && !lm.gamePause )
+            {
+
+                Touch touch = Input.GetTouch(0);
+                switch (touch.phase)
+                {
+                    //When a touch has first been detected,change the message and record the starting position
+                    case TouchPhase.Began:
+                        
+
+                        break;
+                    case TouchPhase.Moved:
+
+                        break;
+                    case TouchPhase.Ended:
+
+
+                        break;
+                }
             }
 
 

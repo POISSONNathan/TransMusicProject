@@ -6,7 +6,7 @@ namespace Nathan
 {
         public class BoutonOptions : TouchableObject
     {
-
+        public GameObject OptionMenu;
         public optionsManager optionsManager;
         // Start is called before the first frame update
         void Start()
@@ -17,15 +17,18 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            
-                GetComponent<Collider2D>().enabled = !optionsManager.dansOptions ;
+
         }
 
         public override void OnTouch(Touch touchinfo)
         {
-            
+            if (!optionsManager.dansOptions) {
+                OptionMenu.GetComponent<Animator>().Play("OptionGoingDown");
                 optionsManager.dansOptions = true;
-                Debug.Log("click");
+
+            }
+                
+                
             
         }
 
