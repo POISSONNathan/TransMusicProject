@@ -11,16 +11,16 @@ namespace Nathan
         /// ////////////////////////////// 
         public TouchableObject currentTouchedObject;
         /// //////////////////////////////
-
+        
         void Start()
         {
-
+   
         }
 
         // Update is called once per frame
         void Update()
         {
-
+    
 
             if (Input.touchCount > 0)
             {
@@ -53,6 +53,7 @@ namespace Nathan
             }
         }
 
-
+       
     }
 }
+

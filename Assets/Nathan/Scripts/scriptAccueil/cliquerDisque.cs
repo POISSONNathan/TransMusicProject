@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 namespace Nathan
 {
-    public class CliquerDisque : TouchableObject
+    public class cliquerDisque : TouchableObject
     {
         private LevelManager lm;
         public ManagerManager gm;
@@ -88,11 +88,6 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-            touchOneTime = false;
-        }
-
-        public override void TouchUp()
-        {
             if (isOpen == false && touchOneTime == false && gm.introGame == false && lm.oneInfoSelected == false && lm.isScrolling == false)
             {
                 text.SetActive(true);
@@ -101,6 +96,8 @@ namespace Nathan
                 lm.oneInfoSelected = true;
 
                 originPos = text.transform.position;
+
+                Debug.Log(text.transform.position);
 
                 if (text.transform.position.y >= 1.27f)
                 {
@@ -115,6 +112,11 @@ namespace Nathan
                 zoom = true;
 
             }
+        }
+
+        public override void TouchUp()
+        {
+            touchOneTime = false;
         }
     }
 }

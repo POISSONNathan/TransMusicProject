@@ -40,9 +40,6 @@ namespace Nathan
             if (config == "aides")
             {
                 Debug.Log($"les aides sont {state}");
-                MusicManagerSingleton.Instance.aides = state;
-
-
             }
         }
 
