@@ -16,4 +16,5 @@ public class QuickLoadScene : MonoBehaviour
             SceneManager.LoadScene(index);
         }
     }
+    
 }
