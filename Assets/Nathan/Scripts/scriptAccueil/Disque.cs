@@ -11,10 +11,11 @@ namespace Nathan
         public List<GameObject> listDisquesTableauRecap;
 
         public int level;
-
+        
         private LevelManager lm;
-
         public accueil ac;
+
+        public float timer;
 
         void Start()
         {
@@ -26,9 +27,9 @@ namespace Nathan
         {
             if (lm.placeDisque == true)
             {
+
                 if (level == 1)
                 {
-                            Debug.Log("ee");
                     if (lm.bestTimeLevel1 < lm.maxTimeLevel1)
                     {
                         if (lm.cdb1 == true)
@@ -42,6 +43,7 @@ namespace Nathan
                             listDisquesTableauRecap[0].SetActive(true);
                             lm.cdb1 = true;
                             lm.placeDisque = false;
+                            listAnimDisques[0].SetActive(true);
                         }
                     }
                     if (lm.bestTimeLevel1 < lm.twoStarTimeLevel1)
@@ -58,6 +60,7 @@ namespace Nathan
                             listDisquesTableauRecap[1].SetActive(true);
                             lm.cda1 = true;
                             lm.placeDisque = false;
+                            listAnimDisques[1].SetActive(true);
                         }
                     }
                     if (lm.bestTimeLevel1 < lm.threeStarTimeLevel1)
@@ -75,6 +78,7 @@ namespace Nathan
                             lm.cdb1 = true;
                             ac.fullDisqueLvl1 = true;
                             lm.placeDisque = false;
+                            listAnimDisques[2].SetActive(true);
                         }
                     }
                 }
@@ -94,6 +98,7 @@ namespace Nathan
                             listDisquesTableauRecap[0].SetActive(true);
                             lm.cdb1 = true;
                             lm.placeDisque = false;
+                            listAnimDisques[0].SetActive(true);
                         }
                     }
                     if (lm.bestTimeLevel2 < lm.twoStarTimeLevel2)
@@ -109,6 +114,7 @@ namespace Nathan
                             listDisquesTableauRecap[1].SetActive(true);
                             lm.cdb1 = true;
                             lm.placeDisque = false;
+                            listAnimDisques[1].SetActive(true);
                         }
                     }
                     if (lm.bestTimeLevel2 < lm.threeStarTimeLevel2)
@@ -126,6 +132,7 @@ namespace Nathan
                             lm.cdb1 = true;
                             ac.fullDisqueLvl2 = true;
                             lm.placeDisque = false;
+                            listAnimDisques[2].SetActive(true);
                         }
                     }
                 }
@@ -136,15 +143,16 @@ namespace Nathan
                     {
                         if (lm.cdb3 == true)
                         {
-                            listDisques[1].SetActive(true);
-                            listDisquesTableauRecap[1].SetActive(true);
+                            listDisques[0].SetActive(true);
+                            listDisquesTableauRecap[0].SetActive(true);
                             lm.placeDisque = false;
                         }
                         else
                         {
-                            listDisquesTableauRecap[1].SetActive(true);
+                            listDisquesTableauRecap[0].SetActive(true);
                             lm.cdb1 = true;
                             lm.placeDisque = false;
+                            listAnimDisques[0].SetActive(true);
                         }
                     }
                     if (lm.bestTimeLevel3 < lm.twoStarTimeLevel3)
@@ -160,6 +168,7 @@ namespace Nathan
                             listDisquesTableauRecap[1].SetActive(true);
                             lm.cdb1 = true;
                             lm.placeDisque = false;
+                            listAnimDisques[1].SetActive(true);
                         }
                     }
                     if (lm.bestTimeLevel3 < lm.threeStarTimeLevel3)
@@ -177,6 +186,7 @@ namespace Nathan
                             lm.cdb1 = true;
                             ac.fullDisqueLvl3 = true;
                             lm.placeDisque = false;
+                            listAnimDisques[2].SetActive(true);
                         }
                     }
                 }
