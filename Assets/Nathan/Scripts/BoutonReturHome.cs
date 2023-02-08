@@ -24,7 +24,7 @@ namespace Nathan
         }
         public override void OnTouch(Touch touchinfo)
         {
-            if (gm.introGame == false && lm.infoOpen == false)
+            if (gm.introGame == false && lm.infoOpen == false && lm.isScrolling == false)
             {
                 gm.lm.resetGameEnd();
 
