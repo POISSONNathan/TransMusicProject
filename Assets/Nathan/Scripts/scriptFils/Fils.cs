@@ -61,6 +61,7 @@ namespace Nathan
         void Connected()
         {
             lightOn.SetActive(true);
+            
             Destroy(this);
         }
 
