@@ -251,7 +251,6 @@ namespace Nathan
             {
                 Instantiate(WinParticule, transform.position, Quaternion.identity);
                 playAnimOneTime = true;
-                MusicManagerSingleton.Instance.PlaySound("Good");
             }
             if ((SceneManager.GetActiveScene().name) == "Accueil")
             {
