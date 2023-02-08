@@ -27,7 +27,6 @@ namespace Nathan
         {
             if (lm.placeDisque == true)
             {
-
                 if (level == 1)
                 {
                     if (lm.bestTimeLevel1 < lm.maxTimeLevel1)
