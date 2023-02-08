@@ -57,6 +57,7 @@ namespace Nathan
                 {
                     this.GetComponent<Animator>().SetTrigger("Boing");
                     //this.GetComponent<Animator>().Play("ButtonPlayAcceuil");
+                    MusicManagerSingleton.Instance.PlaySound("StartButton");
                 }
             }
         }
