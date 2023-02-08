@@ -20,6 +20,8 @@ namespace Nathan
 
         public List<GameObject> destroyList;
 
+        public List<GameObject> cases;
+
         public int order = 0;
 
         public bool canEnd = false;
@@ -188,7 +190,7 @@ namespace Nathan
 
             if (createCaseCoche == true)
             {
-                var newCaseCoche = Instantiate(caseCoche, new Vector2(posX.position.x, spawn[indexOrderText].transform.position.y), Quaternion.identity);
+                var newCaseCoche = Instantiate(caseCoche, new Vector2(cases[indexOrderText].transform.position.x +0.2f, cases[indexOrderText].transform.position.y - 0.2f), Quaternion.identity);
                 destroyList.Add(newCaseCoche);
                 createCaseCoche = false;
             }
