@@ -283,20 +283,20 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179309707}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.96, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.007591353, y: 0.07139131, z: 0}
+  m_LocalScale: {x: 0.019666718, y: 0.010983278, z: 0.11658185}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 1487362118}
   - {fileID: 876647427}
   - {fileID: 1645861235}
   - {fileID: 1383711631}
-  - {fileID: 1487362118}
   - {fileID: 1176345511}
   - {fileID: 169298148}
   - {fileID: 326502601}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 764193864}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &192143939
 GameObject:
@@ -594,6 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8174c8dd6258cc64ea6f8ccfca51e7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OptionMenu: {fileID: 764193862}
   optionsManager: {fileID: 764193865}
 --- !u!1 &438388887
 GameObject:
@@ -803,6 +804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b973e1a6ed967a141baea1ee7151ea7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OptionMenu: {fileID: 764193862}
   optionsManager: {fileID: 764193865}
 --- !u!1 &461796436
 GameObject:
@@ -1305,7 +1307,7 @@ Transform:
   - {fileID: 1799514317}
   - {fileID: 1361804582}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &746284853
 Animator:
@@ -1338,6 +1340,7 @@ GameObject:
   - component: {fileID: 764193864}
   - component: {fileID: 764193863}
   - component: {fileID: 764193865}
+  - component: {fileID: 764193866}
   m_Layer: 0
   m_Name: optionsBackGrey
   m_TagString: Untagged
@@ -1387,7 +1390,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.33333334}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1404,13 +1407,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764193862}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1158, y: -0.131, z: 0}
-  m_LocalScale: {x: 5.9278746, y: 10.614483, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.1158, y: 9.65, z: 0}
+  m_LocalScale: {x: 15.254198, y: 27.314247, z: 2.5733}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 179309709}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &764193865
 MonoBehaviour:
@@ -1426,6 +1430,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dansOptions: 0
   sr: {fileID: 764193863}
+--- !u!95 &764193866
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764193862}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c34e7f573596fd1439d7c24f343575c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &876647427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7786629665968475939, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
@@ -1773,7 +1797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786629665968475939, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7786629665968475939, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: m_LocalScale.x
@@ -2222,7 +2246,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 179309709}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1487362119
 SpriteRenderer:
@@ -2725,7 +2749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786629665968475939, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7786629665968475939, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: m_LocalScale.x
@@ -2806,7 +2830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786629665968475939, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7786629665968475939, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: m_LocalScale.x
