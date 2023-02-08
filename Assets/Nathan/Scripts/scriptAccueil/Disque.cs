@@ -44,10 +44,11 @@ namespace Nathan
                         maxTime1 = 1.01f;
                     }
 
-                        if (lm.bestTimeLevel1 < lm.maxTimeLevel1)
+                    if (lm.bestTimeLevel1 < lm.maxTimeLevel1)
                     {
                         if (lm.cdb1 == true)
                         {
+                            Debug.Log("ee");
                             listDisques[0].SetActive(true);
                             listDisquesTableauRecap[0].SetActive(true);
                             if (timer >= maxTime1 && lm.currentLevelForDisque == 0)

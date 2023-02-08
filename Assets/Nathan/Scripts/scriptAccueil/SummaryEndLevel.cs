@@ -206,10 +206,8 @@ namespace Nathan
         {
             if (touchOneTime)
             {
-                if (order == 3)
-                { 
-                    gm.lm.placeDisque = true;
-                }
+                gm.lm.placeDisque = true;
+                
 
                 touchOneTime = false;
 
