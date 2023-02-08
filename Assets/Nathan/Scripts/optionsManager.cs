@@ -27,11 +27,15 @@ namespace Nathan
         public void Mute(string config,bool state)
         {
             if (config == "sfx") {
-                Debug.Log($"les sfx passe en {state}"); 
+                MusicManagerSingleton.Instance.sfxAudioSource.volume = state ? 1f : 0f;
+                Debug.Log($"sfx volume : {MusicManagerSingleton.Instance.sfxAudioSource.volume}");
+
             }
 
             if (config == "musique") { 
-                Debug.Log($"la musique passe en {state}"); 
+                MusicManagerSingleton.Instance.musicAudioSource.volume = state ? 1f : 0f;
+                Debug.Log($"musique volume : {MusicManagerSingleton.Instance.musicAudioSource.volume}");
+
             }
 
             if (config == "aides")
