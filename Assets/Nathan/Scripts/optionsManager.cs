@@ -20,7 +20,6 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            sr.enabled = dansOptions;
 
 
         }

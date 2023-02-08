@@ -6,6 +6,7 @@ namespace Nathan
 {
     public class optionsBack : TouchableObject
     {
+        public GameObject OptionMenu;
         public optionsManager optionsManager;
         // Start is called before the first frame update
         void Start()
@@ -23,7 +24,7 @@ namespace Nathan
         {
             if (optionsManager.dansOptions)
             {
-                Debug.Log("animation du panneaux qui remonte");
+                OptionMenu.GetComponent<Animator>().Play("OptionGoingUp");
                 optionsManager.dansOptions = false;
 
             }
