@@ -103,6 +103,8 @@ namespace Nathan
         public bool cda3 = false;
         public bool cdo3 = false;
 
+        public bool placeDisque = false;
+
         public void ResetComponent()
         {
             scoreScene = 0;
