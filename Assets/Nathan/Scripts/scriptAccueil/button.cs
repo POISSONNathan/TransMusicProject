@@ -72,18 +72,21 @@ namespace Nathan
                         gm.accueilScene = false;
                         touchOneTime = true;
                         ManagerManager.GetManagerManager.lm.GoToNextScene();
+                        gm.lm.currentLevelForDisque = 0;
                     }
                     if (gm.currentLevel == 1 && gm.lm.bestTimeLevel1 < 100000)
                     {
                         gm.accueilScene = false;
                         touchOneTime = true;
                         ManagerManager.GetManagerManager.lm.GoToNextScene();
+                        gm.lm.currentLevelForDisque = 1;
                     }
                     if (gm.currentLevel == 2 && gm.lm.bestTimeLevel2 < 100000)
                     {
                         gm.accueilScene = false;
                         touchOneTime = true;
                         ManagerManager.GetManagerManager.lm.GoToNextScene();
+                        gm.lm.currentLevelForDisque = 2;
                     }
                 }
                 this.GetComponent<Animator>().SetTrigger("Boing");
