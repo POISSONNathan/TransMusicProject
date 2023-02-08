@@ -10,6 +10,8 @@ namespace Nathan
         public SpriteRenderer sr;
         public Sprite off;
         public Sprite on;
+        public optionsManager OM;
+        public string type;
 
         public bool state;
 
@@ -44,6 +46,7 @@ namespace Nathan
         {
             state = !state;
             sr.sprite = state ? on : off;
+            OM.Mute(type,state);
             //si le state du switch est vrai alors son sprite passe en on et inversement
         }
     }

@@ -6,9 +6,10 @@ namespace Nathan
 {
         public class optionsManager : MonoBehaviour
     {
-
-        public SpriteRenderer sr;
         public bool dansOptions = false;
+        public SpriteRenderer sr;
+        
+        //public soundManager SndMng;
 
         // Start is called before the first frame update
         void Start()
@@ -20,6 +21,24 @@ namespace Nathan
         void Update()
         {
             sr.enabled = dansOptions;
+
+
         }
+        public void Mute(string config,bool state)
+        {
+            if (config == "sfx") {
+                Debug.Log($"les sfx passe en {state}"); 
+            }
+
+            if (config == "musique") { 
+                Debug.Log($"la musique passe en {state}"); 
+            }
+
+            if (config == "aides")
+            {
+                Debug.Log($"les aides sont {state}");
+            }
+        }
+
     }
 }
