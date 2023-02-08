@@ -32,11 +32,7 @@ namespace Nathan
         {
             if (lm.placeDisque == true)
             {
-<<<<<<< HEAD
-=======
                 timer += Time.deltaTime;
-
->>>>>>> main
                 if (level == 1)
                 {
                     if (lm.bestTimeLevel1 < lm.twoStarTimeLevel1 && lm.currentLevelForDisque == 0)
