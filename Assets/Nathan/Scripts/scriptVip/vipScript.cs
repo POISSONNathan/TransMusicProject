@@ -42,10 +42,8 @@ namespace Nathan
                 guestList.Add(i);
             }
             int baseCount = guestList.Count;
-                Debug.Log($"Il reste {guestList.Count} personne dans la liste");
 
             vipList = StaticInt.ReturnXRandom(3, 0, guestList.Count);
-                Debug.Log($"les vip sont{vipList[0]} - {vipList[1]} - {vipList[2]}");
 
             for (int i = 0; i < 3; i++)
             {

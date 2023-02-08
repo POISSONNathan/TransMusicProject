@@ -91,6 +91,18 @@ namespace Nathan
 
         public bool doOnceEndTimer = false;
 
+        public bool isScrolling = false;
+
+        public bool cdb1 = false;
+        public bool cda1 = false;
+        public bool cdo1 = false;
+        public bool cdb2 = false;
+        public bool cda2 = false;
+        public bool cdo2 = false;
+        public bool cdb3 = false;
+        public bool cda3 = false;
+        public bool cdo3 = false;
+
         public void ResetComponent()
         {
             scoreScene = 0;
@@ -115,6 +127,8 @@ namespace Nathan
             gm.reactionTimeGameGood = false;
             gm.lumiereGameGood = false;
             gm.vipGameGood = false;
+
+            se.order = 0;
         }
 
         void Update()

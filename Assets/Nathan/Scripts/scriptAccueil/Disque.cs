@@ -7,7 +7,7 @@ namespace Nathan
     public class Disque : MonoBehaviour
     {
         public List<GameObject> listDisques;
-
+        public List<GameObject> listAnimDisques;
         public List<GameObject> listDisquesTableauRecap;
 
         public int level;
@@ -24,24 +24,46 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            Debug.Log("ff");
             if (level == 1)
             {
                 if (lm.bestTimeLevel1 < lm.maxTimeLevel1)
                 {
-                    listDisques[0].SetActive(true);
-                    listDisquesTableauRecap[0].SetActive(true);
+                    if (lm.cdb1 == true)
+                    {
+                        listDisques[0].SetActive(true);
+                        listDisquesTableauRecap[0].SetActive(true);
+                    }
+                    else
+                    {
+                        lm.cdb1 = true;
+                    }
                 }
                 if (lm.bestTimeLevel1 < lm.twoStarTimeLevel1)
                 {
-                    listDisques[1].SetActive(true);
-                    listDisquesTableauRecap[1].SetActive(true);
+                    
+                    if (lm.cdb1 == true)
+                    {
+                        listDisques[1].SetActive(true);
+                        listDisquesTableauRecap[1].SetActive(true);
+                    }
+                    else
+                    {
+                        lm.cda1 = true;
+                    }
                 }
                 if (lm.bestTimeLevel1 < lm.threeStarTimeLevel1)
                 {
-                    listDisques[2].SetActive(true);
-                    listDisquesTableauRecap[2].SetActive(true);
-                    ac.fullDisqueLvl1 = true;
+                    if (lm.cdo1 == true)
+                    {
+                        listDisques[2].SetActive(true);
+                        listDisquesTableauRecap[2].SetActive(true);
+                        ac.fullDisqueLvl1 = true;
+                    }
+                    else
+                    {
+                        lm.cdb1 = true;
+                        ac.fullDisqueLvl1 = true;
+                    }
                 }
             }
             if (level == 2)

@@ -18,6 +18,8 @@ namespace Nathan
 
         public List<GameObject> spawn;
 
+        public List<GameObject> destroyList;
+
         public int order = 0;
 
         public bool canEnd = false;
@@ -169,7 +171,11 @@ namespace Nathan
                 {
                     indexOrderText++;
                     pourcent = 0;
-                    createCaseCoche = true;
+
+                    if (indexOrderText <= order)
+                    {
+                        createCaseCoche = true;
+                    }
                 }
 
                 if (indexOrderText == orderText.Count)
@@ -184,6 +190,7 @@ namespace Nathan
             if (createCaseCoche == true)
             {
                 var newCaseCoche = Instantiate(caseCoche, new Vector2(posX.position.x, spawn[indexOrderText].transform.position.y), Quaternion.identity);
+                destroyList.Add(newCaseCoche);
                 createCaseCoche = false;
             }
         }
@@ -214,6 +221,11 @@ namespace Nathan
                 for (int i = 0; i < miniGames3.Count; i++)
                 {
                     miniGames3[i].SetActive(false);
+                }
+
+                for (int i = 0; i < destroyList.Count; i++)
+                {
+                    Destroy(destroyList[i].gameObject);
                 }
 
                 this.gameObject.SetActive(false);
