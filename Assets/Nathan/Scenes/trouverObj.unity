@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 337580689}
   - component: {fileID: 337580691}
   - component: {fileID: 337580690}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: nbrObjToCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1213,7 +1213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7373880236755689240, guid: e53afc9121337af4aac3d3f4fa20f046, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7373880236755689240, guid: e53afc9121337af4aac3d3f4fa20f046, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1997,7 +1997,7 @@ GameObject:
   - component: {fileID: 2132917632}
   - component: {fileID: 2132917634}
   - component: {fileID: 2132917633}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: nbrObjCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
