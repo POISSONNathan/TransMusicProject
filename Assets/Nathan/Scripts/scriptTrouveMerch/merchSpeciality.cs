@@ -72,7 +72,6 @@ namespace Nathan
                 goodTrigger = true;
                 if (!drag)
                 {
-                    Debug.Log("fer");
                     md.goodObj = true;
                     lm.scoreScene++;
                     Perso.GetComponent<Animator>().Play("CharaMerch");
