@@ -46,8 +46,14 @@ namespace Nathan
                 /// //////////////////////////////
                 if (currentTouchedObject != null)
                 {
-                    currentTouchedObject.TouchUp();
-                    currentTouchedObject = null;
+                    var tempVector = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, Camera.main.nearClipPlane);
+                    var tempRay = Camera.main.ScreenPointToRay(tempVector);
+                    var tempObject = Physics2D.Raycast(tempRay.origin, tempRay.direction);
+                    if(tempObject.collider.GetComponent<TouchableObject>() == currentTouchedObject)
+                    {
+                        currentTouchedObject.TouchUp();
+                        currentTouchedObject = null;
+                    }
                 }
 
             }
