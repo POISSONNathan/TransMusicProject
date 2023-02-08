@@ -6,7 +6,7 @@ using UnityEngine;
 public class MusicManagerSingleton : MonoBehaviour
 {
     public static MusicManagerSingleton Instance;
-    public AudioSource sfxAudioSource, sfxAudioSource2, musicAudioSource;
+    public AudioSource sfxAudioSource, sfxAudioSource2, sfxAudioSource3, musicAudioSource;
     public List<AudioSound> sounds;
     
     private void Awake()
@@ -50,7 +50,20 @@ public class MusicManagerSingleton : MonoBehaviour
         sfxAudioSource2.clip = audioToPlay;
         sfxAudioSource2.Play();
     }
+    public void PlaySound3(string soundName)
+    {
+        AudioClip audioToPlay = null;
+        foreach (var audioSound in sounds)
+        {
+            if (audioSound.Name == soundName)
+            {
+                audioToPlay = audioSound.Clip;
+            }
+        }
 
+        sfxAudioSource3.clip = audioToPlay;
+        sfxAudioSource3.Play();
+    }
     public void PlayMusic()
     {
         musicAudioSource.Play();
