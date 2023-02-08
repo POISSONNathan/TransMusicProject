@@ -53,7 +53,6 @@ namespace Nathan
             Fade = 1;
             MovingLeft = false;
             MovingRight = false;
-
             posStart = mapObj.transform.position;
         }
 

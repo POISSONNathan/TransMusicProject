@@ -7,7 +7,7 @@ namespace Nathan
     public class Disque : MonoBehaviour
     {
         public List<GameObject> listDisques;
-
+        public List<GameObject> listAnimDisques;
         public List<GameObject> listDisquesTableauRecap;
 
         public int level;
@@ -26,14 +26,17 @@ namespace Nathan
         {
             if (level == 1)
             {
-                if (lm.bestTimeLevel1 == 1000000)
-                {
-                    Debug.Log("FirstTimePlaying");
-                }
                 if (lm.bestTimeLevel1 < lm.maxTimeLevel1)
                 {
-                    listDisques[0].SetActive(true);
-                    listDisquesTableauRecap[0].SetActive(true);
+                    if (lm.cdb1 == false)
+                    {
+                          
+                    }
+                    else
+                    {
+                        listDisques[0].SetActive(true);
+                        listDisquesTableauRecap[0].SetActive(true);
+                    }
                 }
                 if (lm.bestTimeLevel1 < lm.twoStarTimeLevel1)
                 {
