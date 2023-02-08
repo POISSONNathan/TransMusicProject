@@ -160,7 +160,6 @@ namespace Nathan
 
         public void Update()
         {
-            Debug.Log(spawn[0].transform.position.y);
             if (startTimer == true)
             {
                 pourcent += Time.deltaTime / 1f ;
@@ -206,6 +205,8 @@ namespace Nathan
         {
             if (touchOneTime)
             {
+                gm.lm.placeDisque = true;
+
                 touchOneTime = false;
 
                 gm.lm.resetGameEnd();
