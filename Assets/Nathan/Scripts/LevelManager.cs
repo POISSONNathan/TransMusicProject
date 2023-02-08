@@ -117,6 +117,8 @@ namespace Nathan
             gm.reactionTimeGameGood = false;
             gm.lumiereGameGood = false;
             gm.vipGameGood = false;
+
+            se.order = 0;
         }
 
         void Update()

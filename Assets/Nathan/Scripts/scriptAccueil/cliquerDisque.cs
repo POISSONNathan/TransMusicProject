@@ -96,7 +96,17 @@ namespace Nathan
                 lm.oneInfoSelected = true;
 
                 originPos = text.transform.position;
-                zoomPos.position = new Vector3(zoomPos.position.x, originPos.y + 2.4f, zoomPos.position.z);
+
+                Debug.Log(text.transform.position);
+
+                if (text.transform.position.y >= 1.27f)
+                {
+                    zoomPos.position = new Vector3(zoomPos.position.x, originPos.y - 1.4f, zoomPos.position.z);
+                }
+                if (text.transform.position.y < 1.27f)
+                {
+                    zoomPos.position = new Vector3(zoomPos.position.x, originPos.y + 2.4f, zoomPos.position.z);
+                }
 
                 shouldZoom = true;
                 zoom = true;
