@@ -15,14 +15,7 @@ public class InstructionDestroy : MonoBehaviour
     {
         if(Input.touchCount>0)
         {
-            Touch touch = Input.GetTouch(0);
-            switch (touch.phase)
-            {
-                //When a touch has first been detected, change the message and record the starting position
-                case TouchPhase.Began:
-                    Destroy(this.gameObject);
-                    break;
-            }
+            Destroy(this.gameObject);
         }
     }
 }
