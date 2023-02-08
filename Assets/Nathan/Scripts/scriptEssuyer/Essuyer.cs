@@ -50,21 +50,19 @@ namespace Nathan
                 {
                     //When a touch has first been detected, change the message and record the starting position
                     case TouchPhase.Began:
-                        MusicManagerSingleton.Instance.PlaySound3("Eponge");
-
+                    
+                    
                         break;
                     case TouchPhase.Moved:
                         if (drag)
                             {
                                 Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                                 transform.Translate(MousePos);
-                           
                             }
 
                         break;
                     case TouchPhase.Ended:
                         drag = false;
-                        MusicManagerSingleton.Instance.PlaySound3("Silence");
 
                         break;
                 }
