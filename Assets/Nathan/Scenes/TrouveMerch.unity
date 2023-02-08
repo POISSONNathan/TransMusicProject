@@ -285,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178277993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2199564, y: -4.2902327, z: -0.05995065}
+  m_LocalPosition: {x: 0.2199564, y: -4.573, z: -0.059950646}
   m_LocalScale: {x: 0.16915, y: 0.16915, z: 0.16915}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1035,6 +1035,7 @@ MonoBehaviour:
   color: orange
   logo: transmusical
   colorLogo: jaune
+  Perso: {fileID: 178277993}
   md: {fileID: 252802473}
   drag: 0
   posStart: {x: 0, y: 0, z: 0}
@@ -1292,6 +1293,7 @@ MonoBehaviour:
   color: bleu
   logo: lestrans
   colorLogo: jaune
+  Perso: {fileID: 178277993}
   md: {fileID: 252802473}
   drag: 0
   posStart: {x: 0, y: 0, z: 0}
@@ -1738,6 +1740,7 @@ MonoBehaviour:
   color: bleu
   logo: transmusical
   colorLogo: violet
+  Perso: {fileID: 178277993}
   md: {fileID: 252802473}
   drag: 0
   posStart: {x: 0, y: 0, z: 0}
@@ -2326,6 +2329,7 @@ MonoBehaviour:
   color: bleu
   logo: transmusical
   colorLogo: jaune
+  Perso: {fileID: 178277993}
   md: {fileID: 252802473}
   drag: 0
   posStart: {x: 0, y: 0, z: 0}
@@ -2460,6 +2464,7 @@ MonoBehaviour:
   color: bleu
   logo: lestrans
   colorLogo: violet
+  Perso: {fileID: 178277993}
   md: {fileID: 252802473}
   drag: 0
   posStart: {x: 0, y: 0, z: 0}
@@ -2614,6 +2619,7 @@ MonoBehaviour:
   color: orange
   logo: lestrans
   colorLogo: violet
+  Perso: {fileID: 178277993}
   md: {fileID: 252802473}
   drag: 0
   posStart: {x: 0, y: 0, z: 0}
@@ -2936,6 +2942,7 @@ MonoBehaviour:
   color: orange
   logo: transmusical
   colorLogo: violet
+  Perso: {fileID: 178277993}
   md: {fileID: 252802473}
   drag: 0
   posStart: {x: 0, y: 0, z: 0}
@@ -3232,6 +3239,7 @@ MonoBehaviour:
   color: orange
   logo: lestrans
   colorLogo: jaune
+  Perso: {fileID: 178277993}
   md: {fileID: 252802473}
   drag: 0
   posStart: {x: 0, y: 0, z: 0}
