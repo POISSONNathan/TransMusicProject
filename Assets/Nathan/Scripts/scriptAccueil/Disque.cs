@@ -25,6 +25,10 @@ namespace Nathan
         {
             lm = ManagerManager.GetManagerManager.lm;
             timer = 0;
+
+            maxTime1 = 0.1f;
+            maxTime2 = 0.1f;
+            maxTime3 = 0.1f;
         }
 
         // Update is called once per frame
