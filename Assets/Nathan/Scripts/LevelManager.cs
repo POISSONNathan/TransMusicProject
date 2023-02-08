@@ -105,6 +105,8 @@ namespace Nathan
 
         public bool placeDisque = false;
 
+        public int currentLevelForDisque = 0;
+
         public void ResetComponent()
         {
             scoreScene = 0;
