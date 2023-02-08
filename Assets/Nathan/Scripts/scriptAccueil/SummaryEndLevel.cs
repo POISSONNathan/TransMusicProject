@@ -154,6 +154,8 @@ namespace Nathan
 
             /////////////////////
 
+            MusicManagerSingleton.Instance.PlaySound("Applause");
+
             startTimer = true;
             createCaseCoche = true;
         }
@@ -189,6 +191,7 @@ namespace Nathan
             if (createCaseCoche == true)
             {
                 var newCaseCoche = Instantiate(caseCoche, new Vector2(posX.position.x, spawn[indexOrderText].transform.position.y), Quaternion.identity);
+                MusicManagerSingleton.Instance.PlaySound2("Marqueur");
                 destroyList.Add(newCaseCoche);
                 createCaseCoche = false;
             }
@@ -236,6 +239,8 @@ namespace Nathan
                 order = 0;
                 canEnd = false;
                 gm.lm.infoOpen = false;
+
+                MusicManagerSingleton.Instance.PlaySound("Silence");
             }
         }
     }
