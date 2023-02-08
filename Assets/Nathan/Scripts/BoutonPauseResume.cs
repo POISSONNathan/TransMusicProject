@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Nathan
 {
-    public class BoutonPauseUp : TouchableObject
+    public class BoutonPauseResume : TouchableObject
     {
         public GameObject menu2;
         public GameObject Bouton;
