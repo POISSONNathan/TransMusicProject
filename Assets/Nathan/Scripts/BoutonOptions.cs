@@ -23,9 +23,13 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-            
+            if (!optionsManager.dansOptions) {
+                Debug.Log("animation du panneau qui descend");
                 optionsManager.dansOptions = true;
-                Debug.Log("click");
+
+            }
+                
+                
             
         }
 
