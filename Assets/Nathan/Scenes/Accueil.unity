@@ -1280,6 +1280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192500881}
   - component: {fileID: 192500880}
+  - component: {fileID: 192500882}
   - component: {fileID: 192500879}
   m_Layer: 0
   m_Name: optionsBackGrey
@@ -1376,6 +1377,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192500882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192500878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56a1e2b32b39f1449416312bdbd1f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dansOptions: 0
+  sr: {fileID: 0}
 --- !u!1 &258321093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,7 +1690,7 @@ PrefabInstance:
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: OM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 192500882}
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: type
       value: aides
@@ -2434,7 +2449,7 @@ PrefabInstance:
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: OM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 192500882}
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: type
       value: musique
@@ -5169,6 +5184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OptionMenu: {fileID: 192500878}
+  optionsManager: {fileID: 192500882}
 --- !u!1 &1112310678
 GameObject:
   m_ObjectHideFlags: 0
@@ -6127,6 +6143,7 @@ MonoBehaviour:
   ac: {fileID: 1656788315}
   sr: {fileID: 1295291507}
   gm: {fileID: 0}
+  optionsManager: {fileID: 192500882}
   randomMiniGames: 0
   buttonOn: {fileID: 1754836145}
   touchOneTime: 0
@@ -7556,6 +7573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
+  optionsManager: {fileID: 192500882}
 --- !u!58 &1567281829
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7939,6 +7957,7 @@ MonoBehaviour:
   levelSelect: 0
   Off: 0
   gm: {fileID: 0}
+  optionsManager: {fileID: 192500882}
   stopReloadString: 0
   FondLV1: {fileID: 1003111383}
   FondLV2: {fileID: 610765540}
@@ -8695,7 +8714,7 @@ PrefabInstance:
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: OM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 192500882}
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: type
       value: sfx
@@ -9331,6 +9350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OptionMenu: {fileID: 192500878}
+  optionsManager: {fileID: 192500882}
 --- !u!1 &1954705591
 GameObject:
   m_ObjectHideFlags: 0
@@ -9524,6 +9544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22906c6ca72ed54da6d5e03c510e187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  optionsManager: {fileID: 192500882}
   ac: {fileID: 1656788315}
 --- !u!1 &2028703754
 GameObject:

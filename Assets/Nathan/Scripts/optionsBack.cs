@@ -22,12 +22,11 @@ namespace Nathan
 
         public override void TouchUp()
         {
-            if (optionsManager.dansOptions)
-            {
-                OptionMenu.GetComponent<Animator>().Play("OptionGoingUp");
-                optionsManager.dansOptions = false;
+            
+            OptionMenu.GetComponent<Animator>().Play("OptionGoingUp");
+            optionsManager.dansOptions = false;
 
-            }
+            
         
         }
     }

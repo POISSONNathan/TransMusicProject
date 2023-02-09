@@ -7,6 +7,7 @@ namespace Nathan
     public class Scrolling : MonoBehaviour
     {
         private LevelManager lm;
+        public optionsManager optionsManager;
 
         private float _speed = 1f;
         private float _minY = -2.082973f;

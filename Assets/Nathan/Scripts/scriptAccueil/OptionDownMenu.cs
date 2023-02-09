@@ -7,6 +7,7 @@ namespace Nathan
     public class OptionDownMenu : TouchableObject
     {
         public GameObject OptionMenu;
+        public optionsManager optionsManager;
 
         void Start()
         {
@@ -16,12 +17,13 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-        
+            GetComponent<Collider2D>().enabled = !optionsManager.dansOptions;
         }
 
-        public override void OnTouch(Touch touchinfo)
+        public override void TouchUp()
         { 
             OptionMenu.GetComponent<Animator>().Play("OptionGoingDown");
+            optionsManager.dansOptions = true;
         }
 
     }
