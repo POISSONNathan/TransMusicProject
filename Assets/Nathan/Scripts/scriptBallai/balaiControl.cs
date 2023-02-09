@@ -15,9 +15,13 @@ namespace Nathan
         public float delta;
         public float speed;
 
-        public bool useOneTime = true;
+        public bool touched = false;
 
-        private LevelManager lm;
+        
+
+        public LevelManager lm;
+
+        private Vector2 mousePos;
 
         // Start is called before the first frame update
         void Start()
@@ -58,14 +62,32 @@ namespace Nathan
                 {
                     //When a touch has first been detected,change the message and record the starting position
                     case TouchPhase.Began:
+                        if (!lm.gamePause)
+                        {
+                            touched = true;
+                            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                            Debug.Log(mousePos);
+                        }
+
                         
 
                         break;
                     case TouchPhase.Moved:
-
+                        if (touched)
+                        {
+                            if (!shouldGoToTarget && Camera.main.ScreenToWorldPoint(Input.mousePosition).x < mousePos.x)
+                            {
+                                targetPosition = target.position;
+                                initialPosition = transform.position;
+                                delta = 0;
+                                shouldGoToTarget = true;
+                                Debug.Log("bouge");
+                            }
+                        }
                         break;
-                    case TouchPhase.Ended:
 
+                    case TouchPhase.Ended:
+                        touched = false;
 
                         break;
                 }
@@ -74,22 +96,7 @@ namespace Nathan
 
         }
 
-        public override void OnTouch(Touch touchInfo)
-        {
-            if (!shouldGoToTarget && useOneTime == true)
-            {
-                targetPosition = target.position;
-                initialPosition = transform.position;
-                delta = 0;
-                shouldGoToTarget = true;
-                useOneTime = false;
-            }
-        }
-
-        public override void TouchUp()
-        {
-            useOneTime = true;
-        }
+        
 
         private void OnCollisionEnter2D(Collision2D collision)
         {

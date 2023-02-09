@@ -1065,6 +1065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192500881}
   - component: {fileID: 192500880}
+  - component: {fileID: 192500882}
   - component: {fileID: 192500879}
   m_Layer: 0
   m_Name: optionsBackGrey
@@ -1153,14 +1154,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192500878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1158, y: 9.65, z: 0}
-  m_LocalScale: {x: 15.254198, y: 27.314247, z: 2.5733}
+  m_LocalPosition: {x: -2.2934182, y: 7.8200946, z: 0}
+  m_LocalScale: {x: 21.807913, y: 39.049362, z: 3.6788757}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1889159764}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1926929578}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192500882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192500878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56a1e2b32b39f1449416312bdbd1f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dansOptions: 0
 --- !u!1 &258321093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,7 +1473,7 @@ PrefabInstance:
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: OM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 192500882}
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: type
       value: aides
@@ -2042,7 +2056,7 @@ PrefabInstance:
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: OM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 192500882}
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: type
       value: musique
@@ -5045,6 +5059,7 @@ MonoBehaviour:
   ac: {fileID: 1656788315}
   sr: {fileID: 1295291507}
   gm: {fileID: 0}
+  optionsManager: {fileID: 192500882}
   randomMiniGames: 0
   buttonOn: {fileID: 1754836145}
   touchOneTime: 0
@@ -6584,7 +6599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656788311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.52, y: -0.021081, z: -9.7671}
+  m_LocalPosition: {x: 0.03564596, y: -0.021081, z: -9.7671}
   m_LocalScale: {x: 0.84974, y: 0.84974, z: 0.84974}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7375,7 +7390,7 @@ PrefabInstance:
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: OM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 192500882}
     - target: {fileID: 7786629665968475937, guid: c5ba0707d68482e4595f49f4f0e06962, type: 3}
       propertyPath: type
       value: sfx
@@ -7524,7 +7539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833600595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.16, y: -0.59, z: -0.23066552}
+  m_LocalPosition: {x: -0.16, y: -0.59, z: -0.2306655}
   m_LocalScale: {x: 0.15296473, y: 0.15296473, z: 0.15296473}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7810,7 +7825,8 @@ Transform:
   m_LocalPosition: {x: 1.9821993, y: 4.94396, z: 11.494222}
   m_LocalScale: {x: 0.8231694, y: 0.8231694, z: 0.8231694}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 192500881}
   m_Father: {fileID: 1656788314}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7843,6 +7859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OptionMenu: {fileID: 192500878}
+  optionsManager: {fileID: 192500882}
 --- !u!1 &1954705591
 GameObject:
   m_ObjectHideFlags: 0
@@ -7861,7 +7878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1954705592
 SpriteRenderer:
   m_ObjectHideFlags: 0
