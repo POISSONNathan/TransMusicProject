@@ -593,6 +593,7 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 9ac15a883beebcb4fa2d4368aa7a4c1b, type: 3}
   - Name: TapisRoulant
     Clip: {fileID: 8300000, guid: 5e392408e5a3f1f459b28ae2cb7f8845, type: 3}
+  activeAides: 1
 --- !u!4 &229674386
 Transform:
   m_ObjectHideFlags: 0
