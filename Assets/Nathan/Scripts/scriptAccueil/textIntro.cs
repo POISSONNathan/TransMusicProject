@@ -27,7 +27,7 @@ namespace Nathan
             gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
             if (gm.introGame == false)
             {
-
+                Destroy(this.gameObject);
             }
         }
 
