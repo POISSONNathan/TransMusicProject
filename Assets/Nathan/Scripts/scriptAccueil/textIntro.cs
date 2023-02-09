@@ -34,7 +34,7 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            if (gm.currentLevel == 0 && gm.introGame == true)
+            if (gm.introGame == true)
             {
                 if (Input.touchCount > 0 && touchOneTime == true)
                 {
@@ -70,11 +70,6 @@ namespace Nathan
                 {
                     dialogues[0].SetActive(true);
                 }
-            }
-
-            if (gm.currentLevel == 2 && (gm.lm.secondLevel1 > gm.lm.maxTimeLevel1))
-            {
-                Debug.Log("oui");
             }
         }
 
