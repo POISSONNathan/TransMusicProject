@@ -6,9 +6,7 @@ namespace Nathan
 {
         public class optionsManager : MonoBehaviour
     {
-        public bool dansOptions = false;
-        public SpriteRenderer sr;
-        
+        public bool dansOptions = false;        
         //public soundManager SndMng;
 
         // Start is called before the first frame update
@@ -26,7 +24,11 @@ namespace Nathan
         public void Mute(string config,bool state)
         {
             if (config == "sfx") {
-                MusicManagerSingleton.Instance.sfxAudioSource.volume = state ? 1f : 0f;
+                float parameter;
+                parameter = state ? 1f : 0f;
+                MusicManagerSingleton.Instance.sfxAudioSource.volume = parameter;
+                MusicManagerSingleton.Instance.sfxAudioSource2.volume = parameter;
+                MusicManagerSingleton.Instance.sfxAudioSource3.volume = parameter;
                 Debug.Log($"sfx volume : {MusicManagerSingleton.Instance.sfxAudioSource.volume}");
 
             }
@@ -39,7 +41,8 @@ namespace Nathan
 
             if (config == "aides")
             {
-                Debug.Log($"les aides sont {state}");
+                MusicManagerSingleton.Instance.activeAides = state;
+                Debug.Log($"les aides sont {MusicManagerSingleton.Instance.activeAides}");
             }
         }
 
