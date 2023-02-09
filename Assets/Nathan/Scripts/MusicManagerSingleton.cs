@@ -8,10 +8,7 @@ public class MusicManagerSingleton : MonoBehaviour
     public static MusicManagerSingleton Instance;
     public AudioSource sfxAudioSource, sfxAudioSource2, sfxAudioSource3, musicAudioSource;
     public List<AudioSound> sounds;
-<<<<<<< HEAD
-=======
     public bool activeAides = true;
->>>>>>> 44f1275875646ddc014acc106ee856a035721e3d
     
     private void Awake()
     {

@@ -593,10 +593,7 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 9ac15a883beebcb4fa2d4368aa7a4c1b, type: 3}
   - Name: TapisRoulant
     Clip: {fileID: 8300000, guid: 5e392408e5a3f1f459b28ae2cb7f8845, type: 3}
-<<<<<<< HEAD
-=======
   activeAides: 1
->>>>>>> 44f1275875646ddc014acc106ee856a035721e3d
 --- !u!4 &229674386
 Transform:
   m_ObjectHideFlags: 0
@@ -2014,7 +2011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c41af8004cf6a946a1f024521e214a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startThisScene: 1
+  startThisScene: 0
   index: 1
 --- !u!1 &1381887757
 GameObject:
