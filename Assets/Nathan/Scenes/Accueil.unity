@@ -1954,7 +1954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 427988555}
   - component: {fileID: 427988556}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fleche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2203,7 +2203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523991768}
   - component: {fileID: 523991769}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fond4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2571,7 +2571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 610765542}
   - component: {fileID: 610765541}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fond3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3594,7 +3594,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3635,7 +3635,7 @@ Transform:
   m_GameObject: {fileID: 868169768}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.7748785, y: -1.6270269, z: 0.085670464}
-  m_LocalScale: {x: 0.475, y: 2.4153125, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2015759897}
@@ -3712,7 +3712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003111385}
   - component: {fileID: 1003111384}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fond2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3796,7 +3796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1010828304}
   - component: {fileID: 1010828303}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fond1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3941,7 +3941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1027868824}
   - component: {fileID: 1027868825}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: plaque_platine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4931,7 +4931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1207555668}
   - component: {fileID: 1207555669}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fleche (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5023,7 +5023,7 @@ GameObject:
   - component: {fileID: 1295291505}
   - component: {fileID: 1295291509}
   - component: {fileID: 1295291510}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: play_off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5345,7 +5345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1336000062}
   - component: {fileID: 1336000063}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: plaque_platine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5814,7 +5814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486531496}
   - component: {fileID: 1486531497}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: disque_de_platine (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5857,7 +5857,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6185,7 +6185,7 @@ GameObject:
   - component: {fileID: 1567281826}
   - component: {fileID: 1567281829}
   - component: {fileID: 1567281828}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6325,7 +6325,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6473,93 +6473,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1591575732
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1591575734}
-  - component: {fileID: 1591575733}
-  m_Layer: 0
-  m_Name: Light 2D
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1591575733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591575732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ComponentVersion: 1
-  m_LightType: 4
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_LightVolumeIntensity: 1
-  m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
-  m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
-  m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.75
-  m_ShadowVolumeIntensityEnabled: 0
-  m_ShadowVolumeIntensity: 0.75
-  m_Vertices:
-  - position: {x: 0, y: 0, z: 0}
-    color: {r: 0, g: 0, b: 0, a: 0}
-    uv: {x: 0, y: 0}
-  m_Triangles: 0000
-  m_LocalBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
---- !u!4 &1591575734
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591575732}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.45, y: -7.03, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1606417800
 GameObject:
   m_ObjectHideFlags: 0
@@ -6604,7 +6517,8 @@ GameObject:
   - component: {fileID: 1656788312}
   - component: {fileID: 1656788315}
   - component: {fileID: 1656788316}
-  m_Layer: 0
+  - component: {fileID: 1656788319}
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -6732,6 +6646,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTouchedObject: {fileID: 0}
+--- !u!114 &1656788319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656788311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1656832177 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4895945645687313012, guid: b7a864dc987324d4ba563bbd79e36f37, type: 3}
@@ -7256,7 +7203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1754836147}
   - component: {fileID: 1754836146}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7793,7 +7740,7 @@ GameObject:
   - component: {fileID: 1926929577}
   - component: {fileID: 1926929580}
   - component: {fileID: 1926929581}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: optionlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7908,7 +7855,7 @@ GameObject:
   - component: {fileID: 1954705592}
   - component: {fileID: 1954705594}
   - component: {fileID: 1954705595}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: disque_de_platine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7935,7 +7882,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9a685ff373028fa46aaf9cb8bdf17554, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7975,9 +7922,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954705591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.9878798, y: -8.1382265, z: 0.085670464}
-  m_LocalScale: {x: 0.26241252, y: 0.26241252, z: 0.26241252}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 5.012, y: -8.1382265, z: 0.085670464}
+  m_LocalScale: {x: 0.28, y: 0.28, z: 0.28}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1336000062}
   - {fileID: 1486531496}
@@ -8268,7 +8215,7 @@ GameObject:
   - component: {fileID: 2054453003}
   - component: {fileID: 2054453002}
   - component: {fileID: 2054453004}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: whiteray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
