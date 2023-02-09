@@ -21,6 +21,7 @@ namespace Nathan
                 isActive = false;
                 rt.counterChangeColor = 0;
                 this.GetComponent<Animator>().Play("ButtonPushLevel");
+                MusicManagerSingleton.Instance.PlaySound2("Buzz");
             }
         }
 

@@ -593,6 +593,10 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 9ac15a883beebcb4fa2d4368aa7a4c1b, type: 3}
   - Name: TapisRoulant
     Clip: {fileID: 8300000, guid: 5e392408e5a3f1f459b28ae2cb7f8845, type: 3}
+  - Name: Click
+    Clip: {fileID: 8300000, guid: cb8d778251063a84e8d7e53627a19c88, type: 3}
+  - Name: Balai
+    Clip: {fileID: 8300000, guid: a9eb689ac5506aa4c8b72c22f2e573db, type: 3}
   activeAides: 1
 --- !u!4 &229674386
 Transform:
