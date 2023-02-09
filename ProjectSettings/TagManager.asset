@@ -12,11 +12,12 @@ TagManager:
   - poubelleJaune
   - poubelleVerte
   - client
+  - serviette
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostPrcess
   - Water
   - UI
   - 
@@ -48,4 +49,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ArgentDisk
+    uniqueID: 1481308447
+    locked: 0
+  - name: BronzeDisk
+    uniqueID: 77234931
+    locked: 0
+  - name: GoldDisk
+    uniqueID: 217234663
     locked: 0

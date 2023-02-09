@@ -10,6 +10,8 @@ namespace Nathan
         public string color;
         public string logo;
         public string colorLogo;
+    
+        public GameObject Perso;
 
         public merchDemande md;
 
@@ -72,6 +74,8 @@ namespace Nathan
                 {
                     md.goodObj = true;
                     lm.scoreScene++;
+                    Perso.GetComponent<Animator>().Play("CharaMerch");
+
                     if (lm.scoreScene == lm.scoreSceneNeed)
                     {
                         md.thisGameFish = true;
