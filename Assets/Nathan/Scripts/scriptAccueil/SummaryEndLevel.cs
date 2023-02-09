@@ -41,6 +41,8 @@ namespace Nathan
 
         public bool createCaseCoche = false;
 
+        public int numberMiniGamesPlay;
+
         public void CreateText()
         {
             if (gm.lm.miniGame1End == true)
@@ -70,6 +72,8 @@ namespace Nathan
                 }
             }
 
+            numberMiniGamesPlay = order;
+
             TextAppear();
 
             gm.lm.infoOpen = true;
@@ -77,7 +81,11 @@ namespace Nathan
 
         void TextAppear()
         {
-            MusicManagerSingleton.Instance.PlaySound3("Applause");
+            if (numberMiniGamesPlay > 0)
+            {
+                MusicManagerSingleton.Instance.PlaySound3("Applause");
+            }
+
             if (gm.lm.miniGame1End == true)
             {
                 if (gm.dragGameGood == false)
@@ -156,8 +164,15 @@ namespace Nathan
 
             /////////////////////
 
-            startTimer = true;
-            createCaseCoche = true;
+            if (numberMiniGamesPlay > 0)
+            {
+                startTimer = true;
+                createCaseCoche = true;
+            }
+            if (numberMiniGamesPlay == 0)
+            {
+                canEnd = true;
+            }
         }
 
         public void Update()
@@ -240,6 +255,8 @@ namespace Nathan
                 order = 0;
                 canEnd = false;
                 gm.lm.infoOpen = false;
+
+                numberMiniGamesPlay = 0;
             }
         }
     }
