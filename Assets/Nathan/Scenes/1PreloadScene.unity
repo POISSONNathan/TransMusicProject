@@ -3288,6 +3288,7 @@ MonoBehaviour:
   AnimDiskBronze: 0
   WinParticule: {fileID: 6526580923330962992, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
   animator: {fileID: 3539503967158365873}
+  logoJobs: []
   ArgentDisque: {fileID: 6909287470808453971}
   OrDisque: {fileID: 6909287471430058074}
   se: {fileID: 467142292}
