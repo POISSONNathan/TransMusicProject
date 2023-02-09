@@ -70,7 +70,6 @@ namespace Nathan
                 goodTrigger = true;
                 if (!drag)
                 {
-                    Debug.Log("fer");
                     md.goodObj = true;
                     lm.scoreScene++;
                     if (lm.scoreScene == lm.scoreSceneNeed)

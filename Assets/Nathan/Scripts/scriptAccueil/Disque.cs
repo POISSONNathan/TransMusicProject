@@ -25,6 +25,10 @@ namespace Nathan
         {
             lm = ManagerManager.GetManagerManager.lm;
             timer = 0;
+
+            maxTime1 = 0.1f;
+            maxTime2 = 0.1f;
+            maxTime3 = 0.1f;
         }
 
         // Update is called once per frame
@@ -44,10 +48,11 @@ namespace Nathan
                         maxTime1 = 1.01f;
                     }
 
-                        if (lm.bestTimeLevel1 < lm.maxTimeLevel1)
+                    if (lm.bestTimeLevel1 < lm.maxTimeLevel1)
                     {
                         if (lm.cdb1 == true)
                         {
+                            Debug.Log("ee");
                             listDisques[0].SetActive(true);
                             listDisquesTableauRecap[0].SetActive(true);
                             if (timer >= maxTime1 && lm.currentLevelForDisque == 0)
