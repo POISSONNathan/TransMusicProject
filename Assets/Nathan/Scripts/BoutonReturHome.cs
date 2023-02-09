@@ -10,7 +10,6 @@ namespace Nathan
         private LevelManager lm;
 
         public ManagerManager gm;
-        public optionsManager optionsManager;
 
         void Start()
         {
@@ -21,7 +20,7 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-            GetComponent<Collider2D>().enabled = !optionsManager.dansOptions;
+            
         }
         public override void OnTouch(Touch touchinfo)
         {

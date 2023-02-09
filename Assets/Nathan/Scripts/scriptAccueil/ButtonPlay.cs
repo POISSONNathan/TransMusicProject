@@ -26,9 +26,7 @@ namespace Nathan
         public override void OnTouch(Touch touchinfo)
         {
             lm.placeDisque = true; ;
-            MusicManagerSingleton.Instance.PlaySound("StartButton");
             SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
-            
         }
     }
 }

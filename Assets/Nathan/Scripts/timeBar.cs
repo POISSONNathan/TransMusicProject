@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Nathan
-{
+namespace Nathan { 
     [ExecuteInEditMode()]
     public class timeBar : MonoBehaviour
     {
@@ -58,7 +57,7 @@ namespace Nathan
 
                 logo.GetComponent<Image>().enabled = true;
             }
-
+            
             if (lm.inMiniGame == false)
             {
                 contourBar.GetComponent<Image>().enabled = false;

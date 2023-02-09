@@ -52,6 +52,7 @@ namespace Nathan
                     {
                         if (lm.cdb1 == true)
                         {
+                            Debug.Log("ee");
                             listDisques[0].SetActive(true);
                             listDisquesTableauRecap[0].SetActive(true);
                             if (timer >= maxTime1 && lm.currentLevelForDisque == 0)

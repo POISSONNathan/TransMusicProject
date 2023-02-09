@@ -117,48 +117,48 @@ namespace Nathan
                 if (gm.trouverMerchGameGood == false)
                 {
                     miniGames2[0].transform.position = spawn[order].transform.position;
-                    order++; 
+                    order++;
                 }
                 if (gm.magasinGameGood == false)
-                { 
+                {
                     miniGames2[1].transform.position = spawn[order].transform.position;
-                    order++; 
+                    order++;
                 }
                 if (gm.balaiGameGood == false)
-                { 
+                {
                     miniGames2[2].transform.position = spawn[order].transform.position;
-                    order++; 
+                    order++;
                 }
                 if (gm.trouverObjGameGood == false)
-                { 
+                {
                     miniGames2[3].transform.position = spawn[order].transform.position;
-                    order++; 
+                    order++;
                 }
             }
 
             ////////////////////
 
             if (gm.lm.miniGame3End == true)
-            { 
+            {
                 if (gm.rotateGameGood == false)
-                { 
+                {
                     miniGames3[0].transform.position = spawn[order].transform.position;
-                    order++; 
+                    order++;
                 }
                 if (gm.reactionTimeGameGood == false)
-                { 
+                {
                     miniGames3[1].transform.position = spawn[order].transform.position;
-                    order++; 
+                    order++;
                 }
                 if (gm.lumiereGameGood == false)
-                { 
+                {
                     miniGames3[2].transform.position = spawn[order].transform.position;
-                    order++; 
+                    order++;
                 }
                 if (gm.vipGameGood == false)
-                { 
+                {
                     miniGames3[3].transform.position = spawn[order].transform.position;
-                    order++; 
+                    order++;
                 }
             }
 
@@ -179,7 +179,7 @@ namespace Nathan
         {
             if (startTimer == true)
             {
-                pourcent += Time.deltaTime / 1f ;
+                pourcent += Time.deltaTime / 1f;
 
                 orderText[indexOrderText].GetComponent<SpriteRenderer>().color = Color.Lerp(alphaNotGood, alphaGood, pourcent);
 
@@ -224,7 +224,7 @@ namespace Nathan
             if (touchOneTime)
             {
                 gm.lm.placeDisque = true;
-                
+
 
                 touchOneTime = false;
 

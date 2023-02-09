@@ -13,7 +13,7 @@ namespace Nathan
         public Vector2 posStart;
 
         public bool good;
-        private bool son;
+
         public int nbrObj;
         public bool Up;
         public GameObject Boite;
@@ -27,7 +27,7 @@ namespace Nathan
             lm.scoreSceneNeed = 2;
 
             lm.secondMiniGame = 10;
-            son = true;
+
             posStart = transform.position;
             good = false;
             Up = false;
@@ -58,7 +58,6 @@ namespace Nathan
                 {
                     transform.position = new Vector2(transform.position.x, transform.position.y + 0.7f);
                     touchPossible = false;
-                    MusicManagerSingleton.Instance.PlaySound2("Metal");
                 }
                 if (Input.touchCount == 0)
                 {
@@ -69,17 +68,12 @@ namespace Nathan
                 if (transform.position.y > posStart.y - 0.5f)
                 {
                     transform.position = new Vector2(transform.position.x, transform.position.y - 1.2f * Time.deltaTime);
-                    
                 }
             }
             if (good == true)
             {                
                 transform.position = new Vector2(transform.position.x + 2.5f * Time.deltaTime, transform.position.y);
-                if (son == true)
-                {
-                    MusicManagerSingleton.Instance.PlaySound2("TapisRoulant");
-                    son = false;
-                }
+
                 if (transform.position.x > 3)
                 {
                     lm.scoreScene ++;
