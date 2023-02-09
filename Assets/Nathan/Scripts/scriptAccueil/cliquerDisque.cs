@@ -19,6 +19,8 @@ namespace Nathan
         public Vector3 originScale;
         public Vector3 scalePos;
 
+        public bool diskbronz;
+
         public Transform zoomPos;
 
         public bool zoom = false;
@@ -46,6 +48,11 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
+            if (lm.AnimDiskBronze == true && diskbronz == true)
+            {
+                this.GetComponent<Animator>().Play("DiskFirstAnim");
+            }
+            Debug.Log(lm.AnimDiskBronze);
             if (Input.touchCount > 0 && isOpen == true && touchOneTime == false)
             {
                 text.transform.position = originPos;
@@ -88,6 +95,7 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
+            lm.AnimDiskBronze = true;
             if (isOpen == false && touchOneTime == false && gm.introGame == false && lm.oneInfoSelected == false && lm.isScrolling == false)
             {
                 text.SetActive(true);

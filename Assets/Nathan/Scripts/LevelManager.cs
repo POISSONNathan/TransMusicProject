@@ -18,6 +18,8 @@ namespace Nathan
         public bool switchMiniGame = false;
         public bool switchOneTime = false;
 
+        public bool AnimDiskBronze = false;
+
         public ParticleSystem WinParticule;
         public Animator animator;
         
