@@ -49,7 +49,9 @@ namespace Nathan
             }
             if (game2End == true)
             {
-                dialogues = dialoguesFinLvl2;
+                //dialogues = dialoguesFinLvl2;
+                this.gameObject.SetActive(false);
+                gm.introGame = false;
             }
             if (game3End == true)
             {
