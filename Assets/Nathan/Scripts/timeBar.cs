@@ -18,6 +18,8 @@ namespace Nathan {
         public GameObject disque2;
         public GameObject disque3;
 
+        public GameObject logo;
+
         void Start()
         {
             lm = ManagerManager.GetManagerManager.lm;
@@ -52,6 +54,8 @@ namespace Nathan {
                 disque1.GetComponent<Image>().enabled = true;
                 disque2.GetComponent<Image>().enabled = true;
                 disque3.GetComponent<Image>().enabled = true;
+
+                logo.GetComponent<Image>().enabled = true;
             }
             
             if (lm.inMiniGame == false)
@@ -64,6 +68,8 @@ namespace Nathan {
                 disque1.GetComponent<Image>().enabled = false;
                 disque2.GetComponent<Image>().enabled = false;
                 disque3.GetComponent<Image>().enabled = false;
+
+                logo.GetComponent<Image>().enabled = false;
             }
 
         }

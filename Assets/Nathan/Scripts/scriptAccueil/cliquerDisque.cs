@@ -97,15 +97,15 @@ namespace Nathan
 
                 originPos = text.transform.position;
 
-                Debug.Log(text.transform.position);
+                Debug.Log(text.transform.position.y);
 
-                if (text.transform.position.y >= 1.27f)
+                if (text.transform.position.y >= 0.31f)
                 {
-                    zoomPos.position = new Vector3(zoomPos.position.x, originPos.y - 1.4f, zoomPos.position.z);
+                    zoomPos.position = new Vector3(zoomPos.position.x, originPos.y - 1.9f, zoomPos.position.z);
                 }
-                if (text.transform.position.y < 1.27f)
+                if (text.transform.position.y < 0.31f)
                 {
-                    zoomPos.position = new Vector3(zoomPos.position.x, originPos.y + 2.4f, zoomPos.position.z);
+                    zoomPos.position = new Vector3(zoomPos.position.x, originPos.y + 2.9f, zoomPos.position.z);
                 }
 
                 shouldZoom = true;
