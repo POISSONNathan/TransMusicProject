@@ -22,7 +22,7 @@ namespace Nathan
         public override void OnTouch(Touch touchinfo)
         {
             Debug.Log("oui");
-            Disk.GetComponent<Animator>().Play("DiskFirstAnim");
+            this.GetComponent<Animator>().Play("DiskFirstAnim");
         }
 
     }
