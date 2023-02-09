@@ -15,15 +15,22 @@ namespace Nathan
         private LevelManager lm;
         public accueil ac;
 
+        public ManagerManager gm;
+
         public float timer;
 
         public float maxTime1;
         public float maxTime2;
         public float maxTime3;
 
+        public GameObject texteIntro;
+
         void Start()
         {
             lm = ManagerManager.GetManagerManager.lm;
+
+            gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
+
             timer = 0;
 
             maxTime1 = 0.1f;
@@ -64,6 +71,9 @@ namespace Nathan
                             listDisquesTableauRecap[0].SetActive(true);
                             if (timer >= maxTime1 && lm.currentLevelForDisque == 0)
                             {
+                                texteIntro.SetActive(true);
+                                gm.introGame = true;
+                                texteIntro.GetComponent<textIntro>().game1End = true;
                                 lm.cdb1 = true;
                                 lm.placeDisque = false;
                             }
@@ -154,6 +164,9 @@ namespace Nathan
                             listDisquesTableauRecap[0].SetActive(true);
                             if (timer >= maxTime2 && lm.currentLevelForDisque == 1)
                             {
+                                texteIntro.SetActive(true);
+                                gm.introGame = true;
+                                texteIntro.GetComponent<textIntro>().game2End = true;
                                 lm.cdb2 = true;
                                 lm.placeDisque = false;
                             }
@@ -243,6 +256,9 @@ namespace Nathan
                             listDisquesTableauRecap[0].SetActive(true);
                             if (timer >= maxTime3 && lm.currentLevelForDisque == 2)
                             {
+                                texteIntro.SetActive(true);
+                                gm.introGame = true;
+                                texteIntro.GetComponent<textIntro>().game3End = true;
                                 lm.cdb3 = true;
                                 lm.placeDisque = false;
                             }

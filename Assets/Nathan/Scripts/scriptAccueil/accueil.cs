@@ -24,6 +24,7 @@ namespace Nathan
 
         public bool Off;
         public ManagerManager gm;
+        public optionsManager optionsManager;
 
         public bool stopReloadString = false;
 
@@ -75,11 +76,13 @@ namespace Nathan
 
                     if (startTouchPos.x < endTouchPos.x - 200 && moveCamera == false && levelSelect > 0)
                     {
-                        moveLeft();
+                        if (!optionsManager.dansOptions) {moveLeft(); }
+                        
                     }
                     if (startTouchPos.x > endTouchPos.x + 200 && moveCamera == false && levelSelect < 3)
                     {
-                        moveRight();
+                        if (!optionsManager.dansOptions) { moveRight(); }
+                        
                     }
                 }
 

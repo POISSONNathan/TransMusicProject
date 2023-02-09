@@ -3285,6 +3285,7 @@ MonoBehaviour:
   nextScene: 
   switchMiniGame: 0
   switchOneTime: 0
+  AnimDiskBronze: 0
   WinParticule: {fileID: 6526580923330962992, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
   animator: {fileID: 3539503967158365873}
   ArgentDisque: {fileID: 6909287470808453971}

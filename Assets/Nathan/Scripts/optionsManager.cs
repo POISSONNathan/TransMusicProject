@@ -27,6 +27,8 @@ namespace Nathan
         {
             if (config == "sfx") {
                 MusicManagerSingleton.Instance.sfxAudioSource.volume = state ? 1f : 0f;
+                MusicManagerSingleton.Instance.sfxAudioSource2.volume = state ? 1f : 0f;
+                MusicManagerSingleton.Instance.sfxAudioSource3.volume = state ? 1f : 0f;
                 Debug.Log($"sfx volume : {MusicManagerSingleton.Instance.sfxAudioSource.volume}");
 
             }
@@ -39,7 +41,8 @@ namespace Nathan
 
             if (config == "aides")
             {
-                Debug.Log($"les aides sont {state}");
+                MusicManagerSingleton.Instance.activeAides = state;
+                Debug.Log($"les aides sont {MusicManagerSingleton.Instance.activeAides}");
             }
         }
 
