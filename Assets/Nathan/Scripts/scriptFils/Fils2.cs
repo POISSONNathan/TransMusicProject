@@ -64,6 +64,7 @@ namespace Nathan
         {
             wm.currentWire = null;
             lightOn.SetActive(true);
+            MusicManagerSingleton.Instance.PlaySound2("Buzz");
             lm.scoreScene++;
             Destroy(this);
         }

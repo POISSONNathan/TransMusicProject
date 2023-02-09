@@ -49,6 +49,7 @@ namespace Nathan
                 {
                     transform.position = collision.transform.position;
                     lo.objPoubelleVerte++;
+                    MusicManagerSingleton.Instance.PlaySound2("Verre");
                     Destroy(this.gameObject);
                 }
             }
@@ -59,6 +60,7 @@ namespace Nathan
                 {
                     transform.position = collision.transform.position;
                     lo.objPoubelleJaune++;
+                    MusicManagerSingleton.Instance.PlaySound2("Carton");
                     Destroy(this.gameObject);
                 }
             }
