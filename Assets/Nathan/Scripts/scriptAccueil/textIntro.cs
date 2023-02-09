@@ -24,50 +24,58 @@ namespace Nathan
         // Start is called before the first frame update
         void Start()
         {
-            gm = ManagerManager.GetManagerManager;
-
+            gm = FindObjectOfType<ManagerManager>().GetComponent<ManagerManager>();
             if (gm.introGame == false)
             {
-                Destroy(this.gameObject);
+
             }
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (Input.touchCount > 0 && touchOneTime == true)
+            if (gm.currentLevel == 0 && gm.introGame == true)
             {
-                touchOneTime = false;
-                Destroy(dialogues[0]);
-                dialogues.Remove(dialogues[0]);
-            }
-            
-            if(dialogues.Count == 3 || dialogues.Count == 1 ){
-                Expression[4].SetActive(true);
-                Expression[3].SetActive(false);
-            }
-
-            if(dialogues.Count == 2 ){
-                Expression[4].SetActive(false);
-                Expression[3].SetActive(true);
-            }
-
-            if (Input.touchCount == 0)
-            {
-                touchOneTime = true;
-
-                if (dialogues.Count == 0)
+                if (Input.touchCount > 0 && touchOneTime == true)
                 {
-                    gm.introGame = false;
-                    this.GetComponent<Animator>().Play("DialogueEnd");
+                    touchOneTime = false;
+                    Destroy(dialogues[0]);
+                    dialogues.Remove(dialogues[0]);
+                }
+
+                if (dialogues.Count == 3 || dialogues.Count == 1)
+                {
+                    Expression[4].SetActive(true);
+                    Expression[3].SetActive(false);
+                }
+
+                if (dialogues.Count == 2)
+                {
+                    Expression[4].SetActive(false);
+                    Expression[3].SetActive(true);
+                }
+
+                if (Input.touchCount == 0)
+                {
+                    touchOneTime = true;
+
+                    if (dialogues.Count == 0)
+                    {
+                        gm.introGame = false;
+                        this.GetComponent<Animator>().Play("DialogueEnd");
+                    }
+                }
+
+                if (dialogues.Count > 0 && StartD == true)
+                {
+                    dialogues[0].SetActive(true);
                 }
             }
 
-            if (dialogues.Count > 0 && StartD == true)
+            if (gm.currentLevel == 2 && (gm.lm.secondLevel1 > gm.lm.maxTimeLevel1))
             {
-                dialogues[0].SetActive(true);
+                Debug.Log("oui");
             }
-            
         }
 
         public void DialogueStart()
@@ -77,7 +85,7 @@ namespace Nathan
 
         public void DialogueEnd()
         {
-            Destroy(this.gameObject);
+
         }
     }
 }
