@@ -6,9 +6,7 @@ namespace Nathan
 {
         public class optionsManager : MonoBehaviour
     {
-        public bool dansOptions = false;
-        public SpriteRenderer sr;
-        
+        public bool dansOptions = false;        
         //public soundManager SndMng;
 
         // Start is called before the first frame update
