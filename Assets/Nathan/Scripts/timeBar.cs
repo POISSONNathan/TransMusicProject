@@ -29,23 +29,9 @@ namespace Nathan {
         void Update()
         {
 
-            if (gm.currentLevel == 0)
-            {
-                float fillAmount = (float)lm.secondLevel1 / (float)lm.maxTimeLevel1;
-                mask.fillAmount = fillAmount;
-            }
-            if (gm.currentLevel == 1)
-            {
-                float fillAmount = (float)lm.secondLevel2 / (float)lm.maxTimeLevel2;
-                mask.fillAmount = fillAmount;
-            }
-            if (gm.currentLevel == 2)
-            {
-                float fillAmount = (float)lm.secondLevel3 / (float)lm.maxTimeLevel3;
-                mask.fillAmount = fillAmount;
-            }
+            
 
-            if (lm.inMiniGame == true)
+            if (lm.inMiniGame == false)
             {
                 contourBar.GetComponent<Image>().enabled = true;
                 gameObject.GetComponent<Image>().enabled = true;
@@ -58,7 +44,7 @@ namespace Nathan {
                 logo.GetComponent<Image>().enabled = true;
             }
             
-            if (lm.inMiniGame == false)
+            if (lm.inMiniGame == true)
             {
                 contourBar.GetComponent<Image>().enabled = false;
                 gameObject.GetComponent<Image>().enabled = false;
