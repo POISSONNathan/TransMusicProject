@@ -165,7 +165,10 @@ namespace Nathan
             {
                 pourcent += Time.deltaTime / 1f ;
 
-                orderText[indexOrderText].GetComponent<SpriteRenderer>().color = Color.Lerp(alphaNotGood, alphaGood, pourcent);
+                if (indexOrderText > 0)
+                {
+                    orderText[indexOrderText].GetComponent<SpriteRenderer>().color = Color.Lerp(alphaNotGood, alphaGood, pourcent);
+                }
 
                 if (pourcent >= 1)
                 {
