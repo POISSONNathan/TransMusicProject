@@ -130,7 +130,6 @@ namespace Nathan
 
                 if (level == 2)
                 {
-                    Debug.Log(maxTime2);
                     if (lm.bestTimeLevel2 < lm.twoStarTimeLevel2 && lm.currentLevelForDisque == 1)
                     {
                         maxTime2 = 0.51f;
