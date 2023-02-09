@@ -13,7 +13,7 @@ public class InstructionDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.touchCount>0)
+        if(Input.touchCount>0 || !MusicManagerSingleton.Instance.activeAides)
         {
             Destroy(this.gameObject);
         }

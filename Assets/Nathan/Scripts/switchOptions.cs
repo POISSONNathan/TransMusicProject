@@ -13,12 +13,36 @@ namespace Nathan
         public optionsManager OM;
         public string type;
 
-        public bool state;
-
+        public bool state = true;
+        
         public bool isTouched;
         // Start is called before the first frame update
         void Start()
         {
+
+            switch (type )
+            {
+                case "sfx":
+                    if (MusicManagerSingleton.Instance.sfxAudioSource.volume == 0f)
+                    {
+                        state = false;
+
+                    }
+                    break;
+                case "musique":
+                    if (MusicManagerSingleton.Instance.musicAudioSource.volume == 0f)
+                    {
+                        state = false;
+
+                    }
+                    break;
+                case "aides":
+                    
+                    state = MusicManagerSingleton.Instance.activeAides;
+
+                    
+                    break;
+            }
             sr.sprite = state ? on : off;
         }
 
