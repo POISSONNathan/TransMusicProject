@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 26
+  controlID: 215
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 27
+  controlID: 216
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 28
+  controlID: 217
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,8 +190,8 @@ MonoBehaviour:
     y: 0
     width: 485
     height: 623
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -216,8 +216,8 @@ MonoBehaviour:
     y: 0
     width: 965
     height: 623
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -243,8 +243,8 @@ MonoBehaviour:
     y: 0
     width: 505
     height: 623
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -277,7 +277,7 @@ MonoBehaviour:
   - {fileID: 18}
   - {fileID: 19}
   m_Selected: 0
-  m_LastSelected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -297,8 +297,8 @@ MonoBehaviour:
     y: 0
     width: 605
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -363,7 +363,7 @@ MonoBehaviour:
     fitToScreenEnabled: 1
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
-    friendlyName: Apple iPhone 12
+    friendlyName: Apple iPhone 12 Pro
     networkReachability: 1
     systemLanguage: 10
 --- !u!114 &14
@@ -397,9 +397,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 34f2feff
-      m_LastClickedID: -69068
-      m_ExpandedIDs: 92f2feffaaf6feff2a1effff981effff4e20ffffb620ffff7221ffff3622ffff2a23ffffa623ffff7424ffff3825ffffea25ffffcc27ffff0428ffffca28fffffa29ffff762affff3c2bffff002cffffa02dffffc62dffff942effff0a2fffffce2fffff4630fffff830ffff6e31ffff3232ffff5a33ffffda33ffff5834ffff1c35ffff1236ffff4636ffff1237ffff4038ffff7638ffff3c39ffff543affff183bffffdc3bffffa03cffffb83dffff7c3effff7c3fffffb03fffffb640fffff642ffffd643ffffa444ffff0c46ffffa846ffff7a47ffff8048ffffbe48ffff6a49ffffc249ffff184affffe24affff6a4cffff024effff1857ffff6e5affff285bffff085efffff85fffff7260ffff0662ffffae74ffff7a77ffffe6abffffd2adffff40aeffffc8b8ffff6ee1ffff54e3ffff94e3ffff4ce4ffff7aebffff60edffff4aefffff08f0ffff42f6fffff4f6ffffccf7fffff8fafffffafafffff4ffffff166b0000fc6c00003c6d00004e710000f2740000a275000050a10000dc020100ee030100d418010070190100d61901000c1a01001a1a010092850100f48b010044c401007cc4010080c50100b6c50100c4c501009cc60100c6c6010040c7010044c70100a2c7010006c8010052c801001ccf01000ad001004ed00100
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 24a0ffff26a1ffff74a3ffff80a4ffffe0a5ffffeea6ffff8ca7ffff2aa8ffffc4a8ffffbee2ffffa2e4ffffa6eaffff64ebffffc6ecffff6eedffffbeedffff0eeeffffbaeeffff7ef2ffff88f4ffffd4f4ffff06f7ffffecf8fffffcfaffffc09c0000ea9c0000649d0000689d0000769e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -663,16 +663,16 @@ MonoBehaviour:
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.6091895, y: 2.0015874, z: 0.013862463}
+    m_Target: {x: 1.7442998, y: 0.3511622, z: 0.1519059}
     speed: 2
-    m_Value: {x: 2.6091895, y: 2.0015874, z: 0.013862463}
+    m_Value: {x: 1.7442998, y: 0.3511622, z: 0.1519059}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -689,7 +689,7 @@ MonoBehaviour:
     showImageEffects: 1
     showParticleSystems: 1
     showVisualEffectGraphs: 1
-    m_FxEnabled: 1
+    m_FxEnabled: 0
   m_Grid:
     xGrid:
       m_Fade:
@@ -723,9 +723,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.2447534
+    m_Target: 10.724074
     speed: 2
-    m_Value: 7.2447534
+    m_Value: 10.724074
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -931,14 +931,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Nathan/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Nathan\TransM
+  m_LastProjectPath: C:\Users\e.trehin\Documents\trans
   m_LockTracker:
-    m_IsLocked: 0
+    m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: d8680000
-    m_LastClickedID: 26840
-    m_ExpandedIDs: 00000000c0680000c2680000c4680000c6680000c8680000ca680000cc680000de68000000ca9a3bffffff7f
+    m_SelectedIDs: 00660000
+    m_LastClickedID: 26112
+    m_ExpandedIDs: 00000000a8650000bc65000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -966,7 +966,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c0680000c2680000c4680000c6680000c8680000ca680000cc680000
+    m_ExpandedIDs: 00000000a865000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1043,9 +1043,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 696
-    width: 1954
-    height: 303
+    y: 703
+    width: 1465
+    height: 306
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1080,7 +1080,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 118848
+  m_LastSelectedObjectID: 61398
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
