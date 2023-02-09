@@ -9,8 +9,12 @@ namespace Nathan
     public class ButtonPlay : TouchableObject
     {
         public optionsManager optionsManager;
+
+        public LevelManager lm;
+
         void Start()
         {
+            lm = ManagerManager.GetManagerManager.lm;
         }
 
         // Update is called once per frame
@@ -21,10 +25,8 @@ namespace Nathan
 
         public override void OnTouch(Touch touchinfo)
         {
-            
-                SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
- 
-            
+            lm.placeDisque = true; ;
+            SceneManager.LoadScene("Accueil", LoadSceneMode.Single);
         }
     }
 }

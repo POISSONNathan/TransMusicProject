@@ -67,6 +67,8 @@ namespace Nathan
             {
                 if (ac.moveCamera == false && touchOneTime == false)
                 {
+                    gm.lm.placeDisque = false;
+
                     if (gm.currentLevel == 0)
                     {
                         gm.accueilScene = false;
