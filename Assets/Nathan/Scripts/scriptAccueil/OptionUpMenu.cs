@@ -7,6 +7,7 @@ namespace Nathan
     public class OptionUpMenu : TouchableObject
     {
         public GameObject OptionMenu;
+        public optionsManager optionsManager;
 
         void Start()
         {
@@ -22,6 +23,7 @@ namespace Nathan
         public override void OnTouch(Touch touchinfo)
         { 
             OptionMenu.GetComponent<Animator>().Play("OptionGoingUp");
+            optionsManager.dansOptions = false;
         }
 
     }

@@ -17,16 +17,17 @@ namespace Nathan
         // Update is called once per frame
         void Update()
         {
-
+            GetComponent<Collider2D>().enabled = !optionsManager.dansOptions;
+            
         }
 
         public override void OnTouch(Touch touchinfo)
         {
-            if (!optionsManager.dansOptions) {
+            
                 OptionMenu.GetComponent<Animator>().Play("OptionGoingDown");
                 optionsManager.dansOptions = true;
 
-            }
+            
                 
                 
             

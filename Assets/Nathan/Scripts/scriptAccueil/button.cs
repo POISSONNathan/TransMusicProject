@@ -11,6 +11,7 @@ namespace Nathan
 
         public SpriteRenderer sr;
         public ManagerManager gm;
+        public optionsManager optionsManager;
 
         public int randomMiniGames;
 
@@ -27,6 +28,7 @@ namespace Nathan
         // Update is called once per frame
         void Update() 
         {
+            GetComponent<Collider2D>().enabled = !optionsManager.dansOptions;
 
             if (ac.moveCamera == false )
             {
