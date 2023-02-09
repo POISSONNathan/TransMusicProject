@@ -77,6 +77,7 @@ namespace Nathan
 
         void TextAppear()
         {
+            MusicManagerSingleton.Instance.PlaySound3("Applause");
             if (gm.lm.miniGame1End == true)
             {
                 if (gm.dragGameGood == false)
@@ -192,6 +193,7 @@ namespace Nathan
 
             if (createCaseCoche == true)
             {
+                MusicManagerSingleton.Instance.PlaySound2("Marqueur");
                 var newCaseCoche = Instantiate(caseCoche, new Vector2(cases[indexOrderText].transform.position.x + 0.1f, cases[indexOrderText].transform.position.y - 0.1f), Quaternion.identity);
                 destroyList.Add(newCaseCoche);
                 createCaseCoche = false;
@@ -233,7 +235,7 @@ namespace Nathan
                 {
                     Destroy(destroyList[i].gameObject);
                 }
-
+                MusicManagerSingleton.Instance.PlaySound3("Silence");
                 this.gameObject.SetActive(false);
 
                 orderText.Clear();

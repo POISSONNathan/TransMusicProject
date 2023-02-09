@@ -50,8 +50,8 @@ namespace Nathan
                 {
                     //When a touch has first been detected, change the message and record the starting position
                     case TouchPhase.Began:
-                    
-                    
+                        MusicManagerSingleton.Instance.PlaySound3("Eponge");
+
                         break;
                     case TouchPhase.Moved:
                         if (drag)
@@ -62,6 +62,7 @@ namespace Nathan
 
                         break;
                     case TouchPhase.Ended:
+                        MusicManagerSingleton.Instance.PlaySound3("Silence");
                         drag = false;
 
                         break;
