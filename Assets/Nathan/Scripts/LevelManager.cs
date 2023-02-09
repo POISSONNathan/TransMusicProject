@@ -23,6 +23,7 @@ namespace Nathan
         public ParticleSystem WinParticule;
         public Animator animator;
         
+        public GameObject[] logoJobs;
         public GameObject ArgentDisque;
         public GameObject OrDisque;  
 
@@ -253,6 +254,13 @@ namespace Nathan
             {
                 Instantiate(WinParticule, transform.position, Quaternion.identity);
                 playAnimOneTime = true;
+                logoJobs = GameObject.FindGameObjectsWithTag("Logo");
+
+                foreach (GameObject logojob in logoJobs)
+                {
+                    logojob.SetActive(false);
+                }
+
                 MusicManagerSingleton.Instance.PlaySound("Good");
             }
             if ((SceneManager.GetActiveScene().name) == "Accueil")
@@ -335,7 +343,7 @@ namespace Nathan
             { gm.reactionTimeGameGood = true;
                 placeImageGame3(1, se.order);
             }
-            if ((SceneManager.GetActiveScene().name) == "Lumière")
+            if ((SceneManager.GetActiveScene().name) == "Lumiï¿½re")
             { gm.lumiereGameGood = true;
                 placeImageGame3(2, se.order);
             }
