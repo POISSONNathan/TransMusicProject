@@ -15,12 +15,20 @@ namespace Nathan
 
         public accueil ac;
 
+        public GameObject Trail;
+
         private void Start()
         {
             lm = ManagerManager.GetManagerManager.lm;
         }
         void Update()
         {
+            Debug.Log(transform.position.x);
+            if(transform.position.y >= 4.3 && transform.position.x <= -4.9){
+                Trail.GetComponent<TrailRenderer>().enabled=true;
+            }else{
+                Trail.GetComponent<TrailRenderer>().enabled=false;   
+            }
             if (Input.touchCount > 0 && ac.levelSelect == 3 && lm.infoOpen == false)
             {
                 Touch touch = Input.GetTouch(0);
