@@ -2011,7 +2011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c41af8004cf6a946a1f024521e214a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startThisScene: 1
+  startThisScene: 0
   index: 1
 --- !u!1 &1381887757
 GameObject:
@@ -3281,6 +3281,7 @@ MonoBehaviour:
   nextScene: 
   switchMiniGame: 0
   switchOneTime: 0
+  AnimDiskBronze: 0
   WinParticule: {fileID: 6526580923330962992, guid: d985d8f4fe60c714ebe9122123d7e746, type: 3}
   animator: {fileID: 3539503967158365873}
   ArgentDisque: {fileID: 6909287470808453971}
