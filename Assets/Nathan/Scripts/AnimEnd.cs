@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimEnd : MonoBehaviour
 {
-
+    //ca sert a rien
     //void AlertObservers(string message)
     //{
     //    if (message.Equals("EndAnim"))
