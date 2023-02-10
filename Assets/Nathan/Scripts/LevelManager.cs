@@ -343,7 +343,7 @@ namespace Nathan
             { gm.reactionTimeGameGood = true;
                 placeImageGame3(1, se.order);
             }
-            if ((SceneManager.GetActiveScene().name) == "Lumi�re")
+            if ((SceneManager.GetActiveScene().name) == "Lumière")
             { gm.lumiereGameGood = true;
                 placeImageGame3(2, se.order);
             }
